@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản Trị Hệ Thống – PhongWatch Control Panel</title>
+  
+  <link rel="shortcut icon" href="https://theme.hstatic.net/1000223154/1001363986/14/favicon.png?v=133" type="image/png">
+  
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Admin Stylesheet -->
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       AUTH MODAL (PASSCODE LOGIN)
+       ======================================================== -->
+  <div class="admin-modal-overlay" id="authModal">
+    <div class="admin-modal" style="max-width: 420px; text-align: center;">
+      <div class="admin-modal-header" style="justify-content: center; flex-direction: column; gap: 8px; border: none; padding-top: 30px;">
+        <div class="sidebar-logo-icon" style="margin: 0 auto; width: 50px; height: 50px; font-size: 24px;">PW</div>
+        <h3 style="font-size: 18px; margin-top: 8px;">Đăng Nhập Quản Trị PhongWatch</h3>
+        <p style="font-size: 13px; color: var(--admin-text-muted);">Vui lòng nhập mật mã quản trị để truy cập trang quản lý</p>
+      </div>
+      <div class="admin-modal-body" style="padding: 10px 30px 20px;">
+        <div class="form-group">
+          <input type="password" id="adminPasscodeInput" class="form-control" 
+                 placeholder="Nhập mật mã quản trị..." style="text-align: center; font-size: 18px; letter-spacing: 2px;"
+                 onkeydown="if(event.key === 'Enter') verifyAdminPasscode()">
+          <div class="form-help" style="margin-top: 8px;">Mật khẩu mặc định: <code class="code-badge">admin123</code></div>
+        </div>
+        <button class="btn btn-primary" style="width: 100%; padding: 12px;" onclick="verifyAdminPasscode()">
+          <i class="fa fa-unlock"></i> Mở Khóa Quản Trị
+        </button>
+      </div>
+      <div class="admin-modal-footer" style="justify-content: center; background: none; border: none; padding-bottom: 24px;">
+        <a href="index.html" style="font-size: 13px; color: var(--admin-text-muted); text-decoration: none;">
+          <i class="fa fa-arrow-left"></i> Quay lại website
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MAIN ADMIN LAYOUT
+       ======================================================== -->
+  <div class="admin-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">PW</div>
+        <div class="sidebar-title">
+          <h2>PHONGWATCH</h2>
+          <span>Hệ Thống Quản Trị v2.0</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">QUẢN LÝ CHÍNH</div>
+        <div class="nav-item active" onclick="switchTab('tabOverview', this)">
+          <i class="fa fa-chart-pie"></i>
+          <span>Tổng Quan</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('tabTheme', this)">
+          <i class="fa fa-palette"></i>
+          <span>Giao Diện & Thương Hiệu</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('tabProducts', this)">
+          <i class="fa fa-boxes-stacked"></i>
+          <span>Quản Lý Sản Phẩm</span>
+        </div>
+        <div class="nav-item" onclick="switchTab('tabDeploy', this)">
+          <i class="fa fa-cloud-arrow-up"></i>
+          <span>Xuất File & Triển Khai Server</span>
+        </div>
+
+        <div class="nav-section-title" style="margin-top: 20px;">HỆ THỐNG</div>
+        <div class="nav-item" onclick="changeAdminPasscode()">
+          <i class="fa fa-key"></i>
+          <span>Đổi Mật Khẩu Admin</span>
+        </div>
+        <div class="nav-item" onclick="adminLogout()">
+          <i class="fa fa-right-from-bracket"></i>
+          <span>Đăng Xuất</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="index.html" target="_blank" class="btn-sidebar-view" title="Mở trang chủ website trong tab mới">
+          <i class="fa fa-arrow-up-right-from-square"></i> Xem Website Trực Tiếp
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+      
+      <!-- Top Navigation Bar -->
+      <header class="admin-topbar">
+        <div class="topbar-left">
+          <button class="mobile-sidebar-toggle" onclick="toggleMobileSidebar()" title="Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <h1 class="topbar-title" id="currentTabTitle">Tổng Quan</h1>
+        </div>
+
+        <div class="topbar-actions">
+          <a href="index.html" target="_blank" class="btn btn-secondary btn-sm" title="Xem website">
+            <i class="fa fa-globe"></i> Xem Website
+          </a>
+          <button class="btn btn-primary btn-sm" onclick="switchTab('tabProducts', document.querySelectorAll('.sidebar-nav .nav-item')[2]); openAddProductModal()">
+            <i class="fa fa-plus"></i> Thêm Sản Phẩm Mới
+          </button>
+        </div>
+      </header>
+
+      <!-- Body Container -->
+      <div class="admin-body">
+
+        <!-- ====================================================
+             TAB 1: TỔNG QUAN (DASHBOARD)
+             ==================================================== -->
+        <section class="tab-content active" id="tabOverview">
+          <!-- Stats Grid -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon red"><i class="fa fa-clock"></i></div>
+              <div class="stat-info">
+                <div class="stat-value" id="statTotalProducts">143</div>
+                <div class="stat-label">Tổng Sản Phẩm</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon gold"><i class="fa fa-layer-group"></i></div>
+              <div class="stat-info">
+                <div class="stat-value" id="statTotalCollections">9</div>
+                <div class="stat-label">Bộ Sưu Tập</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon green"><i class="fa fa-circle-check"></i></div>
+              <div class="stat-info">
+                <div class="stat-value" id="statInStock">143</div>
+                <div class="stat-label">Còn Hàng</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon blue"><i class="fa fa-server"></i></div>
+              <div class="stat-info">
+                <div class="stat-value" style="font-size: 16px; font-weight: 700; margin-top: 4px;">Sẵn Sàng Triển Khai</div>
+                <div class="stat-label" id="overviewConfigStatus">Đang đồng bộ mặc định</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Guide -->
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-lightbulb"></i> Quy Trình Quản Trị & Bàn Giao Website Cho Khách Hàng</h3>
+            </div>
+            <div class="card-body">
+              <p style="margin-bottom: 20px; color: var(--admin-text-muted); font-size: 14px; line-height: 1.6;">
+                Website được thiết kế theo kiến trúc <strong>Zero-Dependency (Không cần cài đặt Node.js hay Database phức tạp)</strong>. 
+                Mọi thông tin thương hiệu, hotline, logo, màu sắc và danh mục sản phẩm đều được quản lý tập trung và tự động đồng bộ.
+              </p>
+
+              <div class="form-grid">
+                <div class="deploy-step-card">
+                  <div class="deploy-step-number">1</div>
+                  <div class="deploy-step-content">
+                    <h4>Thay Đổi Giao Diện & Thông Tin Shop</h4>
+                    <p>Vào mục <strong>"Giao Diện & Thương Hiệu"</strong> để chỉnh sửa tên cửa hàng, hotline, Zalo, địa chỉ, hoặc chọn màu sắc chủ đạo theo sở thích.</p>
+                    <button class="btn btn-secondary btn-sm" onclick="switchTab('tabTheme', document.querySelectorAll('.sidebar-nav .nav-item')[1])">
+                      Đến cấu hình giao diện <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="deploy-step-card">
+                  <div class="deploy-step-number">2</div>
+                  <div class="deploy-step-content">
+                    <h4>Quản Lý Sản Phẩm (Thêm / Sửa / Xóa)</h4>
+                    <p>Vào mục <strong>"Quản Lý Sản Phẩm"</strong> để cập nhật giá tiền, hình ảnh đồng hồ, trạng thái kho hoặc đăng thêm mẫu mã mới.</p>
+                    <button class="btn btn-secondary btn-sm" onclick="switchTab('tabProducts', document.querySelectorAll('.sidebar-nav .nav-item')[2])">
+                      Đến quản lý sản phẩm <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="deploy-step-card">
+                  <div class="deploy-step-number">3</div>
+                  <div class="deploy-step-content">
+                    <h4>Xuất File & Đưa Lên Server / Hosting</h4>
+                    <p>Vào mục <strong>"Xuất File & Triển Khai Server"</strong> để tải về 2 file <code class="code-badge">config.js</code> và <code class="code-badge">products.js</code> rồi chép đè vào hosting là website cập nhật ngay!</p>
+                    <button class="btn btn-primary btn-sm" onclick="switchTab('tabDeploy', document.querySelectorAll('.sidebar-nav .nav-item')[3])">
+                      Xem hướng dẫn triển khai <i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================
+             TAB 2: GIAO DIỆN & THƯƠNG HIỆU
+             ==================================================== -->
+        <section class="tab-content" id="tabTheme">
+          
+          <!-- Card: Theme Colors -->
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-palette"></i> Cấu Hình Màu Sắc Thương Hiệu</h3>
+              <button class="btn btn-secondary btn-sm" onclick="resetConfigToDefault()">
+                <i class="fa fa-rotate-left"></i> Khôi phục màu gốc
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="form-grid">
+                <!-- Primary Color -->
+                <div class="form-group">
+                  <label>Màu Chủ Đạo (Primary Color):</label>
+                  <div class="color-picker-box">
+                    <input type="color" id="themePrimaryColor" class="color-input-preview" value="#d61114">
+                    <input type="text" id="themePrimaryHex" class="form-control" style="width: 140px; font-family: monospace;" value="#d61114">
+                  </div>
+                  <div class="color-presets">
+                    <div class="color-chip" style="background:#d61114;" title="Đỏ PhongWatch (Ruby)" onclick="setPrimaryPreset('#d61114')"></div>
+                    <div class="color-chip" style="background:#0f52ba;" title="Xanh Sapphire" onclick="setPrimaryPreset('#0f52ba')"></div>
+                    <div class="color-chip" style="background:#1e2022;" title="Đen Huyền Bí" onclick="setPrimaryPreset('#1e2022')"></div>
+                    <div class="color-chip" style="background:#0d7e5d;" title="Xanh Emerald" onclick="setPrimaryPreset('#0d7e5d')"></div>
+                    <div class="color-chip" style="background:#7c2d12;" title="Nâu Hổ Phách" onclick="setPrimaryPreset('#7c2d12')"></div>
+                    <div class="color-chip" style="background:#6366f1;" title="Tím Indigo" onclick="setPrimaryPreset('#6366f1')"></div>
+                  </div>
+                  <div class="form-help">Màu áp dụng cho nút Mua ngay, Giỏ hàng, Thẻ giảm giá và các thành phần chính.</div>
+                </div>
+
+                <!-- Gold / Accent Color -->
+                <div class="form-group">
+                  <label>Màu Điểm Nhấn / Vàng Kim (Gold Accent):</label>
+                  <div class="color-picker-box">
+                    <input type="color" id="themeGoldColor" class="color-input-preview" value="#c89b3c">
+                    <input type="text" id="themeGoldHex" class="form-control" style="width: 140px; font-family: monospace;" value="#c89b3c">
+                  </div>
+                  <div class="color-presets">
+                    <div class="color-chip" style="background:#c89b3c;" title="Vàng Hoàng Gia" onclick="setGoldPreset('#c89b3c')"></div>
+                    <div class="color-chip" style="background:#dfb15b;" title="Vàng Ánh Kim Sáng" onclick="setGoldPreset('#dfb15b')"></div>
+                    <div class="color-chip" style="background:#e67e22;" title="Cam Luxury" onclick="setGoldPreset('#e67e22')"></div>
+                    <div class="color-chip" style="background:#3b82f6;" title="Xanh Cyan Accent" onclick="setGoldPreset('#3b82f6')"></div>
+                  </div>
+                  <div class="form-help">Màu áp dụng cho icon vương miện, viền luxury, ngôi sao đánh giá.</div>
+                </div>
+              </div>
+
+              <!-- Live Preview Widget -->
+              <div class="live-preview-widget">
+                <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--admin-text-muted); margin-bottom: 10px;">
+                  Xem trước trực quan khi đổi màu (Live Preview)
+                </div>
+                <div class="preview-bar" id="previewHeaderBar">
+                  <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa fa-gem" id="previewGoldText" style="color: #c89b3c;"></i>
+                    <strong style="font-size: 13px;">MEN'S WATCH - ĐỒNG HỒ CHÍNH HÃNG</strong>
+                  </div>
+                  <div class="preview-buttons">
+                    <span id="previewPrimaryBadge" style="background-color: #d61114; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;">-24% SALE</span>
+                    <button id="previewPrimaryBtn" class="btn btn-sm" style="background-color: #d61114; color: #fff;">MUA NGAY</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Brand Identity -->
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-tag"></i> Thông Tin Thương Hiệu & Logo</h3>
+            </div>
+            <div class="card-body">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Tên Cửa Hàng / Thương Hiệu:</label>
+                  <input type="text" id="cfgBrandName" class="form-control" placeholder="PHONGWATCH">
+                </div>
+
+                <div class="form-group">
+                  <label>Khẩu Hiệu / Tagline:</label>
+                  <input type="text" id="cfgTagline" class="form-control" placeholder="ĐỒNG HỒ CHÍNH HÃNG">
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label>Slogan Đầu Trang (Header Topbar):</label>
+                  <input type="text" id="cfgSlogan" class="form-control" placeholder="Men's Watch - Đồng Hồ Chính Hãng Giá Tốt">
+                </div>
+
+                <div class="form-group">
+                  <label>Đường Dẫn Ảnh Logo (Logo URL):</label>
+                  <div style="display: flex; gap: 8px;">
+                    <input type="text" id="cfgLogoUrl" class="form-control" placeholder="https://.../logo.png">
+                    <label class="btn btn-secondary" style="white-space: nowrap; cursor: pointer;">
+                      <i class="fa fa-upload"></i> Chọn Ảnh
+                      <input type="file" accept="image/*" style="display: none;" onchange="handleLocalImageUpload(event, 'cfgLogoUrl')">
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Đường Dẫn Favicon (Biểu Tượng Tab Trình Duyệt):</label>
+                  <div style="display: flex; gap: 8px;">
+                    <input type="text" id="cfgFaviconUrl" class="form-control" placeholder="https://.../favicon.png">
+                    <label class="btn btn-secondary" style="white-space: nowrap; cursor: pointer;">
+                      <i class="fa fa-upload"></i> Chọn Ảnh
+                      <input type="file" accept="image/*" style="display: none;" onchange="handleLocalImageUpload(event, 'cfgFaviconUrl')">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Contact & Socials -->
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-phone"></i> Thông Tin Liên Hệ & Mạng Xã Hội</h3>
+            </div>
+            <div class="card-body">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label>Hotline Hiển Thị:</label>
+                  <input type="text" id="cfgHotline" class="form-control" placeholder="0888.477.774">
+                </div>
+
+                <div class="form-group">
+                  <label>Hotline Quay Số (Không có dấu chấm):</label>
+                  <input type="text" id="cfgHotlineTel" class="form-control" placeholder="0888477774">
+                </div>
+
+                <div class="form-group">
+                  <label>Số Zalo Hiển Thị:</label>
+                  <input type="text" id="cfgZalo" class="form-control" placeholder="0988.922.330">
+                </div>
+
+                <div class="form-group">
+                  <label>Link Nhắn Zalo:</label>
+                  <input type="text" id="cfgZaloLink" class="form-control" placeholder="https://zalo.me/0988922330">
+                </div>
+
+                <div class="form-group">
+                  <label>Email Hỗ Trợ Khách Hàng:</label>
+                  <input type="email" id="cfgEmail" class="form-control" placeholder="phongwatch.hcm@gmail.com">
+                </div>
+
+                <div class="form-group">
+                  <label>Fanpage Facebook:</label>
+                  <input type="text" id="cfgFacebook" class="form-control" placeholder="https://www.facebook.com/PhongWatches">
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label>Địa Chỉ Cửa Hàng:</label>
+                  <input type="text" id="cfgAddress" class="form-control" placeholder="357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh">
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label>Ghi Chú Địa Chỉ:</label>
+                  <input type="text" id="cfgAddressNote" class="form-control" placeholder="(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)">
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                  <label>Mã Nhúng Bản Đồ Google Maps (iframe src):</label>
+                  <input type="text" id="cfgMapUrl" class="form-control" placeholder="https://www.google.com/maps/embed?pb=...">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: SEO -->
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-magnifying-glass"></i> Cấu Hình SEO & Tiêu Đề Website</h3>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>Tiêu Đề Trang Chủ (Page Title):</label>
+                <input type="text" id="cfgSeoTitle" class="form-control" placeholder="Đồng Hồ Chính Hãng – PhongWatch">
+              </div>
+              <div class="form-group">
+                <label>Mô Tả Trang Web (Meta Description):</label>
+                <textarea id="cfgSeoDesc" class="form-control" rows="3" placeholder="PhongWatch - Hệ thống phân phối đồng hồ chính hãng giá tốt tại Việt Nam..."></textarea>
+              </div>
+              <div class="form-group">
+                <label>Từ Khóa SEO (Keywords):</label>
+                <input type="text" id="cfgSeoKeywords" class="form-control" placeholder="đồng hồ chính hãng, đồng hồ nam, carnival, seiko...">
+              </div>
+            </div>
+          </div>
+
+          <!-- Save Actions -->
+          <div style="display: flex; gap: 12px; justify-content: flex-end; margin-bottom: 40px;">
+            <button class="btn btn-secondary" onclick="resetConfigToDefault()">
+              <i class="fa fa-rotate-left"></i> Khôi Phục Mặc Định
+            </button>
+            <button class="btn btn-primary" onclick="saveThemeAndBrandConfig()" style="padding: 12px 28px; font-size: 14px;">
+              <i class="fa fa-floppy-disk"></i> Lưu Cấu Hình Giao Diện
+            </button>
+          </div>
+        </section>
+
+        <!-- ====================================================
+             TAB 3: QUẢN LÝ SẢN PHẨM
+             ==================================================== -->
+        <section class="tab-content" id="tabProducts">
+          
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-boxes-stacked"></i> Danh Sách Sản Phẩm</h3>
+              <div style="display: flex; gap: 10px;">
+                <button class="btn btn-secondary btn-sm" onclick="resetProductsToDefault()" title="Khôi phục danh sách 143 sản phẩm gốc">
+                  <i class="fa fa-rotate-left"></i> Khôi phục 143 mẫu gốc
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="openAddProductModal()">
+                  <i class="fa fa-plus"></i> Thêm Sản Phẩm Mới
+                </button>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <!-- Toolbar -->
+              <div class="table-toolbar">
+                <div class="table-search-group">
+                  <input type="text" id="productSearchInput" class="form-control" placeholder="Tìm theo tên sản phẩm, mã SKU...">
+                </div>
+
+                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                  <!-- Vendor filter -->
+                  <select id="filterVendorSelect" class="form-control" style="width: 160px;">
+                    <option value="all">Tất cả thương hiệu</option>
+                    <option value="OLYM PIANUS">OLYM PIANUS</option>
+                    <option value="CARNIVAL">CARNIVAL</option>
+                    <option value="BENTLEY">BENTLEY</option>
+                    <option value="SEIKO">SEIKO</option>
+                    <option value="CITIZEN">CITIZEN</option>
+                    <option value="ORIENT">ORIENT</option>
+                    <option value="TISSOT">TISSOT</option>
+                    <option value="ALEXANDER FERROS">ALEXANDER FERROS</option>
+                  </select>
+
+                  <!-- Collection filter -->
+                  <select id="filterCollectionSelect" class="form-control" style="width: 170px;">
+                    <option value="all">Tất cả danh mục</option>
+                    <option value="OLYM PIANUS">OLYM PIANUS</option>
+                    <option value="ALEXANDER FERROS">ALEXANDER FERROS</option>
+                    <option value="CARNIVAL">CARNIVAL</option>
+                    <option value="ĐỒNG HỒ NỮ CARNIVAL">ĐỒNG HỒ NỮ CARNIVAL</option>
+                    <option value="ĐỒNG HỒ BENTLEY">ĐỒNG HỒ BENTLEY</option>
+                    <option value="SEIKO">SEIKO</option>
+                    <option value="SUN AND MOON">SUN AND MOON</option>
+                    <option value="TISSOT - THUỴ SỸ">TISSOT - THUỴ SỸ</option>
+                    <option value="ĐỒNG HỒ NỮ">ĐỒNG HỒ NỮ</option>
+                  </select>
+
+                  <!-- Stock filter -->
+                  <select id="filterStockSelect" class="form-control" style="width: 130px;">
+                    <option value="all">Tất cả kho</option>
+                    <option value="in_stock">Còn hàng</option>
+                    <option value="out_of_stock">Tạm hết</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Product Table -->
+              <div class="product-table-wrapper">
+                <table class="admin-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 70px; text-align: center;">Hình Ảnh</th>
+                      <th>Tên & Mã Đồng Hồ</th>
+                      <th>Thương Hiệu</th>
+                      <th>Danh Mục</th>
+                      <th>Giá Bán</th>
+                      <th>Trạng Thái</th>
+                      <th style="width: 120px; text-align: center;">Thao Tác</th>
+                    </tr>
+                  </thead>
+                  <tbody id="productsTableBody">
+                    <!-- Populated by admin.js -->
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Pagination -->
+              <div class="table-pagination">
+                <div style="font-size: 13px; color: var(--admin-text-muted);" id="productCountInfo">
+                  Hiển thị sản phẩm...
+                </div>
+                <div class="pagination-controls" id="paginationControls">
+                  <!-- Pagination buttons -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ====================================================
+             TAB 4: XUẤT FILE & TRIỂN KHAI SERVER
+             ==================================================== -->
+        <section class="tab-content" id="tabDeploy">
+          
+          <div class="admin-card">
+            <div class="card-header">
+              <h3><i class="fa fa-cloud-arrow-up"></i> Tải Về File Cập Nhật & Đưa Lên Server</h3>
+            </div>
+            <div class="card-body">
+              <p style="margin-bottom: 24px; color: var(--admin-text-muted); font-size: 14px; line-height: 1.6;">
+                Mỗi khi bạn thực hiện Thêm/Sửa/Xóa sản phẩm hoặc đổi màu sắc giao diện, hệ thống tự động lưu vào trình duyệt của bạn để bạn xem thử. 
+                Để đưa các thay đổi đó lên cho <strong>tất cả khách hàng trên internet</strong> nhìn thấy, bạn chỉ cần tải 2 file bên dưới và tải lên Server / Hosting:
+              </p>
+
+              <!-- Download Action Cards -->
+              <div class="form-grid" style="margin-bottom: 30px;">
+                <div style="border: 1px solid var(--admin-border); border-radius: var(--admin-radius); padding: 24px; background: #fff; text-align: center;">
+                  <i class="fa fa-file-code" style="font-size: 40px; color: var(--admin-accent); margin-bottom: 12px; display: block;"></i>
+                  <h4 style="font-size: 16px; margin-bottom: 6px;">1. File Cấu Hình Giao Diện</h4>
+                  <p style="font-size: 13px; color: var(--admin-text-muted); margin-bottom: 16px;">
+                    Chứa màu sắc, logo, hotline, địa chỉ và thông tin thương hiệu.
+                  </p>
+                  <button class="btn btn-primary" onclick="downloadConfigFile()" style="width: 100%;">
+                    <i class="fa fa-download"></i> Tải Về config.js
+                  </button>
+                  <div style="font-size: 11px; color: var(--admin-text-muted); margin-top: 8px;">
+                    Vị trí đặt: Thư mục gốc website
+                  </div>
+                </div>
+
+                <div style="border: 1px solid var(--admin-border); border-radius: var(--admin-radius); padding: 24px; background: #fff; text-align: center;">
+                  <i class="fa fa-boxes-stacked" style="font-size: 40px; color: var(--admin-gold); margin-bottom: 12px; display: block;"></i>
+                  <h4 style="font-size: 16px; margin-bottom: 6px;">2. File Danh Mục Sản Phẩm</h4>
+                  <p style="font-size: 13px; color: var(--admin-text-muted); margin-bottom: 16px;">
+                    Chứa toàn bộ danh sách sản phẩm, giá bán, hình ảnh và phân loại.
+                  </p>
+                  <button class="btn btn-primary" onclick="downloadProductsJsFile()" style="width: 100%; background-color: var(--admin-gold);">
+                    <i class="fa fa-download"></i> Tải Về data/products.js
+                  </button>
+                  <div style="font-size: 11px; color: var(--admin-text-muted); margin-top: 8px;">
+                    Vị trí đặt: Thư mục <code class="code-badge">data/</code> của website
+                  </div>
+                </div>
+
+                <div style="border: 1px solid var(--admin-border); border-radius: var(--admin-radius); padding: 24px; background: #fff; text-align: center;">
+                  <i class="fa fa-database" style="font-size: 40px; color: var(--admin-info); margin-bottom: 12px; display: block;"></i>
+                  <h4 style="font-size: 16px; margin-bottom: 6px;">3. File Dữ Liệu Gốc JSON</h4>
+                  <p style="font-size: 13px; color: var(--admin-text-muted); margin-bottom: 16px;">
+                    Dùng để sao lưu dự phòng (backup) hoặc đồng bộ cơ sở dữ liệu nếu cần.
+                  </p>
+                  <button class="btn btn-secondary" onclick="downloadProductsJsonFile()" style="width: 100%;">
+                    <i class="fa fa-download"></i> Tải Về products.json
+                  </button>
+                  <div style="font-size: 11px; color: var(--admin-text-muted); margin-top: 8px;">
+                    Vị trí đặt: Thư mục <code class="code-badge">data/</code>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step by Step Instructions -->
+              <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">
+                <i class="fa fa-list-check" style="color: var(--admin-accent);"></i> Các Phương Án Đưa Lên Server / Hosting Dễ Dàng Nhất:
+              </h4>
+
+              <div class="deploy-step-card">
+                <div class="deploy-step-number"><i class="fa fa-server" style="font-size: 14px;"></i></div>
+                <div class="deploy-step-content">
+                  <h4>Cách 1: Hosting cPanel / DirectAdmin (Phổ biến nhất tại Việt Nam)</h4>
+                  <p>1. Đăng nhập vào cPanel &gt; File Manager (Trình Quản Lý Tệp) &gt; mở thư mục <code class="code-badge">public_html</code>.</p>
+                  <p>2. Upload toàn bộ thư mục website này lên đó.</p>
+                  <p>3. Khi có thay đổi sản phẩm: Chỉ cần upload đè 2 file <code class="code-badge">config.js</code> và <code class="code-badge">data/products.js</code> là xong!</p>
+                </div>
+              </div>
+
+              <div class="deploy-step-card">
+                <div class="deploy-step-number"><i class="fa fa-bolt" style="font-size: 14px;"></i></div>
+                <div class="deploy-step-content">
+                  <h4>Cách 2: Triển Khai Miễn Phí Trên Vercel / Netlify / GitHub Pages</h4>
+                  <p>1. Kéo thả thư mục website vào <strong>Vercel</strong> hoặc <strong>Netlify Drop</strong>.</p>
+                  <p>2. Hệ thống cấp ngay tên miền và chứng chỉ bảo mật HTTPS (SSL) miễn phí vĩnh viễn.</p>
+                  <p>3. Tốc độ tải trang siêu tốc toàn cầu nhờ mạng lưới CDN toàn diện.</p>
+                </div>
+              </div>
+
+              <div class="deploy-step-card">
+                <div class="deploy-step-number"><i class="fa fa-terminal" style="font-size: 14px;"></i></div>
+                <div class="deploy-step-content">
+                  <h4>Cách 3: Chạy Trên VPS Linux (Nginx / Apache)</h4>
+                  <p>1. Copy toàn bộ thư mục website vào thư mục <code class="code-badge">/var/www/html/phongwatch</code>.</p>
+                  <p>2. Trỏ VirtualHost của Nginx hoặc Apache tới thư mục đó.</p>
+                  <p>3. Không cần cài đặt Node.js hay cơ sở dữ liệu MySQL, website hoạt động cực nhẹ và mượt mà.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- ========================================================
+       MODAL THÊM / CHỈNH SỬA SẢN PHẨM
+       ======================================================== -->
+  <div class="admin-modal-overlay" id="productModalOverlay">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <h3 id="productModalTitle">Thêm Sản Phẩm Mới</h3>
+        <button class="modal-close-btn" onclick="closeProductModal()"><i class="fa fa-times"></i></button>
+      </div>
+
+      <div class="admin-modal-body">
+        <div class="form-grid">
+          <!-- ID / SKU -->
+          <div class="form-group">
+            <label>Mã Sản Phẩm (SKU / ID): <span class="required">*</span></label>
+            <input type="text" id="prodId" class="form-control" placeholder="PW1035326">
+          </div>
+
+          <!-- Vendor -->
+          <div class="form-group">
+            <label>Thương Hiệu: <span class="required">*</span></label>
+            <select id="prodVendor" class="form-control">
+              <option value="OLYM PIANUS">OLYM PIANUS</option>
+              <option value="CARNIVAL">CARNIVAL</option>
+              <option value="BENTLEY">BENTLEY</option>
+              <option value="SEIKO">SEIKO</option>
+              <option value="CITIZEN">CITIZEN</option>
+              <option value="ORIENT">ORIENT</option>
+              <option value="TISSOT">TISSOT</option>
+              <option value="ALEXANDER FERROS">ALEXANDER FERROS</option>
+              <option value="ĐỒNG HỒ NỮ">ĐỒNG HỒ NỮ</option>
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label>Tên Sản Phẩm Đầy Đủ: <span class="required">*</span></label>
+            <input type="text" id="prodName" class="form-control" placeholder="Ví dụ: Olym Pianus Fusion OP990-45ADDGS-GL-T ( OP990-45 )">
+          </div>
+
+          <!-- Collection -->
+          <div class="form-group">
+            <label>Bộ Sưu Tập / Danh Mục Hiển Thị: <span class="required">*</span></label>
+            <select id="prodCollection" class="form-control">
+              <option value="OLYM PIANUS">OLYM PIANUS</option>
+              <option value="ALEXANDER FERROS">ALEXANDER FERROS</option>
+              <option value="CARNIVAL">CARNIVAL</option>
+              <option value="ĐỒNG HỒ NỮ CARNIVAL">ĐỒNG HỒ NỮ CARNIVAL</option>
+              <option value="ĐỒNG HỒ BENTLEY">ĐỒNG HỒ BENTLEY</option>
+              <option value="SEIKO">SEIKO</option>
+              <option value="SUN AND MOON">SUN AND MOON</option>
+              <option value="TISSOT - THUỴ SỸ">TISSOT - THUỴ SỸ</option>
+              <option value="ĐỒNG HỒ NỮ">ĐỒNG HỒ NỮ</option>
+            </select>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group">
+            <label>Phân Loại Giới Tính:</label>
+            <select id="prodGender" class="form-control">
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+              <option value="Đôi">Cặp đôi</option>
+            </select>
+          </div>
+
+          <!-- Price Num -->
+          <div class="form-group">
+            <label>Giá Bán Thực Tế (VNĐ): <span class="required">*</span></label>
+            <input type="number" id="prodPriceNum" class="form-control" placeholder="Ví dụ: 6700000">
+            <div class="form-help">Hệ thống sẽ tự định dạng thành 6,700,000₫</div>
+          </div>
+
+          <!-- Original Price Num -->
+          <div class="form-group">
+            <label>Giá Gốc / Niêm Yết (VNĐ):</label>
+            <input type="number" id="prodOrigPriceNum" class="form-control" placeholder="Ví dụ: 8800000">
+            <div class="form-help">Dùng để tự động tính % giảm giá sale</div>
+          </div>
+
+          <!-- Image -->
+          <div class="form-group" style="grid-column: 1 / -1;">
+            <label>Hình Ảnh Sản Phẩm (Link Web hoặc Chọn File): <span class="required">*</span></label>
+            <div style="display: flex; gap: 8px;">
+              <input type="text" id="prodImage" class="form-control" placeholder="https://cdn.hstatic.net/products/...">
+              <label class="btn btn-secondary" style="white-space: nowrap; cursor: pointer;">
+                <i class="fa fa-image"></i> Chọn File Từ Máy
+                <input type="file" accept="image/*" style="display: none;" onchange="handleLocalImageUpload(event, 'prodImage')">
+              </label>
+            </div>
+          </div>
+
+          <!-- Stock & Rating -->
+          <div class="form-group">
+            <label>Tình Trạng Kho Hàng:</label>
+            <select id="prodStock" class="form-control">
+              <option value="true">Còn Hàng</option>
+              <option value="false">Tạm Hết Hàng</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Đánh Giá Sao (1 - 5 sao):</label>
+            <select id="prodRating" class="form-control">
+              <option value="5">5 Sao (Tuyệt vời)</option>
+              <option value="4">4 Sao (Rất tốt)</option>
+              <option value="3">3 Sao (Bình thường)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-modal-footer">
+        <button class="btn btn-secondary" onclick="closeProductModal()">Hủy Bỏ</button>
+        <button class="btn btn-primary" onclick="saveProductForm()">
+          <i class="fa fa-floppy-disk"></i> Lưu Sản Phẩm
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="admin-toast-container" id="adminToastContainer"></div>
+
+  <!-- Core Scripts -->
+  <script src="config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

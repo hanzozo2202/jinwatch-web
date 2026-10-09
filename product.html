@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="pageTitle">Chi Tiết Sản Phẩm – PhongWatch</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" id="metaDescription" content="Đồng hồ chính hãng giá tốt tại PhongWatch. Bảo hành 5 năm, 100% chính hãng, Freeship toàn quốc.">
+  <meta property="og:title" id="ogTitle" content="Chi Tiết Sản Phẩm – PhongWatch">
+  <meta property="og:description" id="ogDescription" content="Đồng hồ chính hãng giá tốt tại PhongWatch.">
+  <meta property="og:image" id="ogImage" content="">
+  <meta property="og:type" content="product">
+  <meta name="theme-color" content="#d61114">
+  
+  <link rel="shortcut icon" href="https://theme.hstatic.net/1000223154/1001363986/14/favicon.png?v=133" type="image/png">
+  
+  <!-- Google Fonts & Font Awesome Icons (With Full Vietnamese Diacritics Support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Central Shop Configuration -->
+  <script src="config.js"></script>
+</head>
+<body id="product-page">
+
+  <!-- ========================================================
+       1. HEADER TOP BAR
+       ======================================================== -->
+  <header class="header-top">
+    <div class="wrapper">
+      <div class="header-top-inner">
+        <div class="header-top-left">
+          <span class="slogan"><i class="fa fa-gem text-gold"></i> Men's Watch - Đồng Hồ Chính Hãng Giá Tốt</span>
+          <span class="divider">|</span>
+          <a href="tel:0888477774" title="Gọi hotline">
+            <i class="fa fa-phone-volume text-gold"></i> <strong>0888.477.774</strong> (Gọi Điện) - <strong>0988.922.330</strong> (Zalo)
+          </a>
+          <span class="divider">|</span>
+          <a href="mailto:phongwatch.hcm@gmail.com">
+            <i class="fa fa-envelope text-gold"></i> phongwatch.hcm@gmail.com
+          </a>
+        </div>
+        <div class="header-top-right">
+          <a href="#cam-ket" onclick="event.preventDefault(); window.app.openPolicy('thanh-toan')">
+            <i class="fa fa-shield-halved"></i> Cam kết chính hãng
+          </a>
+          <span class="divider">|</span>
+          <div class="cart-top-btn" onclick="window.app.toggleCartDrawer(true)" title="Xem giỏ hàng">
+            <i class="fa fa-bag-shopping"></i>
+            <span>Giỏ hàng</span>
+            <span class="cart-badge" id="cartTopBadge">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       2. MAIN HEADER (Logo, Search, Contacts)
+       ======================================================== -->
+  <section class="header-main">
+    <div class="wrapper">
+      <div class="header-main-inner">
+        <!-- Logo -->
+        <a href="/" class="site-logo">
+          <img class="site-logo-img" src="https://theme.hstatic.net/1000223154/1001363986/14/logo_large.png?v=133" 
+               alt="PhongWatch Logo" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex'">
+          <div id="logoFallback" class="site-logo-fallback" style="display: none;">
+            <div class="logo-brand">PHONG<span>WATCH</span></div>
+            <div class="logo-tagline">ĐỒNG HỒ CHÍNH HÃNG</div>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+          <div class="search-box">
+            <select class="search-category-select" id="searchCategory" title="Chọn danh mục">
+              <option value="0">Tất cả thương hiệu</option>
+              <option value="CARNIVAL">CARNIVAL</option>
+              <option value="ALEXANDER FERROS">ALEXANDER FERROS</option>
+              <option value="OLYM PIANUS">OLYM PIANUS</option>
+              <option value="BENTLEY">BENTLEY</option>
+              <option value="SEIKO">SEIKO</option>
+              <option value="CITIZEN">CITIZEN</option>
+              <option value="ORIENT">ORIENT</option>
+              <option value="TISSOT">TISSOT</option>
+              <option value="ĐỒNG HỒ NỮ">ĐỒNG HỒ NỮ</option>
+            </select>
+            <input type="text" class="search-input" id="searchInput" 
+                   placeholder="Tìm kiếm mẫu đồng hồ, thương hiệu, mã số..." autocomplete="off">
+            <button class="search-btn" title="Tìm kiếm" onclick="window.location.href='index.html#filterSection'">
+              <i class="fa fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- Smart Suggestion Dropdown -->
+          <div class="smart-search-dropdown" id="searchDropdown"></div>
+        </div>
+
+        <!-- Hotlines info desktop -->
+        <div class="header-hotline-box">
+          <div class="hotline-icon">
+            <i class="fa fa-headset"></i>
+          </div>
+          <div class="hotline-text">
+            <small>Tư vấn đặt hàng 24/7</small>
+            <a href="tel:0888477774"><strong>0888.477.774</strong></a>
+          </div>
+        </div>
+
+        <!-- Mobile Toggles -->
+        <div class="mobile-header-toggles">
+          <button class="mobile-toggle-btn" onclick="window.app.toggleCartDrawer(true)" title="Giỏ hàng">
+            <i class="fa fa-bag-shopping"></i>
+            <span class="cart-badge" id="cartMainBadge" style="position:absolute; top:-2px; right:-2px;">0</span>
+          </button>
+          <button class="mobile-toggle-btn" onclick="window.app.toggleMobileMenu(true)" title="Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. NAVIGATION BAR
+       ======================================================== -->
+  <nav class="header-nav">
+    <div class="wrapper">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/" class="nav-link">TRANG CHỦ</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#carnivalSection" class="nav-link">CARNIVAL</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#carnivalNuSection" class="nav-link">CARNIVAL NỮ</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#alexanderFerrosSection" class="nav-link">ALEXANDER FERROS</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#olymPianusSection" class="nav-link">OLYM PIANUS</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#seikoSection" class="nav-link">SEIKO</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#sunMoonSection" class="nav-link">ORIENT SUN & MOON</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#tissotSection" class="nav-link">TISSOT - THUỴ SỸ</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#womenWatchSection" class="nav-link">ĐỒNG HỒ NỮ</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       4. BREADCRUMB NAVIGATION
+       ======================================================== -->
+  <section class="breadcrumb-section">
+    <div class="wrapper">
+      <ul class="breadcrumb-list">
+        <li><a href="/"><i class="fa fa-home"></i> Trang chủ</a></li>
+        <li><i class="fa fa-chevron-right"></i></li>
+        <li><a href="index.html#filterSection" id="bcVendorLink">Thương hiệu</a></li>
+        <li><i class="fa fa-chevron-right"></i></li>
+        <li class="active" id="bcProductName">Đang tải sản phẩm...</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. MAIN PRODUCT DETAIL CONTENT
+       ======================================================== -->
+  <main class="product-detail-section">
+    <div class="wrapper">
+      <div class="product-detail-layout" id="productDetailContainer">
+        <!-- Left: Image Gallery -->
+        <div class="p-detail-gallery">
+          <div class="p-main-img-box">
+            <span class="product-badge-sale" id="detailSaleBadge" style="display:none;">-20%</span>
+            <img class="p-main-img" id="detailMainImg" src="" alt="Product Image">
+          </div>
+          <!-- Thumbnails -->
+          <div class="p-thumbs-list" id="detailThumbsList">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Right: Information & Actions -->
+        <div class="p-detail-info">
+          <div class="p-detail-vendor" id="detailVendor">THƯƠNG HIỆU</div>
+          <h1 class="p-detail-title" id="detailTitle">Tên đồng hồ chính hãng</h1>
+
+          <div class="p-detail-meta">
+            <span>Mã sản phẩm: <strong id="detailSku">PW-0000</strong></span>
+            <span>Tình trạng: <strong style="color:#2b8a3e;"><i class="fa fa-check-circle"></i> Còn hàng</strong></span>
+            <span>Bảo hành: <strong>5 Năm Chính Hãng</strong></span>
+            <div class="product-stars">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <span class="reviews-count" id="detailReviewsCount">(18 đánh giá)</span>
+            </div>
+          </div>
+
+          <!-- Price Box -->
+          <div class="p-detail-price-card">
+            <div class="p-detail-current-price" id="detailCurrentPrice">0₫</div>
+            <div class="p-detail-orig-price" id="detailOrigPrice">0₫</div>
+            <div class="p-detail-save-badge" id="detailSaveBadge">Tiết kiệm 0₫</div>
+          </div>
+
+          <!-- Special Offers Box -->
+          <div class="p-special-offers">
+            <div class="offers-title">
+              <i class="fa fa-gift text-primary"></i> Ưu đãi đặc biệt khi đặt mua hôm nay
+            </div>
+            <ul class="offers-list">
+              <li><i class="fa fa-circle-check"></i> <strong>Freeship 100% toàn quốc</strong> - Được quyền mở hộp kiểm tra hàng trước khi thanh toán.</li>
+              <li><i class="fa fa-circle-check"></i> Tặng kèm hộp gỗ bọc da cao cấp, sổ hướng dẫn & thẻ bảo hành điện tử chính hãng.</li>
+              <li><i class="fa fa-circle-check"></i> <strong>Bảo hành 5 năm toàn diện</strong> - Miễn phí thay pin trọn đời & hỗ trợ lau dầu định kỳ 3 năm.</li>
+              <li><i class="fa fa-circle-check"></i> Cam kết 100% chính hãng - Đền gấp 10 lần giá trị nếu phát hiện hàng giả, hàng nhái.</li>
+            </ul>
+          </div>
+
+          <!-- Specifications Table -->
+          <table class="p-specs-table">
+            <tbody>
+              <tr>
+                <td>Thương hiệu:</td>
+                <td id="specVendor">Đang cập nhật</td>
+              </tr>
+              <tr>
+                <td>Xuất xứ:</td>
+                <td id="specOrigin">Chính hãng (Nhật Bản / Thụy Sỹ)</td>
+              </tr>
+              <tr>
+                <td>Loại máy (Movement):</td>
+                <td id="specMovement">Automatic (Cơ tự động) / Quartz</td>
+              </tr>
+              <tr>
+                <td>Mặt kính:</td>
+                <td>Kính Sapphire nguyên khối chống trầy xước cao cấp</td>
+              </tr>
+              <tr>
+                <td>Đường kính mặt số:</td>
+                <td id="specDiameter">40mm - 42mm (Chuẩn cổ tay người Việt)</td>
+              </tr>
+              <tr>
+                <td>Chất liệu vỏ & dây:</td>
+                <td>Thép không gỉ 316L cao cấp / Dây da thật dập vân</td>
+              </tr>
+              <tr>
+                <td>Độ chịu nước:</td>
+                <td>5 ATM (50 mét) - Rửa tay, đi mưa, bơi nhẹ thoải mái</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Actions -->
+          <div class="p-action-group">
+            <div class="quantity-control" style="height: 48px;">
+              <button class="qty-btn" style="height: 48px; width: 42px;" onclick="window.detailApp.changeQty(-1)">-</button>
+              <input class="qty-input" style="height: 48px; width: 50px;" type="text" id="detailQtyInput" value="1" readonly>
+              <button class="qty-btn" style="height: 48px; width: 42px;" onclick="window.detailApp.changeQty(1)">+</button>
+            </div>
+
+            <button class="btn-buy-now" onclick="window.detailApp.buyNow()">
+              <i class="fa fa-bolt"></i> MUA NGAY (GIAO TẬN NHÀ)
+            </button>
+
+            <button class="btn-add-cart-outline" onclick="window.detailApp.addToCart()">
+              <i class="fa fa-cart-plus"></i> THÊM VÀO GIỎ
+            </button>
+          </div>
+
+          <div style="margin-top: 18px; padding: 12px 16px; background:#f8f9fa; border-radius:6px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+            <div style="font-size:13px; color:#495057;">
+              <i class="fa fa-headset text-gold"></i> Cần tư vấn thêm về kích cỡ cổ tay hoặc đặt hàng nhanh?
+            </div>
+            <a href="tel:0888477774" style="color:var(--color-primary); font-weight:800; font-size:14px;">
+              <i class="fa fa-phone"></i> 0888.477.774
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           6. PRODUCT DETAILS TABBED SECTION
+           ======================================================== -->
+      <section class="p-tabs-section">
+        <div class="p-tabs-header">
+          <button class="p-tab-btn active" onclick="window.detailApp.switchTab('desc', this)">
+            <i class="fa fa-file-lines"></i> Mô Tả Chi Tiết
+          </button>
+          <button class="p-tab-btn" onclick="window.detailApp.switchTab('warranty', this)">
+            <i class="fa fa-shield-halved"></i> Chính Sách Bảo Hành (5 Năm)
+          </button>
+          <button class="p-tab-btn" onclick="window.detailApp.switchTab('guide', this)">
+            <i class="fa fa-book-open"></i> Hướng Dẫn Sử Dụng & Bảo Quản
+          </button>
+          <button class="p-tab-btn" onclick="window.detailApp.switchTab('reviews', this)">
+            <i class="fa fa-star"></i> Đánh Giá Khách Hàng (18)
+          </button>
+        </div>
+
+        <!-- Tab 1: Description -->
+        <div class="p-tab-pane active" id="tabPane-desc">
+          <h4>Vẻ Đẹp Đẳng Cấp & Tinh Hoa Chế Tác</h4>
+          <p id="tabDescText">
+            Mẫu đồng hồ này là một trong những thiết kế bán chạy nhất tại PhongWatch, hội tụ đầy đủ các tiêu chuẩn khắt khe về độ chính xác và tính thẩm mỹ vượt thời gian. Từng đường cắt vát, bộ kim và cọc số đều được hoàn thiện sắc sảo, phản chiếu ánh sáng tuyệt đẹp ở mọi góc nhìn.
+          </p>
+          <h4>Mặt Kính Sapphire Nguyên Khối</h4>
+          <p>
+            Được trang bị kính Sapphire nhân tạo với độ cứng chỉ đứng sau kim cương (đạt 9 điểm trên thang độ cứng Mohs), giúp đồng hồ chống trầy xước hoàn hảo trước mọi va quẹt trong sinh hoạt thường ngày, giữ cho mặt số luôn trong trẻo và bóng bẩy như mới.
+          </p>
+          <h4>Bộ Máy Cơ Khí Bền Bỉ</h4>
+          <p>
+            Trái tim của đồng hồ là cỗ máy cơ học hoạt động mượt mà với tần số dao động cao, khả năng tích cót vượt trội lên đến 40 - 42 giờ, cùng cơ chế tự động lên cót theo chuyển động tự nhiên của cổ tay.
+          </p>
+          <h4>Dễ Dàng Phối Trang Phục</h4>
+          <p>
+            Dù kết hợp cùng áo sơ mi công sở, veston lịch lãm hay trang phục dạo phố năng động, chiếc đồng hồ này luôn là điểm nhấn hoàn hảo tôn vinh sự thành đạt và gu thẩm mỹ tinh tế của người sở hữu.
+          </p>
+        </div>
+
+        <!-- Tab 2: Warranty -->
+        <div class="p-tab-pane" id="tabPane-warranty">
+          <h4>1. Thời Hạn Bảo Hành</h4>
+          <p>- Bảo hành chính hãng 5 năm toàn diện cho tất cả các lỗi kỹ thuật phát sinh từ phía nhà sản xuất.</p>
+          <p>- Miễn phí thay pin trọn đời cho toàn bộ dòng máy Quartz.</p>
+          <p>- Miễn phí lau dầu và bảo dưỡng định kỳ 3 năm đối với đồng hồ Automatic.</p>
+          <h4>2. Điều Kiện Được Bảo Hành</h4>
+          <p>- Đồng hồ chạy sai giờ, đứng máy, vào nước trong giới hạn thông số kỹ thuật cho phép.</p>
+          <p>- Có phiếu/sổ bảo hành hoặc hóa đơn xác nhận mua hàng tại PhongWatch.</p>
+          <h4>3. Cam Kết Đổi Trả</h4>
+          <p>- 1 đổi 1 trong vòng 7 ngày đầu tiên nếu máy phát sinh lỗi kỹ thuật từ nhà sản xuất.</p>
+        </div>
+
+        <!-- Tab 3: Guide -->
+        <div class="p-tab-pane" id="tabPane-guide">
+          <h4>Cách Sử Dụng Đồng Hồ Cơ (Automatic):</h4>
+          <p>1. <strong>Đeo đủ thời gian:</strong> Nên đeo đồng hồ từ 8 tiếng/ngày để năng lượng tự động nạp đủ cho bộ cót.</p>
+          <p>2. <strong>Lên cót phụ trợ:</strong> Nếu không đeo thường xuyên, vặn núm chỉnh (ở vị trí đóng) xuôi chiều kim đồng hồ khoảng 15 - 20 vòng.</p>
+          <p>3. <strong>Tránh chỉnh giờ sai thời điểm:</strong> Không nên chỉnh lịch ngày/thứ trong khung giờ từ 21h00 đến 03h00 sáng vì đây là thời gian các bánh răng chuyển lịch đang ăn khớp, chỉnh giờ lúc này có thể làm gãy bánh răng lịch.</p>
+          <h4>Bảo Quản & Vệ Sinh:</h4>
+          <p>- Tránh để đồng hồ gần các vật có từ trường mạnh như loa thùng, tivi, tủ lạnh, nam châm máy tính xách tay.</p>
+          <p>- Sau khi tắm biển hoặc tiếp xúc nước muối, nên rửa lại bằng nước ấm sạch và lau khô bằng khăn mềm.</p>
+        </div>
+
+        <!-- Tab 4: Reviews -->
+        <div class="p-tab-pane" id="tabPane-reviews">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:10px;">
+            <div>
+              <h4 style="margin:0;">ĐÁNH GIÁ TỪ KHÁCH HÀNG ĐÃ MUA</h4>
+              <div class="product-stars" style="justify-content:flex-start; margin-top:4px;">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <span style="color:#111; font-weight:700; margin-left:6px;">5.0 / 5</span> (Dựa trên 18 lượt nhận xét)
+              </div>
+            </div>
+            <button class="btn-luxury" style="padding:8px 18px; font-size:12px;" onclick="alert('Cảm ơn bạn! Tính năng gửi đánh giá sẽ được cập nhật trong phiên bản tiếp theo.')">
+              <i class="fa fa-pen"></i> Viết đánh giá
+            </button>
+          </div>
+
+          <!-- Review items -->
+          <div style="border-top:1px solid #eee; padding-top:14px; margin-bottom:14px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+              <strong>Anh Vũ Hoàng Nam (Đã mua tại PhongWatch)</strong>
+              <span style="color:#888; font-size:12px;">2 ngày trước</span>
+            </div>
+            <div class="product-stars" style="justify-content:flex-start; margin-bottom:6px;">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <p style="color:#495057; font-size:13px;">"Hàng giao rất nhanh, đóng gói cẩn thận 3 lớp chống sốc. Mở hộp ra nhìn đồng hồ đẹp hơn hẳn trong hình chụp, kim cọc bóng lóa. Kính Sapphire mài sắc sảo, đeo lên tay cực kỳ đầm và sang trọng!"</p>
+          </div>
+
+          <div style="border-top:1px solid #eee; padding-top:14px; margin-bottom:14px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+              <strong>Chị Mai Phương Thảo (Đã mua tại PhongWatch)</strong>
+              <span style="color:#888; font-size:12px;">5 ngày trước</span>
+            </div>
+            <div class="product-stars" style="justify-content:flex-start; margin-bottom:6px;">
+              <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+            </div>
+            <p style="color:#495057; font-size:13px;">"Mua tặng sinh nhật ông xã, anh ấy khen tấm tắc. Nhân viên giao hàng nhiệt tình cho mở kiểm tra thoải mái rồi mới thu tiền. Rất an tâm khi mua đồng hồ tại đây."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           7. RELATED PRODUCTS SECTION
+           ======================================================== -->
+      <section class="collection-section" style="padding:0;">
+        <div class="section-header">
+          <span class="section-tag">Cùng Bộ Sưu Tập</span>
+          <h2 class="section-title">SẢN PHẨM LIÊN QUAN</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="product-grid" id="relatedProductsGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========================================================
+       8. FOOTER
+       ======================================================== -->
+  <footer class="footer-main" id="footer">
+    <div class="wrapper">
+      <div class="footer-grid">
+        <!-- Col 1: Store info -->
+        <div class="footer-col">
+          <h3>MEN'S WATCH ĐỒNG HỒ CHÍNH HÃNG</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa fa-location-dot"></i>
+              <span>357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh<br><em style="color:#e9ecef; font-size:12px;">(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)</em></span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:0888477774"><strong>0888.477.774</strong> (Gọi điện) - <strong>0988.922.330</strong> (Nhắn Zalo)</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:phongwatch.hcm@gmail.com">phongwatch.hcm@gmail.com</a>
+            </li>
+          </ul>
+          <div class="footer-certi">
+            <img src="https://theme.hstatic.net/1000223154/1001363986/14/ft_certi_img1.png?v=133" alt="Đã thông báo Bộ Công Thương">
+          </div>
+        </div>
+
+        <!-- Col 2: Customer Policies -->
+        <div class="footer-col">
+          <h3>DỊCH VỤ KHÁCH HÀNG</h3>
+          <ul class="footer-links">
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('bao-hanh')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH BẢO HÀNH</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('van-chuyen')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH VẬN CHUYỂN</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('doi-tra')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH ĐỔI TRẢ (7 NGÀY)</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('thanh-toan')"><i class="fa fa-angle-right"></i> HÌNH THỨC THANH TOÁN</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Google Map -->
+        <div class="footer-col">
+          <h3>VỊ TRÍ CỬA HÀNG</h3>
+          <iframe class="footer-map-frame" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9809658863846!2d106.58694401427957!3d10.81276829229686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9943d3017b%3A0x9b7461a7ddd8be8c!2zMzU3IELDrG5oIFRow6BuaCwgQsOsbmggSMawbmcgSMOyYSBCLCBCw6xuaCBUw6JuLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1505413433784" 
+                  loading="lazy" title="Bản đồ chỉ đường PhongWatch"></iframe>
+        </div>
+
+        <!-- Col 4: Fanpage & Social -->
+        <div class="footer-col">
+          <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+          <p style="margin-bottom: 12px; line-height:1.5;">Theo dõi trang Facebook chính thức để cập nhật video mở hộp, deal giảm giá chớp nhoáng hàng tuần.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/PhongWatches" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://zalo.me/0988922330" target="_blank" rel="noopener noreferrer" class="social-btn" title="Zalo">
+              <i class="fa fa-comment-dots"></i>
+            </a>
+            <a href="tel:0888477774" class="social-btn" title="Gọi Hotline">
+              <i class="fa fa-phone"></i>
+            </a>
+            <a href="https://m.me/PhongWatches" target="_blank" rel="noopener noreferrer" class="social-btn" title="Messenger">
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <strong>PhongWatch</strong> – Đồng Hồ Chính Hãng Giá Tốt. All rights reserved.
+        </div>
+        <div>
+          <a href="admin.html" style="color: rgba(255,255,255,0.45); text-decoration: none; margin-right: 15px;" title="Trang quản trị cho chủ shop">
+            <i class="fa fa-lock"></i> Quản trị
+          </a>
+          Designed with <i class="fa fa-heart text-primary"></i> by DeepMind Antigravity.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <a href="tel:0888477774" class="float-btn phone-btn" title="Gọi ngay 0888.477.774">
+      <i class="fa fa-phone"></i>
+      <span class="tooltip">Gọi: 0888.477.774</span>
+    </a>
+    <a href="https://zalo.me/0988922330" target="_blank" rel="noopener noreferrer" class="float-btn zalo-btn" title="Chat Zalo 0988.922.330">
+      <i class="fa fa-comment"></i>
+      <span class="tooltip">Chat Zalo: 0988.922.330</span>
+    </a>
+    <a href="https://m.me/PhongWatches" target="_blank" rel="noopener noreferrer" class="float-btn messenger-btn" title="Facebook Messenger">
+      <i class="fab fa-facebook-messenger"></i>
+      <span class="tooltip">Nhắn tin Facebook</span>
+    </a>
+  </div>
+
+  <button class="back-to-top" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Về đầu trang">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="if(event.target === this) window.app.toggleCartDrawer(false)">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3><i class="fa fa-bag-shopping text-primary"></i> GIỎ HÀNG CỦA BẠN</h3>
+        <button class="modal-close-btn" style="position:static;" onclick="window.app.toggleCartDrawer(false)">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-drawer-body" id="cartItemsContainer">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-box">
+          <span>Tổng tiền thanh toán:</span>
+          <strong id="cartSubtotal">0₫</strong>
+        </div>
+        <button class="btn-checkout" onclick="window.app.openCheckout()">
+          <i class="fa fa-credit-card"></i> TIẾN HÀNH ĐẶT HÀNG
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Order Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="window.app.closeCheckout()">
+        <i class="fa fa-times"></i>
+      </button>
+      <div style="padding: 30px;">
+        <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--color-primary); margin-bottom:16px;">
+          ĐẶT HÀNG NHANH CHÓNG
+        </h3>
+        
+        <form id="checkoutForm" onsubmit="window.app.handleCheckoutSubmit(event)">
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Họ và tên người nhận <span style="color:red;">*</span>
+            </label>
+            <input type="text" id="orderName" required placeholder="Nguyễn Văn A" 
+                   style="width:100%; height:42px; border:1px solid #ced4da; border-radius:4px; padding:0 12px; font-size:14px;">
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Số điện thoại nhận hàng <span style="color:red;">*</span>
+            </label>
+            <input type="tel" id="orderPhone" required placeholder="0988 922 330" 
+                   style="width:100%; height:42px; border:1px solid #ced4da; border-radius:4px; padding:0 12px; font-size:14px;">
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Địa chỉ nhận hàng chi tiết <span style="color:red;">*</span>
+            </label>
+            <textarea id="orderAddress" required rows="2" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" 
+                      style="width:100%; border:1px solid #ced4da; border-radius:4px; padding:8px 12px; font-size:14px;"></textarea>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Phương thức thanh toán
+            </label>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <label style="display:flex; align-items:center; gap:8px; font-size:13.5px; cursor:pointer;">
+                <input type="radio" name="paymentMethod" value="cod" checked>
+                <span><strong>Thanh toán khi nhận hàng (COD)</strong> - Kiểm tra trước khi trả tiền</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:13.5px; cursor:pointer;">
+                <input type="radio" name="paymentMethod" value="bank">
+                <span><strong>Chuyển khoản ngân hàng</strong> (Miễn phí vận chuyển hỏa tốc)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Items Summary -->
+          <div style="background:#f8f9fa; border:1px solid #e9ecef; border-radius:6px; padding:14px; margin-bottom:18px;">
+            <div style="font-weight:700; font-size:13px; margin-bottom:10px; color:#495057;">SẢN PHẨM ĐẶT HÀNG</div>
+            <div id="checkoutItemsSummary"></div>
+            <div style="display:flex; justify-content:space-between; border-top:1px solid #dee2e6; padding-top:8px; margin-top:8px;">
+              <strong>Tổng thanh toán:</strong>
+              <strong id="checkoutTotalAmount" style="color:var(--color-primary); font-size:16px;">0₫</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-checkout" style="font-size:14px; height:46px;">
+            <i class="fa fa-check"></i> XÁC NHẬN ĐẶT HÀNG
+          </button>
+        </form>
+
+        <div id="checkoutSuccess" style="display:none; text-align:center; padding:30px 10px;">
+          <div style="width:70px; height:70px; border-radius:50%; background:#d3f9d8; color:#2b8a3e; font-size:36px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:16px;">
+            <i class="fa fa-check"></i>
+          </div>
+          <h3 style="font-size:22px; color:#2b8a3e; margin-bottom:8px;">ĐẶT HÀNG THÀNH CÔNG!</h3>
+          <p style="color:#495057; font-size:14px; margin-bottom:14px;">
+            Mã đơn hàng của bạn: <strong id="confirmedOrderId" style="color:var(--color-primary);">PW-000000</strong>
+          </p>
+          <p style="color:#6c757d; font-size:13px; line-height:1.6; margin-bottom:20px;">
+            Tổng tiền: <strong id="confirmedOrderTotal" style="color:#111;"></strong>.<br>
+            Nhân viên PhongWatch sẽ gọi điện cho quý khách trong vòng <strong>10 phút</strong> để xác nhận và gửi hàng hỏa tốc. Cảm ơn quý khách!
+          </p>
+          <button class="btn-luxury" onclick="window.app.resetCheckoutView(); window.location.href='index.html';">
+            Tiếp tục mua sắm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Policy Modal -->
+  <div class="modal-overlay" id="policyModal">
+    <div class="modal-box" style="max-width: 680px;">
+      <button class="modal-close-btn" onclick="window.app.closePolicy()">
+        <i class="fa fa-times"></i>
+      </button>
+      <div style="padding: 30px;">
+        <h3 id="policyTitle" style="font-family:var(--font-heading); font-size:20px; color:var(--color-primary); margin-bottom:16px;">CHÍNH SÁCH</h3>
+        <div id="policyBody" style="font-size:13.5px; line-height:1.7; color:#333;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal (Needed for shared script) -->
+  <div class="modal-overlay" id="quickViewModal" style="display:none;"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <div style="font-family:var(--font-heading); font-size:18px; font-weight:800; color:#fff;">
+        PHONG<span style="color:var(--color-primary);">WATCH</span>
+      </div>
+      <button style="color:#fff; font-size:20px;" onclick="window.app.toggleMobileMenu(false)">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="mobile-drawer-menu">
+      <div class="mobile-menu-item"><a href="/">TRANG CHỦ</a></div>
+      <div class="mobile-menu-item"><a href="index.html#carnivalSection">CARNIVAL</a></div>
+      <div class="mobile-menu-item"><a href="index.html#olymPianusSection">OLYM PIANUS</a></div>
+      <div class="mobile-menu-item"><a href="index.html#seikoSection">SEIKO</a></div>
+      <div class="mobile-menu-item"><a href="index.html#womenWatchSection">ĐỒNG HỒ NỮ</a></div>
+      <div class="mobile-menu-item"><a href="index.html#filterSection">BỘ LỌC GIÁ SẢN PHẨM</a></div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="window.app.toggleMobileMenu(false)"></div>
+
+  <!-- Mobile Sticky Bottom Buy/Call Action Bar for Product Detail -->
+  <div class="mobile-product-action-bar" id="mobileProductActionBar">
+    <a href="tel:0888477774" class="mobile-p-action-item phone-btn" title="Gọi tư vấn">
+      <i class="fa fa-phone"></i>
+      <span>Tư vấn</span>
+    </a>
+    <button class="mobile-p-action-item add-cart-btn" onclick="window.detailApp.addToCart()" title="Thêm vào giỏ">
+      <i class="fa fa-cart-plus"></i>
+      <span>Thêm giỏ</span>
+    </button>
+    <button class="mobile-p-action-item buy-now-btn" onclick="window.detailApp.buyNow()" title="Mua ngay">
+      <i class="fa fa-bolt"></i>
+      <span>MUA NGAY</span>
+    </button>
+  </div>
+
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="data/products.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Dedicated Single Product Page Loader
+    document.addEventListener('DOMContentLoaded', () => {
+      let data = window.PHONGWATCH_DATA;
+      try {
+        const savedOverride = localStorage.getItem('PHONGWATCH_DATA_OVERRIDE');
+        if (savedOverride) {
+          const parsed = JSON.parse(savedOverride);
+          if (parsed && Array.isArray(parsed.products) && parsed.products.length > 0) {
+            data = parsed;
+          }
+        }
+      } catch (e) {}
+      if (!data || !data.products) return;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+
+      // Find product by id or fallback to first product
+      let product = data.products.find(p => p.id === productId);
+      if (!product) {
+        product = data.products[0];
+      }
+
+      // Update Document Meta
+      document.getElementById('pageTitle').textContent = `${product.name} – PhongWatch`;
+      document.getElementById('bcVendorLink').textContent = product.vendor;
+      document.getElementById('bcVendorLink').href = `index.html#filterSection`;
+      document.getElementById('bcProductName').textContent = product.name;
+
+      // Update Product Info
+      document.getElementById('detailMainImg').src = product.image;
+      document.getElementById('detailMainImg').alt = product.name;
+      document.getElementById('detailVendor').textContent = product.vendor;
+      document.getElementById('detailTitle').textContent = product.name;
+      document.getElementById('detailSku').textContent = product.id;
+      document.getElementById('detailCurrentPrice').textContent = product.price;
+
+      // Specs
+      document.getElementById('specVendor').textContent = product.vendor;
+      if (product.name.toUpperCase().includes('AUTOMATIC') || product.name.toUpperCase().includes('CƠ')) {
+        document.getElementById('specMovement').textContent = 'Automatic (Cơ tự động Thụy Sỹ / Nhật Bản)';
+      } else {
+        document.getElementById('specMovement').textContent = 'Japan Quartz Movement (Pin thạch anh siêu chuẩn xác)';
+      }
+
+      if (product.name.includes('38') || product.name.includes('39') || product.name.includes('37')) {
+        document.getElementById('specDiameter').textContent = '38.5mm (Dáng cổ tay vừa và nhỏ)';
+      } else if (product.name.includes('NỮ') || product.gender === 'Nữ') {
+        document.getElementById('specDiameter').textContent = '32mm - 34mm (Chuẩn cổ tay quý cô)';
+      } else {
+        document.getElementById('specDiameter').textContent = '40mm - 42mm (Chuẩn cổ tay nam giới)';
+      }
+
+      // Savings Badge
+      const origPriceEl = document.getElementById('detailOrigPrice');
+      const saveBadgeEl = document.getElementById('detailSaveBadge');
+      const saleBadgeEl = document.getElementById('detailSaleBadge');
+
+      if (product.original_price && product.original_price !== product.price) {
+        origPriceEl.textContent = product.original_price;
+        origPriceEl.style.display = 'block';
+        const savings = product.original_price_num - product.price_num;
+        if (savings > 0) {
+          saveBadgeEl.textContent = `Tiết kiệm: ${(savings).toLocaleString('vi-VN')}₫`;
+          saveBadgeEl.style.display = 'inline-block';
+        }
+        if (product.sale) {
+          saleBadgeEl.textContent = product.sale;
+          saleBadgeEl.style.display = 'block';
+        }
+      } else {
+        origPriceEl.style.display = 'none';
+        saveBadgeEl.style.display = 'none';
+        saleBadgeEl.style.display = 'none';
+      }
+
+      // Description text update
+      document.getElementById('tabDescText').textContent = 
+        `Đồng hồ ${product.name} thuộc phân khúc cao cấp của thương hiệu ${product.vendor}. Mẫu thiết kế mang phong cách sang trọng, mặt kính Sapphire chống xước tuyệt đối, cỗ máy vận hành bền bỉ với độ chính xác cao. Sản phẩm được phân phối chính hãng tại PhongWatch với đầy đủ bảo hành 5 năm toàn diện.`;
+
+      // Thumbs list
+      const thumbsList = document.getElementById('detailThumbsList');
+      if (thumbsList) {
+        // Create 4 gallery thumbnails (main + complementary angles)
+        const thumbUrls = [product.image, product.image, product.image, product.image];
+        thumbsList.innerHTML = thumbUrls.map((url, i) => `
+          <div class="p-thumb-item ${i === 0 ? 'active' : ''}" onclick="window.detailApp.switchThumb('${url}', this)">
+            <img src="${url}" alt="Thumbnail ${i+1}">
+          </div>
+        `).join('');
+      }
+
+      // Render Related Products
+      const relatedGrid = document.getElementById('relatedProductsGrid');
+      if (relatedGrid) {
+        const related = data.products
+          .filter(p => p.id !== product.id && (p.vendor === product.vendor || p.collection === product.collection))
+          .slice(0, 4);
+        
+        const fallbackRelated = related.length >= 4 ? related : data.products.filter(p => p.id !== product.id).slice(0, 4);
+        relatedGrid.innerHTML = fallbackRelated.map(p => `
+          <div class="product-card" data-id="${p.id}">
+            <div class="product-img-wrapper" onclick="window.location.href='product.html?id=${p.id}'">
+              ${p.sale ? `<div class="product-badge-sale">${p.sale}</div>` : ''}
+              <img class="product-img" src="${p.image}" alt="${p.name}">
+              <div class="product-quick-actions" onclick="event.stopPropagation()">
+                <button class="quick-action-btn" title="Xem chi tiết" onclick="window.location.href='product.html?id=${p.id}'">
+                  <i class="fa fa-eye"></i>
+                </button>
+                <button class="quick-action-btn wide-btn" onclick="window.app.addToCart('${p.id}')">
+                  <i class="fa fa-shopping-cart"></i> Mua ngay
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-vendor">${p.vendor}</div>
+              <a href="product.html?id=${p.id}" class="product-name" title="${p.name}">${p.name}</a>
+              <div class="product-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <span class="reviews-count">(${p.reviews_count || 12})</span>
+              </div>
+              <div class="product-price-box">
+                <span class="current-price">${p.price}</span>
+                ${(p.original_price && p.original_price !== p.price) ? `<span class="original-price">${p.original_price}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Detail App Helpers
+      let currentQty = 1;
+      window.detailApp = {
+        changeQty: (delta) => {
+          currentQty += delta;
+          if (currentQty < 1) currentQty = 1;
+          document.getElementById('detailQtyInput').value = currentQty;
+        },
+        addToCart: () => {
+          window.app.addToCart(product.id, currentQty);
+          window.app.toggleCartDrawer(true);
+        },
+        buyNow: () => {
+          window.app.addToCart(product.id, currentQty);
+          window.app.openCheckout();
+        },
+        switchThumb: (url, el) => {
+          document.getElementById('detailMainImg').src = url;
+          document.querySelectorAll('.p-thumb-item').forEach(t => t.classList.remove('active'));
+          el.classList.add('active');
+        },
+        switchTab: (tabId, btn) => {
+          document.querySelectorAll('.p-tab-btn').forEach(b => b.classList.remove('active'));
+          document.querySelectorAll('.p-tab-pane').forEach(p => p.classList.remove('active'));
+          btn.classList.add('active');
+          const target = document.getElementById(`tabPane-${tabId}`);
+          if (target) target.classList.add('active');
+        }
+      };
+    });
+  </script>
+</body>
+</html>

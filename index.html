@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đồng Hồ Chính Hãng – PhongWatch</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="PhongWatch - Hệ thống phân phối đồng hồ chính hãng giá tốt tại Việt Nam. Carnival, Olym Pianus, Bentley, Seiko, Citizen, Orient, Tissot. Bảo hành 5 năm, đền gấp 10 nếu phát hiện hàng giả.">
+  <meta name="keywords" content="phongwatch, đồng hồ chính hãng, đồng hồ nam, đồng hồ nữ, carnival, olym pianus, bentley, seiko, tissot">
+  <meta property="og:title" content="Đồng Hồ Chính Hãng – PhongWatch">
+  <meta property="og:description" content="PhongWatch - Đồng Hồ Chính Hãng Giá Tốt Nhất. Cam kết 100% chính hãng, Freeship toàn quốc, kiểm tra trước khi thanh toán.">
+  <meta property="og:image" content="https://theme.hstatic.net/1000223154/1001363986/14/share_fb_home.png?v=133">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#d61114">
+  
+  <link rel="shortcut icon" href="https://theme.hstatic.net/1000223154/1001363986/14/favicon.png?v=133" type="image/png">
+  
+  <!-- Google Fonts & Font Awesome Icons (With Full Vietnamese Diacritics Support) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Central Shop Configuration -->
+  <script src="config.js"></script>
+</head>
+<body id="dong-ho-chinh-hang">
+
+  <!-- ========================================================
+       1. HEADER TOP BAR
+       ======================================================== -->
+  <header class="header-top">
+    <div class="wrapper">
+      <div class="header-top-inner">
+        <div class="header-top-left">
+          <span class="slogan"><i class="fa fa-gem text-gold"></i> Men's Watch - Đồng Hồ Chính Hãng Giá Tốt</span>
+          <span class="divider">|</span>
+          <a href="tel:0888477774" title="Gọi hotline">
+            <i class="fa fa-phone-volume text-gold"></i> <strong>0888.477.774</strong> (Gọi Điện) - <strong>0988.922.330</strong> (Zalo)
+          </a>
+          <span class="divider">|</span>
+          <a href="mailto:phongwatch.hcm@gmail.com">
+            <i class="fa fa-envelope text-gold"></i> phongwatch.hcm@gmail.com
+          </a>
+        </div>
+        <div class="header-top-right">
+          <a href="#login" onclick="event.preventDefault(); window.app.openPolicy('thanh-toan')">
+            <i class="fa fa-shield-halved"></i> Cam kết chính hãng
+          </a>
+          <span class="divider">|</span>
+          <div class="cart-top-btn" onclick="window.app.toggleCartDrawer(true)" title="Xem giỏ hàng">
+            <i class="fa fa-bag-shopping"></i>
+            <span>Giỏ hàng</span>
+            <span class="cart-badge" id="cartTopBadge">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================
+       2. MAIN HEADER (Logo, Search, Contacts)
+       ======================================================== -->
+  <section class="header-main">
+    <div class="wrapper">
+      <div class="header-main-inner">
+        <!-- Logo -->
+        <a href="/" class="site-logo">
+          <img class="site-logo-img" src="https://theme.hstatic.net/1000223154/1001363986/14/logo_large.png?v=133" 
+               alt="PhongWatch Logo" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex'">
+          <div id="logoFallback" class="site-logo-fallback" style="display: none;">
+            <div class="logo-brand">PHONG<span>WATCH</span></div>
+            <div class="logo-tagline">ĐỒNG HỒ CHÍNH HÃNG</div>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+          <div class="search-box">
+            <select class="search-category-select" id="searchCategory" title="Chọn danh mục">
+              <option value="0">Tất cả thương hiệu</option>
+              <option value="CARNIVAL">CARNIVAL</option>
+              <option value="ALEXANDER FERROS">ALEXANDER FERROS</option>
+              <option value="OLYM PIANUS">OLYM PIANUS</option>
+              <option value="BENTLEY">BENTLEY</option>
+              <option value="SEIKO">SEIKO</option>
+              <option value="CITIZEN">CITIZEN</option>
+              <option value="ORIENT">ORIENT</option>
+              <option value="TISSOT">TISSOT</option>
+              <option value="ĐỒNG HỒ NỮ">ĐỒNG HỒ NỮ</option>
+            </select>
+            <input type="text" class="search-input" id="searchInput" 
+                   placeholder="Tìm kiếm mẫu đồng hồ, thương hiệu, mã số..." autocomplete="off">
+            <button class="search-btn" title="Tìm kiếm" onclick="window.app.filterCatalog(document.getElementById('searchInput').value)">
+              <i class="fa fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- Smart Suggestion Dropdown -->
+          <div class="smart-search-dropdown" id="searchDropdown"></div>
+        </div>
+
+        <!-- Hotlines info desktop -->
+        <div class="header-hotline-box">
+          <div class="hotline-icon">
+            <i class="fa fa-headset"></i>
+          </div>
+          <div class="hotline-text">
+            <small>Tư vấn đặt hàng 24/7</small>
+            <a href="tel:0888477774"><strong>0888.477.774</strong></a>
+          </div>
+        </div>
+
+        <!-- Mobile Toggles -->
+        <div class="mobile-header-toggles">
+          <button class="mobile-toggle-btn" onclick="window.app.toggleCartDrawer(true)" title="Giỏ hàng">
+            <i class="fa fa-bag-shopping"></i>
+            <span class="cart-badge" id="cartMainBadge" style="position:absolute; top:-2px; right:-2px;">0</span>
+          </button>
+          <button class="mobile-toggle-btn" onclick="window.app.toggleMobileMenu(true)" title="Menu">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       3. NAVIGATION BAR (Desktop Menu & Mega Menu)
+       ======================================================== -->
+  <nav class="header-nav">
+    <div class="wrapper">
+      <ul class="nav-menu">
+        <li class="nav-item active">
+          <a href="/" class="nav-link">TRANG CHỦ</a>
+        </li>
+        <li class="nav-item">
+          <a href="#carnivalSection" onclick="window.scrollToSection('carnivalSection')" class="nav-link">CARNIVAL</a>
+        </li>
+        <li class="nav-item">
+          <a href="#carnivalNuSection" onclick="window.scrollToSection('carnivalNuSection')" class="nav-link">CARNIVAL NỮ</a>
+        </li>
+        <li class="nav-item">
+          <a href="#alexanderFerrosSection" onclick="window.scrollToSection('alexanderFerrosSection')" class="nav-link">ALEXANDER FERROS</a>
+        </li>
+        <li class="nav-item">
+          <a href="#alexanderFerrosSection" onclick="window.scrollToSection('alexanderFerrosSection')" class="nav-link">ALEXANDER FERROS - NỮ</a>
+        </li>
+        <!-- Japan Dropdown -->
+        <li class="nav-item">
+          <a href="#japan" class="nav-link">
+            ĐỒNG HỒ MÁY NHẬT <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="nav-dropdown">
+            <li class="nav-dropdown-item"><a href="#seikoSection" onclick="window.scrollToSection('seikoSection')">SEIKO</a></li>
+            <li class="nav-dropdown-item"><a href="#olymPianusSection" onclick="window.scrollToSection('olymPianusSection')">OLYM PIANUS</a></li>
+            <li class="nav-dropdown-item"><a href="#sunMoonSection" onclick="window.scrollToSection('sunMoonSection')">ORIENT</a></li>
+            <li class="nav-dropdown-item"><a href="#japan" onclick="window.app.filterCatalog('CITIZEN')">CITIZEN</a></li>
+            <li class="nav-dropdown-item"><a href="#bentleySection" onclick="window.scrollToSection('bentleySection')">BENTLEY</a></li>
+            <li class="nav-dropdown-item"><a href="#japan" onclick="window.app.filterCatalog('BULOVA')">BULOVA</a></li>
+            <li class="nav-dropdown-item"><a href="#japan" onclick="window.app.filterCatalog('CASIO')">CASIO</a></li>
+            <li class="nav-dropdown-item"><a href="#japan" onclick="window.app.filterCatalog('OLYMPIA STAR')">OLYMPIA STAR</a></li>
+            <li class="nav-dropdown-item"><a href="#japan" onclick="window.app.filterCatalog('SRWATCH')">SRWATCH</a></li>
+          </ul>
+        </li>
+        <!-- Swiss Dropdown -->
+        <li class="nav-item">
+          <a href="#swiss" class="nav-link">
+            ĐỒNG HỒ THỤY SỸ <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="nav-dropdown">
+            <li class="nav-dropdown-item"><a href="#tissotSection" onclick="window.scrollToSection('tissotSection')">TISSOT</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('LONGINES')">LONGINES</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('FREDERIQUE CONSTANT')">FREDERIQUE CONSTANT</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MOVADO')">MOVADO</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MAURICE LACROIX')">MAURICE LACROIX</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MIDO')">MIDO</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('OMEGA')">OMEGA X SWATCH</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('OGIVAL')">OGIVAL</a></li>
+          </ul>
+        </li>
+        <!-- UK/US/IT Dropdown -->
+        <li class="nav-item">
+          <a href="#brands" class="nav-link">
+            THƯƠNG HIỆU ANH / MỸ / Ý <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="nav-dropdown">
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('THOMAS EARNSHAW')">THOMAS EARNSHAW</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('INVICTA')">INVICTA</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('FOSSIL')">FOSSIL</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('EMPORIO ARMANI')">EMPORIO ARMANI</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('JUST CAVALLI')">JUST CAVALLI</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('GUESS')">GUESS</a></li>
+          </ul>
+        </li>
+        <!-- Women Mega Menu -->
+        <li class="nav-item has-mega">
+          <a href="#womenWatchSection" onclick="window.scrollToSection('womenWatchSection')" class="nav-link">
+            ĐỒNG HỒ NỮ <i class="fa fa-angle-down"></i>
+          </a>
+          <div class="nav-megamenu">
+            <div class="wrapper">
+              <div class="megamenu-grid">
+                <div class="megamenu-column">
+                  <h4>PHÂN KHÚC GIÁ</h4>
+                  <ul>
+                    <li><a href="#women" onclick="window.app.filterCatalog('1 - 3 triệu')"><i class="fa fa-tag text-gold"></i> Đồng hồ Nữ (1 - 3 Triệu)</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('3 - 5 triệu')"><i class="fa fa-tag text-gold"></i> Đồng hồ Nữ (3 - 5 Triệu)</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('5 - 10 triệu')"><i class="fa fa-tag text-gold"></i> Đồng hồ Nữ (5 - 10 Triệu)</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('trên 10 triệu')"><i class="fa fa-tag text-gold"></i> Đồng hồ Nữ (Trên 10 Triệu)</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-column">
+                  <h4>THƯƠNG HIỆU HÀNG ĐẦU</h4>
+                  <ul>
+                    <li><a href="#carnivalNuSection" onclick="window.scrollToSection('carnivalNuSection')">CARNIVAL NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('CITIZEN NỮ')">CITIZEN NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('ORIENT NỮ')">ORIENT NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('TISSOT NỮ')">TISSOT NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('BULOVA NỮ')">BULOVA NỮ</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-column">
+                  <h4>SANG TRỌNG & ĐÍNH ĐÁ</h4>
+                  <ul>
+                    <li><a href="#olymPianusSection" onclick="window.scrollToSection('olymPianusSection')">Olym Pianus Fusion OP990-45 (Nữ)</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('SEIKO NỮ')">SEIKO NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('OGIVAL NỮ')">OGIVAL NỮ (Thụy Sỹ)</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('MOVADO NỮ')">MOVADO NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('LONGINES NỮ')">LONGINES NỮ</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-column">
+                  <h4>ĐỒNG HỒ CẶP ĐÔI</h4>
+                  <ul>
+                    <li><a href="#couples" onclick="window.app.filterCatalog('Đồng hồ cặp')"><i class="fa fa-heart text-primary"></i> ĐỒNG HỒ CẶP ĐÔI CAO CẤP</a></li>
+                    <li><a href="#couples" onclick="window.app.filterCatalog('Carnival cặp')"><i class="fa fa-heart text-primary"></i> CARNIVAL CẶP</a></li>
+                    <li><a href="#couples" onclick="window.app.filterCatalog('Alexander Ferros cặp')"><i class="fa fa-heart text-primary"></i> ALEXANDER FERROS CẶP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       4. HERO BANNER SLIDER
+       ======================================================== -->
+  <section class="hero-slider-section" id="heroSlider">
+    <div class="hero-slider-container">
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <img class="hero-slide-bg" src="https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_master.png?v=133" 
+             alt="Omega Speedmaster Moonphase">
+        <div class="hero-slide-overlay">
+          <div class="wrapper" style="width: 100%;">
+            <div class="hero-slide-content">
+              <span class="hero-tag">Bộ Sưu Tập Tuyệt Tác</span>
+              <h1 class="hero-title">OMEGA SPEEDMASTER <span>MOONPHASE</span></h1>
+              <p class="hero-desc">Đỉnh cao chế tác đồng hồ thế giới với lịch tuần trăng tinh tế, bộ máy tự động cơ khí Thụy Sỹ chính xác tuyệt đối.</p>
+              <div class="hero-btn-group">
+                <a href="#olymPianusSection" class="btn-luxury" onclick="window.scrollToSection('olymPianusSection')">
+                  Khám phá ngay <i class="fa fa-arrow-right"></i>
+                </a>
+                <a href="#whyUsSection" class="btn-outline-white" onclick="window.scrollToSection('whyUsSection')">
+                  Tìm hiểu thêm
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <img class="hero-slide-bg" src="https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_master.png?v=133" 
+             alt="Carnival Skeleton Mechanical">
+        <div class="hero-slide-overlay">
+          <div class="wrapper" style="width: 100%;">
+            <div class="hero-slide-content">
+              <span class="hero-tag" style="background:var(--color-gold-dark);">Thiết Kế Hoàng Gia</span>
+              <h2 class="hero-title">CARNIVAL <span>AUTOMATIC SKELETON</span></h2>
+              <p class="hero-desc">Đồng hồ lộ cơ toàn phần phong cách quý ông thượng lưu, kính Sapphire chống trầy xước và viền thép không gỉ 316L cao cấp.</p>
+              <div class="hero-btn-group">
+                <a href="#carnivalSection" class="btn-luxury" onclick="window.scrollToSection('carnivalSection')">
+                  Xem bộ sưu tập <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="slider-arrow prev" onclick="window.app.prevSlide()" title="Trước">
+        <i class="fa fa-chevron-left"></i>
+      </button>
+      <button class="slider-arrow next" onclick="window.app.nextSlide()" title="Sau">
+        <i class="fa fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots Indicators -->
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       5. VALUES / GUARANTEES BAR
+       ======================================================== -->
+  <section class="features-bar">
+    <div class="wrapper">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa fa-award"></i>
+          </div>
+          <div class="feature-info">
+            <h4>100% CHÍNH HÃNG</h4>
+            <p>Đền gấp 10 lần nếu phát hiện hàng giả nhái</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa fa-shield-virus"></i>
+          </div>
+          <div class="feature-info">
+            <h4>BẢO HÀNH 5 NĂM</h4>
+            <p>Thay pin trọn đời & bảo dưỡng lau dầu máy cơ</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa fa-truck-fast"></i>
+          </div>
+          <div class="feature-info">
+            <h4>FREESHIP TOÀN QUỐC</h4>
+            <p>Kiểm tra hàng hài lòng mới thanh toán tiền</p>
+          </div>
+        </div>
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa fa-rotate-left"></i>
+          </div>
+          <div class="feature-info">
+            <h4>ĐỔI MỚI 7 NGÀY</h4>
+            <p>Lỗi nhà sản xuất 1 đổi 1 nhanh chóng tận nhà</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6. FEATURED BRANDS STRIP
+       ======================================================== -->
+  <section class="featured-brands-strip">
+    <div class="wrapper">
+      <div class="brands-container">
+        <a href="#carnivalSection" class="brand-badge active" onclick="window.scrollToSection('carnivalSection')">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/hbrand_img1.png?v=133" alt="CARNIVAL" onerror="this.outerHTML='<span>CARNIVAL</span>'">
+        </a>
+        <a href="#alexanderFerrosSection" class="brand-badge" onclick="window.scrollToSection('alexanderFerrosSection')">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/hbrand_img2.png?v=133" alt="ALEXANDER FERROS" onerror="this.outerHTML='<span>ALEXANDER FERROS</span>'">
+        </a>
+        <a href="#olymPianusSection" class="brand-badge" onclick="window.scrollToSection('olymPianusSection')">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/hbrand_img3.png?v=133" alt="OLYM PIANUS" onerror="this.outerHTML='<span>OLYM PIANUS</span>'">
+        </a>
+        <a href="#bentleySection" class="brand-badge" onclick="window.scrollToSection('bentleySection')">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/hbrand_img4.png?v=133" alt="BENTLEY" onerror="this.outerHTML='<span>BENTLEY</span>'">
+        </a>
+        <a href="#seikoSection" class="brand-badge" onclick="window.scrollToSection('seikoSection')">
+          <span>SEIKO</span>
+        </a>
+        <a href="#sunMoonSection" class="brand-badge" onclick="window.scrollToSection('sunMoonSection')">
+          <span>ORIENT</span>
+        </a>
+        <a href="#tissotSection" class="brand-badge" onclick="window.scrollToSection('tissotSection')">
+          <span>TISSOT</span>
+        </a>
+        <a href="#womenWatchSection" class="brand-badge" onclick="window.scrollToSection('womenWatchSection')">
+          <span>CITIZEN</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       6.5 CATALOG & PRICE FILTER TOOLBAR
+       ======================================================== -->
+  <section class="catalog-filter-section" id="filterSection">
+    <div class="wrapper">
+      <div class="filter-card">
+        <div class="filter-header">
+          <div class="filter-header-title">
+            <i class="fa fa-sliders"></i> Bộ lọc đồng hồ & khoảng giá
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <label style="font-size:12.5px; font-weight:700; color:#495057;">Sắp xếp theo:</label>
+            <select id="sortSelect" onchange="window.app.applySort(this.value)" 
+                    style="padding:6px 12px; border:1px solid #ced4da; border-radius:4px; font-size:12.5px; background:#fff; cursor:pointer;">
+              <option value="default">Mặc định</option>
+              <option value="price-asc">Giá: Thấp đến Cao</option>
+              <option value="price-desc">Giá: Cao đến Thấp</option>
+              <option value="discount-desc">Khuyến mãi nhiều nhất</option>
+              <option value="name-asc">Tên: A - Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 1: Mức giá -->
+        <div class="filter-row">
+          <span class="filter-label"><i class="fa fa-tag text-gold"></i> Mức giá:</span>
+          <div class="filter-pills" id="priceFilterPills">
+            <button class="filter-pill active" onclick="window.app.setPriceFilter(0, Infinity, this)">Tất cả mức giá</button>
+            <button class="filter-pill" onclick="window.app.setPriceFilter(0, 3000000, this)">Dưới 3 triệu</button>
+            <button class="filter-pill" onclick="window.app.setPriceFilter(3000000, 5000000, this)">Từ 3 - 5 triệu</button>
+            <button class="filter-pill" onclick="window.app.setPriceFilter(5000000, 10000000, this)">Từ 5 - 10 triệu</button>
+            <button class="filter-pill" onclick="window.app.setPriceFilter(10000000, 20000000, this)">Từ 10 - 20 triệu</button>
+            <button class="filter-pill" onclick="window.app.setPriceFilter(20000000, Infinity, this)">Trên 20 triệu</button>
+          </div>
+        </div>
+
+        <!-- Row 2: Thương hiệu -->
+        <div class="filter-row">
+          <span class="filter-label"><i class="fa fa-crown text-gold"></i> Thương hiệu:</span>
+          <div class="filter-pills" id="brandFilterPills">
+            <button class="filter-pill active" onclick="window.app.setBrandFilter('all', this)">Tất cả thương hiệu</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('OLYM PIANUS', this)">Olym Pianus</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('ALEXANDER FERROS', this)">Alexander Ferros</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('CARNIVAL', this)">Carnival</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('BENTLEY', this)">Bentley</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('SEIKO', this)">Seiko</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('ORIENT', this)">Orient</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('TISSOT', this)">Tissot</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('CITIZEN', this)">Citizen</button>
+          </div>
+        </div>
+
+        <!-- Row 3: Đối tượng / Giới tính -->
+        <div class="filter-row">
+          <span class="filter-label"><i class="fa fa-users text-gold"></i> Dành cho:</span>
+          <div class="filter-pills" id="genderFilterPills">
+            <button class="filter-pill active" onclick="window.app.setGenderFilter('all', this)">Tất cả đối tượng</button>
+            <button class="filter-pill" onclick="window.app.setGenderFilter('Nam', this)">Đồng hồ Nam</button>
+            <button class="filter-pill" onclick="window.app.setGenderFilter('Nữ', this)">Đồng hồ Nữ</button>
+          </div>
+        </div>
+
+        <!-- Status & Reset Bar -->
+        <div class="filter-status-bar" id="filterStatusBar" style="display: none;">
+          <div>
+            <i class="fa fa-check-circle" style="color:#2b8a3e;"></i> 
+            <span id="filterStatusText">Đang lọc kết quả...</span>
+          </div>
+          <button class="btn-reset-filter" onclick="window.app.resetFilters()">
+            <i class="fa fa-rotate-left"></i> Xóa tất cả bộ lọc
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEDICATED FILTERED PRODUCTS SECTION -->
+  <section class="collection-section" id="filteredProductsSection" style="display: none; background: #ffffff;">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag" id="filteredSectionTag">KẾT QUẢ TÌM KIẾM THEO BỘ LỌC</span>
+        <h2 class="section-title" id="filteredSectionTitle">DANH SÁCH SẢN PHẨM PHÙ HỢP</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="product-grid" id="filteredProductsGrid">
+        <!-- Rendered dynamically by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       7. COLLECTION 1: OLYM PIANUS (CAROUSEL)
+       ======================================================== -->
+  <section class="collection-section" id="olymPianusSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Swiss & Japanese Precision</span>
+        <h2 class="section-title"><a href="#olym-pianus">OLYM PIANUS</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-nav-btn prev" onclick="window.appSlideCarousel('olymPianusTrack', 'prev')">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="olymPianusTrack">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <button class="carousel-nav-btn next" onclick="window.appSlideCarousel('olymPianusTrack', 'next')">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="view-more-container">
+        <button class="btn-view-more" onclick="window.app.filterCatalog('OLYM PIANUS')">
+          Xem tất cả mẫu Olym Pianus <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       8. COLLECTION 2: ALEXANDER FERROS (GRID)
+       ======================================================== -->
+  <section class="collection-section alt-bg" id="alexanderFerrosSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Thụy Sỹ Sang Trọng - Giá Tốt Nhất</span>
+        <h2 class="section-title"><a href="#alexander-ferros">ALEXANDER FERROS</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="product-grid" id="alexanderFerrosGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="view-more-container">
+        <button class="btn-view-more" onclick="window.app.filterCatalog('ALEXANDER FERROS')">
+          Xem tất cả mẫu Alexander Ferros <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       9. COLLECTION 3: CARNIVAL (CAROUSEL)
+       ======================================================== -->
+  <section class="collection-section" id="carnivalSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Thiết Kế Cơ Khí Skeleton Đỉnh Cao</span>
+        <h2 class="section-title"><a href="#carnival">CARNIVAL</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-nav-btn prev" onclick="window.appSlideCarousel('carnivalTrack', 'prev')">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carnivalTrack">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <button class="carousel-nav-btn next" onclick="window.appSlideCarousel('carnivalTrack', 'next')">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="view-more-container">
+        <button class="btn-view-more" onclick="window.app.filterCatalog('CARNIVAL')">
+          Xem tất cả mẫu Carnival Nam <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       10. COLLECTION 4: ĐỒNG HỒ NỮ CARNIVAL (CAROUSEL)
+       ======================================================== -->
+  <section class="collection-section alt-bg" id="carnivalNuSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Tỏa Sáng Nét Đẹp Quý Cô Thanh Lịch</span>
+        <h2 class="section-title"><a href="#carnival-nu">ĐỒNG HỒ NỮ CARNIVAL</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-nav-btn prev" onclick="window.appSlideCarousel('carnivalNuTrack', 'prev')">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="carnivalNuTrack">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <button class="carousel-nav-btn next" onclick="window.appSlideCarousel('carnivalNuTrack', 'next')">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="view-more-container">
+        <button class="btn-view-more" onclick="window.app.filterCatalog('CARNIVAL NỮ')">
+          Xem tất cả mẫu Carnival Nữ <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       11. COLLECTION 5: ĐỒNG HỒ BENTLEY (CAROUSEL)
+       ======================================================== -->
+  <section class="collection-section" id="bentleySection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Thương Hiệu Đức - Kính Sapphire Siêu Bền</span>
+        <h2 class="section-title"><a href="#bentley">ĐỒNG HỒ BENTLEY</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="carousel-wrapper">
+        <button class="carousel-nav-btn prev" onclick="window.appSlideCarousel('bentleyTrack', 'prev')">
+          <i class="fa fa-chevron-left"></i>
+        </button>
+        <div class="carousel-viewport">
+          <div class="carousel-track" id="bentleyTrack">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <button class="carousel-nav-btn next" onclick="window.appSlideCarousel('bentleyTrack', 'next')">
+          <i class="fa fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="view-more-container">
+        <button class="btn-view-more" onclick="window.app.filterCatalog('BENTLEY')">
+          Xem tất cả mẫu Bentley <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       12. COLLECTION 6: SEIKO (GRID)
+       ======================================================== -->
+  <section class="collection-section alt-bg" id="seikoSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Huyền Thoại Chế Tác Nhật Bản</span>
+        <h2 class="section-title"><a href="#seiko">SEIKO AUTOMATIC & QUARTZ</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="product-grid" id="seikoGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="view-more-container">
+        <button class="btn-view-more" onclick="window.app.filterCatalog('SEIKO')">
+          Xem tất cả mẫu Seiko <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       13. COLLECTION 7: SUN AND MOON (SHOWCASE WITH SIDE BANNER)
+       ======================================================== -->
+  <section class="collection-section" id="sunMoonSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Orient Sun & Moon Tuyệt Tác Nhật Bản</span>
+        <h2 class="section-title"><a href="#sun-moon">SUN AND MOON</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="showcase-banner-layout">
+        <!-- Side Banner -->
+        <div class="showcase-side-banner">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/banner_colletion_five_grande.jpg?v=133" 
+               alt="Orient Sun and Moon Banner" onerror="this.src='https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_medium.png?v=133'">
+        </div>
+        <!-- Product Grid -->
+        <div class="showcase-grid" id="sunMoonGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       14. COLLECTION 8: TISSOT - THUỴ SỸ (SHOWCASE WITH BANNER)
+       ======================================================== -->
+  <section class="collection-section alt-bg" id="tissotSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Đồng Hồ Thụy Sỹ 1853 Sang Trọng</span>
+        <h2 class="section-title"><a href="#tissot">TISSOT - THUỴ SỸ</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="showcase-banner-layout">
+        <!-- Side Banner -->
+        <div class="showcase-side-banner">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/banner_colletion_six_grande.jpg?v=133" 
+               alt="Tissot Banner" onerror="this.src='https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_medium.png?v=133'">
+        </div>
+        <!-- Product Grid -->
+        <div class="showcase-grid" id="tissotGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       15. COLLECTION 9: ĐỒNG HỒ NỮ (SHOWCASE WITH BANNER)
+       ======================================================== -->
+  <section class="collection-section" id="womenWatchSection">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">BST Đồng Hồ Nữ Quyến Rũ & Tinh Tế</span>
+        <h2 class="section-title"><a href="#dong-ho-nu">ĐỒNG HỒ NỮ CAO CẤP</a></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="showcase-banner-layout">
+        <!-- Side Banner -->
+        <div class="showcase-side-banner">
+          <img src="https://theme.hstatic.net/1000223154/1001363986/14/banner_colletion_four_grande.jpg?v=133" 
+               alt="Đồng hồ Nữ Banner" onerror="this.src='https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_medium.png?v=133'">
+        </div>
+        <!-- Product Grid -->
+        <div class="showcase-grid" id="womenWatchGrid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       16. STORY / PHILOSOPHY SECTION
+       ======================================================== -->
+  <section class="story-quote-section" id="whyUsSection">
+    <div class="story-quote-overlay"></div>
+    <div class="wrapper">
+      <div class="story-quote-content">
+        <h2 class="story-quote-title">
+          Đàn ông hiện đại<br>đừng quên đeo đồng hồ
+        </h2>
+        <div class="story-quote-text">
+          <p>Phụ nữ có vô vàn lựa chọn về phụ kiện để trang trí cho cổ tay của mình, nhưng một chiếc đồng hồ là thứ phụ kiện duy nhất mà một người đàn ông có thể đeo mỗi ngày.</p>
+          <p>Khi một quý ông quên không đeo đồng hồ, họ sẽ cảm thấy không toàn vẹn, như thể có một khiếm khuyết gì đó.</p>
+          <p>Chiếc đồng hồ chính là vật dụng mà bạn đã chọn: một nét đặc trưng cho những giá trị của bạn với tư cách là một người đàn ông lịch lãm và thành đạt.</p>
+        </div>
+        <a href="https://www.facebook.com/PhongWatches/" target="_blank" rel="noopener noreferrer" class="btn-luxury">
+          <i class="fab fa-facebook-f"></i> Fanpage Đồng Hồ Chính Hãng PhongWatch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       17. TESTIMONIALS SECTION
+       ======================================================== -->
+  <section class="testimonials-section">
+    <div class="wrapper">
+      <div class="section-header">
+        <span class="section-tag">Khách Hàng Nói Gì Về PhongWatch</span>
+        <h2 class="section-title">ĐÁNH GIÁ THỰC TẾ</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Đồng hồ Carnival Skeleton nhận được rất đẹp, đường nét sắc sảo, hộp sổ thẻ đầy đủ. Bưu tá cho mở hộp kiểm tra kỹ càng trước khi trả tiền. Rất hài lòng với dịch vụ tại PhongWatch!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TN</div>
+            <div>
+              <div class="author-name">Anh Trần Nhật Minh</div>
+              <div class="author-role">Quận 1, TP. Hồ Chí Minh</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Mua chiếc Olym Pianus tặng sinh nhật sếp. Máy Automatic chạy cực êm và chuẩn xác. Chủ shop tư vấn qua Zalo nhiệt tình, giao hỏa tốc chỉ 2 tiếng là tới nơi. 5 sao cho shop!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">HQ</div>
+            <div>
+              <div class="author-name">Chị Hoàng Quỳnh Anh</div>
+              <div class="author-role">Ba Đình, Hà Nội</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Đã mua 2 chiếc Seiko 5 tại PhongWatch. Cam kết hàng chuẩn 100%, bảo hành 5 năm lau dầu miễn phí giúp mình rất yên tâm khi sử dụng. Giá cả cạnh tranh nhất thị trường."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ĐV</div>
+            <div>
+              <div class="author-name">Anh Đặng Văn Hùng</div>
+              <div class="author-role">Hải Châu, Đà Nẵng</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       18. FOOTER
+       ======================================================== -->
+  <footer class="footer-main" id="footer">
+    <div class="wrapper">
+      <div class="footer-grid">
+        <!-- Col 1: Store info -->
+        <div class="footer-col">
+          <h3>MEN'S WATCH ĐỒNG HỒ CHÍNH HÃNG</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa fa-location-dot"></i>
+              <span>357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh<br><em style="color:#e9ecef; font-size:12px;">(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)</em></span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <a href="tel:0888477774"><strong>0888.477.774</strong> (Gọi điện) - <strong>0988.922.330</strong> (Nhắn Zalo)</a>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <a href="mailto:phongwatch.hcm@gmail.com">phongwatch.hcm@gmail.com</a>
+            </li>
+          </ul>
+          <div class="footer-certi">
+            <img src="https://theme.hstatic.net/1000223154/1001363986/14/ft_certi_img1.png?v=133" alt="Đã thông báo Bộ Công Thương">
+          </div>
+        </div>
+
+        <!-- Col 2: Customer Policies -->
+        <div class="footer-col">
+          <h3>DỊCH VỤ KHÁCH HÀNG</h3>
+          <ul class="footer-links">
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('bao-hanh')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH BẢO HÀNH</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('van-chuyen')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH VẬN CHUYỂN</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('doi-tra')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH ĐỔI TRẢ (7 NGÀY)</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('thanh-toan')"><i class="fa fa-angle-right"></i> HÌNH THỨC THANH TOÁN</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('bao-hanh')"><i class="fa fa-angle-right"></i> HƯỚNG DẪN SỬ DỤNG ĐỒNG HỒ</a></li>
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('van-chuyen')"><i class="fa fa-angle-right"></i> CHÍNH SÁCH ĐỒNG KIỂM</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Google Map -->
+        <div class="footer-col">
+          <h3>VỊ TRÍ CỬA HÀNG</h3>
+          <iframe class="footer-map-frame" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9809658863846!2d106.58694401427957!3d10.81276829229686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9943d3017b%3A0x9b7461a7ddd8be8c!2zMzU3IELDrG5oIFRow6BuaCwgQsOsbmggSMawbmcgSMOyYSBCLCBCw6xuaCBUw6JuLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1505413433784" 
+                  loading="lazy" title="Bản đồ chỉ đường PhongWatch"></iframe>
+        </div>
+
+        <!-- Col 4: Fanpage & Social -->
+        <div class="footer-col">
+          <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
+          <p style="margin-bottom: 12px; line-height:1.5;">Theo dõi trang Facebook chính thức để cập nhật video mở hộp, deal giảm giá chớp nhoáng hàng tuần.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/PhongWatches" target="_blank" rel="noopener noreferrer" class="social-btn" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://zalo.me/0988922330" target="_blank" rel="noopener noreferrer" class="social-btn" title="Zalo">
+              <i class="fa fa-comment-dots"></i>
+            </a>
+            <a href="tel:0888477774" class="social-btn" title="Gọi Hotline">
+              <i class="fa fa-phone"></i>
+            </a>
+            <a href="https://m.me/PhongWatches" target="_blank" rel="noopener noreferrer" class="social-btn" title="Messenger">
+              <i class="fab fa-facebook-messenger"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          Copyright © 2026 <strong>PhongWatch</strong> – Đồng Hồ Chính Hãng Giá Tốt. All rights reserved.
+        </div>
+        <div>
+          <a href="admin.html" style="color: rgba(255,255,255,0.45); text-decoration: none; margin-right: 15px;" title="Trang quản trị cho chủ shop">
+            <i class="fa fa-lock"></i> Quản trị
+          </a>
+          Designed with <i class="fa fa-heart text-primary"></i> by DeepMind Antigravity.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       19. FLOATING ACTION BUTTONS
+       ======================================================== -->
+  <div class="floating-actions">
+    <!-- Call -->
+    <a href="tel:0888477774" class="float-btn phone-btn" title="Gọi ngay 0888.477.774">
+      <i class="fa fa-phone"></i>
+      <span class="tooltip">Gọi: 0888.477.774</span>
+    </a>
+    <!-- Zalo -->
+    <a href="https://zalo.me/0988922330" target="_blank" rel="noopener noreferrer" class="float-btn zalo-btn" title="Chat Zalo 0988.922.330">
+      <i class="fa fa-comment"></i>
+      <span class="tooltip">Chat Zalo: 0988.922.330</span>
+    </a>
+    <!-- Messenger -->
+    <a href="https://m.me/PhongWatches" target="_blank" rel="noopener noreferrer" class="float-btn messenger-btn" title="Facebook Messenger">
+      <i class="fab fa-facebook-messenger"></i>
+      <span class="tooltip">Nhắn tin Facebook</span>
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Về đầu trang">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- ========================================================
+       20. MODAL: QUICK VIEW
+       ======================================================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="window.app.closeQuickView()" title="Đóng">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="quickview-grid">
+        <div class="qv-img-box">
+          <img id="qvImg" src="" alt="Watch Image">
+        </div>
+        <div class="qv-info">
+          <div class="qv-vendor" id="qvVendor">THƯƠNG HIỆU</div>
+          <h3 class="qv-title" id="qvTitle">Tên sản phẩm</h3>
+          <div class="qv-sku-box">
+            Mã sản phẩm: <strong id="qvSku" style="color:#111;">PW-0001</strong> | Tình trạng: <span style="color:#2b8a3e; font-weight:700;"><i class="fa fa-check-circle"></i> Còn hàng</span>
+          </div>
+          <div class="qv-price-box">
+            <span class="qv-current-price" id="qvCurrentPrice">0₫</span>
+            <span class="qv-orig-price" id="qvOrigPrice">0₫</span>
+            <span class="qv-save-text" id="qvSaveText"></span>
+          </div>
+
+          <ul class="qv-specs-list">
+            <li><i class="fa fa-check"></i> Kính: Sapphire chống trầy xước tuyệt đối</li>
+            <li><i class="fa fa-check"></i> Bộ máy: Cơ tự động (Automatic) / Quartz bền bỉ</li>
+            <li><i class="fa fa-check"></i> Chống nước: 50m - 100m (Đi mưa, rửa tay, bơi lội)</li>
+            <li><i class="fa fa-check"></i> Đầy đủ hộp gỗ sang trọng, sổ thẻ bảo hành chính hãng 5 năm</li>
+          </ul>
+
+          <div class="qv-action-box">
+            <div class="quantity-control">
+              <button class="qty-btn" onclick="window.app.changeQvQty(-1)">-</button>
+              <input class="qty-input" type="text" id="qvQtyInput" value="1" readonly>
+              <button class="qty-btn" onclick="window.app.changeQvQty(1)">+</button>
+            </div>
+            <button class="btn-add-cart-large" onclick="window.app.addCurrentQvToCart()">
+              <i class="fa fa-cart-plus"></i> Thêm vào giỏ hàng
+            </button>
+          </div>
+          <div style="margin-top: 14px; text-align: center;">
+            <a id="qvDetailLink" href="product.html" class="p-url" style="color:var(--color-primary); font-size:13px; font-weight:700; text-decoration:underline;">
+              <i class="fa fa-arrow-up-right-from-square"></i> Xem thông số & trang chi tiết đầy đủ
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       21. CART DRAWER
+       ======================================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay" onclick="if(event.target === this) window.app.toggleCartDrawer(false)">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3><i class="fa fa-bag-shopping text-primary"></i> GIỎ HÀNG CỦA BẠN</h3>
+        <button class="modal-close-btn" style="position:static;" onclick="window.app.toggleCartDrawer(false)">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-drawer-body" id="cartItemsContainer">
+        <!-- Rendered by JS -->
+      </div>
+      <div class="cart-drawer-footer">
+        <div class="cart-subtotal-box">
+          <span>Tổng tiền thanh toán:</span>
+          <strong id="cartSubtotal">0₫</strong>
+        </div>
+        <button class="btn-checkout" onclick="window.app.openCheckout()">
+          <i class="fa fa-credit-card"></i> TIẾN HÀNH ĐẶT HÀNG
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       22. MODAL: CHECKOUT ORDER
+       ======================================================== -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="window.app.closeCheckout()">
+        <i class="fa fa-times"></i>
+      </button>
+      <div style="padding: 30px;">
+        <h3 style="font-family:var(--font-heading); font-size:22px; color:var(--color-primary); margin-bottom:16px;">
+          ĐẶT HÀNG NHANH CHÓNG
+        </h3>
+        
+        <!-- Form -->
+        <form id="checkoutForm" onsubmit="window.app.handleCheckoutSubmit(event)">
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Họ và tên người nhận <span style="color:red;">*</span>
+            </label>
+            <input type="text" id="orderName" required placeholder="Nguyễn Văn A" 
+                   style="width:100%; height:42px; border:1px solid #ced4da; border-radius:4px; padding:0 12px; font-size:14px;">
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Số điện thoại nhận hàng <span style="color:red;">*</span>
+            </label>
+            <input type="tel" id="orderPhone" required placeholder="0988 922 330" 
+                   style="width:100%; height:42px; border:1px solid #ced4da; border-radius:4px; padding:0 12px; font-size:14px;">
+          </div>
+
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Địa chỉ nhận hàng chi tiết <span style="color:red;">*</span>
+            </label>
+            <textarea id="orderAddress" required rows="2" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" 
+                      style="width:100%; border:1px solid #ced4da; border-radius:4px; padding:8px 12px; font-size:14px;"></textarea>
+          </div>
+
+          <div style="margin-bottom: 18px;">
+            <label style="display:block; font-size:12px; font-weight:700; text-transform:uppercase; margin-bottom:6px;">
+              Phương thức thanh toán
+            </label>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <label style="display:flex; align-items:center; gap:8px; font-size:13.5px; cursor:pointer;">
+                <input type="radio" name="paymentMethod" value="cod" checked>
+                <span><strong>Thanh toán khi nhận hàng (COD)</strong> - Kiểm tra trước khi trả tiền</span>
+              </label>
+              <label style="display:flex; align-items:center; gap:8px; font-size:13.5px; cursor:pointer;">
+                <input type="radio" name="paymentMethod" value="bank">
+                <span><strong>Chuyển khoản ngân hàng</strong> (Miễn phí vận chuyển hỏa tốc)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Items Summary -->
+          <div style="background:#f8f9fa; border:1px solid #e9ecef; border-radius:6px; padding:14px; margin-bottom:18px;">
+            <div style="font-weight:700; font-size:13px; margin-bottom:10px; color:#495057;">SẢN PHẨM ĐẶT HÀNG</div>
+            <div id="checkoutItemsSummary"></div>
+            <div style="display:flex; justify-content:space-between; border-top:1px solid #dee2e6; padding-top:8px; margin-top:8px;">
+              <strong>Tổng thanh toán:</strong>
+              <strong id="checkoutTotalAmount" style="color:var(--color-primary); font-size:16px;">0₫</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-checkout" style="font-size:14px; height:46px;">
+            <i class="fa fa-check"></i> XÁC NHẬN ĐẶT HÀNG
+          </button>
+        </form>
+
+        <!-- Order Success View -->
+        <div id="checkoutSuccess" style="display:none; text-align:center; padding:30px 10px;">
+          <div style="width:70px; height:70px; border-radius:50%; background:#d3f9d8; color:#2b8a3e; font-size:36px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:16px;">
+            <i class="fa fa-check"></i>
+          </div>
+          <h3 style="font-size:22px; color:#2b8a3e; margin-bottom:8px;">ĐẶT HÀNG THÀNH CÔNG!</h3>
+          <p style="color:#495057; font-size:14px; margin-bottom:14px;">
+            Mã đơn hàng của bạn: <strong id="confirmedOrderId" style="color:var(--color-primary);">PW-000000</strong>
+          </p>
+          <p style="color:#6c757d; font-size:13px; line-height:1.6; margin-bottom:20px;">
+            Tổng tiền: <strong id="confirmedOrderTotal" style="color:#111;"></strong>.<br>
+            Nhân viên PhongWatch sẽ gọi điện cho quý khách trong vòng <strong>10 phút</strong> để xác nhận và gửi hàng hỏa tốc. Cảm ơn quý khách!
+          </p>
+          <button class="btn-luxury" onclick="window.app.resetCheckoutView()">
+            Tiếp tục mua sắm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       23. MODAL: POLICIES
+       ======================================================== -->
+  <div class="modal-overlay" id="policyModal">
+    <div class="modal-box" style="max-width: 680px;">
+      <button class="modal-close-btn" onclick="window.app.closePolicy()">
+        <i class="fa fa-times"></i>
+      </button>
+      <div style="padding: 30px;">
+        <h3 id="policyTitle" style="font-family:var(--font-heading); font-size:20px; color:var(--color-primary); margin-bottom:16px;">
+          CHÍNH SÁCH
+        </h3>
+        <div id="policyBody" style="font-size:13.5px; line-height:1.7; color:#333;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       24. MOBILE MENU DRAWER
+       ======================================================== -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <div style="font-family:var(--font-heading); font-size:18px; font-weight:800; color:#fff;">
+        PHONG<span style="color:var(--color-primary);">WATCH</span>
+      </div>
+      <button style="color:#fff; font-size:20px;" onclick="window.app.toggleMobileMenu(false)">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="mobile-drawer-menu">
+      <div class="mobile-menu-item">
+        <a href="/" onclick="window.app.toggleMobileMenu(false)">TRANG CHỦ</a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#carnivalSection" onclick="window.scrollToSection('carnivalSection')">CARNIVAL</a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#carnivalNuSection" onclick="window.scrollToSection('carnivalNuSection')">CARNIVAL NỮ</a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#alexanderFerrosSection" onclick="window.scrollToSection('alexanderFerrosSection')">ALEXANDER FERROS</a>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#japan" onclick="event.preventDefault(); window.toggleMobileSubmenu(this)">
+          <span>ĐỒNG HỒ MÁY NHẬT</span> <i class="fa fa-plus"></i>
+        </a>
+        <div class="mobile-submenu">
+          <a href="#seikoSection" onclick="window.scrollToSection('seikoSection')">SEIKO</a>
+          <a href="#olymPianusSection" onclick="window.scrollToSection('olymPianusSection')">OLYM PIANUS</a>
+          <a href="#sunMoonSection" onclick="window.scrollToSection('sunMoonSection')">ORIENT</a>
+          <a href="#japan" onclick="window.app.filterCatalog('CITIZEN')">CITIZEN</a>
+          <a href="#bentleySection" onclick="window.scrollToSection('bentleySection')">BENTLEY</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#swiss" onclick="event.preventDefault(); window.toggleMobileSubmenu(this)">
+          <span>ĐỒNG HỒ THỤY SỸ</span> <i class="fa fa-plus"></i>
+        </a>
+        <div class="mobile-submenu">
+          <a href="#tissotSection" onclick="window.scrollToSection('tissotSection')">TISSOT</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('LONGINES')">LONGINES</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('FREDERIQUE CONSTANT')">FREDERIQUE CONSTANT</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('MOVADO')">MOVADO</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#womenWatchSection" onclick="window.scrollToSection('womenWatchSection')">ĐỒNG HỒ NỮ</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="window.app.toggleMobileMenu(false)"></div>
+
+  <!-- Mobile App-like Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav">
+    <a href="/" class="mobile-bottom-nav-item active">
+      <i class="fa fa-house"></i>
+      <span>Trang chủ</span>
+    </a>
+    <a href="#filterSection" onclick="window.scrollToSection('filterSection')" class="mobile-bottom-nav-item">
+      <i class="fa fa-filter"></i>
+      <span>Lọc giá</span>
+    </a>
+    <a href="javascript:void(0)" onclick="window.focusMobileSearch()" class="mobile-bottom-nav-item">
+      <i class="fa fa-magnifying-glass"></i>
+      <span>Tìm kiếm</span>
+    </a>
+    <a href="javascript:void(0)" onclick="window.app.toggleCartDrawer(true)" class="mobile-bottom-nav-item">
+      <div class="bottom-nav-cart-wrapper">
+        <i class="fa fa-bag-shopping"></i>
+        <span class="cart-badge" id="cartBottomBadge">0</span>
+      </div>
+      <span>Giỏ hàng</span>
+    </a>
+    <a href="tel:0888477774" class="mobile-bottom-nav-item bottom-nav-hotline">
+      <i class="fa fa-phone-volume"></i>
+      <span>Gọi điện</span>
+    </a>
+  </nav>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="data/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
