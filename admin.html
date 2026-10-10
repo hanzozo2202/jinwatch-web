@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quản Trị Hệ Thống – PhongWatch Control Panel</title>
   
-  <link rel="shortcut icon" href="https://theme.hstatic.net/1000223154/1001363986/14/favicon.png?v=133" type="image/png">
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
   
   <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -337,7 +337,8 @@
               <div class="form-grid">
                 <div class="form-group">
                   <label>Hotline Hiển Thị:</label>
-                  <input type="text" id="cfgHotline" class="form-control" placeholder="0888.477.774">
+                  <input type="text" id="cfgHotline" class="form-control" placeholder="0888.477.774" oninput="autoSyncHotline(this.value)">
+                  <div class="form-help">Tự động đồng bộ số quay và cập nhật toàn bộ nút Gọi trên website</div>
                 </div>
 
                 <div class="form-group">
@@ -347,7 +348,8 @@
 
                 <div class="form-group">
                   <label>Số Zalo Hiển Thị:</label>
-                  <input type="text" id="cfgZalo" class="form-control" placeholder="0988.922.330">
+                  <input type="text" id="cfgZalo" class="form-control" placeholder="0988.922.330" oninput="autoSyncZalo(this.value)">
+                  <div class="form-help">Nhập số Zalo sẽ tự tạo link zalo.me và cập nhật tất cả nút Zalo trên web</div>
                 </div>
 
                 <div class="form-group">
@@ -362,7 +364,7 @@
 
                 <div class="form-group">
                   <label>Fanpage Facebook:</label>
-                  <input type="text" id="cfgFacebook" class="form-control" placeholder="https://www.facebook.com/PhongWatches">
+                  <input type="text" id="cfgFacebook" class="form-control" placeholder="https://www.facebook.com/PhongWatches" oninput="autoSyncFacebook(this.value)">
                 </div>
 
                 <div class="form-group" style="grid-column: 1 / -1;">
@@ -697,15 +699,40 @@
             <div class="form-help">Dùng để tự động tính % giảm giá sale</div>
           </div>
 
-          <!-- Image -->
+          <!-- Image & Multi-Angle Gallery -->
           <div class="form-group" style="grid-column: 1 / -1;">
-            <label>Hình Ảnh Sản Phẩm (Link Web hoặc Chọn File): <span class="required">*</span></label>
+            <label>Ảnh Đại Diện Chính (Cover Image): <span class="required">*</span></label>
             <div style="display: flex; gap: 8px;">
-              <input type="text" id="prodImage" class="form-control" placeholder="https://cdn.hstatic.net/products/...">
+              <input type="text" id="prodImage" class="form-control" placeholder="assets/products/... hoặc dán link ảnh web" oninput="syncMainImageToGallery(this.value)">
               <label class="btn btn-secondary" style="white-space: nowrap; cursor: pointer;">
-                <i class="fa fa-image"></i> Chọn File Từ Máy
+                <i class="fa fa-image"></i> Chọn Ảnh Từ Máy
                 <input type="file" accept="image/*" style="display: none;" onchange="handleLocalImageUpload(event, 'prodImage')">
               </label>
+            </div>
+          </div>
+
+          <!-- Multi-angle photo gallery -->
+          <div class="form-group" style="grid-column: 1 / -1; background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 8px; padding: 16px;">
+            <label style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+              <span><i class="fa fa-images text-gold"></i> <strong>Bộ Sưu Tập Hình Ảnh (Nhiều Góc Cạnh Sản Phẩm):</strong></span>
+              <label class="btn btn-primary btn-sm" style="cursor: pointer;">
+                <i class="fa fa-plus"></i> Thêm nhiều ảnh từ máy
+                <input type="file" accept="image/*" multiple style="display: none;" onchange="handleMultipleGalleryUpload(event)">
+              </label>
+            </label>
+            
+            <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+              <input type="text" id="addGalleryUrlInput" class="form-control" placeholder="Dán link ảnh góc cạnh khác (mặt sau lộ đáy, núm vặn, lên tay...)...">
+              <button type="button" class="btn btn-secondary" onclick="addManualGalleryImage()">
+                <i class="fa fa-plus"></i> Thêm Link
+              </button>
+            </div>
+
+            <div id="galleryPreviewContainer" style="display: flex; gap: 10px; flex-wrap: wrap; min-height: 50px; align-items: center;">
+              <!-- Rendered thumbnail chips with delete button -->
+            </div>
+            <div class="form-help" style="margin-top: 6px;">
+              Khách hàng xem sản phẩm này sẽ thấy đầy đủ các góc chụp và có thể click phóng to hoặc chuyển góc xem mượt mà.
             </div>
           </div>
 

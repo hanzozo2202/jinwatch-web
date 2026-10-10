@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const toastContainer = document.getElementById('toastContainer');
 
   // Fallback image helper
-  const defaultWatchImage = 'https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_medium.png?v=133';
+  const defaultWatchImage = 'assets/slider-1.png';
 
   // Format currency
   function formatMoney(amount) {
@@ -800,10 +800,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const p = policies[policyKey] || policies['bao-hanh'];
     if (!policyModal) return;
 
+    const brandName = window.SHOP_CONFIG?.brand?.name || 'PhongWatch';
+    const hotline = window.SHOP_CONFIG?.contact?.hotlineDisplay || '0888.477.774';
+    const zalo = window.SHOP_CONFIG?.contact?.zaloDisplay || '0988.922.330';
+
+    let content = (p.content || '')
+      .replace(/PhongWatch/g, brandName)
+      .replace(/0888\.477\.774/g, hotline)
+      .replace(/0988\.922\.330/g, zalo);
+
     const pTitle = document.getElementById('policyTitle');
     const pBody = document.getElementById('policyBody');
     if (pTitle) pTitle.textContent = p.title;
-    if (pBody) pBody.innerHTML = p.content;
+    if (pBody) pBody.innerHTML = content;
     policyModal.classList.add('active');
   }
 

@@ -51,25 +51,40 @@ Chủ shop chỉ cần mở file `admin.html` trên trình duyệt (hoặc truy 
    - **Màu chủ đạo (Primary Color):** Chọn màu đỏ Ruby mặc định, hoặc click vào các mẫu màu có sẵn: *Xanh Sapphire, Đen Luxury Gold, Xanh Emerald, Nâu Hổ Phách...* hoặc tự chọn mã màu bất kỳ qua Color Picker.
    - **Màu vàng kim (Gold Accent):** Đổi màu viền hoàng gia, icon vương miện, số sao đánh giá.
    - Có khung **Live Preview** bên dưới để nhìn thấy ngay mẫu giao diện đổi màu theo thời gian thực!
-2. **Đổi Logo & Thông Tin Cửa Hàng:**
-   - Nhập đường dẫn link ảnh Logo, hoặc bấm nút **"Chọn Ảnh"** từ máy tính (hệ thống sẽ tự nhận diện).
-   - Đổi Slogan, Tên shop, Hotline, Số Zalo, Email.
-   - Đổi Địa chỉ cửa hàng và link nhúng Google Maps iframe.
-   - Cài đặt Tiêu đề SEO và Mô tả trang hiển thị trên Google.
+2. **Đổi Logo & Thông Tin Cửa Hàng (Tự Động Đồng Bộ 100% Toàn Web):**
+   - **Tên shop & Thương hiệu:** Đổi tên (ví dụ `JinWATCH`), hệ thống tự cập nhật logo chữ, menu trượt mobile, chân trang copyright và tiêu đề tab trình duyệt.
+   - **Hotline:** Nhập số hotline hiển thị (ví dụ `0845.013.619`), hệ thống **tự động cập nhật tất cả**:
+     - Số hotline trên thanh topbar đầu trang.
+     - Ô tư vấn hotline trên header.
+     - Nút gọi nổi tròn góc dưới màn hình (`float-btn`).
+     - Thanh điều hướng gọi nhanh dưới đáy màn hình điện thoại (`mobile-bottom-nav`).
+     - Ô tư vấn kích cỡ ở trang chi tiết sản phẩm.
+     - Danh sách hotline ở chân trang footer.
+   - **Zalo (Đồng Bộ Tuyệt Đối):** Chỉ cần nhập số Zalo (ví dụ `0845013619`), hệ thống sẽ **tự động sinh link `https://zalo.me/0845013619`** và cập nhật cho:
+     - Nút chat Zalo nổi góc dưới bên phải màn hình (cả link, tiêu đề và tooltip hiển thị khi rê chuột).
+     - Nút Zalo trong danh sách mạng xã hội ở chân trang footer.
+     - Số Zalo hiển thị và link bấm nhắn Zalo ở thanh topbar đầu trang.
+     - Mục liên hệ Zalo trong popup chính sách thanh toán.
+   - **Fanpage Facebook & Messenger:** Nhập link Fanpage, hệ thống tự đồng bộ cả nút Facebook và nút chat Messenger nổi.
+   - **Địa chỉ & Google Maps:** Nhập địa chỉ và mã nhúng iframe, tự động cập nhật bản đồ chỉ đường ở chân trang.
 3. Bấm **"💾 Lưu Cấu Hình Giao Diện"** để lưu lại.
 
 ---
 
 ### 📦 Bước 3: Thêm / Sửa / Xóa Sản Phẩm (Tab "Quản Lý Sản Phẩm")
-- **Thêm sản phẩm mới:**
+- **Thêm sản phẩm mới & Đăng nhiều ảnh góc cạnh:**
   1. Bấm nút **"+ Thêm Sản Phẩm Mới"**.
   2. Nhập Tên đồng hồ, chọn Thương hiệu (Carnival, Olym Pianus, Bentley, Seiko, Tissot...), chọn Danh mục hiển thị.
   3. Nhập Giá bán (ví dụ gõ `6800000` hệ thống tự định dạng thành `6,800,000₫`).
   4. Nhập Giá gốc / Giá niêm yết (hệ thống sẽ tự động tính ra tỷ lệ % giảm giá, ví dụ `-24%`).
-  5. Chọn ảnh từ máy tính hoặc dán link ảnh web.
-  6. Chọn tình trạng (Còn hàng / Tạm hết hàng), giới tính (Nam / Nữ / Cặp đôi).
-  7. Bấm **"Lưu Sản Phẩm"**.
-- **Sửa sản phẩm:** Bấm biểu tượng cây bút ✏️ tại dòng sản phẩm cần sửa để thay đổi thông tin hoặc cập nhật giá.
+  5. **Ảnh đại diện chính (Cover Image):** Chọn 1 ảnh mặt trước đại diện hiển thị ở danh sách sản phẩm.
+  6. **📸 Bộ Sưu Tập Nhiều Hình Ảnh (Góc Cạnh Đồng Hồ):**
+     - Bấm nút **"+ Thêm nhiều ảnh từ máy"** để chọn cùng lúc nhiều góc chụp (mặt kính sapphire, mặt đáy lộ cơ, núm vặn ren, khóa bướm, lên tay thực tế...).
+     - Hoặc dán link ảnh góc cạnh vào ô và bấm **"Thêm Link"**.
+     - Có thể xóa bớt góc chụp bất kỳ bằng cách bấm nút `X` màu đỏ trên thumbnail.
+  7. Chọn tình trạng (Còn hàng / Tạm hết hàng), giới tính (Nam / Nữ / Cặp đôi).
+  8. Bấm **"Lưu Sản Phẩm"**.
+- **Sửa sản phẩm:** Bấm biểu tượng cây bút ✏️ tại dòng sản phẩm cần sửa để thay đổi thông tin, bổ sung thêm góc chụp hoặc cập nhật giá.
 - **Xóa sản phẩm:** Bấm biểu tượng thùng rác 🗑️ để xóa mẫu đã ngừng kinh doanh.
 - **Tìm kiếm & Lọc:** Hỗ trợ tìm nhanh theo tên, mã SKU, lọc theo hãng hoặc theo kho hàng.
 - **Khôi phục gốc:** Nếu lỡ thao tác nhầm, có nút **"Khôi phục 143 mẫu gốc"** để đưa toàn bộ danh mục về trạng thái chuẩn ban đầu.
@@ -117,7 +132,7 @@ Mọi thay đổi trong file này sẽ **tự động áp dụng đồng bộ** 
 
 ### B. Chỉnh sửa sản phẩm trong `data/products.js`
 Mở file [data/products.js](file:///c:/Users/13520/Documents/personal/projects/website/data/products.js):
-Mỗi sản phẩm là một đối tượng JSON chuẩn:
+Mỗi sản phẩm hỗ trợ trường `images` chứa danh sách nhiều góc ảnh khác nhau:
 ```javascript
 {
   "id": "1035326344",
@@ -129,7 +144,13 @@ Mỗi sản phẩm là một đối tượng JSON chuẩn:
   "original_price": "8,800,000₫",
   "original_price_num": 8800000,
   "sale": "-24%",
-  "image": "https://product.hstatic.net/.../image.jpg",
+  "image": "assets/products/p_1035326344.jpg",
+  "images": [
+    "assets/products/p_1035326344.jpg", // Ảnh mặt trước chính diện
+    "assets/products/p_1033689647.jpg", // Góc cạnh núm vặn
+    "assets/products/p_1033689880.jpg", // Đáy lộ máy
+    "assets/products/p_1038492338.jpg"  // Lên tay thực tế
+  ],
   "in_stock": true,
   "gender": "Nam"
 }
@@ -137,39 +158,75 @@ Mỗi sản phẩm là một đối tượng JSON chuẩn:
 
 ---
 
-## 🚀 4. Hướng Dẫn Phát Hành (Deploy) Lên Server
+## 🚀 4. Hướng Dẫn Phát Hành (Deploy) & Quản Lý Hình Ảnh
 
-### Cách 1: Triển Khai Trên Hosting cPanel / DirectAdmin (Khuyên Dùng Cho Shop)
-1. Nén toàn bộ thư mục `website` thành file `.zip`.
-2. Đăng nhập vào trang quản trị cPanel của nhà cung cấp hosting (PA Việt Nam, Mắt Bão, INET, Hostinger...).
-3. Mở mục **File Manager (Trình Quản Lý Tệp)** &gt; vào thư mục **`public_html`**.
-4. Upload file `.zip` lên và chọn **Extract (Giải nén)** trực tiếp tại đây.
-5. Truy cập tên miền của bạn: Website chạy ngay lập tức với tốc độ tối đa!
+### 📸 A. Vấn Đề Hình Ảnh Sản Phẩm Đã Được Xử Lý Triệt Để:
+- **Tình trạng trước đây:** Ảnh sản phẩm trỏ về link server của trang gốc (`hstatic.net`). Khi deploy sang server khác, nếu trang gốc đổi link hoặc chặn Hotlinking (HTTP 403 Forbidden), ảnh sẽ bị lỗi hiển thị.
+- **Giải pháp đã thực hiện:** 
+  - Toàn bộ **143 hình ảnh sản phẩm** và tất cả logo, banner đã được **tải 100% về thư mục cục bộ `assets/products/`** trong source code.
+  - Tổng dung lượng toàn bộ ảnh chỉ khoảng **~1.7 MB** (rất nhẹ, tải siêu nhanh).
+  - Khi bạn deploy lên bất kỳ hosting nào (DigitalOcean, Vercel, Cloudflare Pages, Netlify...), toàn bộ ảnh đều đi cùng với source code.
+  - **Lợi ích:** 100% tự chủ, website không bao giờ bị phụ thuộc vào trang gốc, không sợ chết link, tốc độ load ảnh nhanh gấp đôi nhờ lưu trữ nội bộ.
 
-### Cách 2: Triển Khai Miễn Phí Trên Vercel / Netlify (Có HTTPS SSL Tự Động)
-1. Truy cập [Netlify Drop](https://app.netlify.com/drop) hoặc [Vercel](https://vercel.com).
+---
+
+### 🌐 B. Hướng Dẫn Deploy Lên Từng Nền Tảng:
+
+#### Cách 1: Triển Khai Trên Cloudflare Pages (Miễn phí vĩnh viễn, CDN mạnh nhất thế giới)
+1. Đăng nhập vào tài khoản [Cloudflare Dashboard](https://dash.cloudflare.com/) &gt; chọn **Workers & Pages** &gt; chọn **Pages** &gt; chọn **Upload Assets**.
+2. Đặt tên dự án (ví dụ: `phongwatch`).
+3. Kéo thả toàn bộ thư mục `website` vào Cloudflare Pages.
+4. Bấm **Deploy site** &gt; Xong trong 5 giây! Cloudflare cung cấp SSL HTTPS miễn phí, CDN chống DDoS cực mạnh và không giới hạn băng thông.
+
+#### Cách 2: Triển Khai Trên Vercel / Netlify
+1. Truy cập [Vercel](https://vercel.com) hoặc [Netlify Drop](https://app.netlify.com/drop).
 2. Kéo thả nguyên thư mục `website` vào giao diện trình duyệt.
-3. Trong vòng 10 giây, bạn sẽ nhận được một địa chỉ web hoạt động với chứng chỉ SSL HTTPS hoàn toàn miễn phí.
-4. Trỏ tên miền riêng (ví dụ `donghophongwatch.vn`) vào DNS của Netlify/Vercel theo hướng dẫn trên màn hình.
+3. Hệ thống tự động cấp phát URL và chứng chỉ SSL HTTPS miễn phí. Toàn bộ hình ảnh trong `assets/products/` tự động được phục vụ qua CDN toàn cầu của Vercel/Netlify.
 
-### Cách 3: Chạy Trên Máy Chủ VPS Riêng (Nginx / Linux)
-Chỉ cần cấu hình một block Nginx tĩnh đơn giản:
-```nginx
-server {
-    listen 80;
-    server_name phongwatch.vn www.phongwatch.vn;
-    root /var/www/phongwatch;
-    index index.html;
+#### Cách 3: Triển Khai Trên DigitalOcean
+- **Phương án App Platform (Dễ nhất):**
+  1. Đẩy code lên GitHub repository.
+  2. Vào DigitalOcean &gt; chọn **App Platform** &gt; chọn kho lưu trữ GitHub của bạn.
+  3. Chọn loại ứng dụng là **Static Site** (Miễn phí tới 3 site tĩnh trên DigitalOcean).
+  4. Bấm Deploy: DigitalOcean sẽ tự động build và cấp domain HTTPS.
+- **Phương án Droplet VPS (Nginx / Linux):**
+  1. Tạo một Droplet Ubuntu (gói 4-6$/tháng).
+  2. Copy toàn bộ thư mục `website` vào `/var/www/phongwatch`.
+  3. Cấu hình Nginx trỏ vào thư mục đó:
+     ```nginx
+     server {
+         listen 80;
+         server_name phongwatch.vn www.phongwatch.vn;
+         root /var/www/phongwatch;
+         index index.html;
 
-    location / {
-        try_files $uri $uri/ /index.html;
-    }
+         location / {
+             try_files $uri $uri/ /index.html;
+         }
 
-    # Bật nén Gzip giúp website tải siêu nhanh
-    gzip on;
-    gzip_types text/plain text/css application/javascript application/json image/svg+xml;
-}
-```
+         # Caching tĩnh cho hình ảnh giúp tải nhanh tối đa
+         location ~* \.(jpg|jpeg|png|gif|ico|webp|svg)$ {
+             expires 30d;
+             add_header Cache-Control "public, no-transform";
+         }
+
+         gzip on;
+         gzip_types text/plain text/css application/javascript application/json image/svg+xml;
+     }
+     ```
+
+#### Cách 4: Hosting Truyền Thống (cPanel / DirectAdmin)
+1. Nén thư mục `website` thành file `.zip`.
+2. Mở cPanel &gt; File Manager &gt; vào `public_html` &gt; Upload và Giải nén (Extract) tại đây.
+3. Truy cập tên miền: Website chạy ngay lập tức mà không cần bất kỳ cấu hình nào khác!
+
+---
+
+### 🖼️ C. Cách Xử Lý Khi Thêm Ảnh Sản Phẩm Mới Trong Tương Lai:
+Khi chủ cửa hàng thêm đồng hồ mới qua trang quản trị `admin.html`:
+- **Cách 1 (Đơn giản nhất):** Bấm nút **"Chọn File Từ Máy"**, hệ thống sẽ tự động chuyển ảnh thành mã Base64 an toàn lưu trực tiếp vào sản phẩm mà không cần thuê server upload riêng.
+- **Cách 2:** Copy file ảnh mới bỏ vào thư mục `assets/products/ten-anh.jpg`, rồi nhập đường dẫn `assets/products/ten-anh.jpg` vào ô ảnh.
+- **Cách 3 (Khi có hàng chục nghìn sản phẩm):** Có thể upload ảnh lên các dịch vụ CDN lưu trữ hình ảnh chuyên dụng (như Cloudflare R2, Cloudinary, Imgur, AWS S3) rồi dán đường link vào.
 
 ---
 

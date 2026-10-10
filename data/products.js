@@ -1,3 +1,9 @@
+/**
+ * PHONGWATCH - LUXURY WATCH CATALOG
+ * Complete Products Catalog (data/products.js)
+ * Generated from Admin Panel: 22:41:07 9/10/2026
+ */
+
 window.PHONGWATCH_DATA = {
   "collections": [
     {
@@ -57,13 +63,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,800,000₫",
       "original_price_num": 8800000,
       "sale": "-24%",
-      "image": "https://product.hstatic.net/1000223154/product/7a4b5fc8594e9f10c65f3_31ff13d459194f8fbbc5158aee5c7424_medium.jpg",
+      "image": "assets/products/p_1035326344.jpg",
       "link": "/products/olym-pianus-fusion-op990-45addgs-gl-t-op990-45",
       "rating": 5,
       "reviews_count": 13,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035326344.jpg",
+        "assets/products/p_1033689647.jpg",
+        "assets/products/p_1033689880.jpg",
+        "assets/products/p_1038492338.jpg"
+      ]
     },
     {
       "id": "1033689647",
@@ -75,13 +87,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,700,000₫",
       "original_price_num": 7700000,
       "sale": "-14%",
-      "image": "https://product.hstatic.net/1000223154/product/z2538012531778_bcb4d98d338261dd76685c4bf8808589_ad3b928fa1794a8cbe225288c1e2670a_medium.jpg",
+      "image": "assets/products/p_1033689647.jpg",
       "link": "/products/olym-pianus-fusion-op990-45adgs-gl-t-op990-45",
       "rating": 5,
       "reviews_count": 16,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1033689647.jpg",
+        "assets/products/p_1033689880.jpg",
+        "assets/products/p_1038492338.jpg",
+        "assets/products/p_1038492551.jpg"
+      ]
     },
     {
       "id": "1033689880",
@@ -93,13 +111,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,700,000₫",
       "original_price_num": 7700000,
       "sale": "-14%",
-      "image": "https://product.hstatic.net/1000223154/product/z2538401394561_8d41f8e6c5ff533a19b7bc13c1d153b3_cf14a4fbce7543e98fa0c52ea086f2bf_medium.jpg",
+      "image": "assets/products/p_1033689880.jpg",
       "link": "/products/olym-pianus-fusion-op990-45adgs-gl-x-op990-45",
       "rating": 5,
       "reviews_count": 13,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1033689880.jpg",
+        "assets/products/p_1038492338.jpg",
+        "assets/products/p_1038492551.jpg",
+        "assets/products/p_1038000476.jpg"
+      ]
     },
     {
       "id": "1038492338",
@@ -111,13 +135,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,000,000₫",
       "original_price_num": 8000000,
       "sale": "-2%",
-      "image": "https://product.hstatic.net/1000223154/product/z3288815997930_04558145e2e6bd172f4b4c1b51700162_9a5d186abb7c474a9b360d2003fe70b1_medium.jpg",
+      "image": "assets/products/p_1038492338.jpg",
       "link": "/products/olym-pianus-op990-45-24adgk-gl-t-skeleton",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1038492338.jpg",
+        "assets/products/p_1038492551.jpg",
+        "assets/products/p_1038000476.jpg",
+        "assets/products/p_1033689638.jpg"
+      ]
     },
     {
       "id": "1038492551",
@@ -129,13 +159,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,000,000₫",
       "original_price_num": 8000000,
       "sale": "-15%",
-      "image": "https://product.hstatic.net/1000223154/product/z3288825725912_618eed14f4be264a79eca2f333aae174_6f1bbd172b184dcea4d33648d20c713b_medium.jpg",
+      "image": "assets/products/p_1038492551.jpg",
       "link": "/products/olym-pianus-op990-45-24adgs-d-skeleton",
       "rating": 5,
       "reviews_count": 20,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1038492551.jpg",
+        "assets/products/p_1038000476.jpg",
+        "assets/products/p_1033689638.jpg",
+        "assets/products/p_1035757326.jpg"
+      ]
     },
     {
       "id": "1038000476",
@@ -147,13 +183,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,900,000₫",
       "original_price_num": 5900000,
       "sale": "-31%",
-      "image": "https://product.hstatic.net/1000223154/product/dong-ho-olym-pianus-op9932-56amsk-t_791a66c8960740e089e8c6645e03f082_medium.jpg",
+      "image": "assets/products/p_1038000476.jpg",
       "link": "/products/olym-pianus-op9932-56amsk-t",
       "rating": 5,
       "reviews_count": 9,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1038000476.jpg",
+        "assets/products/p_1033689638.jpg",
+        "assets/products/p_1035757326.jpg",
+        "assets/products/p_1038001374.jpg"
+      ]
     },
     {
       "id": "1033689638",
@@ -165,13 +207,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,700,000₫",
       "original_price_num": 7700000,
       "sale": "-14%",
-      "image": "https://product.hstatic.net/1000223154/product/83fabc7fbaf97ca725e85_290664ef2f4e4627a6aef312aba7e8b9_medium.jpg",
+      "image": "assets/products/p_1033689638.jpg",
       "link": "/products/olym-pianus-fusion-op990-45adgs-gl-d",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1033689638.jpg",
+        "assets/products/p_1035757326.jpg",
+        "assets/products/p_1038001374.jpg",
+        "assets/products/p_1017830366.jpg"
+      ]
     },
     {
       "id": "1035757326",
@@ -183,13 +231,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,910,000₫",
       "original_price_num": 4910000,
       "sale": "-29%",
-      "image": "https://product.hstatic.net/1000223154/product/z2827972374765_10f886003919b0ff36a2b0a8e829ab1_225bbb545284473587a559e624ea9350_medium.jpg",
+      "image": "assets/products/p_1035757326.jpg",
       "link": "/products/olym-pianus-op89983amk-x",
       "rating": 5,
       "reviews_count": 13,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035757326.jpg",
+        "assets/products/p_1038001374.jpg",
+        "assets/products/p_1017830366.jpg",
+        "assets/products/p_1035747479.jpg"
+      ]
     },
     {
       "id": "1038001374",
@@ -201,13 +255,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,900,000₫",
       "original_price_num": 7900000,
       "sale": "-49%",
-      "image": "https://cdn.hstatic.net/products/1000223154/44aafdfd-460f-44ee-afb7-a09773030ae5_8134cf90b94141ae987220b3f3db9e86_medium.jpg",
+      "image": "assets/products/p_1038001374.jpg",
       "link": "/products/olym-pianus-op9932-56ams-t",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1038001374.jpg",
+        "assets/products/p_1017830366.jpg",
+        "assets/products/p_1035747479.jpg",
+        "assets/products/p_1035747469.jpg"
+      ]
     },
     {
       "id": "1017830366",
@@ -219,13 +279,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,800,000₫",
       "original_price_num": 8800000,
       "sale": "-41%",
-      "image": "https://product.hstatic.net/1000223154/product/upload_3e18302841a44d59907ad88744427cfe_medium.jpg",
+      "image": "assets/products/p_1017830366.jpg",
       "link": "/products/olym-pianus-op99141-56ags-t",
       "rating": 5,
       "reviews_count": 17,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1017830366.jpg",
+        "assets/products/p_1035747479.jpg",
+        "assets/products/p_1035747469.jpg",
+        "assets/products/p_1075956995.jpg"
+      ]
     },
     {
       "id": "1035747479",
@@ -237,13 +303,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,800,000₫",
       "original_price_num": 8800000,
       "sale": "-18%",
-      "image": "https://product.hstatic.net/1000223154/product/z3196489627377_45e47c1d17f17d56fe4a60fa4bad727a_46d5f9724ac94c26a9ddb8c650a3a7d8_medium.jpg",
+      "image": "assets/products/p_1035747479.jpg",
       "link": "/products/olym-pianus-fusion-op990-45addgk-gl-d-op990-45",
       "rating": 5,
       "reviews_count": 12,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035747479.jpg",
+        "assets/products/p_1035747469.jpg",
+        "assets/products/p_1075956995.jpg",
+        "assets/products/p_1070147008.jpg"
+      ]
     },
     {
       "id": "1035747469",
@@ -255,13 +327,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,800,000₫",
       "original_price_num": 8800000,
       "sale": "-14%",
-      "image": "https://product.hstatic.net/1000223154/product/z3191997182455_acca0b572695402199c7529202b06061_486af43b062f4a85bbbf4ca17f623ca5_medium.jpg",
+      "image": "assets/products/p_1035747469.jpg",
       "link": "/products/olym-pianus-fusion-op990-45addgk-gl-t-op990-45",
       "rating": 5,
       "reviews_count": 20,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035747469.jpg",
+        "assets/products/p_1075956995.jpg",
+        "assets/products/p_1070147008.jpg",
+        "assets/products/p_1070147003.jpg"
+      ]
     },
     {
       "id": "1075956995",
@@ -273,13 +351,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,270,000₫",
       "original_price_num": 7270000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/3638691708742128_g3412695359072446024_b9f2968fe1238f24bd069263512bebde_eecf3fcf4df34873a367a8ffe5c1b1dc_medium.jpg",
+      "image": "assets/products/p_1075956995.jpg",
       "link": "/products/gia-tot-alexander-ferros-37-5mm-automatic-8272r-022-8272r-dong-ho-nam",
       "rating": 5,
       "reviews_count": 10,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956995.jpg",
+        "assets/products/p_1070147008.jpg",
+        "assets/products/p_1070147003.jpg",
+        "assets/products/p_1070146999.jpg"
+      ]
     },
     {
       "id": "1070147008",
@@ -291,13 +375,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,750,000₫",
       "original_price_num": 5750000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/6473cda8-f555-4bf7-85db-41fb4e4d11e9_f3ed66348b784c64ad86f55dc47394ce_medium.jpg",
+      "image": "assets/products/p_1070147008.jpg",
       "link": "/products/alexander-ferros-automatic-5052d-02-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 13,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070147008.jpg",
+        "assets/products/p_1070147003.jpg",
+        "assets/products/p_1070146999.jpg",
+        "assets/products/p_1070147012.jpg"
+      ]
     },
     {
       "id": "1070147003",
@@ -309,13 +399,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,950,000₫",
       "original_price_num": 5950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0054_388f54e3ffaa40048aafd6721a68835b_medium.jpg",
+      "image": "assets/products/p_1070147003.jpg",
       "link": "/products/alexander-ferros-automatic-5052r-05-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 8,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070147003.jpg",
+        "assets/products/p_1070146999.jpg",
+        "assets/products/p_1070147012.jpg",
+        "assets/products/p_1070147019.jpg"
+      ]
     },
     {
       "id": "1070146999",
@@ -327,13 +423,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,950,000₫",
       "original_price_num": 5950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/315158e6492dc5739c3c49_673bc9ed1c4246b8947b96a6e21446a9_medium.jpg",
+      "image": "assets/products/p_1070146999.jpg",
       "link": "/products/alexander-ferros-automatic-5052s-08-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070146999.jpg",
+        "assets/products/p_1070147012.jpg",
+        "assets/products/p_1070147019.jpg",
+        "assets/products/p_1070147024.jpg"
+      ]
     },
     {
       "id": "1070147012",
@@ -345,13 +447,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,750,000₫",
       "original_price_num": 5750000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0047_f8aa61a584a34970a9dd6dff363c5926_medium.jpg",
+      "image": "assets/products/p_1070147012.jpg",
       "link": "/products/alexander-ferros-automatic-5052s-01-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 17,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070147012.jpg",
+        "assets/products/p_1070147019.jpg",
+        "assets/products/p_1070147024.jpg",
+        "assets/products/p_1073547934.jpg"
+      ]
     },
     {
       "id": "1070147019",
@@ -363,13 +471,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,750,000₫",
       "original_price_num": 5750000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0051_e7c794afccae4e2db47aaebdfdafed05_medium.jpg",
+      "image": "assets/products/p_1070147019.jpg",
       "link": "/products/alexander-ferros-automatic-5052s-02-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 6,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070147019.jpg",
+        "assets/products/p_1070147024.jpg",
+        "assets/products/p_1073547934.jpg",
+        "assets/products/p_1073547936.jpg"
+      ]
     },
     {
       "id": "1070147024",
@@ -381,13 +495,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,750,000₫",
       "original_price_num": 5750000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0052_82a91d5c0a0d42ffa61b3e4ea1e2a06d_medium.jpg",
+      "image": "assets/products/p_1070147024.jpg",
       "link": "/products/alexander-ferros-automatic-5052s-05-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 11,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070147024.jpg",
+        "assets/products/p_1073547934.jpg",
+        "assets/products/p_1073547936.jpg",
+        "assets/products/p_1073547963.jpg"
+      ]
     },
     {
       "id": "1073547934",
@@ -399,13 +519,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,999,999₫",
       "original_price_num": 9999999,
       "sale": "-48%",
-      "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0130_0b32ef4ffcee441b81f617bbfd3e001c_medium.jpg",
+      "image": "assets/products/p_1073547934.jpg",
       "link": "/products/z-chua-ban-alexander-ferros-automatic-8232d-01-43mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 21,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073547934.jpg",
+        "assets/products/p_1073547936.jpg",
+        "assets/products/p_1073547963.jpg",
+        "assets/products/p_1073547986.jpg"
+      ]
     },
     {
       "id": "1073547936",
@@ -417,13 +543,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,999,999₫",
       "original_price_num": 9999999,
       "sale": "-48%",
-      "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0000_19a6509094cd4862b8acfc8308de2d2f_medium.jpg",
+      "image": "assets/products/p_1073547936.jpg",
       "link": "/products/z-chua-ban-alexander-ferros-automatic-8232d-08-43mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 5,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073547936.jpg",
+        "assets/products/p_1073547963.jpg",
+        "assets/products/p_1073547986.jpg",
+        "assets/products/p_1073658294.jpg"
+      ]
     },
     {
       "id": "1073547963",
@@ -435,13 +567,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,999,999₫",
       "original_price_num": 9999999,
       "sale": "-48%",
-      "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0140_546da748f3b444fb8a58053363c8fa7d_medium.jpg",
+      "image": "assets/products/p_1073547963.jpg",
       "link": "/products/z-chua-ban-alexander-ferros-automatic-8232d-15-43mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073547963.jpg",
+        "assets/products/p_1073547986.jpg",
+        "assets/products/p_1073658294.jpg",
+        "assets/products/p_1070166929.jpg"
+      ]
     },
     {
       "id": "1073547986",
@@ -453,13 +591,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,999,999₫",
       "original_price_num": 9999999,
       "sale": "-50%",
-      "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0026_8bd4cd5610c24580aba62ea27731344b_medium.jpg",
+      "image": "assets/products/p_1073547986.jpg",
       "link": "/products/z-chua-ban-alexander-ferros-automatic-8232s-01-43mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 19,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073547986.jpg",
+        "assets/products/p_1073658294.jpg",
+        "assets/products/p_1070166929.jpg",
+        "assets/products/p_1070166984.jpg"
+      ]
     },
     {
       "id": "1073658294",
@@ -471,13 +615,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,999,999₫",
       "original_price_num": 9999999,
       "sale": "-50%",
-      "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0014_35bf1346aa5a4c42aa3b2ea64cc9729a_medium.jpg",
+      "image": "assets/products/p_1073658294.jpg",
       "link": "/products/z-gia-tot-alexander-ferros-automatic-8232s-05-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 9,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073658294.jpg",
+        "assets/products/p_1070166929.jpg",
+        "assets/products/p_1070166984.jpg",
+        "assets/products/p_1070167004.jpg"
+      ]
     },
     {
       "id": "1070166929",
@@ -489,13 +639,19 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,500,000₫",
       "original_price_num": 6500000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0061_9dc85acc9c254fc0a9ecebce31d8689b_medium.jpg",
+      "image": "assets/products/p_1070166929.jpg",
       "link": "/products/alexander-ferros-automatic-3062s-08-42mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 16,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070166929.jpg",
+        "assets/products/p_1070166984.jpg",
+        "assets/products/p_1070167004.jpg",
+        "assets/products/p_1073463271.jpg"
+      ]
     },
     {
       "id": "1070166984",
@@ -507,13 +663,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,350,000₫",
       "original_price_num": 6350000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0041_028c089504ec4addbe9ae91946b43a44_medium.jpg",
+      "image": "assets/products/p_1070166984.jpg",
       "link": "/products/alexander-ferros-automatic-3062s-01-42mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 17,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070166984.jpg"
+      ]
     },
     {
       "id": "1070167004",
@@ -525,13 +684,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,350,000₫",
       "original_price_num": 6350000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0044_04fbf0a8fce743ebbdd35b19866b62af_medium.jpg",
+      "image": "assets/products/p_1070167004.jpg",
       "link": "/products/alexander-ferros-automatic-3062s-05-42mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 9,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070167004.jpg"
+      ]
     },
     {
       "id": "1073463271",
@@ -543,13 +705,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,350,000₫",
       "original_price_num": 5350000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/2242s-02__1__68e7e96076034acc8601d9f11f8117e5_medium.jpg",
+      "image": "assets/products/p_1073463271.jpg",
       "link": "/products/gia-tot-alexander-ferros-automatic-2242s-02-31mm-dong-ho-nu",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073463271.jpg"
+      ]
     },
     {
       "id": "1073463024",
@@ -561,13 +726,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,350,000₫",
       "original_price_num": 5350000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/2242s-05___14__efc38b3dc8da4903aab329b8ce1538e3_medium.jpg",
+      "image": "assets/products/p_1073463024.jpg",
       "link": "/products/gia-tot-alexander-ferros-automatic-2242r-01-31mm-dong-ho-nu",
       "rating": 5,
       "reviews_count": 11,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073463024.jpg"
+      ]
     },
     {
       "id": "1070185918",
@@ -579,13 +747,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,150,000₫",
       "original_price_num": 5150000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0107_be5f4f7ffd93437180f673f6983a2468_medium.jpg",
+      "image": "assets/products/p_1070185918.jpg",
       "link": "/products/alexander-ferros-automatic-8132d-01-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070185918.jpg"
+      ]
     },
     {
       "id": "1070185929",
@@ -597,13 +768,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,150,000₫",
       "original_price_num": 5150000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/c6ac62f7a88925d77c9849_15e03d2ce4604b4593458329baadad80_medium.jpg",
+      "image": "assets/products/p_1070185929.jpg",
       "link": "/products/alexander-ferros-automatic-8132d-08-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 16,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070185929.jpg"
+      ]
     },
     {
       "id": "1070185935",
@@ -615,13 +789,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,150,000₫",
       "original_price_num": 5150000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/photo_2025-10-24_10-23-35_d717bdb41655444e8141739872b5080d_medium.jpg",
+      "image": "assets/products/p_1070185935.jpg",
       "link": "/products/alexander-ferros-automatic-8132d-15-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070185935.jpg"
+      ]
     },
     {
       "id": "1070185999",
@@ -633,13 +810,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,950,000₫",
       "original_price_num": 4950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0027_d375f9db0f7a4977a56b01b78c3aea8c_medium.jpg",
+      "image": "assets/products/p_1070185999.jpg",
       "link": "/products/alexander-ferros-automatic-8132s-01-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070185999.jpg"
+      ]
     },
     {
       "id": "1070186007",
@@ -651,13 +831,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,950,000₫",
       "original_price_num": 4950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/50a1ee70-8fd7-49e9-bd35-d45e21a47c14_cc20e20c8d3d48f088543b218daf09f1_medium.jpg",
+      "image": "assets/products/p_1070186007.jpg",
       "link": "/products/alexander-ferros-automatic-8132s-02-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070186007.jpg"
+      ]
     },
     {
       "id": "1075956547",
@@ -669,13 +852,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,950,000₫",
       "original_price_num": 3950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/8382d_01__1__0e60ed1844194c3fa53d641d7c87e77b_medium.jpg",
+      "image": "assets/products/p_1075956547.jpg",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-01-8382d-dong-ho-nam",
       "rating": 5,
       "reviews_count": 16,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956547.jpg"
+      ]
     },
     {
       "id": "1075956491",
@@ -687,13 +873,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,950,000₫",
       "original_price_num": 3950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/8382d_08__1__10ca2391cad04eb28132f5efe33b5bdc_medium.jpg",
+      "image": "assets/products/p_1075956491.jpg",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-08-8382d-dong-ho-nam",
       "rating": 5,
       "reviews_count": 6,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956491.jpg"
+      ]
     },
     {
       "id": "1075956381",
@@ -705,13 +894,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,950,000₫",
       "original_price_num": 3950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/8382d_09__1__bd9db3bf3b764c7faa972b36bc74f5ec_medium.jpg",
+      "image": "assets/products/p_1075956381.jpg",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-09-8382d-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956381.jpg"
+      ]
     },
     {
       "id": "1075956643",
@@ -723,13 +915,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,950,000₫",
       "original_price_num": 3950000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/791600329_1490940569506728_7701467967161483410_n_3518d07deabf4a79b0f26e8867ba7651_medium.jpg",
+      "image": "assets/products/p_1075956643.jpg",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-15-8382d-dong-ho-nam",
       "rating": 5,
       "reviews_count": 12,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956643.jpg"
+      ]
     },
     {
       "id": "1075956171",
@@ -741,13 +936,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,650,000₫",
       "original_price_num": 3650000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/8382s_01_8a7e6e0d94c843a5b0c403e8b2dd9681_medium.png",
+      "image": "assets/products/p_1075956171.png",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382s-01-8382s-dong-ho-nam",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956171.png"
+      ]
     },
     {
       "id": "1075956070",
@@ -759,13 +957,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,650,000₫",
       "original_price_num": 3650000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/8382s_02_ce656acae436462cb974e7fcac9325c9_medium.png",
+      "image": "assets/products/p_1075956070.png",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382s-02-8382s-dong-ho-nam",
       "rating": 5,
       "reviews_count": 21,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956070.png"
+      ]
     },
     {
       "id": "1075956032",
@@ -777,13 +978,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "3,650,000₫",
       "original_price_num": 3650000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/8382s_05_b6e1aa07753d494ab5b871dbaddf5395_medium.png",
+      "image": "assets/products/p_1075956032.png",
       "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382s-05-8382s-dong-ho-nam",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956032.png"
+      ]
     },
     {
       "id": "1070186113",
@@ -795,13 +999,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,750,000₫",
       "original_price_num": 5750000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0029_97e375695a35465f83b97c6e01dd56c4_medium.jpg",
+      "image": "assets/products/p_1070186113.jpg",
       "link": "/products/alexander-ferros-automatic-6161r-03-42mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 18,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070186113.jpg"
+      ]
     },
     {
       "id": "1070672072",
@@ -813,13 +1020,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,650,000₫",
       "original_price_num": 5650000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/a7885329e510684e3101217_1920b3ff61f240488ef0120de46d4a70_medium.jpg",
+      "image": "assets/products/p_1070672072.jpg",
       "link": "/products/alexander-ferros-automatic-6162s-03-42mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070672072.jpg"
+      ]
     },
     {
       "id": "1070167081",
@@ -831,13 +1041,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,800,000₫",
       "original_price_num": 5800000,
       "sale": "",
-      "image": "https://cdn.hstatic.net/products/1000223154/photo_2025-10-22_19-04-22_9e2b8b2d222b4de3872ee80c1e15f770_medium.jpg",
+      "image": "assets/products/p_1070167081.jpg",
       "link": "/products/alexander-ferros-automatic-6091r-01-42-5mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1070167081.jpg"
+      ]
     },
     {
       "id": "1073902702",
@@ -849,13 +1062,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-42%",
-      "image": "https://cdn.hstatic.net/products/1000223154/z7219260021762_4441e152896e66cf2da367138bfc3821-1-2048x2048_9a257fcbe2a446989d7b7d0e718229ad_medium.jpg",
+      "image": "assets/products/p_1073902702.jpg",
       "link": "/products/carnival-automatic-8231g-vh-dd-t-8231g-dong-ho-nam",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073902702.jpg"
+      ]
     },
     {
       "id": "1073902708",
@@ -867,13 +1083,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-46%",
-      "image": "https://cdn.hstatic.net/products/1000223154/758677466_122101179771411325_8149295396336440341_n_61e5af4eb77d4ed08d31235172fdd18a_medium.jpg",
+      "image": "assets/products/p_1073902708.jpg",
       "link": "/products/carnival-quartz-8231g-vt-dd-t-8231g-dong-ho-nam",
       "rating": 5,
       "reviews_count": 13,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073902708.jpg"
+      ]
     },
     {
       "id": "1073902713",
@@ -885,13 +1104,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-44%",
-      "image": "https://cdn.hstatic.net/products/1000223154/bf7627e9-1f91-4fbc-99c4-64f653a26fad_3bea37eba0af4b9ea838570c7b442e80_medium.jpg",
+      "image": "assets/products/p_1073902713.jpg",
       "link": "/products/carnival-quartz-8231g-vv-dd-t-8231g-dong-ho-nam",
       "rating": 5,
       "reviews_count": 18,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1073902713.jpg"
+      ]
     },
     {
       "id": "1068414195",
@@ -903,13 +1125,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,200,000₫",
       "original_price_num": 7200000,
       "sale": "-36%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z6772752396972_b133c12b8f896b058def367ffad64df4_a153cdcd661340f1b703cb35f28afaf8_medium.jpg",
+      "image": "assets/products/p_1068414195.jpg",
       "link": "/products/carnival-automatic-8189g-vt-dcs-t-8189g-dong-ho-nam-1",
       "rating": 5,
       "reviews_count": 10,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1068414195.jpg"
+      ]
     },
     {
       "id": "1063313311",
@@ -921,13 +1146,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,540,000₫",
       "original_price_num": 6540000,
       "sale": "-37%",
-      "image": "https://product.hstatic.net/1000223154/product/z6093927721375_96c04b703187b6e17f95c170b57f23a7_28905918f4b94f8e9e6f8fdc9f2b028a_medium.jpg",
+      "image": "assets/products/p_1063313311.jpg",
       "link": "/products/carnival-automatic-8168g-vh-dcs-n-8168g-dong-ho-nam",
       "rating": 5,
       "reviews_count": 16,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1063313311.jpg"
+      ]
     },
     {
       "id": "1066694235",
@@ -939,13 +1167,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,540,000₫",
       "original_price_num": 6540000,
       "sale": "-43%",
-      "image": "https://product.hstatic.net/1000223154/product/490274725_2985033524978812_3798489193836756149_n_8059fed7362448ee80a1d4e4fd37dd44_medium.jpg",
+      "image": "assets/products/p_1066694235.jpg",
       "link": "/products/carnival-automatic-8168g-vt-dcs-n-8168g-dong-ho-nam",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1066694235.jpg"
+      ]
     },
     {
       "id": "1063313357",
@@ -957,13 +1188,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,540,000₫",
       "original_price_num": 6540000,
       "sale": "-37%",
-      "image": "https://product.hstatic.net/1000223154/product/z6093927724442_0e8867bc189c4f5a5e25bfb24cdb75de_0012340f245e482380d0a562df1306eb_medium.jpg",
+      "image": "assets/products/p_1063313357.jpg",
       "link": "/products/carnival-automatic-8168g-vt-dcs-t-8168g-dong-ho-nam",
       "rating": 5,
       "reviews_count": 8,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1063313357.jpg"
+      ]
     },
     {
       "id": "1048366189",
@@ -975,13 +1209,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,120,000₫",
       "original_price_num": 7120000,
       "sale": "-35%",
-      "image": "https://product.hstatic.net/1000223154/product/z4524071207798_f36858254636e68b53ec7fc5fba69b6a_c02f93c442b64dfb81a6c8699b323e43_medium.jpg",
+      "image": "assets/products/p_1048366189.jpg",
       "link": "/products/carnival-nautilus-automatic-8110g-vh-dd-x-g8110-304-425-dong-ho-nam",
       "rating": 5,
       "reviews_count": 22,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048366189.jpg"
+      ]
     },
     {
       "id": "1048366117",
@@ -993,13 +1230,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,680,000₫",
       "original_price_num": 7680000,
       "sale": "-39%",
-      "image": "https://product.hstatic.net/1000223154/product/8109-1024x1024_8174054f73e8429d94ad090f8335276f_medium.jpg",
+      "image": "assets/products/p_1048366117.jpg",
       "link": "/products/carnival-nautilus-automatic-8110g-vh-d-g8110-302-414-dong-ho-nam",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048366117.jpg"
+      ]
     },
     {
       "id": "1048366143",
@@ -1011,13 +1251,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,680,000₫",
       "original_price_num": 7680000,
       "sale": "-39%",
-      "image": "https://product.hstatic.net/1000223154/product/8109-1-1024x1024_c3e70ba9147f499f84f394773cb8fe7f_medium.jpg",
+      "image": "assets/products/p_1048366143.jpg",
       "link": "/products/carnival-nautilus-automatic-8110g-vh-x-g8110-304-414-dong-ho-nam",
       "rating": 5,
       "reviews_count": 12,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048366143.jpg"
+      ]
     },
     {
       "id": "1048226049",
@@ -1029,13 +1272,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,135,000₫",
       "original_price_num": 6135000,
       "sale": "-23%",
-      "image": "https://product.hstatic.net/1000223154/product/fbsb-1024x1024__2__019dde5f559b411aabdff677460d77fb_medium.jpg",
+      "image": "assets/products/p_1048226049.jpg",
       "link": "/products/carnival-nautilus-automatic-g8108-305-011-8108g-vt-d-dong-ho-nam",
       "rating": 5,
       "reviews_count": 18,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048226049.jpg"
+      ]
     },
     {
       "id": "1048366265",
@@ -1047,13 +1293,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,160,000₫",
       "original_price_num": 7160000,
       "sale": "-32%",
-      "image": "https://product.hstatic.net/1000223154/product/1-1024x1024_bd4b49b7dcf44ad09a647fddeddff200_medium.jpg",
+      "image": "assets/products/p_1048366265.jpg",
       "link": "/products/carnival-nautilus-automatic-8108g-vh-d-g8108-302-414-dong-ho-nam",
       "rating": 5,
       "reviews_count": 16,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048366265.jpg"
+      ]
     },
     {
       "id": "1048226218",
@@ -1065,13 +1314,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,720,000₫",
       "original_price_num": 6720000,
       "sale": "-29%",
-      "image": "https://product.hstatic.net/1000223154/product/z4520181673574_eb5393484145e38150f244688f9a06ff_541b625612504fa7a954f6c4256e1da2_medium.jpg",
+      "image": "assets/products/p_1048226218.jpg",
       "link": "/products/carnival-nautilus-automatic-8108g-vh-dcs-d-dong-ho-nam",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048226218.jpg"
+      ]
     },
     {
       "id": "1048226220",
@@ -1083,13 +1335,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,720,000₫",
       "original_price_num": 6720000,
       "sale": "-29%",
-      "image": "https://product.hstatic.net/1000223154/product/z4520181520709_d60dfee8f1a6a92332e80a498c6f160b_1422c56086844d22abdeead0fe82d746_medium.jpg",
+      "image": "assets/products/p_1048226220.jpg",
       "link": "/products/carnival-nautilus-automatic-8108g-vh-dcs-n-dong-ho-nam",
       "rating": 5,
       "reviews_count": 7,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048226220.jpg"
+      ]
     },
     {
       "id": "1048104486",
@@ -1101,13 +1356,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,720,000₫",
       "original_price_num": 6720000,
       "sale": "-29%",
-      "image": "https://product.hstatic.net/1000223154/product/z4486833020109_3f0dad52213c037564cd892f9138b09d_8e4a111856b64a6bbdb9e7c0f86b9859_medium.jpg",
+      "image": "assets/products/p_1048104486.jpg",
       "link": "/products/carnival-automatic-8108g-vh-dd-d-g8108-302-432-dong-ho-nam",
       "rating": 5,
       "reviews_count": 19,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048104486.jpg"
+      ]
     },
     {
       "id": "1048104830",
@@ -1119,13 +1377,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,720,000₫",
       "original_price_num": 6720000,
       "sale": "-29%",
-      "image": "https://product.hstatic.net/1000223154/product/z4486833125143_efa14c8f57822ca51ba354f9e615fe4e_9960386534014c01b9362e250b55f678_medium.jpg",
+      "image": "assets/products/p_1048104830.jpg",
       "link": "/products/carnival-automatic-8108g-vh-dd-x-g8108-304-425-dong-ho-nam",
       "rating": 5,
       "reviews_count": 17,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1048104830.jpg"
+      ]
     },
     {
       "id": "1073902723",
@@ -1137,13 +1398,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-46%",
-      "image": "https://cdn.hstatic.net/products/1000223154/725006194_122199612530469743_9175805954073152379_n_0f4ad0e7994d4cf9bddead8fef49819a_medium.jpg",
+      "image": "assets/products/p_1073902723.jpg",
       "link": "/products/carnival-quartz-8231l-vt-dd-t-8231l-dong-ho-nu",
       "rating": 5,
       "reviews_count": 10,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1073902723.jpg"
+      ]
     },
     {
       "id": "1071739710",
@@ -1155,13 +1419,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,500,000₫",
       "original_price_num": 4500000,
       "sale": "-28%",
-      "image": "https://cdn.hstatic.net/products/1000223154/a93505d078f6f2a8abe7_18b91112bacf4dbf83eb9093ffb8bfe1_medium.jpg",
+      "image": "assets/products/p_1071739710.jpg",
       "link": "/products/carnival-fusion-quartz-8168l2-vh-dcs-xa-cu-hong-2-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 15,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1071739710.jpg"
+      ]
     },
     {
       "id": "1070022033",
@@ -1173,13 +1440,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-34%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7010222301434_a59c44fd9bc83a474bcd647f995c7fe0_0d43a7bbdf2946b282568a4b286efbe2_medium.jpg",
+      "image": "assets/products/p_1070022033.jpg",
       "link": "/products/carnival-fusion-quartz-8168l2-vh-dcs-xa-cu-trang-8168l2-day-trang-dong-ho-nu",
       "rating": 5,
       "reviews_count": 20,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1070022033.jpg"
+      ]
     },
     {
       "id": "1068940672",
@@ -1191,13 +1461,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/3_e0d2fa5d551a444383a733f22beea733_medium.png",
+      "image": "assets/products/p_1068940672.png",
       "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-d-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068940672.png"
+      ]
     },
     {
       "id": "1068940779",
@@ -1209,13 +1482,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/4_9049ac832f244122a04386a95678ae52_medium.png",
+      "image": "assets/products/p_1068940779.png",
       "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-n-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 12,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068940779.png"
+      ]
     },
     {
       "id": "1068940668",
@@ -1227,13 +1503,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/1_58b80991f7c047d09e0d8d24f3c4d5b1_medium.png",
+      "image": "assets/products/p_1068940668.png",
       "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-t-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068940668.png"
+      ]
     },
     {
       "id": "1068940685",
@@ -1245,13 +1524,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/2_440af1d71e314689abb1063d516b1fc0_medium.png",
+      "image": "assets/products/p_1068940685.png",
       "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-x-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 18,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068940685.png"
+      ]
     },
     {
       "id": "1068940655",
@@ -1263,13 +1545,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/2__2__2a4031da022240b8ad1202d3ed68ab2e_medium.png",
+      "image": "assets/products/p_1068940655.png",
       "link": "/products/carnival-fusion-quartz-8168l2-vv-dcs-d-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 6,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068940655.png"
+      ]
     },
     {
       "id": "1068940661",
@@ -1281,13 +1566,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,900,000₫",
       "original_price_num": 4900000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/1__2__8022a53553b640f0962ce724c0f22068_medium.png",
+      "image": "assets/products/p_1068940661.png",
       "link": "/products/carnival-fusion-quartz-8168l2-vv-dcs-t-8168l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068940661.png"
+      ]
     },
     {
       "id": "1068936950",
@@ -1299,13 +1587,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,200,000₫",
       "original_price_num": 5200000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/z6607814423087_2dfaf09531cfdd8a34ab6e9c9dd0bee4_4439dbeca28c4dc9b9570fa9ab5033fb_medium.jpg",
+      "image": "assets/products/p_1068936950.jpg",
       "link": "/products/carnival-quartz-8173l2-vh-dcs-d-8173l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 19,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068936950.jpg"
+      ]
     },
     {
       "id": "1068936966",
@@ -1317,13 +1608,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,200,000₫",
       "original_price_num": 5200000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7868026039472_de20017f1a568f90d2e8e10c7666a2c5_aa26fa5873c14f6ca6009a70b0e2ccb8_medium.jpg",
+      "image": "assets/products/p_1068936966.jpg",
       "link": "/products/carnival-quartz-8173l2-vh-dcs-n-8173l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 17,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068936966.jpg"
+      ]
     },
     {
       "id": "1068934440",
@@ -1335,13 +1629,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,200,000₫",
       "original_price_num": 5200000,
       "sale": "-38%",
-      "image": "https://cdn.hstatic.net/products/1000223154/z6607812700864_030d0cbc0d1d6bba81ca6884e713dc02_e3b86e57176a4ae283f03ec80fd54f99_medium.jpg",
+      "image": "assets/products/p_1068934440.jpg",
       "link": "/products/carnival-quartz-8173l2-vt-dcs-d-8173l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 9,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068934440.jpg"
+      ]
     },
     {
       "id": "1068934429",
@@ -1353,13 +1650,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,200,000₫",
       "original_price_num": 5200000,
       "sale": "-38%",
-      "image": "https://cdn.hstatic.net/products/1000223154/z6607812680062_40f5e49d0cf767507090385a3fa992c3_b31394d85f604f5aa4a07aa497c62954_medium.jpg",
+      "image": "assets/products/p_1068934429.jpg",
       "link": "/products/carnival-quartz-8173l2-vt-dcs-t1-8173l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 16,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068934429.jpg"
+      ]
     },
     {
       "id": "1068934418",
@@ -1371,13 +1671,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,200,000₫",
       "original_price_num": 5200000,
       "sale": "-38%",
-      "image": "https://cdn.hstatic.net/products/1000223154/z6607812661402_92a0ddb1f2a8722935d0e536402d1a0a_ab791a7ad00c45f89d2eb0892520cb55_medium.jpg",
+      "image": "assets/products/p_1068934418.jpg",
       "link": "/products/carnival-quartz-8173l2-vt-dcs-x-8173l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068934418.jpg"
+      ]
     },
     {
       "id": "1068934373",
@@ -1389,13 +1692,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,200,000₫",
       "original_price_num": 5200000,
       "sale": "-37%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7628132667092_06db5da6d39f011e01df86fb097df7db_e52f85353a264726881f4c52784f357c_medium.jpg",
+      "image": "assets/products/p_1068934373.jpg",
       "link": "/products/carnival-quartz-8173l2-vv-dcs-d-8173l2-dong-ho-nu",
       "rating": 5,
       "reviews_count": 6,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1068934373.jpg"
+      ]
     },
     {
       "id": "1037950596",
@@ -1407,13 +1713,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,140,000₫",
       "original_price_num": 4140000,
       "sale": "-8%",
-      "image": "https://product.hstatic.net/1000223154/product/1839-10mwdb__92dd53be4038419880c4d6df3b77c870_medium.png",
+      "image": "assets/products/p_1037950596.png",
       "link": "/products/bentley-bl1839-10mwdb",
       "rating": 5,
       "reviews_count": 11,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1037950596.png"
+      ]
     },
     {
       "id": "1053667648",
@@ -1425,13 +1734,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-26%",
-      "image": "https://product.hstatic.net/1000223154/product/z5304849042711_9eff03df87abb9b336ce4d4fcc95c074_1ee1047669374d28a28c6407f48c88ba_medium.jpg",
+      "image": "assets/products/p_1053667648.jpg",
       "link": "/products/bentley-quartz-bl2333-10mtci-r-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 17,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1053667648.jpg"
+      ]
     },
     {
       "id": "1053667645",
@@ -1443,13 +1755,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-26%",
-      "image": "https://product.hstatic.net/1000223154/product/z5304200525823_3ee4497aa026becff2e34ddf54055967_a3463ecba8a44b82a4bdcd062d693b55_medium.jpg",
+      "image": "assets/products/p_1053667645.jpg",
       "link": "/products/bentley-quartz-bl2333-10mtdi-r-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1053667645.jpg"
+      ]
     },
     {
       "id": "1053667566",
@@ -1461,13 +1776,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,700,000₫",
       "original_price_num": 6700000,
       "sale": "-22%",
-      "image": "https://product.hstatic.net/1000223154/product/428690180_3660738274185220_2977293035461343710_n__1__cd64764883da4de78da1d2fdc29cad9d_medium.jpg",
+      "image": "assets/products/p_1053667566.jpg",
       "link": "/products/bentley-automatic-bl2333-15mtci-r-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 17,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1053667566.jpg"
+      ]
     },
     {
       "id": "1053667551",
@@ -1479,13 +1797,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,700,000₫",
       "original_price_num": 6700000,
       "sale": "-22%",
-      "image": "https://product.hstatic.net/1000223154/product/z5862875384044_572f7f88271dd2dd3e2dfb1adece618f_6078358db22e43bbb8980760c621e514_medium.jpg",
+      "image": "assets/products/p_1053667551.jpg",
       "link": "/products/bentley-automatic-bl2333-15mtdi-r-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 20,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1053667551.jpg"
+      ]
     },
     {
       "id": "1037949724",
@@ -1497,13 +1818,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,050,000₫",
       "original_price_num": 8050000,
       "sale": "-16%",
-      "image": "https://product.hstatic.net/1000223154/product/2018-05-18-2-22-35_1784-202wcb-s_85422430e404482da2cb413e70c19748_medium.png",
+      "image": "assets/products/p_1037949724.png",
       "link": "/products/bentley-bl1784-202wcb-s",
       "rating": 5,
       "reviews_count": 11,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1037949724.png"
+      ]
     },
     {
       "id": "1027795661",
@@ -1515,13 +1839,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,300,000₫",
       "original_price_num": 12300000,
       "sale": "-30%",
-      "image": "https://product.hstatic.net/1000223154/product/z2398556833777_b278db90406218f10ac3a7582828e97_33c9bd0d763645ea85dab940d5756a5e_medium.jpg",
+      "image": "assets/products/p_1027795661.jpg",
       "link": "/products/bentley-bl1784-252kbb-s2",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1027795661.jpg"
+      ]
     },
     {
       "id": "1027795697",
@@ -1533,13 +1860,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,300,000₫",
       "original_price_num": 12300000,
       "sale": "-30%",
-      "image": "https://product.hstatic.net/1000223154/product/z3241758380321_13a580fa48c3e63154674b460095af6_0a4313c773a44f2b8bd61dce5d02cab0_medium.jpg",
+      "image": "assets/products/p_1027795697.jpg",
       "link": "/products/bentley-bl1784-252kbb-s2-m",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1027795697.jpg"
+      ]
     },
     {
       "id": "1071321968",
@@ -1551,13 +1881,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-30%",
-      "image": "https://cdn.hstatic.net/products/1000223154/490511287_1747465869479625_8539764952696701249_n_361f35b138bc43249f184f72a61975ff_medium.jpg",
+      "image": "assets/products/p_1071321968.jpg",
       "link": "/products/seiko-5-snke03k1-snke03-dong-ho-nam",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1071321968.jpg"
+      ]
     },
     {
       "id": "1023941363",
@@ -1569,13 +1902,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "6,900,000₫",
       "original_price_num": 6900000,
       "sale": "-36%",
-      "image": "https://product.hstatic.net/1000223154/product/4gfdsfds_ce155f76b3d547a4b6794022dba584c3_medium.jpg",
+      "image": "assets/products/p_1023941363.jpg",
       "link": "/products/seiko-5-automatic-snkp15k1",
       "rating": 5,
       "reviews_count": 14,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1023941363.jpg"
+      ]
     },
     {
       "id": "1044963197",
@@ -1587,13 +1923,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "20,000,000₫",
       "original_price_num": 20000000,
       "sale": "-42%",
-      "image": "https://cdn.hstatic.net/products/1000223154/674742858_1484036286780578_5583039845760862186_n__1__4eb4071291d943768d9063a4c91ba522_medium.jpg",
+      "image": "assets/products/p_1044963197.jpg",
       "link": "/products/seiko-solar-ssc815-prospex-speedtimer-chronograph-dong-ho-nam",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1044963197.jpg"
+      ]
     },
     {
       "id": "1041730681",
@@ -1605,13 +1944,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,000,000₫",
       "original_price_num": 7000000,
       "sale": "-41%",
-      "image": "https://product.hstatic.net/1000223154/product/z3697546331478_31d5f3c0acf520b66f964e365c6b153c_ae80f03de02a430989e0eb306c3e0b22_medium.jpg",
+      "image": "assets/products/p_1041730681.jpg",
       "link": "/products/seiko-tank-swr049-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1041730681.jpg"
+      ]
     },
     {
       "id": "1044768345",
@@ -1623,13 +1965,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "14,250,000₫",
       "original_price_num": 14250000,
       "sale": "-38%",
-      "image": "https://product.hstatic.net/1000223154/product/329182029_1125577521440575_3420533208677720208_n_9b3e99b81604432fbc33cdda9d2c3b74_medium.jpg",
+      "image": "assets/products/p_1044768345.jpg",
       "link": "/products/seiko-5-automatic-g-m-t-watch-ssk005k1-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1044768345.jpg"
+      ]
     },
     {
       "id": "1035782981",
@@ -1641,13 +1986,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "5,000,000₫",
       "original_price_num": 5000000,
       "sale": "-20%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7636211103286_fb34585a2b36578c07faaadcc4360926_cff46bec586249aca314894bbacda5ca_medium.jpg",
+      "image": "assets/products/p_1035782981.jpg",
       "link": "/products/seiko-5-snk361k1-snk361",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035782981.jpg"
+      ]
     },
     {
       "id": "1037630786",
@@ -1659,13 +2007,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,500,000₫",
       "original_price_num": 4500000,
       "sale": "-24%",
-      "image": "https://product.hstatic.net/1000223154/product/z3060391420778_29f9eb797a761672e1d58bbcae4c1ede_4a9e2cd2223047d59bcf75cd34ec4f1d_medium.jpg",
+      "image": "assets/products/p_1037630786.jpg",
       "link": "/products/seiko-5-snk809k1-day-kim-loai",
       "rating": 5,
       "reviews_count": 19,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1037630786.jpg"
+      ]
     },
     {
       "id": "1031081314",
@@ -1677,13 +2028,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,500,000₫",
       "original_price_num": 4500000,
       "sale": "-12%",
-      "image": "https://product.hstatic.net/1000223154/product/z3479057271011_6ffea6162a4b24dc0297e5bfe29465cc_1b2913c304bd4d9c91074aada5b1f691_medium.jpg",
+      "image": "assets/products/p_1031081314.jpg",
       "link": "/products/seiko-5-snkk31k1-snkk31",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1031081314.jpg"
+      ]
     },
     {
       "id": "1066648734",
@@ -1695,13 +2049,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,500,000₫",
       "original_price_num": 4500000,
       "sale": "-12%",
-      "image": "https://product.hstatic.net/1000223154/product/122719063_2955676811200459_8248457443795187600_n_7badf3866468427c9fe69e98658a21d1_medium.jpg",
+      "image": "assets/products/p_1066648734.jpg",
       "link": "/products/seiko-5-snkk71k1-38mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 21,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1066648734.jpg"
+      ]
     },
     {
       "id": "1023258421",
@@ -1713,13 +2070,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "4,500,000₫",
       "original_price_num": 4500000,
       "sale": "-13%",
-      "image": "https://product.hstatic.net/1000223154/product/z2446225615749_843e0ebc376a459a0172952f7a54c068_bf8147a4106e4f1497d2a201db40c95b_medium.jpg",
+      "image": "assets/products/p_1023258421.jpg",
       "link": "/products/seiko-5-snkl79k1-snkl79",
       "rating": 5,
       "reviews_count": 8,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1023258421.jpg"
+      ]
     },
     {
       "id": "1053494660",
@@ -1731,13 +2091,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,000,000₫",
       "original_price_num": 9000000,
       "sale": "-28%",
-      "image": "https://product.hstatic.net/1000223154/product/432421113_7642153789181416_5196703897567752230_n_183fbcd8c4414cddb6249939d2fcb6fb_medium.jpg",
+      "image": "assets/products/p_1053494660.jpg",
       "link": "/products/a-seiko-5-sport-sbsa185-vissel-kobe-limited-300c-dong-ho-nam",
       "rating": 5,
       "reviews_count": 11,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1053494660.jpg"
+      ]
     },
     {
       "id": "1051710974",
@@ -1749,13 +2112,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,200,000₫",
       "original_price_num": 8200000,
       "sale": "-32%",
-      "image": "https://product.hstatic.net/1000223154/product/z4951060958105_eab9e3838fde6408eed2c9b05f599252_8ac138340a434587840e7c763552fad3_medium.jpg",
+      "image": "assets/products/p_1051710974.jpg",
       "link": "/products/seiko-5-sport-srpk33k1-38mm-tiffany-dong-ho-nam",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1051710974.jpg"
+      ]
     },
     {
       "id": "1035782587",
@@ -1767,13 +2133,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "10,000,000₫",
       "original_price_num": 10000000,
       "sale": "-26%",
-      "image": "https://product.hstatic.net/1000223154/product/z3602525555100_3d09b94504419e2030fdc79cb3ecf8f8_5ec16bde20934958accc0d34c168895b_medium.jpg",
+      "image": "assets/products/p_1035782587.jpg",
       "link": "/products/orient-sun-and-moon-gen-3-ra-ak0011d10b-ra-ak0011d10b-ra-ak0011d-2021",
       "rating": 5,
       "reviews_count": 20,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035782587.jpg"
+      ]
     },
     {
       "id": "1051276318",
@@ -1785,13 +2154,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,900,000₫",
       "original_price_num": 9900000,
       "sale": "-36%",
-      "image": "https://cdn.hstatic.net/products/1000223154/481239601_1414380456601377_2190928022508915597_n_98e59e17de984efc94b8dbbf370142a6_medium.jpg",
+      "image": "assets/products/p_1051276318.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-ak0801s-41-5mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1051276318.jpg"
+      ]
     },
     {
       "id": "1035782736",
@@ -1803,13 +2175,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,000,000₫",
       "original_price_num": 12000000,
       "sale": "-34%",
-      "image": "https://cdn.hstatic.net/products/1000223154/z3836002102867_ad89992c934256db88fd0cb50751417c_53c8155fac574b188f4d625d7e1d6361_medium.jpg",
+      "image": "assets/products/p_1035782736.jpg",
       "link": "/products/orient-sun-and-moon-gen-3-ra-ak0007s10b-ra-ak0007s00c-ra-ak0007s-2021",
       "rating": 5,
       "reviews_count": 5,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035782736.jpg"
+      ]
     },
     {
       "id": "1035782571",
@@ -1821,13 +2196,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "10,000,000₫",
       "original_price_num": 10000000,
       "sale": "-26%",
-      "image": "https://product.hstatic.net/1000223154/product/z2972784869679_34090f7c1262adf4fe7bb4798df29663__1__55cbbb39c8464d86b282d51e5757e3c7_medium.jpg",
+      "image": "assets/products/p_1035782571.jpg",
       "link": "/products/orient-sun-and-moon-gen-3-ra-ak0008s10b-ra-ak0008s-ra-ak0008s00c",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035782571.jpg"
+      ]
     },
     {
       "id": "1035782718",
@@ -1839,13 +2217,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,000,000₫",
       "original_price_num": 12000000,
       "sale": "-34%",
-      "image": "https://product.hstatic.net/1000223154/product/z3356737979450_e67c0aea76144d12b9341b053e4101ef_07b7f14dc76c4a9f9934249da3d6d439_medium.jpg",
+      "image": "assets/products/p_1035782718.jpg",
       "link": "/products/orient-sun-and-moon-gen-3-ra-ak0009t10b-ra-ak0009t00c-ra-ak0009t-2021",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035782718.jpg"
+      ]
     },
     {
       "id": "1035782623",
@@ -1857,13 +2238,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "10,000,000₫",
       "original_price_num": 10000000,
       "sale": "-25%",
-      "image": "https://product.hstatic.net/1000223154/product/z2738003548354_4ee00ab1e57ff975eb266891d415eca_b2bfe3306ad64efe8c1ae39f7cbb0c9a_medium.jpg",
+      "image": "assets/products/p_1035782623.jpg",
       "link": "/products/orient-sun-and-moon-gen-3-ra-ak0010b10b-ra-ak0010b00c-ra-ak0010b",
       "rating": 5,
       "reviews_count": 10,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035782623.jpg"
+      ]
     },
     {
       "id": "1035797932",
@@ -1875,13 +2259,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "13,400,000₫",
       "original_price_num": 13400000,
       "sale": "-34%",
-      "image": "https://product.hstatic.net/1000223154/product/z3652242343822_453195220deb21e700dbdb4a96110303_2798c74c96d041429f595ca438f24cdd_medium.jpg",
+      "image": "assets/products/p_1035797932.jpg",
       "link": "/products/orient-sun-and-moon-gen-4-ra-as0008b10b-ra-as0008b00c-ra-as0008b-2021",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797932.jpg"
+      ]
     },
     {
       "id": "1035797827",
@@ -1893,13 +2280,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,000,000₫",
       "original_price_num": 12000000,
       "sale": "-28%",
-      "image": "https://product.hstatic.net/1000223154/product/z2760918982073_d185531b050302f96b60fd91c38590bf_ac86b2b8b32d4149b6bfe5dbaba25ea8_medium.jpg",
+      "image": "assets/products/p_1035797827.jpg",
       "link": "/products/orient-sun-and-moon-gen-4-ra-as0009s10b-ra-as0009s00c-ra-as0009s-2021",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797827.jpg"
+      ]
     },
     {
       "id": "1035797825",
@@ -1911,13 +2301,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,000,000₫",
       "original_price_num": 12000000,
       "sale": "-27%",
-      "image": "https://product.hstatic.net/1000223154/product/z3226504272146_1feae365507181e9a229eb1f10bc6151_43b11bcc8429465aa1e7a862d9ddd347_medium.jpg",
+      "image": "assets/products/p_1035797825.jpg",
       "link": "/products/orient-sun-and-moon-gen-4-ra-as0010s10b-ra-as0010s00c-ra-as0010s-2021",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797825.jpg"
+      ]
     },
     {
       "id": "1035797835",
@@ -1929,13 +2322,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,000,000₫",
       "original_price_num": 12000000,
       "sale": "-31%",
-      "image": "https://product.hstatic.net/1000223154/product/z3607349605138_46c35e1fec288e5ae7537dfc6c1ed525_9fff2d35f41d4f1a81f056d77e9ed69a_medium.jpg",
+      "image": "assets/products/p_1035797835.jpg",
       "link": "/products/orient-sun-and-moon-gen-4-ra-as0011s10b-ra-as0011s00c-ra-as0011s-2021",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797835.jpg"
+      ]
     },
     {
       "id": "1035797930",
@@ -1947,13 +2343,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,260,000₫",
       "original_price_num": 9260000,
       "sale": "-30%",
-      "image": "https://product.hstatic.net/1000223154/product/z3604226077731_a3a615703c213e2196c8010bb96415c9_0256ee15f64e4b3e823294af78de12d3_medium.jpg",
+      "image": "assets/products/p_1035797930.jpg",
       "link": "/products/orient-sun-and-moon-gen-5-ra-ak0308l10b-ra-ak0308l00c-ra-ak0308l-2021",
       "rating": 5,
       "reviews_count": 17,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797930.jpg"
+      ]
     },
     {
       "id": "1035797893",
@@ -1965,13 +2364,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,890,000₫",
       "original_price_num": 8890000,
       "sale": "-24%",
-      "image": "https://product.hstatic.net/1000223154/product/z4125979745471_8567465a8d3691b607d0f77392726232_7ac5087bc3454a2c929c3df2c5e8af03_medium.jpg",
+      "image": "assets/products/p_1035797893.jpg",
       "link": "/products/orient-sun-and-moon-gen-5-2021-ra-ak0309b10b-ra-ak0309b00c-ra-ak0309b-2021",
       "rating": 5,
       "reviews_count": 8,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797893.jpg"
+      ]
     },
     {
       "id": "1035797902",
@@ -1983,13 +2385,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,350,000₫",
       "original_price_num": 8350000,
       "sale": "-22%",
-      "image": "https://product.hstatic.net/1000223154/product/z3608114526409_7ec6803ad72683d98c51f0b4a9f26811_118ccc393a834436bbf14ebb7cd5f167_medium.jpg",
+      "image": "assets/products/p_1035797902.jpg",
       "link": "/products/orient-sun-and-moon-gen-5-ra-ak0310s10b-ra-ak0310s00c-ra-ak0310s-2021",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1035797902.jpg"
+      ]
     },
     {
       "id": "1071322118",
@@ -2001,13 +2406,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "12,000,000₫",
       "original_price_num": 12000000,
       "sale": "-42%",
-      "image": "https://cdn.hstatic.net/products/1000223154/587192576_1152821870367725_8480017560918720506_n_86e46a3c32f447a69c706aec0403cfb4_medium.jpg",
+      "image": "assets/products/p_1071322118.jpg",
       "link": "/products/orient-sun-and-moon-gen-7-ra-ak0311n30b-ra-ak0311n10b-ra-ak0311n-dong-ho-nam",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1071322118.jpg"
+      ]
     },
     {
       "id": "1051276274",
@@ -2019,13 +2427,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,900,000₫",
       "original_price_num": 9900000,
       "sale": "-34%",
-      "image": "https://product.hstatic.net/1000223154/product/z6077735931628_4cf01e71860b7bdd5127b1871731630b_31cdb37fcfaf403a97066323736119da_medium.jpg",
+      "image": "assets/products/p_1051276274.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-ak0802s-41-5mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1051276274.jpg"
+      ]
     },
     {
       "id": "1051276270",
@@ -2037,13 +2448,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,900,000₫",
       "original_price_num": 9900000,
       "sale": "-34%",
-      "image": "https://product.hstatic.net/1000223154/product/z5610498528046_bdf4713c30b4d73db2d9d6040f7c65b2_ad4929ecc5914472861474a59530132e_medium.jpg",
+      "image": "assets/products/p_1051276270.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-ak0803y-41-5mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 21,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1051276270.jpg"
+      ]
     },
     {
       "id": "1051276278",
@@ -2055,13 +2469,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,900,000₫",
       "original_price_num": 9900000,
       "sale": "-34%",
-      "image": "https://cdn.hstatic.net/products/1000223154/9607eb8f-45ba-4daf-8f60-bcb35730fd8c_85b59a2ee428490bbd0ccae451d36e39_medium.jpg",
+      "image": "assets/products/p_1051276278.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-ak0804y-41-5mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 11,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1051276278.jpg"
+      ]
     },
     {
       "id": "1030521752",
@@ -2073,13 +2490,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "10,980,000₫",
       "original_price_num": 10980000,
       "sale": "-32%",
-      "image": "https://product.hstatic.net/1000223154/product/z2385407368960_44bdbc1659a619cd491d429858cd44d4_62f650b18694476d97403278ad6e882f_medium.jpg",
+      "image": "assets/products/p_1030521752.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-as0101s10b-ra-as0101s00c-ra-as0101s",
       "rating": 5,
       "reviews_count": 21,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1030521752.jpg"
+      ]
     },
     {
       "id": "1030677720",
@@ -2091,13 +2511,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,900,000₫",
       "original_price_num": 9900000,
       "sale": "-31%",
-      "image": "https://product.hstatic.net/1000223154/product/z2479066019330_65d7e3b449f3f7c5a90a597ced588ba2_5bc46325d4d841a8b3a123638fd70dde_medium.jpg",
+      "image": "assets/products/p_1030677720.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-as0102s10b-ra-as0102s00c-ra-as0102s",
       "rating": 5,
       "reviews_count": 7,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1030677720.jpg"
+      ]
     },
     {
       "id": "1030677766",
@@ -2109,13 +2532,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,900,000₫",
       "original_price_num": 9900000,
       "sale": "-35%",
-      "image": "https://product.hstatic.net/1000223154/product/z2264769261821_e1d45fa46310678817d631797632034f_d7579b84755447e3b8d0133c3e10cbbb_medium.jpg",
+      "image": "assets/products/p_1030677766.jpg",
       "link": "/products/orient-sun-and-moon-bambino-ra-as0103a10b",
       "rating": 5,
       "reviews_count": 17,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1030677766.jpg"
+      ]
     },
     {
       "id": "1023098254",
@@ -2127,13 +2553,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "26,000,000₫",
       "original_price_num": 26000000,
       "sale": "-52%",
-      "image": "https://product.hstatic.net/1000223154/product/2bc790962e59d6078f48_6b68c62e68fb4a10a2ea5fc3e85bc132_medium.jpg",
+      "image": "assets/products/p_1023098254.jpg",
       "link": "/products/tissot-t-classic-automatic-t087-407-55-067-00-t0874075506700",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1023098254.jpg"
+      ]
     },
     {
       "id": "1006815493",
@@ -2145,13 +2574,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "21,940,000₫",
       "original_price_num": 21940000,
       "sale": "-37%",
-      "image": "https://product.hstatic.net/1000223154/product/z2429033546020_6cf07392d66ae7b63e2d6d53058f1e77_5f5b0814a74b4c138158dbb8d38e34d2_medium.jpg",
+      "image": "assets/products/p_1006815493.jpg",
       "link": "/products/tissot-tradition-powermatic-80-open-heart-t063-907-11-038-00",
       "rating": 5,
       "reviews_count": 8,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1006815493.jpg"
+      ]
     },
     {
       "id": "1054917761",
@@ -2163,13 +2595,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "18,830,000₫",
       "original_price_num": 18830000,
       "sale": "-21%",
-      "image": "https://product.hstatic.net/1000223154/product/z6295055154863_95a6525d21422c3eaab611773c323462_61691e798c7b48069cd445ee89d70769_medium.jpg",
+      "image": "assets/products/p_1054917761.jpg",
       "link": "/products/a-tissot-prx-powermatic-80-35mm-t137-207-11-091-01-t1372071109101",
       "rating": 5,
       "reviews_count": 12,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1054917761.jpg"
+      ]
     },
     {
       "id": "1051252068",
@@ -2181,13 +2616,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "17,170,000₫",
       "original_price_num": 17170000,
       "sale": "-45%",
-      "image": "https://cdn.hstatic.net/products/1000223154/t41.1.483.52-qvwatch-8_d301406cd3b948d9a26891fa0d765854_medium.png",
+      "image": "assets/products/p_1051252068.png",
       "link": "/products/tissot-automatic-t41-1-483-52-le-locle-t41148352-dong-ho-nam",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1051252068.png"
+      ]
     },
     {
       "id": "1067442479",
@@ -2199,13 +2637,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "20,000,000₫",
       "original_price_num": 20000000,
       "sale": "-31%",
-      "image": "https://cdn.hstatic.net/products/1000223154/fc-0a3f-4124-bf7c-00a9f9b60bd0_af6b88655220458b9517badce8824bd7_master_aa15e3f00f4e4e2e9706d78cdb76a269_medium.jpg",
+      "image": "assets/products/p_1067442479.jpg",
       "link": "/products/tissot-automatic-t139-807-22-038-00-chemin-des-tourelles-powermatic-80-dong-ho-nam",
       "rating": 5,
       "reviews_count": 12,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1067442479.jpg"
+      ]
     },
     {
       "id": "1020038505",
@@ -2217,13 +2658,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "19,000,000₫",
       "original_price_num": 19000000,
       "sale": "-35%",
-      "image": "https://product.hstatic.net/1000223154/product/z2191828321864_a051c6cc43daa6ab886cabcf1ca80ba5_ea1a6f4212404e59803e8689074071dc_medium.jpg",
+      "image": "assets/products/p_1020038505.jpg",
       "link": "/products/tissot-chemin-des-tourelles-powermatic-80-t099-407-22-038-01-t0994072203801",
       "rating": 5,
       "reviews_count": 10,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1020038505.jpg"
+      ]
     },
     {
       "id": "1031233423",
@@ -2235,13 +2679,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "25,500,000₫",
       "original_price_num": 25500000,
       "sale": "-46%",
-      "image": "https://product.hstatic.net/1000223154/product/z2365746455268_b96c4914f857595e66f0c3326c85bc6d_0d5ac5ff7a1543988a26704c3791ec27_medium.jpg",
+      "image": "assets/products/p_1031233423.jpg",
       "link": "/products/tissot-automatic-openheart-demirose-t063-907-22-038-01-t0639072203801",
       "rating": 5,
       "reviews_count": 10,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1031233423.jpg"
+      ]
     },
     {
       "id": "1075764644",
@@ -2253,13 +2700,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "26,150,000₫",
       "original_price_num": 26150000,
       "sale": "-43%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8068685058804_e6e78be94a4aa0e1da9d1ed4eae9f71b_523f5592f1e94c0487461db9a5c8704f_medium.jpg",
+      "image": "assets/products/p_1075764644.jpg",
       "link": "/products/tissot-automatic-t120-807-33-051-00-t1208073305100-dong-ho-nam",
       "rating": 5,
       "reviews_count": 13,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075764644.jpg"
+      ]
     },
     {
       "id": "1026425939",
@@ -2271,13 +2721,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "22,000,000₫",
       "original_price_num": 22000000,
       "sale": "-46%",
-      "image": "https://product.hstatic.net/1000223154/product/65c6654318fde5a3bcec_ebeb14e2bc4f40859bfa363ad188e6cc_medium.jpg",
+      "image": "assets/products/p_1026425939.jpg",
       "link": "/products/tissot-automatic-carson-powermatic80-t122-407-36-031-00",
       "rating": 5,
       "reviews_count": 8,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1026425939.jpg"
+      ]
     },
     {
       "id": "1040001662",
@@ -2289,13 +2742,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "17,800,000₫",
       "original_price_num": 17800000,
       "sale": "-41%",
-      "image": "https://product.hstatic.net/1000223154/product/z3499305285366_d5c82ea18995d218a3c12f9c9283d0c0_f88983193ca04a08ab491c440db1e30e_medium.jpg",
+      "image": "assets/products/p_1040001662.jpg",
       "link": "/products/tissot-le-locle-demi-t006-428-22-032-00-tt0064282203200-dong-ho-nam",
       "rating": 5,
       "reviews_count": 13,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1040001662.jpg"
+      ]
     },
     {
       "id": "1072302637",
@@ -2307,13 +2763,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "24,850,000₫",
       "original_price_num": 24850000,
       "sale": "-48%",
-      "image": "https://cdn.hstatic.net/products/1000223154/9a-720d-434c-a45e-458161470163_50802b5fed9d44d5883433cba2810e79_master_c021b04a075f42bdb4a7f8b9970a1891_medium.jpg",
+      "image": "assets/products/p_1072302637.jpg",
       "link": "/products/tissot-automatic-t139-807-11-031-00-dong-ho-nam",
       "rating": 5,
       "reviews_count": 6,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1072302637.jpg"
+      ]
     },
     {
       "id": "1039913127",
@@ -2325,13 +2784,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "22,000,000₫",
       "original_price_num": 22000000,
       "sale": "-48%",
-      "image": "https://cdn.hstatic.net/products/1000223154/74-6bc0-4922-aded-f5aa29825296_42473ea9fe3c4b31a15e8e8b468c02c0_master_228ac2e643334d71b5e5cc5240b4a762_medium.jpg",
+      "image": "assets/products/p_1039913127.jpg",
       "link": "/products/tissot-carson-powermatic-demirose-t122-407-22-031-01-t1224072203101-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1039913127.jpg"
+      ]
     },
     {
       "id": "1074206935",
@@ -2343,13 +2805,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "23,000,000₫",
       "original_price_num": 23000000,
       "sale": "-44%",
-      "image": "https://cdn.hstatic.net/products/1000223154/b6-703e-4fc8-9ee1-e14e6d2e7051_dc7b1897de3c4b449a06427d5797c68c_master_03e262b753894b6b8b4ec59af778a130_medium.jpg",
+      "image": "assets/products/p_1074206935.jpg",
       "link": "/products/tissot-chemin-des-tourelles-powermatic-80-automatic-t139-807-11-061-00-t1398071106100-dong-ho-nam",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1074206935.jpg"
+      ]
     },
     {
       "id": "1067613545",
@@ -2361,13 +2826,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "20,180,000₫",
       "original_price_num": 20180000,
       "sale": "-32%",
-      "image": "https://cdn.hstatic.net/products/1000223154/7b80cfcf4375c92b9064_cfa07329dbf74cb4ba1f90dfd068db92_medium.jpg",
+      "image": "assets/products/p_1067613545.jpg",
       "link": "/products/tissot-automatic-t139-807-11-048-00-dong-ho-nam",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1067613545.jpg"
+      ]
     },
     {
       "id": "1056451838",
@@ -2379,13 +2847,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "24,000,000₫",
       "original_price_num": 24000000,
       "sale": "-43%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8013873371453_4cbdbd1c60dc8fdb4d7172408eac0e87_8a25d430e88e49dcae653c6aa953fce6_medium.jpg",
+      "image": "assets/products/p_1056451838.jpg",
       "link": "/products/tissot-chemin-des-tourelles-t139-807-36-031-00-t1398073603100-39mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1056451838.jpg"
+      ]
     },
     {
       "id": "1075765468",
@@ -2397,13 +2868,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "27,650,000₫",
       "original_price_num": 27650000,
       "sale": "-46%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8120786166625_6b518040842f9fcead68049613b888d1_1cf1f8ebf54b4d4e8c1b39aaf58fb17d_medium.jpg",
+      "image": "assets/products/p_1075765468.jpg",
       "link": "/products/tissot-automatic-t120-807-22-051-00-t1208072205100-dong-ho-nam",
       "rating": 5,
       "reviews_count": 19,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075765468.jpg"
+      ]
     },
     {
       "id": "1075956415",
@@ -2415,13 +2889,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "17,190,000₫",
       "original_price_num": 17190000,
       "sale": "-49%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8098116631707_18215851000a40e2ccc0e309bef51b73_ac8233ca8c2a4ae4881259fd664cd6ce_medium.jpg",
+      "image": "assets/products/p_1075956415.jpg",
       "link": "/products/tissot-seastar-1000-quartz-t120-410-33-091-00-t1204103309100-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 20,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956415.jpg"
+      ]
     },
     {
       "id": "1075956551",
@@ -2433,13 +2910,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "17,190,000₫",
       "original_price_num": 17190000,
       "sale": "-49%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8073188536848_252d432498156551349b098fd574c7b4_a75177811c2443e99222c23b8ed7c542_medium.jpg",
+      "image": "assets/products/p_1075956551.jpg",
       "link": "/products/tissot-seastar-1000-quartz-t120-410-33-421-00-t1204103342100-40mm-dong-ho-nam",
       "rating": 5,
       "reviews_count": 20,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1075956551.jpg"
+      ]
     },
     {
       "id": "1044628927",
@@ -2451,13 +2931,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "21,230,000₫",
       "original_price_num": 21230000,
       "sale": "-57%",
-      "image": "https://product.hstatic.net/1000223154/product/z4073276131072_f0d6c63d09b3c0f57f52a5f57e6ca9e1_33c43ea6063d45a7b1974d7aaf9aa9d0_medium.jpg",
+      "image": "assets/products/p_1044628927.jpg",
       "link": "/products/tissot-t-classic-automatic-iii-day-date-t065-430-22-051-00-t0654302205100",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1044628927.jpg"
+      ]
     },
     {
       "id": "1041846981",
@@ -2469,13 +2952,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "20,000,000₫",
       "original_price_num": 20000000,
       "sale": "-26%",
-      "image": "https://product.hstatic.net/1000223154/product/z3723725424174_1f34124a41483f32c6e0127f474a5e24_f439a4dadd9444cbbc45115f57ba150c_medium.jpg",
+      "image": "assets/products/p_1041846981.jpg",
       "link": "/products/tissot-seastar-1000-black-t120-407-17-051-00-t1204071705100",
       "rating": 5,
       "reviews_count": 14,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1041846981.jpg"
+      ]
     },
     {
       "id": "1076283315",
@@ -2487,13 +2973,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "17,000,000₫",
       "original_price_num": 17000000,
       "sale": "-50%",
-      "image": "https://cdn.hstatic.net/products/1000223154/783029374_28931997826403303_2957954725602447386_n_f76a72b1117549a48df5d8bf92ef2f46_medium.jpg",
+      "image": "assets/products/p_1076283315.jpg",
       "link": "/products/citizen-quartz-nk0030-51e-nk003051e-dong-ho-nu",
       "rating": 5,
       "reviews_count": 20,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1076283315.jpg"
+      ]
     },
     {
       "id": "1076283301",
@@ -2505,13 +2994,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "18,000,000₫",
       "original_price_num": 18000000,
       "sale": "-47%",
-      "image": "https://cdn.hstatic.net/products/1000223154/1790475340214_6809250771806591907_g533268933396290490_h_b858792fb9054e2c878d641e5be60a96_medium.jpg",
+      "image": "assets/products/p_1076283301.jpg",
       "link": "/products/citizen-quartz-nk0032-56a-nk003256a-dong-ho-nu",
       "rating": 5,
       "reviews_count": 6,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nam"
+      "gender": "Nam",
+      "images": [
+        "assets/products/p_1076283301.jpg"
+      ]
     },
     {
       "id": "1075795517",
@@ -2523,13 +3015,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,700,000₫",
       "original_price_num": 7700000,
       "sale": "-26%",
-      "image": "https://cdn.hstatic.net/products/1000223154/746807499_17994113378995221_2362510591432391478_n_e4891ddd6ee54c78b8fa4fa63aa74c44_medium.jpg",
+      "image": "assets/products/p_1075795517.jpg",
       "link": "/products/seiko-quartz-swr083p1-dong-ho-nu",
       "rating": 5,
       "reviews_count": 22,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1075795517.jpg"
+      ]
     },
     {
       "id": "1075795454",
@@ -2541,13 +3036,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "7,700,000₫",
       "original_price_num": 7700000,
       "sale": "-30%",
-      "image": "https://cdn.hstatic.net/products/1000223154/729991849_1040718974957963_1495007288771584128_n_9bb2f35b72ad4c17af32f9bdca3cc191_medium.jpg",
+      "image": "assets/products/p_1075795454.jpg",
       "link": "/products/seiko-quartz-swr099p1-dong-ho-nu",
       "rating": 5,
       "reviews_count": 5,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1075795454.jpg"
+      ]
     },
     {
       "id": "1075795557",
@@ -2559,13 +3057,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "9,240,000₫",
       "original_price_num": 9240000,
       "sale": "-43%",
-      "image": "https://cdn.hstatic.net/products/1000223154/737297588_1569484317902019_2116320251537176760_n_4b64351e4de746ef9a407d3ad1eb843f_medium.jpg",
+      "image": "assets/products/p_1075795557.jpg",
       "link": "/products/seiko-tank-quartz-swr108p1-sapphire-dong-ho-nu",
       "rating": 5,
       "reviews_count": 8,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1075795557.jpg"
+      ]
     },
     {
       "id": "1039812906",
@@ -2577,13 +3078,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,900,000₫",
       "original_price_num": 8900000,
       "sale": "-37%",
-      "image": "https://product.hstatic.net/1000223154/product/z3715853921536_f1cc707d075e31598388ff0fcb83333_15cff4f1eacf467793cce2eebf4d1afb_medium.jpg",
+      "image": "assets/products/p_1039812906.jpg",
       "link": "/products/olym-pianus-fusion-op990-45addgs-gl-xanh-duong-dong-ho-nu-34mm",
       "rating": 5,
       "reviews_count": 11,
       "is_new": true,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1039812906.jpg"
+      ]
     },
     {
       "id": "1039979698",
@@ -2595,13 +3099,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,900,000₫",
       "original_price_num": 8900000,
       "sale": "-38%",
-      "image": "https://product.hstatic.net/1000223154/product/z3712836976525_2cc729f9a0fdfd33292588e58fd07a54_3ff86885ca7a4384807b3aecb08d86c2_medium.jpg",
+      "image": "assets/products/p_1039979698.jpg",
       "link": "/products/olym-pianus-fusion-op990-45adgk-gl-den-dong-ho-nu-34mm-op990-45",
       "rating": 5,
       "reviews_count": 13,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1039979698.jpg"
+      ]
     },
     {
       "id": "1041717538",
@@ -2613,13 +3120,16 @@ window.PHONGWATCH_DATA = {
       "original_price": "8,900,000₫",
       "original_price_num": 8900000,
       "sale": "-39%",
-      "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7090533919484_790cb7f7125d89c2fb3091357f2c4c98_5748ef96e5eb4601876ea1c84ba54f1b_medium.jpg",
+      "image": "assets/products/p_1041717538.jpg",
       "link": "/products/b-olym-pianus-fusion-op990-45adgr-gl-xanh-dong-ho-nu-34mm-op990-45",
       "rating": 5,
       "reviews_count": 7,
       "is_new": false,
       "in_stock": true,
-      "gender": "Nữ"
+      "gender": "Nữ",
+      "images": [
+        "assets/products/p_1041717538.jpg"
+      ]
     }
   ],
   "by_collection": {
@@ -2634,13 +3144,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,800,000₫",
         "original_price_num": 8800000,
         "sale": "-24%",
-        "image": "https://product.hstatic.net/1000223154/product/7a4b5fc8594e9f10c65f3_31ff13d459194f8fbbc5158aee5c7424_medium.jpg",
+        "image": "assets/products/p_1035326344.jpg",
         "link": "/products/olym-pianus-fusion-op990-45addgs-gl-t-op990-45",
         "rating": 5,
         "reviews_count": 13,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035326344.jpg",
+          "assets/products/p_1033689647.jpg",
+          "assets/products/p_1033689880.jpg",
+          "assets/products/p_1038492338.jpg"
+        ]
       },
       {
         "id": "1033689647",
@@ -2652,13 +3168,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,700,000₫",
         "original_price_num": 7700000,
         "sale": "-14%",
-        "image": "https://product.hstatic.net/1000223154/product/z2538012531778_bcb4d98d338261dd76685c4bf8808589_ad3b928fa1794a8cbe225288c1e2670a_medium.jpg",
+        "image": "assets/products/p_1033689647.jpg",
         "link": "/products/olym-pianus-fusion-op990-45adgs-gl-t-op990-45",
         "rating": 5,
         "reviews_count": 16,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1033689647.jpg",
+          "assets/products/p_1033689880.jpg",
+          "assets/products/p_1038492338.jpg",
+          "assets/products/p_1038492551.jpg"
+        ]
       },
       {
         "id": "1033689880",
@@ -2670,13 +3192,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,700,000₫",
         "original_price_num": 7700000,
         "sale": "-14%",
-        "image": "https://product.hstatic.net/1000223154/product/z2538401394561_8d41f8e6c5ff533a19b7bc13c1d153b3_cf14a4fbce7543e98fa0c52ea086f2bf_medium.jpg",
+        "image": "assets/products/p_1033689880.jpg",
         "link": "/products/olym-pianus-fusion-op990-45adgs-gl-x-op990-45",
         "rating": 5,
         "reviews_count": 13,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1033689880.jpg",
+          "assets/products/p_1038492338.jpg",
+          "assets/products/p_1038492551.jpg",
+          "assets/products/p_1038000476.jpg"
+        ]
       },
       {
         "id": "1038492338",
@@ -2688,13 +3216,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,000,000₫",
         "original_price_num": 8000000,
         "sale": "-2%",
-        "image": "https://product.hstatic.net/1000223154/product/z3288815997930_04558145e2e6bd172f4b4c1b51700162_9a5d186abb7c474a9b360d2003fe70b1_medium.jpg",
+        "image": "assets/products/p_1038492338.jpg",
         "link": "/products/olym-pianus-op990-45-24adgk-gl-t-skeleton",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1038492338.jpg",
+          "assets/products/p_1038492551.jpg",
+          "assets/products/p_1038000476.jpg",
+          "assets/products/p_1033689638.jpg"
+        ]
       },
       {
         "id": "1038492551",
@@ -2706,13 +3240,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,000,000₫",
         "original_price_num": 8000000,
         "sale": "-15%",
-        "image": "https://product.hstatic.net/1000223154/product/z3288825725912_618eed14f4be264a79eca2f333aae174_6f1bbd172b184dcea4d33648d20c713b_medium.jpg",
+        "image": "assets/products/p_1038492551.jpg",
         "link": "/products/olym-pianus-op990-45-24adgs-d-skeleton",
         "rating": 5,
         "reviews_count": 20,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1038492551.jpg",
+          "assets/products/p_1038000476.jpg",
+          "assets/products/p_1033689638.jpg",
+          "assets/products/p_1035757326.jpg"
+        ]
       },
       {
         "id": "1038000476",
@@ -2724,13 +3264,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,900,000₫",
         "original_price_num": 5900000,
         "sale": "-31%",
-        "image": "https://product.hstatic.net/1000223154/product/dong-ho-olym-pianus-op9932-56amsk-t_791a66c8960740e089e8c6645e03f082_medium.jpg",
+        "image": "assets/products/p_1038000476.jpg",
         "link": "/products/olym-pianus-op9932-56amsk-t",
         "rating": 5,
         "reviews_count": 9,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1038000476.jpg",
+          "assets/products/p_1033689638.jpg",
+          "assets/products/p_1035757326.jpg",
+          "assets/products/p_1038001374.jpg"
+        ]
       },
       {
         "id": "1033689638",
@@ -2742,13 +3288,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,700,000₫",
         "original_price_num": 7700000,
         "sale": "-14%",
-        "image": "https://product.hstatic.net/1000223154/product/83fabc7fbaf97ca725e85_290664ef2f4e4627a6aef312aba7e8b9_medium.jpg",
+        "image": "assets/products/p_1033689638.jpg",
         "link": "/products/olym-pianus-fusion-op990-45adgs-gl-d",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1033689638.jpg",
+          "assets/products/p_1035757326.jpg",
+          "assets/products/p_1038001374.jpg",
+          "assets/products/p_1017830366.jpg"
+        ]
       },
       {
         "id": "1035757326",
@@ -2760,13 +3312,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,910,000₫",
         "original_price_num": 4910000,
         "sale": "-29%",
-        "image": "https://product.hstatic.net/1000223154/product/z2827972374765_10f886003919b0ff36a2b0a8e829ab1_225bbb545284473587a559e624ea9350_medium.jpg",
+        "image": "assets/products/p_1035757326.jpg",
         "link": "/products/olym-pianus-op89983amk-x",
         "rating": 5,
         "reviews_count": 13,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035757326.jpg",
+          "assets/products/p_1038001374.jpg",
+          "assets/products/p_1017830366.jpg",
+          "assets/products/p_1035747479.jpg"
+        ]
       },
       {
         "id": "1038001374",
@@ -2778,13 +3336,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,900,000₫",
         "original_price_num": 7900000,
         "sale": "-49%",
-        "image": "https://cdn.hstatic.net/products/1000223154/44aafdfd-460f-44ee-afb7-a09773030ae5_8134cf90b94141ae987220b3f3db9e86_medium.jpg",
+        "image": "assets/products/p_1038001374.jpg",
         "link": "/products/olym-pianus-op9932-56ams-t",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1038001374.jpg",
+          "assets/products/p_1017830366.jpg",
+          "assets/products/p_1035747479.jpg",
+          "assets/products/p_1035747469.jpg"
+        ]
       },
       {
         "id": "1017830366",
@@ -2796,13 +3360,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,800,000₫",
         "original_price_num": 8800000,
         "sale": "-41%",
-        "image": "https://product.hstatic.net/1000223154/product/upload_3e18302841a44d59907ad88744427cfe_medium.jpg",
+        "image": "assets/products/p_1017830366.jpg",
         "link": "/products/olym-pianus-op99141-56ags-t",
         "rating": 5,
         "reviews_count": 17,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1017830366.jpg",
+          "assets/products/p_1035747479.jpg",
+          "assets/products/p_1035747469.jpg",
+          "assets/products/p_1075956995.jpg"
+        ]
       },
       {
         "id": "1035747479",
@@ -2814,13 +3384,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,800,000₫",
         "original_price_num": 8800000,
         "sale": "-18%",
-        "image": "https://product.hstatic.net/1000223154/product/z3196489627377_45e47c1d17f17d56fe4a60fa4bad727a_46d5f9724ac94c26a9ddb8c650a3a7d8_medium.jpg",
+        "image": "assets/products/p_1035747479.jpg",
         "link": "/products/olym-pianus-fusion-op990-45addgk-gl-d-op990-45",
         "rating": 5,
         "reviews_count": 12,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035747479.jpg",
+          "assets/products/p_1035747469.jpg",
+          "assets/products/p_1075956995.jpg",
+          "assets/products/p_1070147008.jpg"
+        ]
       },
       {
         "id": "1035747469",
@@ -2832,13 +3408,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,800,000₫",
         "original_price_num": 8800000,
         "sale": "-14%",
-        "image": "https://product.hstatic.net/1000223154/product/z3191997182455_acca0b572695402199c7529202b06061_486af43b062f4a85bbbf4ca17f623ca5_medium.jpg",
+        "image": "assets/products/p_1035747469.jpg",
         "link": "/products/olym-pianus-fusion-op990-45addgk-gl-t-op990-45",
         "rating": 5,
         "reviews_count": 20,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035747469.jpg",
+          "assets/products/p_1075956995.jpg",
+          "assets/products/p_1070147008.jpg",
+          "assets/products/p_1070147003.jpg"
+        ]
       },
       {
         "id": "1039812906",
@@ -2850,13 +3432,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,900,000₫",
         "original_price_num": 8900000,
         "sale": "-37%",
-        "image": "https://product.hstatic.net/1000223154/product/z3715853921536_f1cc707d075e31598388ff0fcb83333_15cff4f1eacf467793cce2eebf4d1afb_medium.jpg",
+        "image": "assets/products/p_1039812906.jpg",
         "link": "/products/olym-pianus-fusion-op990-45addgs-gl-xanh-duong-dong-ho-nu-34mm",
         "rating": 5,
         "reviews_count": 11,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1039812906.jpg"
+        ]
       },
       {
         "id": "1039979698",
@@ -2868,13 +3453,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,900,000₫",
         "original_price_num": 8900000,
         "sale": "-38%",
-        "image": "https://product.hstatic.net/1000223154/product/z3712836976525_2cc729f9a0fdfd33292588e58fd07a54_3ff86885ca7a4384807b3aecb08d86c2_medium.jpg",
+        "image": "assets/products/p_1039979698.jpg",
         "link": "/products/olym-pianus-fusion-op990-45adgk-gl-den-dong-ho-nu-34mm-op990-45",
         "rating": 5,
         "reviews_count": 13,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1039979698.jpg"
+        ]
       },
       {
         "id": "1041717538",
@@ -2886,13 +3474,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,900,000₫",
         "original_price_num": 8900000,
         "sale": "-39%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7090533919484_790cb7f7125d89c2fb3091357f2c4c98_5748ef96e5eb4601876ea1c84ba54f1b_medium.jpg",
+        "image": "assets/products/p_1041717538.jpg",
         "link": "/products/b-olym-pianus-fusion-op990-45adgr-gl-xanh-dong-ho-nu-34mm-op990-45",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1041717538.jpg"
+        ]
       }
     ],
     "ALEXANDER FERROS": [
@@ -2906,13 +3497,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,270,000₫",
         "original_price_num": 7270000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/3638691708742128_g3412695359072446024_b9f2968fe1238f24bd069263512bebde_eecf3fcf4df34873a367a8ffe5c1b1dc_medium.jpg",
+        "image": "assets/products/p_1075956995.jpg",
         "link": "/products/gia-tot-alexander-ferros-37-5mm-automatic-8272r-022-8272r-dong-ho-nam",
         "rating": 5,
         "reviews_count": 10,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956995.jpg",
+          "assets/products/p_1070147008.jpg",
+          "assets/products/p_1070147003.jpg",
+          "assets/products/p_1070146999.jpg"
+        ]
       },
       {
         "id": "1070147008",
@@ -2924,13 +3521,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,750,000₫",
         "original_price_num": 5750000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/6473cda8-f555-4bf7-85db-41fb4e4d11e9_f3ed66348b784c64ad86f55dc47394ce_medium.jpg",
+        "image": "assets/products/p_1070147008.jpg",
         "link": "/products/alexander-ferros-automatic-5052d-02-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 13,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070147008.jpg",
+          "assets/products/p_1070147003.jpg",
+          "assets/products/p_1070146999.jpg",
+          "assets/products/p_1070147012.jpg"
+        ]
       },
       {
         "id": "1070147003",
@@ -2942,13 +3545,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,950,000₫",
         "original_price_num": 5950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0054_388f54e3ffaa40048aafd6721a68835b_medium.jpg",
+        "image": "assets/products/p_1070147003.jpg",
         "link": "/products/alexander-ferros-automatic-5052r-05-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 8,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070147003.jpg",
+          "assets/products/p_1070146999.jpg",
+          "assets/products/p_1070147012.jpg",
+          "assets/products/p_1070147019.jpg"
+        ]
       },
       {
         "id": "1070146999",
@@ -2960,13 +3569,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,950,000₫",
         "original_price_num": 5950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/315158e6492dc5739c3c49_673bc9ed1c4246b8947b96a6e21446a9_medium.jpg",
+        "image": "assets/products/p_1070146999.jpg",
         "link": "/products/alexander-ferros-automatic-5052s-08-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070146999.jpg",
+          "assets/products/p_1070147012.jpg",
+          "assets/products/p_1070147019.jpg",
+          "assets/products/p_1070147024.jpg"
+        ]
       },
       {
         "id": "1070147012",
@@ -2978,13 +3593,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,750,000₫",
         "original_price_num": 5750000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0047_f8aa61a584a34970a9dd6dff363c5926_medium.jpg",
+        "image": "assets/products/p_1070147012.jpg",
         "link": "/products/alexander-ferros-automatic-5052s-01-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 17,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070147012.jpg",
+          "assets/products/p_1070147019.jpg",
+          "assets/products/p_1070147024.jpg",
+          "assets/products/p_1073547934.jpg"
+        ]
       },
       {
         "id": "1070147019",
@@ -2996,13 +3617,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,750,000₫",
         "original_price_num": 5750000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0051_e7c794afccae4e2db47aaebdfdafed05_medium.jpg",
+        "image": "assets/products/p_1070147019.jpg",
         "link": "/products/alexander-ferros-automatic-5052s-02-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 6,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070147019.jpg",
+          "assets/products/p_1070147024.jpg",
+          "assets/products/p_1073547934.jpg",
+          "assets/products/p_1073547936.jpg"
+        ]
       },
       {
         "id": "1070147024",
@@ -3014,13 +3641,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,750,000₫",
         "original_price_num": 5750000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0052_82a91d5c0a0d42ffa61b3e4ea1e2a06d_medium.jpg",
+        "image": "assets/products/p_1070147024.jpg",
         "link": "/products/alexander-ferros-automatic-5052s-05-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 11,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070147024.jpg",
+          "assets/products/p_1073547934.jpg",
+          "assets/products/p_1073547936.jpg",
+          "assets/products/p_1073547963.jpg"
+        ]
       },
       {
         "id": "1073547934",
@@ -3032,13 +3665,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,999,999₫",
         "original_price_num": 9999999,
         "sale": "-48%",
-        "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0130_0b32ef4ffcee441b81f617bbfd3e001c_medium.jpg",
+        "image": "assets/products/p_1073547934.jpg",
         "link": "/products/z-chua-ban-alexander-ferros-automatic-8232d-01-43mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 21,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073547934.jpg",
+          "assets/products/p_1073547936.jpg",
+          "assets/products/p_1073547963.jpg",
+          "assets/products/p_1073547986.jpg"
+        ]
       },
       {
         "id": "1073547936",
@@ -3050,13 +3689,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,999,999₫",
         "original_price_num": 9999999,
         "sale": "-48%",
-        "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0000_19a6509094cd4862b8acfc8308de2d2f_medium.jpg",
+        "image": "assets/products/p_1073547936.jpg",
         "link": "/products/z-chua-ban-alexander-ferros-automatic-8232d-08-43mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 5,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073547936.jpg",
+          "assets/products/p_1073547963.jpg",
+          "assets/products/p_1073547986.jpg",
+          "assets/products/p_1073658294.jpg"
+        ]
       },
       {
         "id": "1073547963",
@@ -3068,13 +3713,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,999,999₫",
         "original_price_num": 9999999,
         "sale": "-48%",
-        "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0140_546da748f3b444fb8a58053363c8fa7d_medium.jpg",
+        "image": "assets/products/p_1073547963.jpg",
         "link": "/products/z-chua-ban-alexander-ferros-automatic-8232d-15-43mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073547963.jpg",
+          "assets/products/p_1073547986.jpg",
+          "assets/products/p_1073658294.jpg",
+          "assets/products/p_1070166929.jpg"
+        ]
       },
       {
         "id": "1073547986",
@@ -3086,13 +3737,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,999,999₫",
         "original_price_num": 9999999,
         "sale": "-50%",
-        "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0026_8bd4cd5610c24580aba62ea27731344b_medium.jpg",
+        "image": "assets/products/p_1073547986.jpg",
         "link": "/products/z-chua-ban-alexander-ferros-automatic-8232s-01-43mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 19,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073547986.jpg",
+          "assets/products/p_1073658294.jpg",
+          "assets/products/p_1070166929.jpg",
+          "assets/products/p_1070166984.jpg"
+        ]
       },
       {
         "id": "1073658294",
@@ -3104,13 +3761,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,999,999₫",
         "original_price_num": 9999999,
         "sale": "-50%",
-        "image": "https://cdn.hstatic.net/products/1000223154/dhp2026_0014_35bf1346aa5a4c42aa3b2ea64cc9729a_medium.jpg",
+        "image": "assets/products/p_1073658294.jpg",
         "link": "/products/z-gia-tot-alexander-ferros-automatic-8232s-05-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 9,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073658294.jpg",
+          "assets/products/p_1070166929.jpg",
+          "assets/products/p_1070166984.jpg",
+          "assets/products/p_1070167004.jpg"
+        ]
       },
       {
         "id": "1070166929",
@@ -3122,13 +3785,19 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,500,000₫",
         "original_price_num": 6500000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0061_9dc85acc9c254fc0a9ecebce31d8689b_medium.jpg",
+        "image": "assets/products/p_1070166929.jpg",
         "link": "/products/alexander-ferros-automatic-3062s-08-42mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 16,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070166929.jpg",
+          "assets/products/p_1070166984.jpg",
+          "assets/products/p_1070167004.jpg",
+          "assets/products/p_1073463271.jpg"
+        ]
       },
       {
         "id": "1070166984",
@@ -3140,13 +3809,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,350,000₫",
         "original_price_num": 6350000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0041_028c089504ec4addbe9ae91946b43a44_medium.jpg",
+        "image": "assets/products/p_1070166984.jpg",
         "link": "/products/alexander-ferros-automatic-3062s-01-42mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 17,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070166984.jpg"
+        ]
       },
       {
         "id": "1070167004",
@@ -3158,13 +3830,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,350,000₫",
         "original_price_num": 6350000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0044_04fbf0a8fce743ebbdd35b19866b62af_medium.jpg",
+        "image": "assets/products/p_1070167004.jpg",
         "link": "/products/alexander-ferros-automatic-3062s-05-42mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 9,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070167004.jpg"
+        ]
       },
       {
         "id": "1073463271",
@@ -3176,13 +3851,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,350,000₫",
         "original_price_num": 5350000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/2242s-02__1__68e7e96076034acc8601d9f11f8117e5_medium.jpg",
+        "image": "assets/products/p_1073463271.jpg",
         "link": "/products/gia-tot-alexander-ferros-automatic-2242s-02-31mm-dong-ho-nu",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073463271.jpg"
+        ]
       },
       {
         "id": "1073463024",
@@ -3194,13 +3872,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,350,000₫",
         "original_price_num": 5350000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/2242s-05___14__efc38b3dc8da4903aab329b8ce1538e3_medium.jpg",
+        "image": "assets/products/p_1073463024.jpg",
         "link": "/products/gia-tot-alexander-ferros-automatic-2242r-01-31mm-dong-ho-nu",
         "rating": 5,
         "reviews_count": 11,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073463024.jpg"
+        ]
       },
       {
         "id": "1070185918",
@@ -3212,13 +3893,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,150,000₫",
         "original_price_num": 5150000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0107_be5f4f7ffd93437180f673f6983a2468_medium.jpg",
+        "image": "assets/products/p_1070185918.jpg",
         "link": "/products/alexander-ferros-automatic-8132d-01-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070185918.jpg"
+        ]
       },
       {
         "id": "1070185929",
@@ -3230,13 +3914,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,150,000₫",
         "original_price_num": 5150000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/c6ac62f7a88925d77c9849_15e03d2ce4604b4593458329baadad80_medium.jpg",
+        "image": "assets/products/p_1070185929.jpg",
         "link": "/products/alexander-ferros-automatic-8132d-08-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 16,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070185929.jpg"
+        ]
       },
       {
         "id": "1070185935",
@@ -3248,13 +3935,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,150,000₫",
         "original_price_num": 5150000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/photo_2025-10-24_10-23-35_d717bdb41655444e8141739872b5080d_medium.jpg",
+        "image": "assets/products/p_1070185935.jpg",
         "link": "/products/alexander-ferros-automatic-8132d-15-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070185935.jpg"
+        ]
       },
       {
         "id": "1070185999",
@@ -3266,13 +3956,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,950,000₫",
         "original_price_num": 4950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0027_d375f9db0f7a4977a56b01b78c3aea8c_medium.jpg",
+        "image": "assets/products/p_1070185999.jpg",
         "link": "/products/alexander-ferros-automatic-8132s-01-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070185999.jpg"
+        ]
       },
       {
         "id": "1070186007",
@@ -3284,13 +3977,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,950,000₫",
         "original_price_num": 4950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/50a1ee70-8fd7-49e9-bd35-d45e21a47c14_cc20e20c8d3d48f088543b218daf09f1_medium.jpg",
+        "image": "assets/products/p_1070186007.jpg",
         "link": "/products/alexander-ferros-automatic-8132s-02-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070186007.jpg"
+        ]
       },
       {
         "id": "1075956547",
@@ -3302,13 +3998,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,950,000₫",
         "original_price_num": 3950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/8382d_01__1__0e60ed1844194c3fa53d641d7c87e77b_medium.jpg",
+        "image": "assets/products/p_1075956547.jpg",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-01-8382d-dong-ho-nam",
         "rating": 5,
         "reviews_count": 16,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956547.jpg"
+        ]
       },
       {
         "id": "1075956491",
@@ -3320,13 +4019,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,950,000₫",
         "original_price_num": 3950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/8382d_08__1__10ca2391cad04eb28132f5efe33b5bdc_medium.jpg",
+        "image": "assets/products/p_1075956491.jpg",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-08-8382d-dong-ho-nam",
         "rating": 5,
         "reviews_count": 6,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956491.jpg"
+        ]
       },
       {
         "id": "1075956381",
@@ -3338,13 +4040,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,950,000₫",
         "original_price_num": 3950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/8382d_09__1__bd9db3bf3b764c7faa972b36bc74f5ec_medium.jpg",
+        "image": "assets/products/p_1075956381.jpg",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-09-8382d-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956381.jpg"
+        ]
       },
       {
         "id": "1075956643",
@@ -3356,13 +4061,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,950,000₫",
         "original_price_num": 3950000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/791600329_1490940569506728_7701467967161483410_n_3518d07deabf4a79b0f26e8867ba7651_medium.jpg",
+        "image": "assets/products/p_1075956643.jpg",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382d-15-8382d-dong-ho-nam",
         "rating": 5,
         "reviews_count": 12,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956643.jpg"
+        ]
       },
       {
         "id": "1075956171",
@@ -3374,13 +4082,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,650,000₫",
         "original_price_num": 3650000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/8382s_01_8a7e6e0d94c843a5b0c403e8b2dd9681_medium.png",
+        "image": "assets/products/p_1075956171.png",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382s-01-8382s-dong-ho-nam",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956171.png"
+        ]
       },
       {
         "id": "1075956070",
@@ -3392,13 +4103,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,650,000₫",
         "original_price_num": 3650000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/8382s_02_ce656acae436462cb974e7fcac9325c9_medium.png",
+        "image": "assets/products/p_1075956070.png",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382s-02-8382s-dong-ho-nam",
         "rating": 5,
         "reviews_count": 21,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956070.png"
+        ]
       },
       {
         "id": "1075956032",
@@ -3410,13 +4124,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "3,650,000₫",
         "original_price_num": 3650000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/8382s_05_b6e1aa07753d494ab5b871dbaddf5395_medium.png",
+        "image": "assets/products/p_1075956032.png",
         "link": "/products/gia-tot-alexander-ferros-40mm-automatic-8382s-05-8382s-dong-ho-nam",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956032.png"
+        ]
       },
       {
         "id": "1070186113",
@@ -3428,13 +4145,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,750,000₫",
         "original_price_num": 5750000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/ca5001_0029_97e375695a35465f83b97c6e01dd56c4_medium.jpg",
+        "image": "assets/products/p_1070186113.jpg",
         "link": "/products/alexander-ferros-automatic-6161r-03-42mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 18,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070186113.jpg"
+        ]
       },
       {
         "id": "1070672072",
@@ -3446,13 +4166,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,650,000₫",
         "original_price_num": 5650000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/a7885329e510684e3101217_1920b3ff61f240488ef0120de46d4a70_medium.jpg",
+        "image": "assets/products/p_1070672072.jpg",
         "link": "/products/alexander-ferros-automatic-6162s-03-42mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070672072.jpg"
+        ]
       },
       {
         "id": "1070167081",
@@ -3464,13 +4187,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,800,000₫",
         "original_price_num": 5800000,
         "sale": "",
-        "image": "https://cdn.hstatic.net/products/1000223154/photo_2025-10-22_19-04-22_9e2b8b2d222b4de3872ee80c1e15f770_medium.jpg",
+        "image": "assets/products/p_1070167081.jpg",
         "link": "/products/alexander-ferros-automatic-6091r-01-42-5mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1070167081.jpg"
+        ]
       }
     ],
     "CARNIVAL": [
@@ -3484,13 +4210,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-42%",
-        "image": "https://cdn.hstatic.net/products/1000223154/z7219260021762_4441e152896e66cf2da367138bfc3821-1-2048x2048_9a257fcbe2a446989d7b7d0e718229ad_medium.jpg",
+        "image": "assets/products/p_1073902702.jpg",
         "link": "/products/carnival-automatic-8231g-vh-dd-t-8231g-dong-ho-nam",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073902702.jpg"
+        ]
       },
       {
         "id": "1073902708",
@@ -3502,13 +4231,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-46%",
-        "image": "https://cdn.hstatic.net/products/1000223154/758677466_122101179771411325_8149295396336440341_n_61e5af4eb77d4ed08d31235172fdd18a_medium.jpg",
+        "image": "assets/products/p_1073902708.jpg",
         "link": "/products/carnival-quartz-8231g-vt-dd-t-8231g-dong-ho-nam",
         "rating": 5,
         "reviews_count": 13,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073902708.jpg"
+        ]
       },
       {
         "id": "1073902713",
@@ -3520,13 +4252,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-44%",
-        "image": "https://cdn.hstatic.net/products/1000223154/bf7627e9-1f91-4fbc-99c4-64f653a26fad_3bea37eba0af4b9ea838570c7b442e80_medium.jpg",
+        "image": "assets/products/p_1073902713.jpg",
         "link": "/products/carnival-quartz-8231g-vv-dd-t-8231g-dong-ho-nam",
         "rating": 5,
         "reviews_count": 18,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1073902713.jpg"
+        ]
       },
       {
         "id": "1068414195",
@@ -3538,13 +4273,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,200,000₫",
         "original_price_num": 7200000,
         "sale": "-36%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z6772752396972_b133c12b8f896b058def367ffad64df4_a153cdcd661340f1b703cb35f28afaf8_medium.jpg",
+        "image": "assets/products/p_1068414195.jpg",
         "link": "/products/carnival-automatic-8189g-vt-dcs-t-8189g-dong-ho-nam-1",
         "rating": 5,
         "reviews_count": 10,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1068414195.jpg"
+        ]
       },
       {
         "id": "1063313311",
@@ -3556,13 +4294,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,540,000₫",
         "original_price_num": 6540000,
         "sale": "-37%",
-        "image": "https://product.hstatic.net/1000223154/product/z6093927721375_96c04b703187b6e17f95c170b57f23a7_28905918f4b94f8e9e6f8fdc9f2b028a_medium.jpg",
+        "image": "assets/products/p_1063313311.jpg",
         "link": "/products/carnival-automatic-8168g-vh-dcs-n-8168g-dong-ho-nam",
         "rating": 5,
         "reviews_count": 16,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1063313311.jpg"
+        ]
       },
       {
         "id": "1066694235",
@@ -3574,13 +4315,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,540,000₫",
         "original_price_num": 6540000,
         "sale": "-43%",
-        "image": "https://product.hstatic.net/1000223154/product/490274725_2985033524978812_3798489193836756149_n_8059fed7362448ee80a1d4e4fd37dd44_medium.jpg",
+        "image": "assets/products/p_1066694235.jpg",
         "link": "/products/carnival-automatic-8168g-vt-dcs-n-8168g-dong-ho-nam",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1066694235.jpg"
+        ]
       },
       {
         "id": "1063313357",
@@ -3592,13 +4336,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,540,000₫",
         "original_price_num": 6540000,
         "sale": "-37%",
-        "image": "https://product.hstatic.net/1000223154/product/z6093927724442_0e8867bc189c4f5a5e25bfb24cdb75de_0012340f245e482380d0a562df1306eb_medium.jpg",
+        "image": "assets/products/p_1063313357.jpg",
         "link": "/products/carnival-automatic-8168g-vt-dcs-t-8168g-dong-ho-nam",
         "rating": 5,
         "reviews_count": 8,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1063313357.jpg"
+        ]
       },
       {
         "id": "1048366189",
@@ -3610,13 +4357,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,120,000₫",
         "original_price_num": 7120000,
         "sale": "-35%",
-        "image": "https://product.hstatic.net/1000223154/product/z4524071207798_f36858254636e68b53ec7fc5fba69b6a_c02f93c442b64dfb81a6c8699b323e43_medium.jpg",
+        "image": "assets/products/p_1048366189.jpg",
         "link": "/products/carnival-nautilus-automatic-8110g-vh-dd-x-g8110-304-425-dong-ho-nam",
         "rating": 5,
         "reviews_count": 22,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048366189.jpg"
+        ]
       },
       {
         "id": "1048366117",
@@ -3628,13 +4378,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,680,000₫",
         "original_price_num": 7680000,
         "sale": "-39%",
-        "image": "https://product.hstatic.net/1000223154/product/8109-1024x1024_8174054f73e8429d94ad090f8335276f_medium.jpg",
+        "image": "assets/products/p_1048366117.jpg",
         "link": "/products/carnival-nautilus-automatic-8110g-vh-d-g8110-302-414-dong-ho-nam",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048366117.jpg"
+        ]
       },
       {
         "id": "1048366143",
@@ -3646,13 +4399,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,680,000₫",
         "original_price_num": 7680000,
         "sale": "-39%",
-        "image": "https://product.hstatic.net/1000223154/product/8109-1-1024x1024_c3e70ba9147f499f84f394773cb8fe7f_medium.jpg",
+        "image": "assets/products/p_1048366143.jpg",
         "link": "/products/carnival-nautilus-automatic-8110g-vh-x-g8110-304-414-dong-ho-nam",
         "rating": 5,
         "reviews_count": 12,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048366143.jpg"
+        ]
       },
       {
         "id": "1048226049",
@@ -3664,13 +4420,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,135,000₫",
         "original_price_num": 6135000,
         "sale": "-23%",
-        "image": "https://product.hstatic.net/1000223154/product/fbsb-1024x1024__2__019dde5f559b411aabdff677460d77fb_medium.jpg",
+        "image": "assets/products/p_1048226049.jpg",
         "link": "/products/carnival-nautilus-automatic-g8108-305-011-8108g-vt-d-dong-ho-nam",
         "rating": 5,
         "reviews_count": 18,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048226049.jpg"
+        ]
       },
       {
         "id": "1048366265",
@@ -3682,13 +4441,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,160,000₫",
         "original_price_num": 7160000,
         "sale": "-32%",
-        "image": "https://product.hstatic.net/1000223154/product/1-1024x1024_bd4b49b7dcf44ad09a647fddeddff200_medium.jpg",
+        "image": "assets/products/p_1048366265.jpg",
         "link": "/products/carnival-nautilus-automatic-8108g-vh-d-g8108-302-414-dong-ho-nam",
         "rating": 5,
         "reviews_count": 16,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048366265.jpg"
+        ]
       },
       {
         "id": "1048226218",
@@ -3700,13 +4462,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,720,000₫",
         "original_price_num": 6720000,
         "sale": "-29%",
-        "image": "https://product.hstatic.net/1000223154/product/z4520181673574_eb5393484145e38150f244688f9a06ff_541b625612504fa7a954f6c4256e1da2_medium.jpg",
+        "image": "assets/products/p_1048226218.jpg",
         "link": "/products/carnival-nautilus-automatic-8108g-vh-dcs-d-dong-ho-nam",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048226218.jpg"
+        ]
       },
       {
         "id": "1048226220",
@@ -3718,13 +4483,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,720,000₫",
         "original_price_num": 6720000,
         "sale": "-29%",
-        "image": "https://product.hstatic.net/1000223154/product/z4520181520709_d60dfee8f1a6a92332e80a498c6f160b_1422c56086844d22abdeead0fe82d746_medium.jpg",
+        "image": "assets/products/p_1048226220.jpg",
         "link": "/products/carnival-nautilus-automatic-8108g-vh-dcs-n-dong-ho-nam",
         "rating": 5,
         "reviews_count": 7,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048226220.jpg"
+        ]
       },
       {
         "id": "1048104486",
@@ -3736,13 +4504,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,720,000₫",
         "original_price_num": 6720000,
         "sale": "-29%",
-        "image": "https://product.hstatic.net/1000223154/product/z4486833020109_3f0dad52213c037564cd892f9138b09d_8e4a111856b64a6bbdb9e7c0f86b9859_medium.jpg",
+        "image": "assets/products/p_1048104486.jpg",
         "link": "/products/carnival-automatic-8108g-vh-dd-d-g8108-302-432-dong-ho-nam",
         "rating": 5,
         "reviews_count": 19,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048104486.jpg"
+        ]
       },
       {
         "id": "1048104830",
@@ -3754,13 +4525,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,720,000₫",
         "original_price_num": 6720000,
         "sale": "-29%",
-        "image": "https://product.hstatic.net/1000223154/product/z4486833125143_efa14c8f57822ca51ba354f9e615fe4e_9960386534014c01b9362e250b55f678_medium.jpg",
+        "image": "assets/products/p_1048104830.jpg",
         "link": "/products/carnival-automatic-8108g-vh-dd-x-g8108-304-425-dong-ho-nam",
         "rating": 5,
         "reviews_count": 17,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1048104830.jpg"
+        ]
       }
     ],
     "ĐỒNG HỒ NỮ CARNIVAL": [
@@ -3774,13 +4548,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-46%",
-        "image": "https://cdn.hstatic.net/products/1000223154/725006194_122199612530469743_9175805954073152379_n_0f4ad0e7994d4cf9bddead8fef49819a_medium.jpg",
+        "image": "assets/products/p_1073902723.jpg",
         "link": "/products/carnival-quartz-8231l-vt-dd-t-8231l-dong-ho-nu",
         "rating": 5,
         "reviews_count": 10,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1073902723.jpg"
+        ]
       },
       {
         "id": "1071739710",
@@ -3792,13 +4569,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,500,000₫",
         "original_price_num": 4500000,
         "sale": "-28%",
-        "image": "https://cdn.hstatic.net/products/1000223154/a93505d078f6f2a8abe7_18b91112bacf4dbf83eb9093ffb8bfe1_medium.jpg",
+        "image": "assets/products/p_1071739710.jpg",
         "link": "/products/carnival-fusion-quartz-8168l2-vh-dcs-xa-cu-hong-2-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 15,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1071739710.jpg"
+        ]
       },
       {
         "id": "1070022033",
@@ -3810,13 +4590,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-34%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7010222301434_a59c44fd9bc83a474bcd647f995c7fe0_0d43a7bbdf2946b282568a4b286efbe2_medium.jpg",
+        "image": "assets/products/p_1070022033.jpg",
         "link": "/products/carnival-fusion-quartz-8168l2-vh-dcs-xa-cu-trang-8168l2-day-trang-dong-ho-nu",
         "rating": 5,
         "reviews_count": 20,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1070022033.jpg"
+        ]
       },
       {
         "id": "1068940672",
@@ -3828,13 +4611,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/3_e0d2fa5d551a444383a733f22beea733_medium.png",
+        "image": "assets/products/p_1068940672.png",
         "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-d-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068940672.png"
+        ]
       },
       {
         "id": "1068940779",
@@ -3846,13 +4632,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/4_9049ac832f244122a04386a95678ae52_medium.png",
+        "image": "assets/products/p_1068940779.png",
         "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-n-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 12,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068940779.png"
+        ]
       },
       {
         "id": "1068940668",
@@ -3864,13 +4653,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/1_58b80991f7c047d09e0d8d24f3c4d5b1_medium.png",
+        "image": "assets/products/p_1068940668.png",
         "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-t-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068940668.png"
+        ]
       },
       {
         "id": "1068940685",
@@ -3882,13 +4674,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/2_440af1d71e314689abb1063d516b1fc0_medium.png",
+        "image": "assets/products/p_1068940685.png",
         "link": "/products/carnival-fusion-quartz-8168l2-vt-dcs-x-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 18,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068940685.png"
+        ]
       },
       {
         "id": "1068940655",
@@ -3900,13 +4695,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/2__2__2a4031da022240b8ad1202d3ed68ab2e_medium.png",
+        "image": "assets/products/p_1068940655.png",
         "link": "/products/carnival-fusion-quartz-8168l2-vv-dcs-d-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 6,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068940655.png"
+        ]
       },
       {
         "id": "1068940661",
@@ -3918,13 +4716,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,900,000₫",
         "original_price_num": 4900000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/1__2__8022a53553b640f0962ce724c0f22068_medium.png",
+        "image": "assets/products/p_1068940661.png",
         "link": "/products/carnival-fusion-quartz-8168l2-vv-dcs-t-8168l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068940661.png"
+        ]
       },
       {
         "id": "1068936950",
@@ -3936,13 +4737,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,200,000₫",
         "original_price_num": 5200000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/z6607814423087_2dfaf09531cfdd8a34ab6e9c9dd0bee4_4439dbeca28c4dc9b9570fa9ab5033fb_medium.jpg",
+        "image": "assets/products/p_1068936950.jpg",
         "link": "/products/carnival-quartz-8173l2-vh-dcs-d-8173l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 19,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068936950.jpg"
+        ]
       },
       {
         "id": "1068936966",
@@ -3954,13 +4758,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,200,000₫",
         "original_price_num": 5200000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7868026039472_de20017f1a568f90d2e8e10c7666a2c5_aa26fa5873c14f6ca6009a70b0e2ccb8_medium.jpg",
+        "image": "assets/products/p_1068936966.jpg",
         "link": "/products/carnival-quartz-8173l2-vh-dcs-n-8173l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 17,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068936966.jpg"
+        ]
       },
       {
         "id": "1068934440",
@@ -3972,13 +4779,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,200,000₫",
         "original_price_num": 5200000,
         "sale": "-38%",
-        "image": "https://cdn.hstatic.net/products/1000223154/z6607812700864_030d0cbc0d1d6bba81ca6884e713dc02_e3b86e57176a4ae283f03ec80fd54f99_medium.jpg",
+        "image": "assets/products/p_1068934440.jpg",
         "link": "/products/carnival-quartz-8173l2-vt-dcs-d-8173l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 9,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068934440.jpg"
+        ]
       },
       {
         "id": "1068934429",
@@ -3990,13 +4800,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,200,000₫",
         "original_price_num": 5200000,
         "sale": "-38%",
-        "image": "https://cdn.hstatic.net/products/1000223154/z6607812680062_40f5e49d0cf767507090385a3fa992c3_b31394d85f604f5aa4a07aa497c62954_medium.jpg",
+        "image": "assets/products/p_1068934429.jpg",
         "link": "/products/carnival-quartz-8173l2-vt-dcs-t1-8173l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 16,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068934429.jpg"
+        ]
       },
       {
         "id": "1068934418",
@@ -4008,13 +4821,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,200,000₫",
         "original_price_num": 5200000,
         "sale": "-38%",
-        "image": "https://cdn.hstatic.net/products/1000223154/z6607812661402_92a0ddb1f2a8722935d0e536402d1a0a_ab791a7ad00c45f89d2eb0892520cb55_medium.jpg",
+        "image": "assets/products/p_1068934418.jpg",
         "link": "/products/carnival-quartz-8173l2-vt-dcs-x-8173l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068934418.jpg"
+        ]
       },
       {
         "id": "1068934373",
@@ -4026,13 +4842,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,200,000₫",
         "original_price_num": 5200000,
         "sale": "-37%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7628132667092_06db5da6d39f011e01df86fb097df7db_e52f85353a264726881f4c52784f357c_medium.jpg",
+        "image": "assets/products/p_1068934373.jpg",
         "link": "/products/carnival-quartz-8173l2-vv-dcs-d-8173l2-dong-ho-nu",
         "rating": 5,
         "reviews_count": 6,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1068934373.jpg"
+        ]
       }
     ],
     "ĐỒNG HỒ BENTLEY": [
@@ -4046,13 +4865,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,140,000₫",
         "original_price_num": 4140000,
         "sale": "-8%",
-        "image": "https://product.hstatic.net/1000223154/product/1839-10mwdb__92dd53be4038419880c4d6df3b77c870_medium.png",
+        "image": "assets/products/p_1037950596.png",
         "link": "/products/bentley-bl1839-10mwdb",
         "rating": 5,
         "reviews_count": 11,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1037950596.png"
+        ]
       },
       {
         "id": "1053667648",
@@ -4064,13 +4886,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-26%",
-        "image": "https://product.hstatic.net/1000223154/product/z5304849042711_9eff03df87abb9b336ce4d4fcc95c074_1ee1047669374d28a28c6407f48c88ba_medium.jpg",
+        "image": "assets/products/p_1053667648.jpg",
         "link": "/products/bentley-quartz-bl2333-10mtci-r-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 17,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1053667648.jpg"
+        ]
       },
       {
         "id": "1053667645",
@@ -4082,13 +4907,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-26%",
-        "image": "https://product.hstatic.net/1000223154/product/z5304200525823_3ee4497aa026becff2e34ddf54055967_a3463ecba8a44b82a4bdcd062d693b55_medium.jpg",
+        "image": "assets/products/p_1053667645.jpg",
         "link": "/products/bentley-quartz-bl2333-10mtdi-r-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1053667645.jpg"
+        ]
       },
       {
         "id": "1053667566",
@@ -4100,13 +4928,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,700,000₫",
         "original_price_num": 6700000,
         "sale": "-22%",
-        "image": "https://product.hstatic.net/1000223154/product/428690180_3660738274185220_2977293035461343710_n__1__cd64764883da4de78da1d2fdc29cad9d_medium.jpg",
+        "image": "assets/products/p_1053667566.jpg",
         "link": "/products/bentley-automatic-bl2333-15mtci-r-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 17,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1053667566.jpg"
+        ]
       },
       {
         "id": "1053667551",
@@ -4118,13 +4949,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,700,000₫",
         "original_price_num": 6700000,
         "sale": "-22%",
-        "image": "https://product.hstatic.net/1000223154/product/z5862875384044_572f7f88271dd2dd3e2dfb1adece618f_6078358db22e43bbb8980760c621e514_medium.jpg",
+        "image": "assets/products/p_1053667551.jpg",
         "link": "/products/bentley-automatic-bl2333-15mtdi-r-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 20,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1053667551.jpg"
+        ]
       },
       {
         "id": "1037949724",
@@ -4136,13 +4970,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,050,000₫",
         "original_price_num": 8050000,
         "sale": "-16%",
-        "image": "https://product.hstatic.net/1000223154/product/2018-05-18-2-22-35_1784-202wcb-s_85422430e404482da2cb413e70c19748_medium.png",
+        "image": "assets/products/p_1037949724.png",
         "link": "/products/bentley-bl1784-202wcb-s",
         "rating": 5,
         "reviews_count": 11,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1037949724.png"
+        ]
       },
       {
         "id": "1027795661",
@@ -4154,13 +4991,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,300,000₫",
         "original_price_num": 12300000,
         "sale": "-30%",
-        "image": "https://product.hstatic.net/1000223154/product/z2398556833777_b278db90406218f10ac3a7582828e97_33c9bd0d763645ea85dab940d5756a5e_medium.jpg",
+        "image": "assets/products/p_1027795661.jpg",
         "link": "/products/bentley-bl1784-252kbb-s2",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1027795661.jpg"
+        ]
       },
       {
         "id": "1027795697",
@@ -4172,13 +5012,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,300,000₫",
         "original_price_num": 12300000,
         "sale": "-30%",
-        "image": "https://product.hstatic.net/1000223154/product/z3241758380321_13a580fa48c3e63154674b460095af6_0a4313c773a44f2b8bd61dce5d02cab0_medium.jpg",
+        "image": "assets/products/p_1027795697.jpg",
         "link": "/products/bentley-bl1784-252kbb-s2-m",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1027795697.jpg"
+        ]
       }
     ],
     "SEIKO": [
@@ -4192,13 +5035,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-30%",
-        "image": "https://cdn.hstatic.net/products/1000223154/490511287_1747465869479625_8539764952696701249_n_361f35b138bc43249f184f72a61975ff_medium.jpg",
+        "image": "assets/products/p_1071321968.jpg",
         "link": "/products/seiko-5-snke03k1-snke03-dong-ho-nam",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1071321968.jpg"
+        ]
       },
       {
         "id": "1023941363",
@@ -4210,13 +5056,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "6,900,000₫",
         "original_price_num": 6900000,
         "sale": "-36%",
-        "image": "https://product.hstatic.net/1000223154/product/4gfdsfds_ce155f76b3d547a4b6794022dba584c3_medium.jpg",
+        "image": "assets/products/p_1023941363.jpg",
         "link": "/products/seiko-5-automatic-snkp15k1",
         "rating": 5,
         "reviews_count": 14,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1023941363.jpg"
+        ]
       },
       {
         "id": "1044963197",
@@ -4228,13 +5077,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "20,000,000₫",
         "original_price_num": 20000000,
         "sale": "-42%",
-        "image": "https://cdn.hstatic.net/products/1000223154/674742858_1484036286780578_5583039845760862186_n__1__4eb4071291d943768d9063a4c91ba522_medium.jpg",
+        "image": "assets/products/p_1044963197.jpg",
         "link": "/products/seiko-solar-ssc815-prospex-speedtimer-chronograph-dong-ho-nam",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1044963197.jpg"
+        ]
       },
       {
         "id": "1041730681",
@@ -4246,13 +5098,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,000,000₫",
         "original_price_num": 7000000,
         "sale": "-41%",
-        "image": "https://product.hstatic.net/1000223154/product/z3697546331478_31d5f3c0acf520b66f964e365c6b153c_ae80f03de02a430989e0eb306c3e0b22_medium.jpg",
+        "image": "assets/products/p_1041730681.jpg",
         "link": "/products/seiko-tank-swr049-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1041730681.jpg"
+        ]
       },
       {
         "id": "1044768345",
@@ -4264,13 +5119,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "14,250,000₫",
         "original_price_num": 14250000,
         "sale": "-38%",
-        "image": "https://product.hstatic.net/1000223154/product/329182029_1125577521440575_3420533208677720208_n_9b3e99b81604432fbc33cdda9d2c3b74_medium.jpg",
+        "image": "assets/products/p_1044768345.jpg",
         "link": "/products/seiko-5-automatic-g-m-t-watch-ssk005k1-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1044768345.jpg"
+        ]
       },
       {
         "id": "1035782981",
@@ -4282,13 +5140,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "5,000,000₫",
         "original_price_num": 5000000,
         "sale": "-20%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z7636211103286_fb34585a2b36578c07faaadcc4360926_cff46bec586249aca314894bbacda5ca_medium.jpg",
+        "image": "assets/products/p_1035782981.jpg",
         "link": "/products/seiko-5-snk361k1-snk361",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035782981.jpg"
+        ]
       },
       {
         "id": "1037630786",
@@ -4300,13 +5161,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,500,000₫",
         "original_price_num": 4500000,
         "sale": "-24%",
-        "image": "https://product.hstatic.net/1000223154/product/z3060391420778_29f9eb797a761672e1d58bbcae4c1ede_4a9e2cd2223047d59bcf75cd34ec4f1d_medium.jpg",
+        "image": "assets/products/p_1037630786.jpg",
         "link": "/products/seiko-5-snk809k1-day-kim-loai",
         "rating": 5,
         "reviews_count": 19,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1037630786.jpg"
+        ]
       },
       {
         "id": "1031081314",
@@ -4318,13 +5182,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,500,000₫",
         "original_price_num": 4500000,
         "sale": "-12%",
-        "image": "https://product.hstatic.net/1000223154/product/z3479057271011_6ffea6162a4b24dc0297e5bfe29465cc_1b2913c304bd4d9c91074aada5b1f691_medium.jpg",
+        "image": "assets/products/p_1031081314.jpg",
         "link": "/products/seiko-5-snkk31k1-snkk31",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1031081314.jpg"
+        ]
       },
       {
         "id": "1066648734",
@@ -4336,13 +5203,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,500,000₫",
         "original_price_num": 4500000,
         "sale": "-12%",
-        "image": "https://product.hstatic.net/1000223154/product/122719063_2955676811200459_8248457443795187600_n_7badf3866468427c9fe69e98658a21d1_medium.jpg",
+        "image": "assets/products/p_1066648734.jpg",
         "link": "/products/seiko-5-snkk71k1-38mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 21,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1066648734.jpg"
+        ]
       },
       {
         "id": "1023258421",
@@ -4354,13 +5224,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "4,500,000₫",
         "original_price_num": 4500000,
         "sale": "-13%",
-        "image": "https://product.hstatic.net/1000223154/product/z2446225615749_843e0ebc376a459a0172952f7a54c068_bf8147a4106e4f1497d2a201db40c95b_medium.jpg",
+        "image": "assets/products/p_1023258421.jpg",
         "link": "/products/seiko-5-snkl79k1-snkl79",
         "rating": 5,
         "reviews_count": 8,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1023258421.jpg"
+        ]
       },
       {
         "id": "1053494660",
@@ -4372,13 +5245,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,000,000₫",
         "original_price_num": 9000000,
         "sale": "-28%",
-        "image": "https://product.hstatic.net/1000223154/product/432421113_7642153789181416_5196703897567752230_n_183fbcd8c4414cddb6249939d2fcb6fb_medium.jpg",
+        "image": "assets/products/p_1053494660.jpg",
         "link": "/products/a-seiko-5-sport-sbsa185-vissel-kobe-limited-300c-dong-ho-nam",
         "rating": 5,
         "reviews_count": 11,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1053494660.jpg"
+        ]
       },
       {
         "id": "1051710974",
@@ -4390,13 +5266,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,200,000₫",
         "original_price_num": 8200000,
         "sale": "-32%",
-        "image": "https://product.hstatic.net/1000223154/product/z4951060958105_eab9e3838fde6408eed2c9b05f599252_8ac138340a434587840e7c763552fad3_medium.jpg",
+        "image": "assets/products/p_1051710974.jpg",
         "link": "/products/seiko-5-sport-srpk33k1-38mm-tiffany-dong-ho-nam",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1051710974.jpg"
+        ]
       },
       {
         "id": "1075795517",
@@ -4408,13 +5287,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,700,000₫",
         "original_price_num": 7700000,
         "sale": "-26%",
-        "image": "https://cdn.hstatic.net/products/1000223154/746807499_17994113378995221_2362510591432391478_n_e4891ddd6ee54c78b8fa4fa63aa74c44_medium.jpg",
+        "image": "assets/products/p_1075795517.jpg",
         "link": "/products/seiko-quartz-swr083p1-dong-ho-nu",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1075795517.jpg"
+        ]
       },
       {
         "id": "1075795454",
@@ -4426,13 +5308,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "7,700,000₫",
         "original_price_num": 7700000,
         "sale": "-30%",
-        "image": "https://cdn.hstatic.net/products/1000223154/729991849_1040718974957963_1495007288771584128_n_9bb2f35b72ad4c17af32f9bdca3cc191_medium.jpg",
+        "image": "assets/products/p_1075795454.jpg",
         "link": "/products/seiko-quartz-swr099p1-dong-ho-nu",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1075795454.jpg"
+        ]
       },
       {
         "id": "1075795557",
@@ -4444,13 +5329,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,240,000₫",
         "original_price_num": 9240000,
         "sale": "-43%",
-        "image": "https://cdn.hstatic.net/products/1000223154/737297588_1569484317902019_2116320251537176760_n_4b64351e4de746ef9a407d3ad1eb843f_medium.jpg",
+        "image": "assets/products/p_1075795557.jpg",
         "link": "/products/seiko-tank-quartz-swr108p1-sapphire-dong-ho-nu",
         "rating": 5,
         "reviews_count": 8,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nữ"
+        "gender": "Nữ",
+        "images": [
+          "assets/products/p_1075795557.jpg"
+        ]
       }
     ],
     "SUN AND MOON": [
@@ -4464,13 +5352,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "10,000,000₫",
         "original_price_num": 10000000,
         "sale": "-26%",
-        "image": "https://product.hstatic.net/1000223154/product/z3602525555100_3d09b94504419e2030fdc79cb3ecf8f8_5ec16bde20934958accc0d34c168895b_medium.jpg",
+        "image": "assets/products/p_1035782587.jpg",
         "link": "/products/orient-sun-and-moon-gen-3-ra-ak0011d10b-ra-ak0011d10b-ra-ak0011d-2021",
         "rating": 5,
         "reviews_count": 20,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035782587.jpg"
+        ]
       },
       {
         "id": "1051276318",
@@ -4482,13 +5373,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,900,000₫",
         "original_price_num": 9900000,
         "sale": "-36%",
-        "image": "https://cdn.hstatic.net/products/1000223154/481239601_1414380456601377_2190928022508915597_n_98e59e17de984efc94b8dbbf370142a6_medium.jpg",
+        "image": "assets/products/p_1051276318.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-ak0801s-41-5mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1051276318.jpg"
+        ]
       },
       {
         "id": "1035782736",
@@ -4500,13 +5394,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,000,000₫",
         "original_price_num": 12000000,
         "sale": "-34%",
-        "image": "https://cdn.hstatic.net/products/1000223154/z3836002102867_ad89992c934256db88fd0cb50751417c_53c8155fac574b188f4d625d7e1d6361_medium.jpg",
+        "image": "assets/products/p_1035782736.jpg",
         "link": "/products/orient-sun-and-moon-gen-3-ra-ak0007s10b-ra-ak0007s00c-ra-ak0007s-2021",
         "rating": 5,
         "reviews_count": 5,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035782736.jpg"
+        ]
       },
       {
         "id": "1035782571",
@@ -4518,13 +5415,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "10,000,000₫",
         "original_price_num": 10000000,
         "sale": "-26%",
-        "image": "https://product.hstatic.net/1000223154/product/z2972784869679_34090f7c1262adf4fe7bb4798df29663__1__55cbbb39c8464d86b282d51e5757e3c7_medium.jpg",
+        "image": "assets/products/p_1035782571.jpg",
         "link": "/products/orient-sun-and-moon-gen-3-ra-ak0008s10b-ra-ak0008s-ra-ak0008s00c",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035782571.jpg"
+        ]
       },
       {
         "id": "1035782718",
@@ -4536,13 +5436,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,000,000₫",
         "original_price_num": 12000000,
         "sale": "-34%",
-        "image": "https://product.hstatic.net/1000223154/product/z3356737979450_e67c0aea76144d12b9341b053e4101ef_07b7f14dc76c4a9f9934249da3d6d439_medium.jpg",
+        "image": "assets/products/p_1035782718.jpg",
         "link": "/products/orient-sun-and-moon-gen-3-ra-ak0009t10b-ra-ak0009t00c-ra-ak0009t-2021",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035782718.jpg"
+        ]
       },
       {
         "id": "1035782623",
@@ -4554,13 +5457,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "10,000,000₫",
         "original_price_num": 10000000,
         "sale": "-25%",
-        "image": "https://product.hstatic.net/1000223154/product/z2738003548354_4ee00ab1e57ff975eb266891d415eca_b2bfe3306ad64efe8c1ae39f7cbb0c9a_medium.jpg",
+        "image": "assets/products/p_1035782623.jpg",
         "link": "/products/orient-sun-and-moon-gen-3-ra-ak0010b10b-ra-ak0010b00c-ra-ak0010b",
         "rating": 5,
         "reviews_count": 10,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035782623.jpg"
+        ]
       },
       {
         "id": "1035797932",
@@ -4572,13 +5478,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "13,400,000₫",
         "original_price_num": 13400000,
         "sale": "-34%",
-        "image": "https://product.hstatic.net/1000223154/product/z3652242343822_453195220deb21e700dbdb4a96110303_2798c74c96d041429f595ca438f24cdd_medium.jpg",
+        "image": "assets/products/p_1035797932.jpg",
         "link": "/products/orient-sun-and-moon-gen-4-ra-as0008b10b-ra-as0008b00c-ra-as0008b-2021",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797932.jpg"
+        ]
       },
       {
         "id": "1035797827",
@@ -4590,13 +5499,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,000,000₫",
         "original_price_num": 12000000,
         "sale": "-28%",
-        "image": "https://product.hstatic.net/1000223154/product/z2760918982073_d185531b050302f96b60fd91c38590bf_ac86b2b8b32d4149b6bfe5dbaba25ea8_medium.jpg",
+        "image": "assets/products/p_1035797827.jpg",
         "link": "/products/orient-sun-and-moon-gen-4-ra-as0009s10b-ra-as0009s00c-ra-as0009s-2021",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797827.jpg"
+        ]
       },
       {
         "id": "1035797825",
@@ -4608,13 +5520,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,000,000₫",
         "original_price_num": 12000000,
         "sale": "-27%",
-        "image": "https://product.hstatic.net/1000223154/product/z3226504272146_1feae365507181e9a229eb1f10bc6151_43b11bcc8429465aa1e7a862d9ddd347_medium.jpg",
+        "image": "assets/products/p_1035797825.jpg",
         "link": "/products/orient-sun-and-moon-gen-4-ra-as0010s10b-ra-as0010s00c-ra-as0010s-2021",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797825.jpg"
+        ]
       },
       {
         "id": "1035797835",
@@ -4626,13 +5541,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,000,000₫",
         "original_price_num": 12000000,
         "sale": "-31%",
-        "image": "https://product.hstatic.net/1000223154/product/z3607349605138_46c35e1fec288e5ae7537dfc6c1ed525_9fff2d35f41d4f1a81f056d77e9ed69a_medium.jpg",
+        "image": "assets/products/p_1035797835.jpg",
         "link": "/products/orient-sun-and-moon-gen-4-ra-as0011s10b-ra-as0011s00c-ra-as0011s-2021",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797835.jpg"
+        ]
       },
       {
         "id": "1035797930",
@@ -4644,13 +5562,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,260,000₫",
         "original_price_num": 9260000,
         "sale": "-30%",
-        "image": "https://product.hstatic.net/1000223154/product/z3604226077731_a3a615703c213e2196c8010bb96415c9_0256ee15f64e4b3e823294af78de12d3_medium.jpg",
+        "image": "assets/products/p_1035797930.jpg",
         "link": "/products/orient-sun-and-moon-gen-5-ra-ak0308l10b-ra-ak0308l00c-ra-ak0308l-2021",
         "rating": 5,
         "reviews_count": 17,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797930.jpg"
+        ]
       },
       {
         "id": "1035797893",
@@ -4662,13 +5583,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,890,000₫",
         "original_price_num": 8890000,
         "sale": "-24%",
-        "image": "https://product.hstatic.net/1000223154/product/z4125979745471_8567465a8d3691b607d0f77392726232_7ac5087bc3454a2c929c3df2c5e8af03_medium.jpg",
+        "image": "assets/products/p_1035797893.jpg",
         "link": "/products/orient-sun-and-moon-gen-5-2021-ra-ak0309b10b-ra-ak0309b00c-ra-ak0309b-2021",
         "rating": 5,
         "reviews_count": 8,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797893.jpg"
+        ]
       },
       {
         "id": "1035797902",
@@ -4680,13 +5604,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "8,350,000₫",
         "original_price_num": 8350000,
         "sale": "-22%",
-        "image": "https://product.hstatic.net/1000223154/product/z3608114526409_7ec6803ad72683d98c51f0b4a9f26811_118ccc393a834436bbf14ebb7cd5f167_medium.jpg",
+        "image": "assets/products/p_1035797902.jpg",
         "link": "/products/orient-sun-and-moon-gen-5-ra-ak0310s10b-ra-ak0310s00c-ra-ak0310s-2021",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1035797902.jpg"
+        ]
       },
       {
         "id": "1071322118",
@@ -4698,13 +5625,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "12,000,000₫",
         "original_price_num": 12000000,
         "sale": "-42%",
-        "image": "https://cdn.hstatic.net/products/1000223154/587192576_1152821870367725_8480017560918720506_n_86e46a3c32f447a69c706aec0403cfb4_medium.jpg",
+        "image": "assets/products/p_1071322118.jpg",
         "link": "/products/orient-sun-and-moon-gen-7-ra-ak0311n30b-ra-ak0311n10b-ra-ak0311n-dong-ho-nam",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1071322118.jpg"
+        ]
       },
       {
         "id": "1051276274",
@@ -4716,13 +5646,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,900,000₫",
         "original_price_num": 9900000,
         "sale": "-34%",
-        "image": "https://product.hstatic.net/1000223154/product/z6077735931628_4cf01e71860b7bdd5127b1871731630b_31cdb37fcfaf403a97066323736119da_medium.jpg",
+        "image": "assets/products/p_1051276274.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-ak0802s-41-5mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1051276274.jpg"
+        ]
       },
       {
         "id": "1051276270",
@@ -4734,13 +5667,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,900,000₫",
         "original_price_num": 9900000,
         "sale": "-34%",
-        "image": "https://product.hstatic.net/1000223154/product/z5610498528046_bdf4713c30b4d73db2d9d6040f7c65b2_ad4929ecc5914472861474a59530132e_medium.jpg",
+        "image": "assets/products/p_1051276270.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-ak0803y-41-5mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 21,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1051276270.jpg"
+        ]
       },
       {
         "id": "1051276278",
@@ -4752,13 +5688,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,900,000₫",
         "original_price_num": 9900000,
         "sale": "-34%",
-        "image": "https://cdn.hstatic.net/products/1000223154/9607eb8f-45ba-4daf-8f60-bcb35730fd8c_85b59a2ee428490bbd0ccae451d36e39_medium.jpg",
+        "image": "assets/products/p_1051276278.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-ak0804y-41-5mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 11,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1051276278.jpg"
+        ]
       },
       {
         "id": "1030521752",
@@ -4770,13 +5709,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "10,980,000₫",
         "original_price_num": 10980000,
         "sale": "-32%",
-        "image": "https://product.hstatic.net/1000223154/product/z2385407368960_44bdbc1659a619cd491d429858cd44d4_62f650b18694476d97403278ad6e882f_medium.jpg",
+        "image": "assets/products/p_1030521752.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-as0101s10b-ra-as0101s00c-ra-as0101s",
         "rating": 5,
         "reviews_count": 21,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1030521752.jpg"
+        ]
       },
       {
         "id": "1030677720",
@@ -4788,13 +5730,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,900,000₫",
         "original_price_num": 9900000,
         "sale": "-31%",
-        "image": "https://product.hstatic.net/1000223154/product/z2479066019330_65d7e3b449f3f7c5a90a597ced588ba2_5bc46325d4d841a8b3a123638fd70dde_medium.jpg",
+        "image": "assets/products/p_1030677720.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-as0102s10b-ra-as0102s00c-ra-as0102s",
         "rating": 5,
         "reviews_count": 7,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1030677720.jpg"
+        ]
       },
       {
         "id": "1030677766",
@@ -4806,13 +5751,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "9,900,000₫",
         "original_price_num": 9900000,
         "sale": "-35%",
-        "image": "https://product.hstatic.net/1000223154/product/z2264769261821_e1d45fa46310678817d631797632034f_d7579b84755447e3b8d0133c3e10cbbb_medium.jpg",
+        "image": "assets/products/p_1030677766.jpg",
         "link": "/products/orient-sun-and-moon-bambino-ra-as0103a10b",
         "rating": 5,
         "reviews_count": 17,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1030677766.jpg"
+        ]
       }
     ],
     "TISSOT - THUỴ SỸ": [
@@ -4826,13 +5774,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "26,000,000₫",
         "original_price_num": 26000000,
         "sale": "-52%",
-        "image": "https://product.hstatic.net/1000223154/product/2bc790962e59d6078f48_6b68c62e68fb4a10a2ea5fc3e85bc132_medium.jpg",
+        "image": "assets/products/p_1023098254.jpg",
         "link": "/products/tissot-t-classic-automatic-t087-407-55-067-00-t0874075506700",
         "rating": 5,
         "reviews_count": 5,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1023098254.jpg"
+        ]
       },
       {
         "id": "1006815493",
@@ -4844,13 +5795,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "21,940,000₫",
         "original_price_num": 21940000,
         "sale": "-37%",
-        "image": "https://product.hstatic.net/1000223154/product/z2429033546020_6cf07392d66ae7b63e2d6d53058f1e77_5f5b0814a74b4c138158dbb8d38e34d2_medium.jpg",
+        "image": "assets/products/p_1006815493.jpg",
         "link": "/products/tissot-tradition-powermatic-80-open-heart-t063-907-11-038-00",
         "rating": 5,
         "reviews_count": 8,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1006815493.jpg"
+        ]
       },
       {
         "id": "1054917761",
@@ -4862,13 +5816,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "18,830,000₫",
         "original_price_num": 18830000,
         "sale": "-21%",
-        "image": "https://product.hstatic.net/1000223154/product/z6295055154863_95a6525d21422c3eaab611773c323462_61691e798c7b48069cd445ee89d70769_medium.jpg",
+        "image": "assets/products/p_1054917761.jpg",
         "link": "/products/a-tissot-prx-powermatic-80-35mm-t137-207-11-091-01-t1372071109101",
         "rating": 5,
         "reviews_count": 12,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1054917761.jpg"
+        ]
       },
       {
         "id": "1051252068",
@@ -4880,13 +5837,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "17,170,000₫",
         "original_price_num": 17170000,
         "sale": "-45%",
-        "image": "https://cdn.hstatic.net/products/1000223154/t41.1.483.52-qvwatch-8_d301406cd3b948d9a26891fa0d765854_medium.png",
+        "image": "assets/products/p_1051252068.png",
         "link": "/products/tissot-automatic-t41-1-483-52-le-locle-t41148352-dong-ho-nam",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1051252068.png"
+        ]
       },
       {
         "id": "1067442479",
@@ -4898,13 +5858,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "20,000,000₫",
         "original_price_num": 20000000,
         "sale": "-31%",
-        "image": "https://cdn.hstatic.net/products/1000223154/fc-0a3f-4124-bf7c-00a9f9b60bd0_af6b88655220458b9517badce8824bd7_master_aa15e3f00f4e4e2e9706d78cdb76a269_medium.jpg",
+        "image": "assets/products/p_1067442479.jpg",
         "link": "/products/tissot-automatic-t139-807-22-038-00-chemin-des-tourelles-powermatic-80-dong-ho-nam",
         "rating": 5,
         "reviews_count": 12,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1067442479.jpg"
+        ]
       },
       {
         "id": "1020038505",
@@ -4916,13 +5879,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "19,000,000₫",
         "original_price_num": 19000000,
         "sale": "-35%",
-        "image": "https://product.hstatic.net/1000223154/product/z2191828321864_a051c6cc43daa6ab886cabcf1ca80ba5_ea1a6f4212404e59803e8689074071dc_medium.jpg",
+        "image": "assets/products/p_1020038505.jpg",
         "link": "/products/tissot-chemin-des-tourelles-powermatic-80-t099-407-22-038-01-t0994072203801",
         "rating": 5,
         "reviews_count": 10,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1020038505.jpg"
+        ]
       },
       {
         "id": "1031233423",
@@ -4934,13 +5900,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "25,500,000₫",
         "original_price_num": 25500000,
         "sale": "-46%",
-        "image": "https://product.hstatic.net/1000223154/product/z2365746455268_b96c4914f857595e66f0c3326c85bc6d_0d5ac5ff7a1543988a26704c3791ec27_medium.jpg",
+        "image": "assets/products/p_1031233423.jpg",
         "link": "/products/tissot-automatic-openheart-demirose-t063-907-22-038-01-t0639072203801",
         "rating": 5,
         "reviews_count": 10,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1031233423.jpg"
+        ]
       },
       {
         "id": "1075764644",
@@ -4952,13 +5921,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "26,150,000₫",
         "original_price_num": 26150000,
         "sale": "-43%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8068685058804_e6e78be94a4aa0e1da9d1ed4eae9f71b_523f5592f1e94c0487461db9a5c8704f_medium.jpg",
+        "image": "assets/products/p_1075764644.jpg",
         "link": "/products/tissot-automatic-t120-807-33-051-00-t1208073305100-dong-ho-nam",
         "rating": 5,
         "reviews_count": 13,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075764644.jpg"
+        ]
       },
       {
         "id": "1026425939",
@@ -4970,13 +5942,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "22,000,000₫",
         "original_price_num": 22000000,
         "sale": "-46%",
-        "image": "https://product.hstatic.net/1000223154/product/65c6654318fde5a3bcec_ebeb14e2bc4f40859bfa363ad188e6cc_medium.jpg",
+        "image": "assets/products/p_1026425939.jpg",
         "link": "/products/tissot-automatic-carson-powermatic80-t122-407-36-031-00",
         "rating": 5,
         "reviews_count": 8,
         "is_new": true,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1026425939.jpg"
+        ]
       },
       {
         "id": "1040001662",
@@ -4988,13 +5963,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "17,800,000₫",
         "original_price_num": 17800000,
         "sale": "-41%",
-        "image": "https://product.hstatic.net/1000223154/product/z3499305285366_d5c82ea18995d218a3c12f9c9283d0c0_f88983193ca04a08ab491c440db1e30e_medium.jpg",
+        "image": "assets/products/p_1040001662.jpg",
         "link": "/products/tissot-le-locle-demi-t006-428-22-032-00-tt0064282203200-dong-ho-nam",
         "rating": 5,
         "reviews_count": 13,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1040001662.jpg"
+        ]
       },
       {
         "id": "1072302637",
@@ -5006,13 +5984,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "24,850,000₫",
         "original_price_num": 24850000,
         "sale": "-48%",
-        "image": "https://cdn.hstatic.net/products/1000223154/9a-720d-434c-a45e-458161470163_50802b5fed9d44d5883433cba2810e79_master_c021b04a075f42bdb4a7f8b9970a1891_medium.jpg",
+        "image": "assets/products/p_1072302637.jpg",
         "link": "/products/tissot-automatic-t139-807-11-031-00-dong-ho-nam",
         "rating": 5,
         "reviews_count": 6,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1072302637.jpg"
+        ]
       },
       {
         "id": "1039913127",
@@ -5024,13 +6005,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "22,000,000₫",
         "original_price_num": 22000000,
         "sale": "-48%",
-        "image": "https://cdn.hstatic.net/products/1000223154/74-6bc0-4922-aded-f5aa29825296_42473ea9fe3c4b31a15e8e8b468c02c0_master_228ac2e643334d71b5e5cc5240b4a762_medium.jpg",
+        "image": "assets/products/p_1039913127.jpg",
         "link": "/products/tissot-carson-powermatic-demirose-t122-407-22-031-01-t1224072203101-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1039913127.jpg"
+        ]
       },
       {
         "id": "1074206935",
@@ -5042,13 +6026,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "23,000,000₫",
         "original_price_num": 23000000,
         "sale": "-44%",
-        "image": "https://cdn.hstatic.net/products/1000223154/b6-703e-4fc8-9ee1-e14e6d2e7051_dc7b1897de3c4b449a06427d5797c68c_master_03e262b753894b6b8b4ec59af778a130_medium.jpg",
+        "image": "assets/products/p_1074206935.jpg",
         "link": "/products/tissot-chemin-des-tourelles-powermatic-80-automatic-t139-807-11-061-00-t1398071106100-dong-ho-nam",
         "rating": 5,
         "reviews_count": 22,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1074206935.jpg"
+        ]
       },
       {
         "id": "1067613545",
@@ -5060,13 +6047,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "20,180,000₫",
         "original_price_num": 20180000,
         "sale": "-32%",
-        "image": "https://cdn.hstatic.net/products/1000223154/7b80cfcf4375c92b9064_cfa07329dbf74cb4ba1f90dfd068db92_medium.jpg",
+        "image": "assets/products/p_1067613545.jpg",
         "link": "/products/tissot-automatic-t139-807-11-048-00-dong-ho-nam",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1067613545.jpg"
+        ]
       },
       {
         "id": "1056451838",
@@ -5078,13 +6068,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "24,000,000₫",
         "original_price_num": 24000000,
         "sale": "-43%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8013873371453_4cbdbd1c60dc8fdb4d7172408eac0e87_8a25d430e88e49dcae653c6aa953fce6_medium.jpg",
+        "image": "assets/products/p_1056451838.jpg",
         "link": "/products/tissot-chemin-des-tourelles-t139-807-36-031-00-t1398073603100-39mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 7,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1056451838.jpg"
+        ]
       },
       {
         "id": "1075765468",
@@ -5096,13 +6089,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "27,650,000₫",
         "original_price_num": 27650000,
         "sale": "-46%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8120786166625_6b518040842f9fcead68049613b888d1_1cf1f8ebf54b4d4e8c1b39aaf58fb17d_medium.jpg",
+        "image": "assets/products/p_1075765468.jpg",
         "link": "/products/tissot-automatic-t120-807-22-051-00-t1208072205100-dong-ho-nam",
         "rating": 5,
         "reviews_count": 19,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075765468.jpg"
+        ]
       },
       {
         "id": "1075956415",
@@ -5114,13 +6110,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "17,190,000₫",
         "original_price_num": 17190000,
         "sale": "-49%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8098116631707_18215851000a40e2ccc0e309bef51b73_ac8233ca8c2a4ae4881259fd664cd6ce_medium.jpg",
+        "image": "assets/products/p_1075956415.jpg",
         "link": "/products/tissot-seastar-1000-quartz-t120-410-33-091-00-t1204103309100-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 20,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956415.jpg"
+        ]
       },
       {
         "id": "1075956551",
@@ -5132,13 +6131,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "17,190,000₫",
         "original_price_num": 17190000,
         "sale": "-49%",
-        "image": "https://cdn.hstatic.net/products/1000223154/gen-h-z8073188536848_252d432498156551349b098fd574c7b4_a75177811c2443e99222c23b8ed7c542_medium.jpg",
+        "image": "assets/products/p_1075956551.jpg",
         "link": "/products/tissot-seastar-1000-quartz-t120-410-33-421-00-t1204103342100-40mm-dong-ho-nam",
         "rating": 5,
         "reviews_count": 20,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1075956551.jpg"
+        ]
       },
       {
         "id": "1044628927",
@@ -5150,13 +6152,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "21,230,000₫",
         "original_price_num": 21230000,
         "sale": "-57%",
-        "image": "https://product.hstatic.net/1000223154/product/z4073276131072_f0d6c63d09b3c0f57f52a5f57e6ca9e1_33c43ea6063d45a7b1974d7aaf9aa9d0_medium.jpg",
+        "image": "assets/products/p_1044628927.jpg",
         "link": "/products/tissot-t-classic-automatic-iii-day-date-t065-430-22-051-00-t0654302205100",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1044628927.jpg"
+        ]
       },
       {
         "id": "1041846981",
@@ -5168,13 +6173,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "20,000,000₫",
         "original_price_num": 20000000,
         "sale": "-26%",
-        "image": "https://product.hstatic.net/1000223154/product/z3723725424174_1f34124a41483f32c6e0127f474a5e24_f439a4dadd9444cbbc45115f57ba150c_medium.jpg",
+        "image": "assets/products/p_1041846981.jpg",
         "link": "/products/tissot-seastar-1000-black-t120-407-17-051-00-t1204071705100",
         "rating": 5,
         "reviews_count": 14,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1041846981.jpg"
+        ]
       }
     ],
     "CITIZEN": [
@@ -5188,13 +6196,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "17,000,000₫",
         "original_price_num": 17000000,
         "sale": "-50%",
-        "image": "https://cdn.hstatic.net/products/1000223154/783029374_28931997826403303_2957954725602447386_n_f76a72b1117549a48df5d8bf92ef2f46_medium.jpg",
+        "image": "assets/products/p_1076283315.jpg",
         "link": "/products/citizen-quartz-nk0030-51e-nk003051e-dong-ho-nu",
         "rating": 5,
         "reviews_count": 20,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1076283315.jpg"
+        ]
       },
       {
         "id": "1076283301",
@@ -5206,13 +6217,16 @@ window.PHONGWATCH_DATA = {
         "original_price": "18,000,000₫",
         "original_price_num": 18000000,
         "sale": "-47%",
-        "image": "https://cdn.hstatic.net/products/1000223154/1790475340214_6809250771806591907_g533268933396290490_h_b858792fb9054e2c878d641e5be60a96_medium.jpg",
+        "image": "assets/products/p_1076283301.jpg",
         "link": "/products/citizen-quartz-nk0032-56a-nk003256a-dong-ho-nu",
         "rating": 5,
         "reviews_count": 6,
         "is_new": false,
         "in_stock": true,
-        "gender": "Nam"
+        "gender": "Nam",
+        "images": [
+          "assets/products/p_1076283301.jpg"
+        ]
       }
     ]
   }

@@ -269,14 +269,35 @@
     const primaryColor = document.getElementById('themePrimaryColor')?.value || '#d61114';
     const goldColor = document.getElementById('themeGoldColor')?.value || '#c89b3c';
 
+    const brandName = getVal('cfgBrandName') || 'PHONGWATCH';
+    const hotlineDisplay = getVal('cfgHotline') || '0888.477.774';
+    let hotlineTel = getVal('cfgHotlineTel');
+    if (!hotlineTel) {
+      hotlineTel = hotlineDisplay.replace(/\D/g, '') || '0888477774';
+    }
+
+    const zaloDisplay = getVal('cfgZalo') || '0988.922.330';
+    const cleanZalo = zaloDisplay.replace(/\D/g, '') || '0988922330';
+    let zaloLink = getVal('cfgZaloLink');
+    if (!zaloLink || !zaloLink.startsWith('http')) {
+      zaloLink = `https://zalo.me/${cleanZalo}`;
+    }
+
+    const facebookPage = getVal('cfgFacebook') || 'https://www.facebook.com/PhongWatches';
+    let messenger = getVal('cfgMessenger');
+    if (!messenger) {
+      const fbMatch = facebookPage.match(/facebook\.com\/([a-zA-Z0-9._-]+)/);
+      messenger = fbMatch ? `https://m.me/${fbMatch[1]}` : 'https://m.me/PhongWatches';
+    }
+
     shopConfig = {
       ...shopConfig,
       brand: {
-        name: getVal('cfgBrandName') || 'PHONGWATCH',
+        name: brandName,
         tagline: getVal('cfgTagline') || 'ĐỒNG HỒ CHÍNH HÃNG',
         slogan: getVal('cfgSlogan') || "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt",
-        logoUrl: getVal('cfgLogoUrl') || 'https://theme.hstatic.net/1000223154/1001363986/14/logo_large.png?v=133',
-        faviconUrl: getVal('cfgFaviconUrl') || 'https://theme.hstatic.net/1000223154/1001363986/14/favicon.png?v=133',
+        logoUrl: getVal('cfgLogoUrl') || 'assets/logo.png',
+        faviconUrl: getVal('cfgFaviconUrl') || 'assets/favicon.png',
         shareFbImage: shopConfig.brand?.shareFbImage || ''
       },
       theme: {
@@ -288,19 +309,19 @@
         goldDark: adjustBrightness(goldColor, -20)
       },
       contact: {
-        hotlineDisplay: getVal('cfgHotline') || '0888.477.774',
-        hotlineTel: getVal('cfgHotlineTel') || '0888477774',
-        zaloDisplay: getVal('cfgZalo') || '0988.922.330',
-        zaloLink: getVal('cfgZaloLink') || 'https://zalo.me/0988922330',
+        hotlineDisplay: hotlineDisplay,
+        hotlineTel: hotlineTel,
+        zaloDisplay: zaloDisplay,
+        zaloLink: zaloLink,
         email: getVal('cfgEmail') || 'phongwatch.hcm@gmail.com',
         address: getVal('cfgAddress') || '357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh',
         addressNote: getVal('cfgAddressNote') || '(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)',
         mapEmbedUrl: getVal('cfgMapUrl') || '',
-        facebookPage: getVal('cfgFacebook') || 'https://www.facebook.com/PhongWatches',
-        messenger: getVal('cfgMessenger') || 'https://m.me/PhongWatches'
+        facebookPage: facebookPage,
+        messenger: messenger
       },
       seo: {
-        title: getVal('cfgSeoTitle') || 'Đồng Hồ Chính Hãng – PhongWatch',
+        title: getVal('cfgSeoTitle') || `Đồng Hồ Chính Hãng – ${brandName}`,
         metaDescription: getVal('cfgSeoDesc') || '',
         keywords: getVal('cfgSeoKeywords') || ''
       }
@@ -308,6 +329,34 @@
 
     saveConfigToStorage();
     showToast('Đã lưu cấu hình thương hiệu và màu sắc thành công!', 'success');
+  };
+
+  // Real-time synchronization helpers for admin form
+  window.autoSyncHotline = function (val) {
+    const clean = (val || '').replace(/\D/g, '');
+    const telInput = document.getElementById('cfgHotlineTel');
+    if (telInput && clean.length >= 8) {
+      telInput.value = clean;
+    }
+  };
+
+  window.autoSyncZalo = function (val) {
+    const clean = (val || '').replace(/\D/g, '');
+    const linkInput = document.getElementById('cfgZaloLink');
+    if (linkInput && clean.length >= 8) {
+      linkInput.value = `https://zalo.me/${clean}`;
+    }
+  };
+
+  window.autoSyncFacebook = function (val) {
+    const link = (val || '').trim();
+    const msgrInput = document.getElementById('cfgMessenger');
+    if (msgrInput && (!msgrInput.value || msgrInput.value.includes('m.me/PhongWatches'))) {
+      const match = link.match(/facebook\.com\/([a-zA-Z0-9._-]+)/);
+      if (match) {
+        msgrInput.value = `https://m.me/${match[1]}`;
+      }
+    }
   };
 
   // Helper color brightness adjust
@@ -392,7 +441,7 @@
         <tr>
           <td style="text-align: center;">
             <img class="product-thumb" src="${p.image}" alt="${p.name}" 
-                 onerror="this.src='https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_medium.png?v=133'">
+                 onerror="this.src='assets/slider-1.png'">
           </td>
           <td class="product-name-cell">
             <div class="p-title">${p.name}</div>
@@ -451,8 +500,100 @@
   }
 
   // --- ADD / EDIT PRODUCT MODAL ---
+  let currentProductImages = [];
+
+  function renderGalleryPreview() {
+    const container = document.getElementById('galleryPreviewContainer');
+    if (!container) return;
+
+    if (!currentProductImages || currentProductImages.length === 0) {
+      container.innerHTML = `
+        <div style="font-size: 13px; color: #94a3b8; font-style: italic; padding: 6px 0;">
+          <i class="fa fa-circle-info"></i> Chưa có ảnh trong bộ sưu tập. Hệ thống sẽ tự dùng ảnh đại diện chính làm mặc định.
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = currentProductImages.map((imgUrl, idx) => `
+      <div style="position: relative; width: 64px; height: 64px; border-radius: 8px; border: 2px solid ${idx === 0 ? '#d61114' : '#cbd5e1'}; overflow: hidden; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.06); flex-shrink: 0;" title="${idx === 0 ? 'Ảnh đại diện chính' : `Góc ảnh #${idx + 1}`}">
+        <img src="${imgUrl}" alt="Gallery ${idx + 1}" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.src='assets/slider-1.png'">
+        ${idx === 0 ? '<span style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(214,17,20,0.85); color: #fff; font-size: 9px; text-align: center; line-height: 14px; font-weight: 700;">CHÍNH</span>' : ''}
+        <button type="button" onclick="window.removeGalleryImage(${idx})" style="position: absolute; top: 2px; right: 2px; width: 18px; height: 18px; border-radius: 50%; background: rgba(0,0,0,0.65); color: #fff; border: none; font-size: 10px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;" onmouseover="this.style.background='#ef4444'" onmouseout="this.style.background='rgba(0,0,0,0.65)'" title="Xóa ảnh này">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+    `).join('');
+  }
+
+  window.removeGalleryImage = function (index) {
+    if (index >= 0 && index < currentProductImages.length) {
+      currentProductImages.splice(index, 1);
+      if (index === 0 && currentProductImages.length > 0) {
+        setVal('prodImage', currentProductImages[0]);
+      }
+      renderGalleryPreview();
+    }
+  };
+
+  window.addManualGalleryImage = function () {
+    const input = document.getElementById('addGalleryUrlInput');
+    const val = input ? input.value.trim() : '';
+    if (!val) {
+      alert('Vui lòng nhập đường dẫn URL ảnh hoặc tên file ảnh!');
+      return;
+    }
+    currentProductImages.push(val);
+    if (!getVal('prodImage')) {
+      setVal('prodImage', val);
+    }
+    if (input) input.value = '';
+    renderGalleryPreview();
+    showToast('Đã thêm ảnh vào bộ sưu tập!', 'success');
+  };
+
+  window.handleMultipleGalleryUpload = function (event) {
+    const files = Array.from(event.target.files || []);
+    if (!files.length) return;
+
+    let loadedCount = 0;
+    files.forEach(file => {
+      if (file.size > 2 * 1024 * 1024) {
+        showToast(`Ảnh "${file.name}" quá lớn (>2MB), đã bỏ qua.`, 'warning');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        currentProductImages.push(e.target.result);
+        if (!getVal('prodImage')) {
+          setVal('prodImage', e.target.result);
+        }
+        loadedCount++;
+        if (loadedCount === files.length) {
+          renderGalleryPreview();
+          showToast(`Đã thêm ${loadedCount} ảnh vào bộ sưu tập!`, 'success');
+        }
+      };
+      reader.readAsDataURL(file);
+    });
+    event.target.value = '';
+  };
+
+  window.syncMainImageToGallery = function (val) {
+    const trimmed = (val || '').trim();
+    if (!trimmed) return;
+    if (currentProductImages.length === 0) {
+      currentProductImages.push(trimmed);
+      renderGalleryPreview();
+    } else {
+      currentProductImages[0] = trimmed;
+      renderGalleryPreview();
+    }
+  };
+
   window.openAddProductModal = function () {
     currentEditingProductId = null;
+    currentProductImages = [];
     document.getElementById('productModalTitle').textContent = 'Thêm Sản Phẩm Mới';
     
     // Auto generate ID
@@ -469,6 +610,7 @@
     setVal('prodRating', '5');
     setVal('prodReviews', '12');
 
+    renderGalleryPreview();
     document.getElementById('productModalOverlay').classList.add('active');
   };
 
@@ -491,6 +633,16 @@
     setVal('prodRating', p.rating || 5);
     setVal('prodReviews', p.reviews_count || 10);
 
+    // Initialize gallery images
+    if (p.images && Array.isArray(p.images) && p.images.length > 0) {
+      currentProductImages = [...p.images];
+    } else if (p.image) {
+      currentProductImages = [p.image];
+    } else {
+      currentProductImages = [];
+    }
+    renderGalleryPreview();
+
     document.getElementById('productModalOverlay').classList.add('active');
   };
 
@@ -506,7 +658,7 @@
     const collection = getVal('prodCollection');
     const priceNum = parseInt(getVal('prodPriceNum'), 10);
     const origPriceNum = parseInt(getVal('prodOrigPriceNum'), 10) || priceNum;
-    const image = getVal('prodImage') || 'https://theme.hstatic.net/1000223154/1001363986/14/slideshow_1_medium.png?v=133';
+    let image = getVal('prodImage') || 'assets/slider-1.png';
     const gender = getVal('prodGender');
     const inStock = document.getElementById('prodStock')?.value === 'true';
     const rating = parseInt(getVal('prodRating'), 10) || 5;
@@ -532,6 +684,17 @@
       saleBadge = `-${discount}%`;
     }
 
+    // Prepare gallery images array
+    let finalImages = currentProductImages.length > 0 ? [...currentProductImages] : (image ? [image] : []);
+    if (image && (!finalImages.length || finalImages[0] !== image)) {
+      finalImages.unshift(image);
+    }
+    // Remove duplicates while preserving order
+    finalImages = [...new Set(finalImages)];
+    if (!image && finalImages.length > 0) {
+      image = finalImages[0];
+    }
+
     const newProd = {
       id: id,
       name: name,
@@ -543,6 +706,7 @@
       original_price_num: origPriceNum,
       sale: saleBadge,
       image: image,
+      images: finalImages,
       link: `/products/${id}`,
       rating: rating,
       reviews_count: reviewsCount,
@@ -598,6 +762,9 @@
       const input = document.getElementById(targetInputId);
       if (input) {
         input.value = e.target.result;
+        if (targetInputId === 'prodImage') {
+          syncMainImageToGallery(e.target.result);
+        }
         showToast('Đã tải ảnh lên thành công!', 'success');
       }
     };
@@ -666,92 +833,232 @@
     }
   }
 
-  function applyConfigToDOM() {
-    const config = window.SHOP_CONFIG;
+  function applyConfigToDOM(customConfig) {
+    let config = customConfig;
+    if (!config) {
+      try {
+        const saved = localStorage.getItem('SHOP_CONFIG_OVERRIDE');
+        if (saved) {
+          config = JSON.parse(saved);
+        }
+      } catch (e) {}
+    }
+    if (!config) {
+      config = window.SHOP_CONFIG;
+    }
     if (!config) return;
 
+    // 1. Theme Colors
     applyThemeColors(config.theme);
 
-    const favicon = document.querySelector("link[rel*='icon']");
-    if (favicon && config.brand.faviconUrl) {
-      favicon.href = config.brand.faviconUrl;
+    // 2. Favicon
+    if (config.brand && config.brand.faviconUrl) {
+      document.querySelectorAll("link[rel*='icon']").forEach(el => {
+        el.href = config.brand.faviconUrl;
+      });
     }
 
-    const logos = document.querySelectorAll('.site-logo-img');
-    logos.forEach(img => {
-      if (config.brand.logoUrl) {
+    // 3. Brand & Logos
+    const brandName = (config.brand && config.brand.name) ? config.brand.name : 'PHONGWATCH';
+    const brandTagline = (config.brand && config.brand.tagline) ? config.brand.tagline : 'ĐỒNG HỒ CHÍNH HÃNG';
+    const brandSlogan = (config.brand && config.brand.slogan) ? config.brand.slogan : "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt";
+
+    // All Logo Images
+    if (config.brand && config.brand.logoUrl) {
+      document.querySelectorAll('.site-logo-img, img[alt*="Logo"], [data-config="logo"]').forEach(img => {
         img.src = config.brand.logoUrl;
-        img.alt = config.brand.name || 'Logo';
+        img.alt = brandName + ' Logo';
+      });
+    }
+
+    // Logo Brand Text (Desktop & Mobile Fallbacks)
+    document.querySelectorAll('.logo-brand, [data-config="brand-name"]').forEach(el => {
+      if (brandName.toUpperCase().endsWith('WATCH') && brandName.length > 5) {
+        const prefix = brandName.substring(0, brandName.length - 5);
+        el.innerHTML = \`\${prefix}<span>WATCH</span>\`;
+      } else {
+        el.textContent = brandName;
       }
     });
 
-    const logoBrands = document.querySelectorAll('.logo-brand');
-    logoBrands.forEach(el => {
-      el.innerHTML = \`\${config.brand.name || 'PHONG<span>WATCH</span>'}\`;
-    });
-
-    const logoTaglines = document.querySelectorAll('.logo-tagline');
-    logoTaglines.forEach(el => {
-      el.textContent = config.brand.tagline || 'ĐỒNG HỒ CHÍNH HÃNG';
-    });
-
-    const slogans = document.querySelectorAll('.header-top-left .slogan');
-    slogans.forEach(el => {
-      el.innerHTML = \`<i class="fa fa-gem text-gold"></i> \${config.brand.slogan || "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt"}\`;
-    });
-
-    const hotlineCallLinks = document.querySelectorAll('.topbar-hotline-link, a[href^="tel:"]');
-    hotlineCallLinks.forEach(a => {
-      if (a.closest('.header-hotline-box')) {
-        a.href = \`tel:\${config.contact.hotlineTel}\`;
-        const strong = a.querySelector('strong');
-        if (strong) strong.textContent = config.contact.hotlineDisplay;
-      } else if (a.closest('.header-top-left')) {
-        a.href = \`tel:\${config.contact.hotlineTel}\`;
-        a.innerHTML = \`<i class="fa fa-phone-volume text-gold"></i> <strong>\${config.contact.hotlineDisplay}</strong> (Gọi Điện) - <strong>\${config.contact.zaloDisplay}</strong> (Zalo)\`;
-      } else if (a.closest('.footer-contact-list')) {
-        a.href = \`tel:\${config.contact.hotlineTel}\`;
-        a.innerHTML = \`<strong>\${config.contact.hotlineDisplay}</strong> (Gọi điện) - <strong>\${config.contact.zaloDisplay}</strong> (Nhắn Zalo)\`;
+    // Mobile Drawer Header Brand Text
+    document.querySelectorAll('.mobile-drawer-header div').forEach(el => {
+      if (brandName.toUpperCase().endsWith('WATCH') && brandName.length > 5) {
+        const prefix = brandName.substring(0, brandName.length - 5);
+        el.innerHTML = \`\${prefix}<span style="color:var(--color-primary);">WATCH</span>\`;
+      } else {
+        el.textContent = brandName;
       }
     });
 
-    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
-    emailLinks.forEach(a => {
-      a.href = \`mailto:\${config.contact.email}\`;
-      if (a.closest('.header-top-left')) {
-        a.innerHTML = \`<i class="fa fa-envelope text-gold"></i> \${config.contact.email}\`;
-      } else if (a.closest('.footer-contact-list')) {
-        a.textContent = config.contact.email;
-      }
+    // Logo Tagline
+    document.querySelectorAll('.logo-tagline, [data-config="brand-tagline"]').forEach(el => {
+      el.textContent = brandTagline;
     });
 
-    const addressItems = document.querySelectorAll('.footer-contact-list li');
-    if (addressItems.length > 0) {
-      const firstLiSpan = addressItems[0].querySelector('span');
-      if (firstLiSpan) {
-        firstLiSpan.innerHTML = \`\${config.contact.address}<br><em style="color:#e9ecef; font-size:12px;">\${config.contact.addressNote}</em>\`;
+    // Topbar Slogan
+    document.querySelectorAll('.header-top-left .slogan, [data-config="brand-slogan"]').forEach(el => {
+      el.innerHTML = \`<i class="fa fa-gem text-gold"></i> \${brandSlogan}\`;
+    });
+
+    // Footer Copyright Brand
+    document.querySelectorAll('.footer-bottom strong, [data-config="copyright-brand"]').forEach(el => {
+      el.textContent = brandName;
+    });
+
+    // Checkout Modal Order Confirmation Text
+    const checkoutNotice = document.querySelector('#checkoutSuccess p');
+    if (checkoutNotice) {
+      checkoutNotice.innerHTML = \`Nhân viên <strong>\${brandName}</strong> sẽ gọi điện cho quý khách trong vòng <strong>10 phút</strong> để xác nhận và gửi hàng hỏa tốc. Cảm ơn quý khách!\`;
+    }
+
+    // 4. CONTACTS: HOTLINE, ZALO, SOCIALS
+    if (config.contact) {
+      const hotlineDisplay = config.contact.hotlineDisplay || '0888.477.774';
+      const rawTel = config.contact.hotlineTel || hotlineDisplay.replace(/\D/g, '') || '0888477774';
+      const telHref = \`tel:\${rawTel}\`;
+
+      const zaloDisplay = config.contact.zaloDisplay || '0988.922.330';
+      const cleanZalo = zaloDisplay.replace(/\D/g, '') || '0988922330';
+      let zaloLink = config.contact.zaloLink;
+      if (!zaloLink || !zaloLink.startsWith('http')) {
+        zaloLink = \`https://zalo.me/\${cleanZalo}\`;
+      }
+
+      const facebookPage = config.contact.facebookPage || 'https://www.facebook.com/PhongWatches';
+      let messenger = config.contact.messenger;
+      if (!messenger) {
+        const fbMatch = facebookPage.match(/facebook\\.com\\/([a-zA-Z0-9._-]+)/);
+        messenger = fbMatch ? \`https://m.me/\${fbMatch[1]}\` : 'https://m.me/PhongWatches';
+      }
+
+      // --- A. ALL HOTLINE / PHONE LINKS & BUTTONS ---
+      document.querySelectorAll('a[href^="tel:"], .phone-btn, .bottom-nav-hotline, [data-config="hotline-link"]').forEach(a => {
+        a.href = telHref;
+
+        if (a.closest('.header-hotline-box')) {
+          const strong = a.querySelector('strong');
+          if (strong) strong.textContent = hotlineDisplay;
+          else a.textContent = hotlineDisplay;
+        } else if (a.closest('.header-top-left')) {
+          // Handled separately below in combined block
+        } else if (a.closest('.footer-contact-list')) {
+          // Handled separately below in combined block
+        } else if (a.closest('.product-detail-layout') || a.parentElement?.textContent?.includes('tư vấn')) {
+          a.innerHTML = \`<i class="fa fa-phone"></i> \${hotlineDisplay}\`;
+        } else if (a.classList.contains('float-btn') && a.classList.contains('phone-btn')) {
+          a.title = \`Gọi ngay \${hotlineDisplay}\`;
+          const tip = a.querySelector('.tooltip');
+          if (tip) tip.textContent = \`Gọi: \${hotlineDisplay}\`;
+        } else if (a.classList.contains('social-btn')) {
+          a.title = \`Gọi Hotline: \${hotlineDisplay}\`;
+        } else if (a.classList.contains('mobile-bottom-nav-item') || a.classList.contains('mobile-p-action-item')) {
+          a.title = \`Gọi Hotline: \${hotlineDisplay}\`;
+        }
+      });
+
+      // --- B. ALL ZALO LINKS, BUTTONS & TOOLTIPS ---
+      document.querySelectorAll('a[href*="zalo.me"], a.zalo-btn, a[title*="Zalo"], a[title*="zalo"], [data-config="zalo-link"]').forEach(a => {
+        a.href = zaloLink;
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+
+        if (a.classList.contains('float-btn') || a.classList.contains('zalo-btn')) {
+          a.title = \`Chat Zalo \${zaloDisplay}\`;
+          const tip = a.querySelector('.tooltip');
+          if (tip) tip.textContent = \`Chat Zalo: \${zaloDisplay}\`;
+        } else if (a.classList.contains('social-btn')) {
+          a.title = \`Zalo: \${zaloDisplay}\`;
+        }
+      });
+
+      // --- C. COMBINED TOPBAR & FOOTER CONTACT BLOCKS ---
+      // Header Topbar
+      document.querySelectorAll('.header-top-left a[href^="tel:"], .header-top-left [data-config="topbar-contacts"]').forEach(a => {
+        a.href = telHref;
+        a.innerHTML = \`<i class="fa fa-phone-volume text-gold"></i> <strong>\${hotlineDisplay}</strong> (Gọi Điện) - <span onclick="event.preventDefault(); window.open('\${zaloLink}', '_blank');" style="cursor:pointer;" title="Bấm để chat Zalo"><strong>\${zaloDisplay}</strong> (Zalo)</span>\`;
+      });
+
+      // Footer contact list items
+      document.querySelectorAll('.footer-contact-list li').forEach((li, idx) => {
+        if (idx === 0) {
+          const span = li.querySelector('span');
+          if (span && config.contact.address) {
+            span.innerHTML = \`\${config.contact.address}<br><em style="color:#e9ecef; font-size:12px;">\${config.contact.addressNote || ''}</em>\`;
+          }
+        } else if (idx === 1 || li.textContent.includes('Gọi điện') || li.textContent.includes('Zalo')) {
+          const a = li.querySelector('a');
+          if (a) {
+            a.href = telHref;
+            a.innerHTML = \`<strong>\${hotlineDisplay}</strong> (Gọi điện) - <span onclick="event.preventDefault(); window.open('\${zaloLink}', '_blank');" style="cursor:pointer; text-decoration:underline;" title="Bấm để chat Zalo"><strong>\${zaloDisplay}</strong> (Nhắn Zalo)</span>\`;
+          }
+        } else if (idx === 2 || li.textContent.includes('@')) {
+          const a = li.querySelector('a');
+          if (a && config.contact.email) {
+            a.href = \`mailto:\${config.contact.email}\`;
+            a.textContent = config.contact.email;
+          }
+        }
+      });
+
+      // --- D. ALL FACEBOOK / FANPAGE LINKS ---
+      document.querySelectorAll('a[href*="facebook.com"], a[title*="Facebook"], a.facebook-btn, [data-config="facebook-link"]').forEach(a => {
+        a.href = facebookPage;
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+        if (a.classList.contains('social-btn')) {
+          a.title = \`Fanpage Facebook: \${brandName}\`;
+        }
+      });
+
+      // --- E. ALL MESSENGER LINKS ---
+      document.querySelectorAll('a[href*="m.me"], a[title*="Messenger"], a.messenger-btn, [data-config="messenger-link"]').forEach(a => {
+        a.href = messenger;
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+        if (a.classList.contains('float-btn')) {
+          a.title = 'Facebook Messenger';
+          const tip = a.querySelector('.tooltip');
+          if (tip) tip.textContent = 'Nhắn tin Facebook';
+        }
+      });
+
+      // --- F. EMAIL LINKS ---
+      if (config.contact.email) {
+        document.querySelectorAll('a[href^="mailto:"], [data-config="email-link"]').forEach(a => {
+          a.href = \`mailto:\${config.contact.email}\`;
+          if (a.closest('.header-top-left')) {
+            a.innerHTML = \`<i class="fa fa-envelope text-gold"></i> \${config.contact.email}\`;
+          } else if (a.closest('.footer-contact-list')) {
+            a.textContent = config.contact.email;
+          }
+        });
+      }
+
+      // --- G. GOOGLE MAPS ---
+      if (config.contact.mapEmbedUrl) {
+        document.querySelectorAll('.footer-map-frame, iframe[title*="Bản đồ"], [data-config="map-frame"]').forEach(frame => {
+          frame.src = config.contact.mapEmbedUrl;
+        });
       }
     }
 
-    const mapFrame = document.querySelector('.footer-map-frame');
-    if (mapFrame && config.contact.mapEmbedUrl) {
-      mapFrame.src = config.contact.mapEmbedUrl;
+    // 5. SEO & PAGE TITLES
+    if (config.seo) {
+      if (config.seo.title && (document.title.includes('PhongWatch') || document.title.includes('JinWatch'))) {
+        document.title = config.seo.title;
+      }
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && config.seo.metaDescription) {
+        metaDesc.setAttribute('content', config.seo.metaDescription);
+      }
     }
-
-    const fbLinks = document.querySelectorAll('a[title="Facebook"], a.social-btn[href*="facebook.com"]');
-    fbLinks.forEach(a => { a.href = config.contact.facebookPage; });
-
-    const msgrLinks = document.querySelectorAll('a[title="Messenger"], a.social-btn[href*="m.me"]');
-    msgrLinks.forEach(a => { a.href = config.contact.messenger; });
-
-    const zaloLinks = document.querySelectorAll('a[title="Zalo"], a.social-btn[href*="zalo.me"]');
-    zaloLinks.forEach(a => { a.href = config.contact.zaloLink; });
   }
 
   applyThemeColors(SHOP_CONFIG.theme);
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyConfigToDOM);
+    document.addEventListener('DOMContentLoaded', () => applyConfigToDOM());
   } else {
     applyConfigToDOM();
   }
