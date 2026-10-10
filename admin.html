@@ -33,9 +33,11 @@
           <input type="password" id="adminPasscodeInput" class="form-control" 
                  placeholder="Nhập mật mã quản trị..." style="text-align: center; font-size: 18px; letter-spacing: 2px;"
                  onkeydown="if(event.key === 'Enter') verifyAdminPasscode()">
-          <div class="form-help" style="margin-top: 8px;">Mật khẩu mặc định: <code class="code-badge">admin123</code></div>
+          <div id="authAttemptsMsg" class="form-help" style="margin-top: 8px; color: var(--admin-text-muted);">
+            <i class="fa fa-shield-halved"></i> Xác thực bảo mật hai chiều (SHA-256)
+          </div>
         </div>
-        <button class="btn btn-primary" style="width: 100%; padding: 12px;" onclick="verifyAdminPasscode()">
+        <button class="btn btn-primary" id="btnAdminUnlock" style="width: 100%; padding: 12px;" onclick="verifyAdminPasscode()">
           <i class="fa fa-unlock"></i> Mở Khóa Quản Trị
         </button>
       </div>
@@ -48,9 +50,9 @@
   </div>
 
   <!-- ========================================================
-       MAIN ADMIN LAYOUT
+       MAIN ADMIN LAYOUT (HIDDEN UNTIL AUTHENTICATED)
        ======================================================== -->
-  <div class="admin-layout">
+  <div class="admin-layout" id="adminMainLayout" style="display: none;">
     
     <!-- Sidebar Navigation -->
     <aside class="admin-sidebar" id="adminSidebar">

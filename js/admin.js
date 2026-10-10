@@ -8,8 +8,11 @@
 
   // 1. Authentication State
   const AUTH_KEY = 'phongwatch_admin_auth';
-  const PASSCODE_KEY = 'phongwatch_admin_passcode';
-  const DEFAULT_PASSCODE = 'admin123';
+  const PASSCODE_HASH_KEY = 'phongwatch_admin_pass_hash';
+  // SHA-256 hash của mật khẩu mặc định 'admin123' (Không lưu mật khẩu dạng plain-text)
+  const DEFAULT_PASSCODE_HASH = '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9';
+  const LOCKOUT_KEY = 'phongwatch_admin_lockout';
+  const ATTEMPTS_KEY = 'phongwatch_admin_fail_attempts';
 
   // 2. Data State
   let productsData = { collections: [], products: [] };
@@ -17,6 +20,41 @@
   let currentEditingProductId = null;
   let currentPage = 1;
   const itemsPerPage = 12;
+
+  // --- Cryptography & Security Helpers ---
+  async function computeSha256(text) {
+    if (window.crypto && crypto.subtle) {
+      const encoder = new TextEncoder();
+      const data = encoder.encode(text);
+      const hash = await crypto.subtle.digest('SHA-256', data);
+      const hashArray = Array.from(new Uint8Array(hash));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    return text;
+  }
+
+  function checkLockoutStatus() {
+    const lockoutUntil = parseInt(localStorage.getItem(LOCKOUT_KEY) || '0', 10);
+    const now = Date.now();
+    const btnUnlock = document.getElementById('btnAdminUnlock');
+    const inputPass = document.getElementById('adminPasscodeInput');
+    const msg = document.getElementById('authAttemptsMsg');
+
+    if (lockoutUntil > now) {
+      const remainingMinutes = Math.ceil((lockoutUntil - now) / 60000);
+      if (btnUnlock) btnUnlock.disabled = true;
+      if (inputPass) inputPass.disabled = true;
+      if (msg) {
+        msg.style.color = 'var(--admin-danger)';
+        msg.innerHTML = `<i class="fa fa-ban"></i> Đã thử sai quá 5 lần. Tạm khóa ${remainingMinutes} phút!`;
+      }
+      return true;
+    } else {
+      if (btnUnlock) btnUnlock.disabled = false;
+      if (inputPass) inputPass.disabled = false;
+      return false;
+    }
+  }
 
   // 3. Initialize Admin Panel
   document.addEventListener('DOMContentLoaded', () => {
@@ -34,47 +72,92 @@
   function checkAuth() {
     const isAuthed = sessionStorage.getItem(AUTH_KEY);
     const authModal = document.getElementById('authModal');
+    const mainLayout = document.getElementById('adminMainLayout');
+
     if (isAuthed === 'true') {
       if (authModal) authModal.classList.remove('active');
+      if (mainLayout) mainLayout.style.display = 'flex';
     } else {
       if (authModal) authModal.classList.add('active');
+      if (mainLayout) mainLayout.style.display = 'none';
+      checkLockoutStatus();
     }
   }
 
-  window.verifyAdminPasscode = function () {
+  window.verifyAdminPasscode = async function () {
+    if (checkLockoutStatus()) return;
+
     const input = document.getElementById('adminPasscodeInput');
     const entered = input ? input.value.trim() : '';
-    const storedPasscode = localStorage.getItem(PASSCODE_KEY) || DEFAULT_PASSCODE;
+    if (!entered) {
+      showToast('Vui lòng nhập mật mã quản trị!', 'warning');
+      return;
+    }
 
-    if (entered === storedPasscode) {
+    const enteredHash = await computeSha256(entered);
+    const storedHash = localStorage.getItem(PASSCODE_HASH_KEY) || DEFAULT_PASSCODE_HASH;
+
+    if (enteredHash === storedHash) {
       sessionStorage.setItem(AUTH_KEY, 'true');
+      localStorage.removeItem(ATTEMPTS_KEY);
+      localStorage.removeItem(LOCKOUT_KEY);
+
       const authModal = document.getElementById('authModal');
+      const mainLayout = document.getElementById('adminMainLayout');
       if (authModal) authModal.classList.remove('active');
+      if (mainLayout) mainLayout.style.display = 'flex';
+
       showToast('Đăng nhập quản trị thành công!', 'success');
     } else {
-      showToast('Mật khẩu quản trị không chính xác!', 'danger');
-      if (input) input.focus();
+      let attempts = parseInt(localStorage.getItem(ATTEMPTS_KEY) || '0', 10) + 1;
+      localStorage.setItem(ATTEMPTS_KEY, attempts.toString());
+
+      if (attempts >= 5) {
+        localStorage.setItem(LOCKOUT_KEY, (Date.now() + 15 * 60 * 1000).toString());
+        checkLockoutStatus();
+        showToast('Bạn đã nhập sai 5 lần! Bảng quản trị bị khóa 15 phút.', 'danger');
+      } else {
+        const remaining = 5 - attempts;
+        showToast(`Mật khẩu không chính xác! Còn ${remaining} lần thử.`, 'danger');
+        const msg = document.getElementById('authAttemptsMsg');
+        if (msg) {
+          msg.style.color = 'var(--admin-danger)';
+          msg.innerHTML = `<i class="fa fa-triangle-exclamation"></i> Mật khẩu sai! Còn ${remaining} lần thử trước khi bị khóa.`;
+        }
+      }
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
     }
   };
 
   window.adminLogout = function () {
     sessionStorage.removeItem(AUTH_KEY);
+    const mainLayout = document.getElementById('adminMainLayout');
+    if (mainLayout) mainLayout.style.display = 'none';
     checkAuth();
+    showToast('Đã đăng xuất khỏi phiên quản trị!', 'info');
   };
 
-  window.changeAdminPasscode = function () {
+  window.changeAdminPasscode = async function () {
     const current = prompt('Nhập mật khẩu hiện tại:');
-    const stored = localStorage.getItem(PASSCODE_KEY) || DEFAULT_PASSCODE;
-    if (current !== stored) {
+    if (!current) return;
+    const currentHash = await computeSha256(current.trim());
+    const storedHash = localStorage.getItem(PASSCODE_HASH_KEY) || DEFAULT_PASSCODE_HASH;
+
+    if (currentHash !== storedHash) {
       alert('Mật khẩu hiện tại không đúng!');
       return;
     }
-    const newPass = prompt('Nhập mật khẩu mới:');
-    if (newPass && newPass.trim().length >= 4) {
-      localStorage.setItem(PASSCODE_KEY, newPass.trim());
-      alert('Đổi mật khẩu thành công! Mật khẩu mới của bạn là: ' + newPass.trim());
+    const newPass = prompt('Nhập mật khẩu mới (ít nhất 6 ký tự):');
+    if (newPass && newPass.trim().length >= 6) {
+      const newHash = await computeSha256(newPass.trim());
+      localStorage.setItem(PASSCODE_HASH_KEY, newHash);
+      alert('Đổi mật khẩu thành công! Hãy ghi nhớ mật khẩu mới của bạn.');
+      showToast('Đã đổi mật khẩu quản trị thành công!', 'success');
     } else if (newPass) {
-      alert('Mật khẩu mới phải có ít nhất 4 ký tự!');
+      alert('Mật khẩu mới phải có ít nhất 6 ký tự!');
     }
   };
 
