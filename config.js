@@ -1,7 +1,7 @@
 /**
  * PHONGWATCH - LUXURY WATCH STORE
  * Central Configuration File (config.js)
- * Generated from Admin Panel: 22:40:36 9/10/2026
+ * Generated from Admin Panel: 09:19:16 10/10/2026
  */
 
 (function () {
@@ -17,9 +17,9 @@
     "shareFbImage": "assets/slider-1.png"
   },
   "theme": {
-    "primaryColor": "#0f52ba",
-    "primaryHover": "#001f87",
-    "primaryLight": "#f5ffff",
+    "primaryColor": "#0d7e5d",
+    "primaryHover": "#004b2a",
+    "primaryLight": "#f3ffff",
     "goldColor": "#c89b3c",
     "goldLight": "#ffffa2",
     "goldDark": "#956809"
@@ -34,12 +34,12 @@
     "addressNote": "(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9809658863846!2d106.58694401427957!3d10.81276829229686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9943d3017b%3A0x9b7461a7ddd8be8c!2zMzU3IELDrG5oIFRow6BuaCwgQsOsbmggSMawbmcgSMOyYSBCLCBCw6xuaCBUw6JuLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1505413433784",
     "facebookPage": "https://www.facebook.com/JinWatchPro",
-    "messenger": "https://m.me/PhongWatches"
+    "messenger": "https://m.me/JinWatchPro"
   },
   "seo": {
     "title": "Đồng Hồ Chính Hãng – JinWatch",
     "metaDescription": "JinWatch - Hệ thống phân phối đồng hồ chính hãng giá tốt tại Việt Nam. Carnival, Olym Pianus, Bentley, Seiko, Citizen, Orient, Tissot. Bảo hành 5 năm, đền gấp 10 nếu phát hiện hàng giả.",
-    "keywords": "phongwatch, đồng hồ chính hãng, đồng hồ nam, đồng hồ nữ, carnival, olym pianus, bentley, seiko, tissot"
+    "keywords": "jinwatch, đồng hồ chính hãng, đồng hồ nam, đồng hồ nữ, carnival, olym pianus, bentley, seiko, tissot"
   }
 };
 
