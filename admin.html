@@ -515,18 +515,171 @@
         </section>
 
         <!-- ====================================================
-             TAB 4: XUẤT FILE & TRIỂN KHAI SERVER
+             TAB 4: XUẤT FILE & TRIỂN KHAI SERVER / CLOUDFLARE
              ==================================================== -->
         <section class="tab-content" id="tabDeploy">
           
+          <!-- CLOUDFLARE PAGES CI/CD & 1-CLICK DEPLOY CARD -->
+          <div class="cf-deploy-card">
+            <div class="cf-card-header">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <div style="width: 46px; height: 46px; border-radius: 10px; background: #f38020; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; box-shadow: 0 4px 12px rgba(243, 128, 32, 0.35);">
+                  <i class="fa-brands fa-cloudflare"></i>
+                </div>
+                <div>
+                  <h3 style="color: #9a3412; font-size: 18px; margin: 0; display: flex; align-items: center; gap: 10px;">
+                    Tự Động Triển Khai Cloudflare Pages
+                    <span style="background: #10b981; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; letter-spacing: 0.5px;">CI/CD AUTO</span>
+                  </h3>
+                  <p style="font-size: 13px; color: #7c2d12; margin: 3px 0 0;">
+                    Kết nối GitHub &rarr; Mỗi khi bạn <strong>Push code</strong> hoặc <strong>Lưu cấu hình</strong>, Cloudflare tự động Deploy bản mới ra toàn cầu trong 15-30 giây!
+                  </p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <a href="https://dash.cloudflare.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="border-color: #fdba74; color: #9a3412; background: #fff;">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Mở Cloudflare Dashboard
+                </a>
+              </div>
+            </div>
+
+            <div class="cf-card-body">
+              
+              <!-- 1-Click Deploy Panel -->
+              <div style="background: #fff; border: 1px solid #fed7aa; border-radius: 8px; padding: 20px; margin-bottom: 24px; box-shadow: 0 2px 10px rgba(243, 128, 32, 0.05);">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+                  <h4 style="font-size: 16px; font-weight: 700; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-brands fa-github" style="font-size: 20px;"></i> 1-Click Đẩy Lên GitHub & Auto Deploy Cloudflare
+                  </h4>
+                  <span style="font-size: 12px; color: var(--admin-text-muted);">
+                    <i class="fa fa-shield-halved" style="color: #10b981;"></i> Token được lưu bảo mật trong trình duyệt
+                  </span>
+                </div>
+
+                <div class="form-grid" style="grid-template-columns: 1fr 1fr 2fr; gap: 14px; margin-bottom: 16px;">
+                  <div class="form-group" style="margin: 0;">
+                    <label style="font-size: 12px; font-weight: 600; color: #475569;">GitHub Repository:</label>
+                    <input type="text" id="cfGithubRepo" class="form-control" value="hanzozo2202/jinwatch-web" placeholder="owner/repo">
+                  </div>
+                  <div class="form-group" style="margin: 0;">
+                    <label style="font-size: 12px; font-weight: 600; color: #475569;">Nhánh (Branch):</label>
+                    <input type="text" id="cfGithubBranch" class="form-control" value="main" placeholder="main">
+                  </div>
+                  <div class="form-group" style="margin: 0;">
+                    <label style="font-size: 12px; font-weight: 600; color: #475569; display: flex; justify-content: space-between;">
+                      <span>GitHub Personal Access Token (PAT):</span>
+                      <a href="https://github.com/settings/tokens/new?scopes=repo&description=PhongWatch_Admin_Deploy" target="_blank" rel="noopener noreferrer" style="color: var(--admin-info); text-decoration: underline; font-weight: 400;">
+                        Tạo token nhanh (30s)
+                      </a>
+                    </label>
+                    <div style="display: flex; gap: 8px;">
+                      <input type="password" id="cfGithubToken" class="form-control" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="letter-spacing: 1px;">
+                      <button type="button" class="btn btn-secondary" onclick="toggleGithubTokenVisibility()" title="Ẩn/Hiện token" style="padding: 0 12px;">
+                        <i class="fa fa-eye" id="cfTokenEyeIcon"></i>
+                      </button>
+                      <button type="button" class="btn btn-secondary" onclick="saveGitHubDeploySettings()" title="Lưu token">
+                        <i class="fa fa-save"></i> Lưu
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px;">
+                  <button type="button" class="btn btn-primary" onclick="triggerCloudflareDeploy(false)" style="background: linear-gradient(135deg, #f38020, #ea580c); border: none; padding: 12px 20px; font-weight: 600; box-shadow: 0 4px 12px rgba(243, 128, 32, 0.3);">
+                    <i class="fa fa-rocket"></i> ĐẨY CONFIG (config.js) LÊN GITHUB & AUTO DEPLOY
+                  </button>
+                  <button type="button" class="btn btn-primary" onclick="triggerCloudflareDeploy(true)" style="background: linear-gradient(135deg, #c89b3c, #b48328); border: none; padding: 12px 20px; font-weight: 600; box-shadow: 0 4px 12px rgba(200, 155, 60, 0.3);">
+                    <i class="fa fa-boxes-packing"></i> ĐẨY CẢ CONFIG & SẢN PHẨM LÊN GITHUB
+                  </button>
+                  <button type="button" class="btn btn-secondary" onclick="clearCfDeployTerminal()" style="padding: 12px 16px;" title="Xóa lịch sử log">
+                    <i class="fa fa-eraser"></i> Xóa Log
+                  </button>
+                </div>
+
+                <!-- Terminal Log Display -->
+                <div>
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                    <span style="font-size: 12px; font-weight: 600; color: #475569;">
+                      <i class="fa fa-terminal"></i> Trạng Thái Triển Khai Real-time:
+                    </span>
+                    <span id="cfDeployStatusBadge" style="font-size: 11px; padding: 2px 8px; border-radius: 12px; background: #e2e8f0; color: #475569;">
+                      Chờ lệnh...
+                    </span>
+                  </div>
+                  <div class="cf-terminal-log" id="cfDeployTerminal">PhongWatch Deploy System v2.0 ready.
+Nhấn nút "ĐẨY CONFIG LÊN GITHUB & AUTO DEPLOY" để tự động cập nhật website lên Cloudflare Pages.</div>
+                </div>
+
+              </div>
+
+              <!-- Setup Cloudflare Pages Git Guide -->
+              <h4 style="font-size: 15px; font-weight: 700; margin-bottom: 14px; color: #1e293b; display: flex; align-items: center; gap: 8px;">
+                <i class="fa fa-circle-nodes" style="color: #f38020;"></i> Hướng Dẫn Kết Nối Cloudflare Pages Với GitHub (Chỉ cần làm 1 lần duy nhất)
+              </h4>
+
+              <div class="cf-step-card">
+                <div class="cf-step-num">1</div>
+                <div class="cf-step-content">
+                  <h5>Đăng Nhập Cloudflare & Tạo Dự Án Pages Mới</h5>
+                  <p>Truy cập <a href="https://dash.cloudflare.com" target="_blank" rel="noopener noreferrer" style="color: #f38020; font-weight: 600; text-decoration: underline;">dash.cloudflare.com</a> &rarr; Menu trái chọn <strong>Workers & Pages</strong> &rarr; Bấm <strong>Create application</strong> &rarr; Chọn tab <strong>Pages</strong> &rarr; Bấm nút <strong>Connect to Git</strong>.</p>
+                </div>
+              </div>
+
+              <div class="cf-step-card">
+                <div class="cf-step-num">2</div>
+                <div class="cf-step-content">
+                  <h5>Ủy Quyền GitHub & Chọn Repository</h5>
+                  <p>Chọn tài khoản GitHub của bạn (cấp quyền truy cập nếu lần đầu), sau đó tìm và chọn repository: <code class="code-badge" style="color: #f38020; font-weight: 700;">hanzozo2202/jinwatch-web</code> &rarr; Bấm <strong>Begin setup</strong>.</p>
+                </div>
+              </div>
+
+              <div class="cf-step-card">
+                <div class="cf-step-num">3</div>
+                <div class="cf-step-content">
+                  <h5>Cấu Hình Build Cực Kỳ Đơn Giản (Static Site)</h5>
+                  <p>
+                    - <strong>Project name:</strong> <code>jinwatch</code> (hoặc tên bạn thích)<br>
+                    - <strong>Production branch:</strong> <code>main</code><br>
+                    - <strong>Framework preset:</strong> <code>None</code> (Trang tĩnh thuần)<br>
+                    - <strong>Build command:</strong> <em>(để trống hoàn toàn)</em><br>
+                    - <strong>Build output directory:</strong> <code>/</code> <em>(hoặc để trống)</em>
+                  </p>
+                </div>
+              </div>
+
+              <div class="cf-step-card">
+                <div class="cf-step-num">4</div>
+                <div class="cf-step-content">
+                  <h5>Nhấn "Save and Deploy" & Tận Hưởng Tự Động Hóa 100%</h5>
+                  <p>Cloudflare sẽ tự động kéo code, cấp phát tên miền <code>https://jinwatch-xxx.pages.dev</code> và chứng chỉ SSL HTTPS miễn phí. Kể từ lúc này, bất kỳ lần nào bạn chạy lệnh <code>git push jin main</code> hoặc ấn nút <strong>1-Click Deploy</strong> ở trên, Cloudflare Pages sẽ <strong>tự động nhận diện và cập nhật website ngay lập tức trong 15-30 giây!</strong></p>
+                </div>
+              </div>
+
+              <!-- Terminal Command Guide For Developers -->
+              <div style="background: #f1f5f9; border-radius: 8px; padding: 16px; margin-top: 18px; border-left: 4px solid #3b82f6;">
+                <h5 style="font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 6px;">
+                  <i class="fa fa-terminal" style="color: #3b82f6;"></i> Cách Deploy Nhanh Bằng Lệnh Git Từ Máy Tính:
+                </h5>
+                <pre style="background: #1e293b; color: #f8fafc; padding: 12px 14px; border-radius: 6px; font-size: 13px; font-family: monospace; overflow-x: auto; margin: 0;">git add .
+git commit -m "Cập nhật cấu hình & giao diện"
+git push jin main</pre>
+                <div style="font-size: 12px; color: #64748b; margin-top: 6px;">
+                  Cloudflare Pages sẽ tự động kích hoạt tiến trình triển khai ngay khi lệnh push hoàn tất!
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- MANUAL DOWNLOAD BACKUP CARD -->
           <div class="admin-card">
             <div class="card-header">
-              <h3><i class="fa fa-cloud-arrow-up"></i> Tải Về File Cập Nhật & Đưa Lên Server</h3>
+              <h3><i class="fa fa-download"></i> Tải Về File Cập Nhật Dự Phòng (Thủ Công)</h3>
             </div>
             <div class="card-body">
               <p style="margin-bottom: 24px; color: var(--admin-text-muted); font-size: 14px; line-height: 1.6;">
-                Mỗi khi bạn thực hiện Thêm/Sửa/Xóa sản phẩm hoặc đổi màu sắc giao diện, hệ thống tự động lưu vào trình duyệt của bạn để bạn xem thử. 
-                Để đưa các thay đổi đó lên cho <strong>tất cả khách hàng trên internet</strong> nhìn thấy, bạn chỉ cần tải 2 file bên dưới và tải lên Server / Hosting:
+                Nếu bạn muốn lưu trữ bản sao lưu trên máy tính hoặc tải lên các Hosting truyền thống khác (cPanel, VPS), bạn có thể tải 3 file bên dưới:
               </p>
 
               <!-- Download Action Cards -->
@@ -576,36 +729,34 @@
 
               <!-- Step by Step Instructions -->
               <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">
-                <i class="fa fa-list-check" style="color: var(--admin-accent);"></i> Các Phương Án Đưa Lên Server / Hosting Dễ Dàng Nhất:
+                <i class="fa fa-list-check" style="color: var(--admin-accent);"></i> Các Phương Án Hosting Khác:
               </h4>
 
               <div class="deploy-step-card">
                 <div class="deploy-step-number"><i class="fa fa-server" style="font-size: 14px;"></i></div>
                 <div class="deploy-step-content">
-                  <h4>Cách 1: Hosting cPanel / DirectAdmin (Phổ biến nhất tại Việt Nam)</h4>
-                  <p>1. Đăng nhập vào cPanel &gt; File Manager (Trình Quản Lý Tệp) &gt; mở thư mục <code class="code-badge">public_html</code>.</p>
+                  <h4>Hosting cPanel / DirectAdmin (Phổ biến tại Việt Nam)</h4>
+                  <p>1. Đăng nhập vào cPanel &gt; File Manager &gt; mở thư mục <code class="code-badge">public_html</code>.</p>
                   <p>2. Upload toàn bộ thư mục website này lên đó.</p>
-                  <p>3. Khi có thay đổi sản phẩm: Chỉ cần upload đè 2 file <code class="code-badge">config.js</code> và <code class="code-badge">data/products.js</code> là xong!</p>
+                  <p>3. Khi có thay đổi: Chỉ cần upload đè 2 file <code class="code-badge">config.js</code> và <code class="code-badge">data/products.js</code> là xong!</p>
                 </div>
               </div>
 
               <div class="deploy-step-card">
                 <div class="deploy-step-number"><i class="fa fa-bolt" style="font-size: 14px;"></i></div>
                 <div class="deploy-step-content">
-                  <h4>Cách 2: Triển Khai Miễn Phí Trên Vercel / Netlify / GitHub Pages</h4>
+                  <h4>Triển Khai Trên Vercel / Netlify</h4>
                   <p>1. Kéo thả thư mục website vào <strong>Vercel</strong> hoặc <strong>Netlify Drop</strong>.</p>
-                  <p>2. Hệ thống cấp ngay tên miền và chứng chỉ bảo mật HTTPS (SSL) miễn phí vĩnh viễn.</p>
-                  <p>3. Tốc độ tải trang siêu tốc toàn cầu nhờ mạng lưới CDN toàn diện.</p>
+                  <p>2. Hệ thống cấp ngay tên miền và SSL miễn phí vĩnh viễn.</p>
                 </div>
               </div>
 
               <div class="deploy-step-card">
                 <div class="deploy-step-number"><i class="fa fa-terminal" style="font-size: 14px;"></i></div>
                 <div class="deploy-step-content">
-                  <h4>Cách 3: Chạy Trên VPS Linux (Nginx / Apache)</h4>
-                  <p>1. Copy toàn bộ thư mục website vào thư mục <code class="code-badge">/var/www/html/phongwatch</code>.</p>
+                  <h4>Chạy Trên VPS Linux (Nginx / Apache)</h4>
+                  <p>1. Copy toàn bộ website vào thư mục <code class="code-badge">/var/www/html/phongwatch</code>.</p>
                   <p>2. Trỏ VirtualHost của Nginx hoặc Apache tới thư mục đó.</p>
-                  <p>3. Không cần cài đặt Node.js hay cơ sở dữ liệu MySQL, website hoạt động cực nhẹ và mượt mà.</p>
                 </div>
               </div>
 

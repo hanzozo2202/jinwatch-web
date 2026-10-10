@@ -178,10 +178,75 @@ Mỗi sản phẩm hỗ trợ trường `images` chứa danh sách nhiều góc 
 3. Kéo thả toàn bộ thư mục `website` vào Cloudflare Pages.
 4. Bấm **Deploy site** &gt; Xong trong 5 giây! Cloudflare cung cấp SSL HTTPS miễn phí, CDN chống DDoS cực mạnh và không giới hạn băng thông.
 
+### 🚀 B. Các Phương Án Triển Khai Website Lên Server / Hosting
+
+#### 🥇 Cách 1: Triển Khai Tự Động Với Cloudflare Pages (KHUYÊN DÙNG SỐ 1 - 100% MIỄN PHÍ)
+
+Cloudflare Pages là giải pháp tối ưu nhất cho website PhongWatch / JinWatch vì:
+- **Tự Động Hóa 100% (CI/CD):** Mỗi lần bạn đẩy code lên GitHub hoặc nhấn nút lưu trên trang Admin, Cloudflare Pages sẽ **tự động deploy bản mới nhất sau 15-30 giây**!
+- **Tốc Độ Siêu Tốc:** Toàn bộ hình ảnh, CSS, JS được lưu trên mạng lưới Edge CDN của Cloudflare (có máy chủ tại Hà Nội và TP.HCM), giúp mở trang gần như tức thì.
+- **Bảo Mật & Miễn Phí:** Miễn phí băng thông không giới hạn, miễn phí chứng chỉ SSL HTTPS, chống DDoS tự động.
+
+---
+
+##### 📌 Bước 1: Kết Nối Cloudflare Pages Với GitHub Repository (Làm 1 lần duy nhất)
+
+1. Đăng nhập hoặc đăng ký tài khoản tại [dash.cloudflare.com](https://dash.cloudflare.com).
+2. Tại menu bên trái, chọn **Workers & Pages** &rarr; Bấm **Create application** &rarr; Chọn tab **Pages**.
+3. Bấm nút **Connect to Git**.
+4. Chọn tài khoản GitHub của bạn (nếu là lần đầu, cấp quyền cho Cloudflare truy cập repository).
+5. Chọn kho lưu trữ: <code class="code-badge">hanzozo2202/jinwatch-web</code> &rarr; Bấm **Begin setup**.
+6. Điền cấu hình xây dựng (Build settings):
+   - **Project name:** `jinwatch-web` (hoặc tên tùy thích).
+   - **Production branch:** `main`.
+   - **Framework preset:** `None` *(vì website viết bằng HTML/CSS/JS thuần)*.
+   - **Build command:** *(để trống)*.
+   - **Build output directory:** `/` *(hoặc để trống)*.
+7. Bấm **Save and Deploy**.
+8. Chờ khoảng 20 giây, Cloudflare sẽ cấp cho bạn tên miền miễn phí dạng:  
+   👉 `https://jinwatch-web.pages.dev` (hoặc bạn có thể gắn tên miền riêng `.vn` / `.com` vào mục Custom Domains cực kỳ dễ dàng).
+
+---
+
+##### ⚡ Cách 1: Tự Động Deploy Mỗi Lần Push Code Từ Máy Tính (Dành Cho Lập Trình Viên)
+
+Mỗi lần bạn sửa đổi code hoặc hình ảnh trên máy tính:
+```bash
+git add .
+git commit -m "Cập nhật tính năng mới"
+git push jin main
+```
+Ngay sau khi lệnh `git push` hoàn tất, Cloudflare Pages sẽ tự động nhận diện commit mới, kéo code về và phát hành bản mới ra toàn cầu mà bạn không cần phải làm thêm bất kỳ thao tác nào!
+
+---
+
+##### 🚀 Cách 2: Tự Động Deploy Mỗi Khi Đổi Config / Sản Phẩm Trực Tiếp Từ Admin (1-Click Auto Deploy)
+
+Bạn muốn đổi số điện thoại, đổi link Zalo, đổi giá hay thêm đồng hồ mới từ giao diện `admin.html` (thậm chí dùng trên điện thoại) mà **không cần mở máy tính gõ lệnh Git**?
+
+Trang `admin.html` đã tích hợp sẵn tính năng **1-Click Auto Deploy lên Cloudflare**:
+1. **Lấy GitHub Token (chỉ làm 1 lần mất 30 giây):**
+   - Vào [GitHub Personal Access Tokens](https://github.com/settings/tokens/new?scopes=repo&description=PhongWatch_Admin_Deploy).
+   - Đặt thời hạn (Expiration) ví dụ `90 days` hoặc `No expiration`.
+   - Tích chọn quyền `repo` (Full control of private repositories).
+   - Kéo xuống dưới cùng bấm nút xanh **Generate token** &rarr; Copy đoạn mã token (bắt đầu bằng `ghp_...`).
+2. **Cấu hình trên trang Admin:**
+   - Mở `admin.html` &rarr; vào Tab **"Xuất File & Triển Khai Server"**.
+   - Tại ô **GitHub Personal Access Token**, dán mã token vừa copy vào &rarr; bấm **Lưu**. *(Mã token được lưu an toàn tuyệt đối trong trình duyệt của bạn)*.
+3. **Kích hoạt Deploy:**
+   - Mỗi lần bạn đổi SĐT/Zalo/Màu sắc: Bấm **[🚀 ĐẨY CONFIG LÊN GITHUB & AUTO DEPLOY]**.
+   - Nếu bạn thêm/sửa sản phẩm: Bấm **[📦 ĐẨY CẢ CONFIG & SẢN PHẨM LÊN GITHUB]**.
+   - Khung Terminal bên dưới sẽ báo ngay:
+     ```text
+     [08:50:10] Đang tạo commit file config.js lên GitHub...
+     [08:50:12] ✅ Đã commit config.js thành công (Commit: a1b2c3d)!
+     [08:50:13] 🚀 Cloudflare Pages đang tự động nhận diện và Build website toàn cầu...
+     ```
+   - Sau 15 - 30 giây, vào lại link `https://jinwatch-web.pages.dev` là toàn bộ cấu hình mới đã hiển thị cho mọi khách hàng!
+
+---
+
 #### Cách 2: Triển Khai Trên Vercel / Netlify
-1. Truy cập [Vercel](https://vercel.com) hoặc [Netlify Drop](https://app.netlify.com/drop).
-2. Kéo thả nguyên thư mục `website` vào giao diện trình duyệt.
-3. Hệ thống tự động cấp phát URL và chứng chỉ SSL HTTPS miễn phí. Toàn bộ hình ảnh trong `assets/products/` tự động được phục vụ qua CDN toàn cầu của Vercel/Netlify.
 
 #### Cách 3: Triển Khai Trên DigitalOcean
 - **Phương án App Platform (Dễ nhất):**

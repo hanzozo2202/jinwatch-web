@@ -873,3 +873,159 @@ body {
   }
 }
 
+/* ========================================================
+   CLOUDFLARE PAGES & GITHUB AUTO-DEPLOY STYLES
+   ======================================================== */
+.cf-deploy-card {
+  border: 2px solid #f38020;
+  border-radius: var(--admin-radius);
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(243, 128, 32, 0.12);
+  margin-bottom: 28px;
+}
+
+.cf-card-header {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+  border-bottom: 1px solid #fed7aa;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.cf-card-body {
+  padding: 24px;
+}
+
+.cf-step-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: var(--admin-transition);
+}
+
+.cf-step-card:hover {
+  border-color: #cbd5e1;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.cf-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f38020;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.cf-step-content {
+  flex: 1;
+}
+
+.cf-step-content h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.cf-step-content p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cf-terminal-log {
+  background: #0f172a;
+  color: #38bdf8;
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 13px;
+  border-radius: 8px;
+  padding: 16px 20px;
+  min-height: 100px;
+  max-height: 220px;
+  overflow-y: auto;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border: 1px solid #1e293b;
+  margin-top: 16px;
+}
+
+.cf-terminal-log .log-time {
+  color: #64748b;
+  margin-right: 8px;
+}
+
+.cf-terminal-log .log-success {
+  color: #34d399;
+  font-weight: 600;
+}
+
+.cf-terminal-log .log-error {
+  color: #f87171;
+  font-weight: 600;
+}
+
+.cf-terminal-log .log-warn {
+  color: #fbbf24;
+}
+
+.cf-terminal-log .log-info {
+  color: #38bdf8;
+}
+
+.deploy-step-card {
+  background: #f8fafc;
+  border: 1px solid var(--admin-border);
+  border-radius: var(--admin-radius);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.deploy-step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--admin-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.deploy-step-content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--admin-text-dark);
+}
+
+.deploy-step-content p {
+  font-size: 13px;
+  color: var(--admin-text-muted);
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+

@@ -27,6 +27,7 @@
     renderThemeSettings();
     renderProductsTable();
     updateThemePreview();
+    loadGitHubDeploySettings();
   });
 
   // --- Authentication Helpers ---
@@ -801,9 +802,107 @@
     showToast('Đã khôi phục cài đặt giao diện gốc ban đầu!', 'success');
   };
 
-  // --- 4. EXPORT FILES FOR SERVER DEPLOYMENT ---
-  window.downloadConfigFile = function () {
-    const fileContent = `/**
+  // --- 4. EXPORT FILES FOR SERVER DEPLOYMENT & CLOUDFLARE AUTO-DEPLOY ---
+  const CF_REPO_KEY = 'phongwatch_cf_repo';
+  const CF_BRANCH_KEY = 'phongwatch_cf_branch';
+  const CF_TOKEN_KEY = 'phongwatch_cf_token';
+
+  window.toggleGithubTokenVisibility = function () {
+    const input = document.getElementById('cfGithubToken');
+    const eye = document.getElementById('cfTokenEyeIcon');
+    if (!input) return;
+    if (input.type === 'password') {
+      input.type = 'text';
+      if (eye) eye.className = 'fa fa-eye-slash';
+    } else {
+      input.type = 'password';
+      if (eye) eye.className = 'fa fa-eye';
+    }
+  };
+
+  window.saveGitHubDeploySettings = function () {
+    const repoInput = document.getElementById('cfGithubRepo');
+    const branchInput = document.getElementById('cfGithubBranch');
+    const tokenInput = document.getElementById('cfGithubToken');
+
+    const repo = repoInput ? repoInput.value.trim() : 'hanzozo2202/jinwatch-web';
+    const branch = branchInput ? branchInput.value.trim() : 'main';
+    const token = tokenInput ? tokenInput.value.trim() : '';
+
+    localStorage.setItem(CF_REPO_KEY, repo);
+    localStorage.setItem(CF_BRANCH_KEY, branch);
+    if (token) {
+      localStorage.setItem(CF_TOKEN_KEY, token);
+    }
+
+    showToast('Đã lưu cấu hình GitHub vào trình duyệt!', 'success');
+    logToCfTerminal(`Đã lưu cấu hình: Repo = "${repo}", Branch = "${branch}".`, 'info');
+  };
+
+  function loadGitHubDeploySettings() {
+    const repoInput = document.getElementById('cfGithubRepo');
+    const branchInput = document.getElementById('cfGithubBranch');
+    const tokenInput = document.getElementById('cfGithubToken');
+
+    const repo = localStorage.getItem(CF_REPO_KEY) || 'hanzozo2202/jinwatch-web';
+    const branch = localStorage.getItem(CF_BRANCH_KEY) || 'main';
+    const token = localStorage.getItem(CF_TOKEN_KEY) || '';
+
+    if (repoInput) repoInput.value = repo;
+    if (branchInput) branchInput.value = branch;
+    if (tokenInput && token) tokenInput.value = token;
+  }
+
+  window.clearCfDeployTerminal = function () {
+    const term = document.getElementById('cfDeployTerminal');
+    const badge = document.getElementById('cfDeployStatusBadge');
+    if (term) term.textContent = 'PhongWatch Deploy System v2.0 ready.\nNhấn nút "ĐẨY CONFIG LÊN GITHUB & AUTO DEPLOY" để tự động cập nhật website lên Cloudflare Pages.';
+    if (badge) {
+      badge.textContent = 'Chờ lệnh...';
+      badge.style.background = '#e2e8f0';
+      badge.style.color = '#475569';
+    }
+  };
+
+  function logToCfTerminal(message, type = 'info') {
+    const term = document.getElementById('cfDeployTerminal');
+    const badge = document.getElementById('cfDeployStatusBadge');
+    if (!term) return;
+
+    const time = new Date().toLocaleTimeString('vi-VN');
+    const formattedMsg = `[${time}] ${message}`;
+
+    term.textContent += '\n' + formattedMsg;
+    term.scrollTop = term.scrollHeight;
+
+    if (badge) {
+      if (type === 'success') {
+        badge.textContent = 'Deploy thành công!';
+        badge.style.background = '#10b981';
+        badge.style.color = '#fff';
+      } else if (type === 'error') {
+        badge.textContent = 'Lỗi!';
+        badge.style.background = '#ef4444';
+        badge.style.color = '#fff';
+      } else if (type === 'running') {
+        badge.textContent = 'Đang triển khai...';
+        badge.style.background = '#f59e0b';
+        badge.style.color = '#fff';
+      }
+    }
+  }
+
+  function utf8ToBase64(str) {
+    const bytes = new TextEncoder().encode(str);
+    let binary = '';
+    for (let i = 0; i < bytes.byteLength; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+  }
+
+  function generateConfigFileString() {
+    return `/**
  * PHONGWATCH - LUXURY WATCH STORE
  * Central Configuration File (config.js)
  * Generated from Admin Panel: ${new Date().toLocaleString('vi-VN')}
@@ -915,11 +1014,11 @@
     // 4. CONTACTS: HOTLINE, ZALO, SOCIALS
     if (config.contact) {
       const hotlineDisplay = config.contact.hotlineDisplay || '0888.477.774';
-      const rawTel = config.contact.hotlineTel || hotlineDisplay.replace(/\D/g, '') || '0888477774';
+      const rawTel = config.contact.hotlineTel || hotlineDisplay.replace(/\\D/g, '') || '0888477774';
       const telHref = \`tel:\${rawTel}\`;
 
       const zaloDisplay = config.contact.zaloDisplay || '0988.922.330';
-      const cleanZalo = zaloDisplay.replace(/\D/g, '') || '0988922330';
+      const cleanZalo = zaloDisplay.replace(/\\D/g, '') || '0988922330';
       let zaloLink = config.contact.zaloLink;
       if (!zaloLink || !zaloLink.startsWith('http')) {
         zaloLink = \`https://zalo.me/\${cleanZalo}\`;
@@ -1067,13 +1166,10 @@
   window.updateShopTheme = applyThemeColors;
 })();
 `;
+  }
 
-    triggerDownload('config.js', fileContent);
-    showToast('Đang tải file config.js xuống máy tính của bạn...', 'success');
-  };
-
-  window.downloadProductsJsFile = function () {
-    const fileContent = `/**
+  function generateProductsJsFileString() {
+    return `/**
  * PHONGWATCH - LUXURY WATCH CATALOG
  * Complete Products Catalog (data/products.js)
  * Generated from Admin Panel: ${new Date().toLocaleString('vi-VN')}
@@ -1081,7 +1177,153 @@
 
 window.PHONGWATCH_DATA = ${JSON.stringify(productsData, null, 2)};
 `;
+  }
 
+  // --- GitHub REST API Helper ---
+  async function commitFileToGitHub(owner, repo, branch, path, contentStr, commitMessage, token) {
+    const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+    
+    // Step 1: Get current SHA if file exists
+    let sha = null;
+    try {
+      const getRes = await fetch(`${url}?ref=${encodeURIComponent(branch)}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github+json'
+        }
+      });
+      if (getRes.status === 200) {
+        const getData = await getRes.json();
+        sha = getData.sha;
+      } else if (getRes.status === 401 || getRes.status === 403) {
+        const errData = await getRes.json().catch(() => ({}));
+        throw new Error(errData.message || 'GitHub Token không chính xác hoặc không đủ quyền "repo"!');
+      }
+    } catch (err) {
+      if (!err.message || !err.message.includes('404')) {
+        throw err;
+      }
+    }
+
+    // Step 2: PUT commit
+    const base64Content = utf8ToBase64(contentStr);
+    const body = {
+      message: commitMessage,
+      content: base64Content,
+      branch: branch
+    };
+    if (sha) {
+      body.sha = sha;
+    }
+
+    const putRes = await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Accept': 'application/vnd.github+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!putRes.ok) {
+      const errData = await putRes.json().catch(() => ({}));
+      throw new Error(errData.message || `Lỗi GitHub API HTTP ${putRes.status}`);
+    }
+
+    const result = await putRes.json();
+    return result;
+  }
+
+  // --- 1-Click Trigger Cloudflare Auto Deploy ---
+  window.triggerCloudflareDeploy = async function (includeProducts = false) {
+    const repoInput = document.getElementById('cfGithubRepo');
+    const branchInput = document.getElementById('cfGithubBranch');
+    const tokenInput = document.getElementById('cfGithubToken');
+
+    const repoFullName = (repoInput ? repoInput.value.trim() : '') || localStorage.getItem(CF_REPO_KEY) || 'hanzozo2202/jinwatch-web';
+    const branch = (branchInput ? branchInput.value.trim() : '') || localStorage.getItem(CF_BRANCH_KEY) || 'main';
+    const token = (tokenInput ? tokenInput.value.trim() : '') || localStorage.getItem(CF_TOKEN_KEY);
+
+    if (!token) {
+      alert('Vui lòng nhập GitHub Personal Access Token (PAT) để tự động đẩy code!\n\nNếu chưa có, hãy bấm vào link "Tạo token nhanh (30s)" ở trên ô nhập token (chọn quyền "repo").');
+      if (tokenInput) tokenInput.focus();
+      return;
+    }
+
+    const repoParts = repoFullName.split('/');
+    if (repoParts.length !== 2) {
+      alert('Tên GitHub Repository phải có định dạng "owner/repo" (ví dụ: hanzozo2202/jinwatch-web)!');
+      return;
+    }
+    const [owner, repo] = repoParts;
+
+    // Save settings
+    localStorage.setItem(CF_REPO_KEY, repoFullName);
+    localStorage.setItem(CF_BRANCH_KEY, branch);
+    localStorage.setItem(CF_TOKEN_KEY, token);
+
+    logToCfTerminal('========================================');
+    logToCfTerminal(`BẮT ĐẦU QUY TRÌNH AUTO-DEPLOY CLOUDFLARE PAGES...`, 'running');
+    logToCfTerminal(`Đích đến: GitHub ${owner}/${repo} (nhánh ${branch})`, 'info');
+
+    try {
+      // 1. Commit config.js
+      logToCfTerminal(`[1/${includeProducts ? '2' : '1'}] Đang tạo commit file config.js lên GitHub...`, 'running');
+      const configStr = generateConfigFileString();
+      const configResult = await commitFileToGitHub(
+        owner,
+        repo,
+        branch,
+        'config.js',
+        configStr,
+        `admin: auto deploy config.js via Cloudflare [${new Date().toLocaleString('vi-VN')}]`,
+        token
+      );
+      const commitSha = configResult.commit ? configResult.commit.sha.substring(0, 7) : 'latest';
+      logToCfTerminal(`✅ Đã commit config.js thành công (Commit: ${commitSha})!`, 'info');
+
+      // 2. Commit data/products.js if requested
+      if (includeProducts) {
+        logToCfTerminal(`[2/2] Đang tạo commit file data/products.js lên GitHub...`, 'running');
+        const prodJsStr = generateProductsJsFileString();
+        const prodResult = await commitFileToGitHub(
+          owner,
+          repo,
+          branch,
+          'data/products.js',
+          prodJsStr,
+          `admin: auto deploy products.js via Cloudflare [${new Date().toLocaleString('vi-VN')}]`,
+          token
+        );
+        const prodSha = prodResult.commit ? prodResult.commit.sha.substring(0, 7) : 'latest';
+        logToCfTerminal(`✅ Đã commit data/products.js thành công (Commit: ${prodSha})!`, 'info');
+      }
+
+      logToCfTerminal(`🎉 HOÀN TẤT COMMIT LÊN GITHUB!`, 'success');
+      logToCfTerminal(`🚀 Cloudflare Pages đang tự động nhận diện commit mới và Build website toàn cầu.`, 'success');
+      logToCfTerminal(`⏱️ Website của bạn sẽ cập nhật sau khoảng 15 - 30 giây!`, 'info');
+      logToCfTerminal(`🌐 Kiểm tra Cloudflare: https://dash.cloudflare.com`, 'info');
+      logToCfTerminal(`========================================`);
+
+      showToast('Đã đẩy lên GitHub thành công! Cloudflare Pages đang tự động triển khai bản mới.', 'success');
+    } catch (err) {
+      console.error('Lỗi triển khai GitHub / Cloudflare:', err);
+      logToCfTerminal(`❌ THẤT BẠI: ${err.message}`, 'error');
+      logToCfTerminal(`Gợi ý: Kiểm tra lại Token có quyền "repo" chưa, hoặc kiểm tra kết nối mạng.`, 'error');
+      showToast(`Lỗi triển khai: ${err.message}`, 'danger');
+    }
+  };
+
+  // --- Manual Downloads ---
+  window.downloadConfigFile = function () {
+    const fileContent = generateConfigFileString();
+    triggerDownload('config.js', fileContent);
+    showToast('Đang tải file config.js xuống máy tính của bạn...', 'success');
+  };
+
+  window.downloadProductsJsFile = function () {
+    const fileContent = generateProductsJsFileString();
     triggerDownload('products.js', fileContent);
     showToast('Đang tải file products.js xuống máy tính của bạn...', 'success');
   };
