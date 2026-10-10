@@ -230,14 +230,27 @@ button {
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.site-logo:hover {
+  transform: translateY(-1px);
 }
 
 .site-logo-img {
-  height: 48px;
-  max-width: 220px;
+  height: 64px;
+  max-width: 260px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-logo:hover .site-logo-img {
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 14px rgba(214, 17, 20, 0.22));
 }
 
 .site-logo-fallback {
@@ -247,23 +260,26 @@ button {
 
 .logo-brand {
   font-family: var(--font-heading);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   color: #1a1e24;
-  line-height: 1;
+  line-height: 1.1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .logo-brand span {
   color: var(--color-primary);
+  text-shadow: 0 0 12px rgba(214, 17, 20, 0.25);
 }
 
 .logo-tagline {
-  font-size: 10px;
-  letter-spacing: 2px;
+  font-size: 11px;
+  letter-spacing: 2.5px;
   color: var(--color-gold-dark);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
+  margin-top: 3px;
 }
 
 /* Search Bar */
@@ -2857,15 +2873,17 @@ button {
 
   .site-logo {
     order: 1;
+    flex-shrink: 0;
   }
 
   .site-logo-img {
-    height: 38px;
-    max-width: 170px;
+    height: 48px;
+    max-width: 190px;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
   }
 
   .logo-brand {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .mobile-header-toggles {
@@ -3664,8 +3682,12 @@ button {
   }
 
   .site-logo-img {
-    height: 32px;
-    max-width: 140px;
+    height: 42px;
+    max-width: 165px;
+  }
+
+  .logo-brand {
+    font-size: 19px;
   }
 
   .mobile-p-action-item.phone-btn {
