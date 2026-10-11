@@ -1,13 +1,13 @@
 /**
- * PhongWatch - Luxury Watch Store Clone
+ * JinWatch - Luxury Watch Store Clone
  * Main Interactive Application Script
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // Support products override from Admin Panel
-  let rawData = window.PHONGWATCH_DATA || { products: [], collections: [], by_collection: {} };
+  let rawData = window.JINWATCH_DATA || window.PHONGWATCH_DATA || { products: [], collections: [], by_collection: {} };
   try {
-    const savedProductsOverride = localStorage.getItem('PHONGWATCH_DATA_OVERRIDE');
+    const savedProductsOverride = localStorage.getItem('JINWATCH_DATA_OVERRIDE') || localStorage.getItem('PHONGWATCH_DATA_OVERRIDE');
     if (savedProductsOverride) {
       const parsed = JSON.parse(savedProductsOverride);
       if (parsed && Array.isArray(parsed.products) && parsed.products.length > 0) {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // State
-  let cart = JSON.parse(localStorage.getItem('phongwatch_cart') || '[]');
+  let cart = JSON.parse(localStorage.getItem('jinwatch_cart') || localStorage.getItem('phongwatch_cart') || '[]');
   let currentSlide = 0;
   let slideInterval = null;
 
@@ -497,7 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. SHOPPING CART LOGIC
   // ==========================================
   function saveCart() {
-    localStorage.setItem('phongwatch_cart', JSON.stringify(cart));
+    localStorage.setItem('jinwatch_cart', JSON.stringify(cart));
     updateCartUI();
   }
 
@@ -753,7 +753,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <br>
         <p><strong>2. Điều kiện bảo hành:</strong></p>
         <p>- Bảo hành các lỗi kỹ thuật về máy của nhà sản xuất (chạy sai giờ, ngưng hoạt động, lỗi linh kiện bên trong).</p>
-        <p>- Đồng hồ còn đầy đủ sổ thẻ/hóa đơn bảo hành của PhongWatch.</p>
+        <p>- Đồng hồ còn đầy đủ sổ thẻ/hóa đơn bảo hành của JinWatch.</p>
         <p>- Không bảo hành đối với các trường hợp va chạm ngoại lực làm nứt vỡ kính, tự ý sửa chữa tại nơi khác không thuộc ủy quyền.</p>
       `
     },
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title: 'CHÍNH SÁCH VẬN CHUYỂN & GIAO NHẬN',
       content: `
         <p><strong>1. Phí giao hàng:</strong></p>
-        <p>- MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC (Freeship 100%) cho mọi đơn hàng đồng hồ chính hãng tại PhongWatch.</p>
+        <p>- MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC (Freeship 100%) cho mọi đơn hàng đồng hồ chính hãng tại JinWatch.</p>
         <br>
         <p><strong>2. Thời gian nhận hàng:</strong></p>
         <p>- Khu vực nội thành TP. Hồ Chí Minh: Giao hàng hỏa tốc trong vòng 2 - 4 giờ.</p>
@@ -790,8 +790,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <p>- Quý khách nhận hàng tại nhà, kiểm tra hàng hài lòng rồi thanh toán trực tiếp cho bưu tá giao hàng.</p>
         <br>
         <p><strong>2. Chuyển khoản ngân hàng:</strong></p>
-        <p>- Chuyển khoản qua số tài khoản chính thức của PhongWatch với nội dung: [Tên khách hàng] + [SĐT].</p>
-        <p>- Quý khách vui lòng liên hệ Hotline: <strong>0888.477.774</strong> hoặc Zalo: <strong>0988.922.330</strong> để nhận số tài khoản xác thực.</p>
+        <p>- Chuyển khoản qua số tài khoản chính thức của JinWatch với nội dung: [Tên khách hàng] + [SĐT].</p>
+        <p>- Quý khách vui lòng liên hệ Hotline: <strong>0932.1234.73</strong> hoặc Zalo: <strong>0845.0136.19</strong> để nhận số tài khoản xác thực.</p>
       `
     }
   };
@@ -800,14 +800,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const p = policies[policyKey] || policies['bao-hanh'];
     if (!policyModal) return;
 
-    const brandName = window.SHOP_CONFIG?.brand?.name || 'PhongWatch';
-    const hotline = window.SHOP_CONFIG?.contact?.hotlineDisplay || '0888.477.774';
-    const zalo = window.SHOP_CONFIG?.contact?.zaloDisplay || '0988.922.330';
+    const brandName = window.SHOP_CONFIG?.brand?.name || 'Jin Watch';
+    const hotline = window.SHOP_CONFIG?.contact?.hotlineDisplay || '0932.1234.73';
+    const zalo = window.SHOP_CONFIG?.contact?.zaloDisplay || '0845.0136.19';
 
     let content = (p.content || '')
       .replace(/PhongWatch/g, brandName)
+      .replace(/JinWatch/g, brandName)
       .replace(/0888\.477\.774/g, hotline)
-      .replace(/0988\.922\.330/g, zalo);
+      .replace(/0932\.1234\.73/g, hotline)
+      .replace(/0988\.922\.330/g, zalo)
+      .replace(/0845\.0136\.19/g, zalo);
 
     const pTitle = document.getElementById('policyTitle');
     const pBody = document.getElementById('policyBody');

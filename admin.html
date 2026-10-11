@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quản Trị Hệ Thống – PhongWatch Control Panel</title>
+  <title>Quản Trị Hệ Thống – JinWatch Control Panel</title>
   
   <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
   
@@ -25,7 +25,7 @@
     <div class="admin-modal" style="max-width: 420px; text-align: center;">
       <div class="admin-modal-header" style="justify-content: center; flex-direction: column; gap: 8px; border: none; padding-top: 30px;">
         <div class="sidebar-logo-icon" style="margin: 0 auto; width: 50px; height: 50px; font-size: 24px;">PW</div>
-        <h3 style="font-size: 18px; margin-top: 8px;">Đăng Nhập Quản Trị PhongWatch</h3>
+        <h3 style="font-size: 18px; margin-top: 8px;">Đăng Nhập Quản Trị JinWatch</h3>
         <p style="font-size: 13px; color: var(--admin-text-muted);">Vui lòng nhập mật mã quản trị để truy cập trang quản lý</p>
       </div>
       <div class="admin-modal-body" style="padding: 10px 30px 20px;">
@@ -59,7 +59,7 @@
       <div class="sidebar-header">
         <div class="sidebar-logo-icon">PW</div>
         <div class="sidebar-title">
-          <h2>PHONGWATCH</h2>
+          <h2>JINWATCH</h2>
           <span>Hệ Thống Quản Trị v2.0</span>
         </div>
       </div>
@@ -237,7 +237,7 @@
                     <input type="text" id="themePrimaryHex" class="form-control" style="width: 140px; font-family: monospace;" value="#d61114">
                   </div>
                   <div class="color-presets">
-                    <div class="color-chip" style="background:#d61114;" title="Đỏ PhongWatch (Ruby)" onclick="setPrimaryPreset('#d61114')"></div>
+                    <div class="color-chip" style="background:#d61114;" title="Đỏ Ruby Luxury" onclick="setPrimaryPreset('#d61114')"></div>
                     <div class="color-chip" style="background:#0f52ba;" title="Xanh Sapphire" onclick="setPrimaryPreset('#0f52ba')"></div>
                     <div class="color-chip" style="background:#1e2022;" title="Đen Huyền Bí" onclick="setPrimaryPreset('#1e2022')"></div>
                     <div class="color-chip" style="background:#0d7e5d;" title="Xanh Emerald" onclick="setPrimaryPreset('#0d7e5d')"></div>
@@ -292,7 +292,7 @@
               <div class="form-grid">
                 <div class="form-group">
                   <label>Tên Cửa Hàng / Thương Hiệu:</label>
-                  <input type="text" id="cfgBrandName" class="form-control" placeholder="PHONGWATCH">
+                  <input type="text" id="cfgBrandName" class="form-control" placeholder="Jin Watch">
                 </div>
 
                 <div class="form-group">
@@ -339,34 +339,34 @@
               <div class="form-grid">
                 <div class="form-group">
                   <label>Hotline Hiển Thị:</label>
-                  <input type="text" id="cfgHotline" class="form-control" placeholder="0888.477.774" oninput="autoSyncHotline(this.value)">
+                  <input type="text" id="cfgHotline" class="form-control" placeholder="0932.1234.73" oninput="autoSyncHotline(this.value)">
                   <div class="form-help">Tự động đồng bộ số quay và cập nhật toàn bộ nút Gọi trên website</div>
                 </div>
 
                 <div class="form-group">
                   <label>Hotline Quay Số (Không có dấu chấm):</label>
-                  <input type="text" id="cfgHotlineTel" class="form-control" placeholder="0888477774">
+                  <input type="text" id="cfgHotlineTel" class="form-control" placeholder="0932123473">
                 </div>
 
                 <div class="form-group">
                   <label>Số Zalo Hiển Thị:</label>
-                  <input type="text" id="cfgZalo" class="form-control" placeholder="0988.922.330" oninput="autoSyncZalo(this.value)">
+                  <input type="text" id="cfgZalo" class="form-control" placeholder="0845.0136.19" oninput="autoSyncZalo(this.value)">
                   <div class="form-help">Nhập số Zalo sẽ tự tạo link zalo.me và cập nhật tất cả nút Zalo trên web</div>
                 </div>
 
                 <div class="form-group">
                   <label>Link Nhắn Zalo:</label>
-                  <input type="text" id="cfgZaloLink" class="form-control" placeholder="https://zalo.me/0988922330">
+                  <input type="text" id="cfgZaloLink" class="form-control" placeholder="https://zalo.me/0845013619">
                 </div>
 
                 <div class="form-group">
                   <label>Email Hỗ Trợ Khách Hàng:</label>
-                  <input type="email" id="cfgEmail" class="form-control" placeholder="phongwatch.hcm@gmail.com">
+                  <input type="email" id="cfgEmail" class="form-control" placeholder="jinwatch.hcm@gmail.com">
                 </div>
 
                 <div class="form-group">
                   <label>Fanpage Facebook:</label>
-                  <input type="text" id="cfgFacebook" class="form-control" placeholder="https://www.facebook.com/PhongWatches" oninput="autoSyncFacebook(this.value)">
+                  <input type="text" id="cfgFacebook" class="form-control" placeholder="https://www.facebook.com/JinWatchPro" oninput="autoSyncFacebook(this.value)">
                 </div>
 
                 <div class="form-group" style="grid-column: 1 / -1;">
@@ -395,11 +395,11 @@
             <div class="card-body">
               <div class="form-group">
                 <label>Tiêu Đề Trang Chủ (Page Title):</label>
-                <input type="text" id="cfgSeoTitle" class="form-control" placeholder="Đồng Hồ Chính Hãng – PhongWatch">
+                <input type="text" id="cfgSeoTitle" class="form-control" placeholder="Đồng Hồ Chính Hãng – Jin Watch">
               </div>
               <div class="form-group">
                 <label>Mô Tả Trang Web (Meta Description):</label>
-                <textarea id="cfgSeoDesc" class="form-control" rows="3" placeholder="PhongWatch - Hệ thống phân phối đồng hồ chính hãng giá tốt tại Việt Nam..."></textarea>
+                <textarea id="cfgSeoDesc" class="form-control" rows="3" placeholder="Jin Watch - Hệ thống phân phối đồng hồ chính hãng giá tốt tại Việt Nam..."></textarea>
               </div>
               <div class="form-group">
                 <label>Từ Khóa SEO (Keywords):</label>
@@ -570,7 +570,7 @@
                   <div class="form-group" style="margin: 0;">
                     <label style="font-size: 12px; font-weight: 600; color: #475569; display: flex; justify-content: space-between;">
                       <span>GitHub Personal Access Token (PAT):</span>
-                      <a href="https://github.com/settings/tokens/new?scopes=repo&description=PhongWatch_Admin_Deploy" target="_blank" rel="noopener noreferrer" style="color: var(--admin-info); text-decoration: underline; font-weight: 400;">
+                      <a href="https://github.com/settings/tokens/new?scopes=repo&description=JinWatch_Admin_Deploy" target="_blank" rel="noopener noreferrer" style="color: var(--admin-info); text-decoration: underline; font-weight: 400;">
                         Tạo token nhanh (30s)
                       </a>
                     </label>
@@ -609,7 +609,7 @@
                       Chờ lệnh...
                     </span>
                   </div>
-                  <div class="cf-terminal-log" id="cfDeployTerminal">PhongWatch Deploy System v2.0 ready.
+                  <div class="cf-terminal-log" id="cfDeployTerminal">JinWatch Deploy System v2.0 ready.
 Nhấn nút "ĐẨY CONFIG LÊN GITHUB & AUTO DEPLOY" để tự động cập nhật website lên Cloudflare Pages.</div>
                 </div>
 
@@ -757,7 +757,7 @@ git push jin main</pre>
                 <div class="deploy-step-number"><i class="fa fa-terminal" style="font-size: 14px;"></i></div>
                 <div class="deploy-step-content">
                   <h4>Chạy Trên VPS Linux (Nginx / Apache)</h4>
-                  <p>1. Copy toàn bộ website vào thư mục <code class="code-badge">/var/www/html/phongwatch</code>.</p>
+                  <p>1. Copy toàn bộ website vào thư mục <code class="code-badge">/var/www/html/jinwatch</code>.</p>
                   <p>2. Trỏ VirtualHost của Nginx hoặc Apache tới thư mục đó.</p>
                 </div>
               </div>

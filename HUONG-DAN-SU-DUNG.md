@@ -1,7 +1,7 @@
-# 📖 HƯỚNG DẪN QUẢN TRỊ & BÀN GIAO WEBSITE PHONGWATCH
+# 📖 HƯỚNG DẪN QUẢN TRỊ & BÀN GIAO WEBSITE JINWATCH
 
 > **Dành cho:** Chủ cửa hàng, Quản trị viên website và Đội ngũ kỹ thuật bàn giao.  
-> **Phiên bản:** PhongWatch Luxury Store v2.0  
+> **Phiên bản:** JinWatch Luxury Store v2.0  
 > **Kiến trúc:** Zero-Dependency (Chạy trực tiếp trên mọi Server/Hosting, không cần cài đặt Node.js hay Database MySQL phức tạp).
 
 ---
@@ -109,7 +109,7 @@ Mở file [config.js](file:///c:/Users/13520/Documents/personal/projects/website
 ```javascript
 window.SHOP_CONFIG = {
   brand: {
-    name: "PHONGWATCH",
+    name: "Jin Watch",
     tagline: "ĐỒNG HỒ CHÍNH HÃNG",
     slogan: "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt",
     logoUrl: "https://ten-mien-cua-ban/logo.png"
@@ -123,7 +123,7 @@ window.SHOP_CONFIG = {
     hotlineTel: "0888477774",
     zaloDisplay: "0988.922.330",
     zaloLink: "https://zalo.me/0988922330",
-    email: "phongwatch.hcm@gmail.com",
+    email: "jinwatch.hcm@gmail.com",
     address: "357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh"
   }
 };
@@ -174,7 +174,7 @@ Mỗi sản phẩm hỗ trợ trường `images` chứa danh sách nhiều góc 
 
 #### Cách 1: Triển Khai Trên Cloudflare Pages (Miễn phí vĩnh viễn, CDN mạnh nhất thế giới)
 1. Đăng nhập vào tài khoản [Cloudflare Dashboard](https://dash.cloudflare.com/) &gt; chọn **Workers & Pages** &gt; chọn **Pages** &gt; chọn **Upload Assets**.
-2. Đặt tên dự án (ví dụ: `phongwatch`).
+2. Đặt tên dự án (ví dụ: `jinwatch`).
 3. Kéo thả toàn bộ thư mục `website` vào Cloudflare Pages.
 4. Bấm **Deploy site** &gt; Xong trong 5 giây! Cloudflare cung cấp SSL HTTPS miễn phí, CDN chống DDoS cực mạnh và không giới hạn băng thông.
 
@@ -182,7 +182,7 @@ Mỗi sản phẩm hỗ trợ trường `images` chứa danh sách nhiều góc 
 
 #### 🥇 Cách 1: Triển Khai Tự Động Với Cloudflare Pages (KHUYÊN DÙNG SỐ 1 - 100% MIỄN PHÍ)
 
-Cloudflare Pages là giải pháp tối ưu nhất cho website PhongWatch / JinWatch vì:
+Cloudflare Pages là giải pháp tối ưu nhất cho website JinWatch vì:
 - **Tự Động Hóa 100% (CI/CD):** Mỗi lần bạn đẩy code lên GitHub hoặc nhấn nút lưu trên trang Admin, Cloudflare Pages sẽ **tự động deploy bản mới nhất sau 15-30 giây**!
 - **Tốc Độ Siêu Tốc:** Toàn bộ hình ảnh, CSS, JS được lưu trên mạng lưới Edge CDN của Cloudflare (có máy chủ tại Hà Nội và TP.HCM), giúp mở trang gần như tức thì.
 - **Bảo Mật & Miễn Phí:** Miễn phí băng thông không giới hạn, miễn phí chứng chỉ SSL HTTPS, chống DDoS tự động.
@@ -226,7 +226,7 @@ Bạn muốn đổi số điện thoại, đổi link Zalo, đổi giá hay thê
 
 Trang `admin.html` đã tích hợp sẵn tính năng **1-Click Auto Deploy lên Cloudflare**:
 1. **Lấy GitHub Token (chỉ làm 1 lần mất 30 giây):**
-   - Vào [GitHub Personal Access Tokens](https://github.com/settings/tokens/new?scopes=repo&description=PhongWatch_Admin_Deploy).
+   - Vào [GitHub Personal Access Tokens](https://github.com/settings/tokens/new?scopes=repo&description=JinWatch_Admin_Deploy).
    - Đặt thời hạn (Expiration) ví dụ `90 days` hoặc `No expiration`.
    - Tích chọn quyền `repo` (Full control of private repositories).
    - Kéo xuống dưới cùng bấm nút xanh **Generate token** &rarr; Copy đoạn mã token (bắt đầu bằng `ghp_...`).
@@ -256,13 +256,13 @@ Trang `admin.html` đã tích hợp sẵn tính năng **1-Click Auto Deploy lên
   4. Bấm Deploy: DigitalOcean sẽ tự động build và cấp domain HTTPS.
 - **Phương án Droplet VPS (Nginx / Linux):**
   1. Tạo một Droplet Ubuntu (gói 4-6$/tháng).
-  2. Copy toàn bộ thư mục `website` vào `/var/www/phongwatch`.
+  2. Copy toàn bộ thư mục `website` vào `/var/www/jinwatch`.
   3. Cấu hình Nginx trỏ vào thư mục đó:
      ```nginx
      server {
          listen 80;
-         server_name phongwatch.vn www.phongwatch.vn;
-         root /var/www/phongwatch;
+         server_name jinwatch.vn www.jinwatch.vn;
+         root /var/www/jinwatch;
          index index.html;
 
          location / {

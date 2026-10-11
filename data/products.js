@@ -1,10 +1,10 @@
 /**
- * PHONGWATCH - LUXURY WATCH CATALOG
+ * JINWATCH - LUXURY WATCH CATALOG
  * Complete Products Catalog (data/products.js)
- * Generated from Admin Panel: 22:41:07 9/10/2026
+ * Updated for JinWatch Luxury Store
  */
 
-window.PHONGWATCH_DATA = {
+window.JINWATCH_DATA = {
   "collections": [
     {
       "title": "OLYM PIANUS",
@@ -6231,3 +6231,5 @@ window.PHONGWATCH_DATA = {
     ]
   }
 };
+window.PHONGWATCH_DATA = window.JINWATCH_DATA;
+

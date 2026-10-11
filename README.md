@@ -1,4 +1,4 @@
-# ⌚ PhongWatch - Đồng Hồ Chính Hãng Luxury Store
+# ⌚ JinWatch - Đồng Hồ Chính Hãng Luxury Store
 
 Website thương mại điện tử chuyên nghiệp cho chuỗi cửa hàng đồng hồ chính hãng.
 

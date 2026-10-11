@@ -1,5 +1,5 @@
 /**
- * PHONGWATCH ADMIN CONTROL PANEL SCRIPT (js/admin.js)
+ * JINWATCH ADMIN CONTROL PANEL SCRIPT (js/admin.js)
  * Full CRUD for Products, Theme & Brand Management, 1-Click Export
  */
 
@@ -7,12 +7,12 @@
   'use strict';
 
   // 1. Authentication State
-  const AUTH_KEY = 'phongwatch_admin_auth';
-  const PASSCODE_HASH_KEY = 'phongwatch_admin_pass_hash';
+  const AUTH_KEY = 'jinwatch_admin_auth';
+  const PASSCODE_HASH_KEY = 'jinwatch_admin_pass_hash';
   // SHA-256 hash của mật khẩu mặc định 'admin123' (Không lưu mật khẩu dạng plain-text)
   const DEFAULT_PASSCODE_HASH = '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9';
-  const LOCKOUT_KEY = 'phongwatch_admin_lockout';
-  const ATTEMPTS_KEY = 'phongwatch_admin_fail_attempts';
+  const LOCKOUT_KEY = 'jinwatch_admin_lockout';
+  const ATTEMPTS_KEY = 'jinwatch_admin_fail_attempts';
 
   // 2. Data State
   let productsData = { collections: [], products: [] };
@@ -112,7 +112,7 @@
     }
 
     const storedHash = localStorage.getItem(PASSCODE_HASH_KEY);
-    const storedPlain = localStorage.getItem('phongwatch_admin_passcode');
+    const storedPlain = localStorage.getItem('jinwatch_admin_passcode');
 
     // Matching condition: matches SHA-256 hash OR default hash OR default plain 'admin123' OR custom plain
     const isSuccess = (entered === 'admin123') ||
@@ -197,16 +197,16 @@
 
   // --- Data Loading & Synchronization ---
   function loadData() {
-    // A. Load Products: Ưu tiên localStorage override, sau đó tới window.PHONGWATCH_DATA
-    const savedProducts = localStorage.getItem('PHONGWATCH_DATA_OVERRIDE');
+    // A. Load Products: Ưu tiên localStorage override, sau đó tới window.JINWATCH_DATA / window.PHONGWATCH_DATA
+    const savedProducts = localStorage.getItem('JINWATCH_DATA_OVERRIDE');
     if (savedProducts) {
       try {
         productsData = JSON.parse(savedProducts);
       } catch (e) {
-        productsData = window.PHONGWATCH_DATA || { collections: [], products: [] };
+        productsData = window.JINWATCH_DATA || window.PHONGWATCH_DATA || { collections: [], products: [] };
       }
-    } else if (window.PHONGWATCH_DATA) {
-      productsData = JSON.parse(JSON.stringify(window.PHONGWATCH_DATA));
+    } else if (window.JINWATCH_DATA || window.PHONGWATCH_DATA) {
+      productsData = JSON.parse(JSON.stringify(window.JINWATCH_DATA || window.PHONGWATCH_DATA));
     }
 
     // B. Load Config: Ưu tiên localStorage override, sau đó tới window.SHOP_CONFIG
@@ -223,7 +223,7 @@
   }
 
   function saveProductsToStorage() {
-    localStorage.setItem('PHONGWATCH_DATA_OVERRIDE', JSON.stringify(productsData));
+    localStorage.setItem('JINWATCH_DATA_OVERRIDE', JSON.stringify(productsData));
     updateStats();
   }
 
@@ -283,7 +283,7 @@
 
     const badgeStatus = document.getElementById('overviewConfigStatus');
     if (badgeStatus) {
-      const hasOverride = localStorage.getItem('SHOP_CONFIG_OVERRIDE') || localStorage.getItem('PHONGWATCH_DATA_OVERRIDE');
+      const hasOverride = localStorage.getItem('SHOP_CONFIG_OVERRIDE') || localStorage.getItem('JINWATCH_DATA_OVERRIDE');
       if (hasOverride) {
         badgeStatus.innerHTML = '<span class="badge" style="background:#fef3c7; color:#92400e;"><i class="fa fa-pen"></i> Có tùy chỉnh đang lưu</span>';
       } else {
@@ -387,25 +387,25 @@
     const primaryColor = document.getElementById('themePrimaryColor')?.value || '#d61114';
     const goldColor = document.getElementById('themeGoldColor')?.value || '#c89b3c';
 
-    const brandName = getVal('cfgBrandName') || 'PHONGWATCH';
-    const hotlineDisplay = getVal('cfgHotline') || '0888.477.774';
+    const brandName = getVal('cfgBrandName') || 'Jin Watch';
+    const hotlineDisplay = getVal('cfgHotline') || '0932.1234.73';
     let hotlineTel = getVal('cfgHotlineTel');
     if (!hotlineTel) {
-      hotlineTel = hotlineDisplay.replace(/\D/g, '') || '0888477774';
+      hotlineTel = hotlineDisplay.replace(/\D/g, '') || '0932123473';
     }
 
-    const zaloDisplay = getVal('cfgZalo') || '0988.922.330';
-    const cleanZalo = zaloDisplay.replace(/\D/g, '') || '0988922330';
+    const zaloDisplay = getVal('cfgZalo') || '0845.0136.19';
+    const cleanZalo = zaloDisplay.replace(/\D/g, '') || '0845013619';
     let zaloLink = getVal('cfgZaloLink');
     if (!zaloLink || !zaloLink.startsWith('http')) {
       zaloLink = `https://zalo.me/${cleanZalo}`;
     }
 
-    const facebookPage = getVal('cfgFacebook') || 'https://www.facebook.com/PhongWatches';
+    const facebookPage = getVal('cfgFacebook') || 'https://www.facebook.com/JinWatchPro';
     let messenger = getVal('cfgMessenger');
     if (!messenger) {
       const fbMatch = facebookPage.match(/facebook\.com\/([a-zA-Z0-9._-]+)/);
-      messenger = fbMatch ? `https://m.me/${fbMatch[1]}` : 'https://m.me/PhongWatches';
+      messenger = fbMatch ? `https://m.me/${fbMatch[1]}` : 'https://m.me/JinWatchPro';
     }
 
     shopConfig = {
@@ -431,7 +431,7 @@
         hotlineTel: hotlineTel,
         zaloDisplay: zaloDisplay,
         zaloLink: zaloLink,
-        email: getVal('cfgEmail') || 'phongwatch.hcm@gmail.com',
+        email: getVal('cfgEmail') || 'jinwatch.hcm@gmail.com',
         address: getVal('cfgAddress') || '357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh',
         addressNote: getVal('cfgAddressNote') || '(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)',
         mapEmbedUrl: getVal('cfgMapUrl') || '',
@@ -469,7 +469,7 @@
   window.autoSyncFacebook = function (val) {
     const link = (val || '').trim();
     const msgrInput = document.getElementById('cfgMessenger');
-    if (msgrInput && (!msgrInput.value || msgrInput.value.includes('m.me/PhongWatches'))) {
+    if (msgrInput && (!msgrInput.value || msgrInput.value.includes('m.me/JinWatchPro'))) {
       const match = link.match(/facebook\.com\/([a-zA-Z0-9._-]+)/);
       if (match) {
         msgrInput.value = `https://m.me/${match[1]}`;
@@ -894,9 +894,9 @@
     if (!confirm('Bạn có chắc muốn KHÔI PHỤC lại danh sách 143 sản phẩm gốc ban đầu?\nMọi sản phẩm tự tạo sẽ bị xóa.')) {
       return;
     }
-    localStorage.removeItem('PHONGWATCH_DATA_OVERRIDE');
-    if (window.PHONGWATCH_DATA) {
-      productsData = JSON.parse(JSON.stringify(window.PHONGWATCH_DATA));
+    localStorage.removeItem('JINWATCH_DATA_OVERRIDE');
+    if (window.JINWATCH_DATA || window.PHONGWATCH_DATA) {
+      productsData = JSON.parse(JSON.stringify(window.JINWATCH_DATA || window.PHONGWATCH_DATA));
     }
     renderProductsTable(1);
     updateStats();
@@ -920,9 +920,9 @@
   };
 
   // --- 4. EXPORT FILES FOR SERVER DEPLOYMENT & CLOUDFLARE AUTO-DEPLOY ---
-  const CF_REPO_KEY = 'phongwatch_cf_repo';
-  const CF_BRANCH_KEY = 'phongwatch_cf_branch';
-  const CF_TOKEN_KEY = 'phongwatch_cf_token';
+  const CF_REPO_KEY = 'jinwatch_cf_repo';
+  const CF_BRANCH_KEY = 'jinwatch_cf_branch';
+  const CF_TOKEN_KEY = 'jinwatch_cf_tokenPosition';
 
   window.toggleGithubTokenVisibility = function () {
     const input = document.getElementById('cfGithubToken');
@@ -973,7 +973,7 @@
   window.clearCfDeployTerminal = function () {
     const term = document.getElementById('cfDeployTerminal');
     const badge = document.getElementById('cfDeployStatusBadge');
-    if (term) term.textContent = 'PhongWatch Deploy System v2.0 ready.\nNhấn nút "ĐẨY CONFIG LÊN GITHUB & AUTO DEPLOY" để tự động cập nhật website lên Cloudflare Pages.';
+    if (term) term.textContent = 'JinWatch Deploy System v2.0 ready.\nNhấn nút "ĐẨY CONFIG LÊN GITHUB & AUTO DEPLOY" để tự động cập nhật website lên Cloudflare Pages.';
     if (badge) {
       badge.textContent = 'Chờ lệnh...';
       badge.style.background = '#e2e8f0';
@@ -1020,7 +1020,7 @@
 
   function generateConfigFileString() {
     return `/**
- * PHONGWATCH - LUXURY WATCH STORE
+ * JINWATCH - LUXURY WATCH STORE
  * Central Configuration File (config.js)
  * Generated from Admin Panel: ${new Date().toLocaleString('vi-VN')}
  */
@@ -1075,7 +1075,7 @@
     }
 
     // 3. Brand & Logos
-    const brandName = (config.brand && config.brand.name) ? config.brand.name : 'PHONGWATCH';
+    const brandName = (config.brand && config.brand.name) ? config.brand.name : 'Jin Watch';
     const brandTagline = (config.brand && config.brand.tagline) ? config.brand.tagline : 'ĐỒNG HỒ CHÍNH HÃNG';
     const brandSlogan = (config.brand && config.brand.slogan) ? config.brand.slogan : "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt";
 
@@ -1130,22 +1130,22 @@
 
     // 4. CONTACTS: HOTLINE, ZALO, SOCIALS
     if (config.contact) {
-      const hotlineDisplay = config.contact.hotlineDisplay || '0888.477.774';
-      const rawTel = config.contact.hotlineTel || hotlineDisplay.replace(/\\D/g, '') || '0888477774';
+      const hotlineDisplay = config.contact.hotlineDisplay || '0932.1234.73';
+      const rawTel = config.contact.hotlineTel || hotlineDisplay.replace(/\\D/g, '') || '0932123473';
       const telHref = \`tel:\${rawTel}\`;
 
-      const zaloDisplay = config.contact.zaloDisplay || '0988.922.330';
-      const cleanZalo = zaloDisplay.replace(/\\D/g, '') || '0988922330';
+      const zaloDisplay = config.contact.zaloDisplay || '0845.0136.19';
+      const cleanZalo = zaloDisplay.replace(/\\D/g, '') || '0845013619';
       let zaloLink = config.contact.zaloLink;
       if (!zaloLink || !zaloLink.startsWith('http')) {
         zaloLink = \`https://zalo.me/\${cleanZalo}\`;
       }
 
-      const facebookPage = config.contact.facebookPage || 'https://www.facebook.com/PhongWatches';
+      const facebookPage = config.contact.facebookPage || 'https://www.facebook.com/JinWatchPro';
       let messenger = config.contact.messenger;
       if (!messenger) {
         const fbMatch = facebookPage.match(/facebook\\.com\\/([a-zA-Z0-9._-]+)/);
-        messenger = fbMatch ? \`https://m.me/\${fbMatch[1]}\` : 'https://m.me/PhongWatches';
+        messenger = fbMatch ? \`https://m.me/\${fbMatch[1]}\` : 'https://m.me/JinWatchPro';
       }
 
       // --- A. ALL HOTLINE / PHONE LINKS & BUTTONS ---
@@ -1261,7 +1261,7 @@
 
     // 5. SEO & PAGE TITLES
     if (config.seo) {
-      if (config.seo.title && (document.title.includes('PhongWatch') || document.title.includes('JinWatch'))) {
+      if (config.seo.title && (document.title.includes('JinWatch') || document.title.includes('PhongWatch'))) {
         document.title = config.seo.title;
       }
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -1287,12 +1287,12 @@
 
   function generateProductsJsFileString() {
     return `/**
- * PHONGWATCH - LUXURY WATCH CATALOG
+ * JINWATCH - LUXURY WATCH CATALOG
  * Complete Products Catalog (data/products.js)
  * Generated from Admin Panel: ${new Date().toLocaleString('vi-VN')}
  */
 
-window.PHONGWATCH_DATA = ${JSON.stringify(productsData, null, 2)};
+window.JINWATCH_DATA = ${JSON.stringify(productsData, null, 2)};\nwindow.PHONGWATCH_DATA = window.JINWATCH_DATA;
 `;
   }
 
