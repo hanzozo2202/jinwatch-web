@@ -8,6 +8,7 @@
   'use strict';
 
   const SHOP_CONFIG = {
+  "version": "2026.10.12.0805",
   "brand": {
     "name": "Jin Watch",
     "tagline": "ĐỒNG HỒ CHÍNH HÃNG",
@@ -68,12 +69,21 @@
       try {
         const saved = localStorage.getItem('SHOP_CONFIG_OVERRIDE');
         if (saved) {
-          config = JSON.parse(saved);
+          const parsed = JSON.parse(saved);
+          if (!parsed.version || (SHOP_CONFIG.version && parsed.version !== SHOP_CONFIG.version)) {
+            console.warn('[JinWatch Config] Phát hiện config.js từ mã nguồn mới hơn bộ nhớ tạm trình duyệt. Tự động đồng bộ với config.js.');
+            localStorage.removeItem('SHOP_CONFIG_OVERRIDE');
+            config = SHOP_CONFIG;
+          } else {
+            config = parsed;
+          }
         }
-      } catch (e) {}
+      } catch (e) {
+        config = SHOP_CONFIG;
+      }
     }
     if (!config) {
-      config = window.SHOP_CONFIG;
+      config = window.SHOP_CONFIG || SHOP_CONFIG;
     }
     if (!config) return;
 

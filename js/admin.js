@@ -209,13 +209,20 @@
       productsData = JSON.parse(JSON.stringify(window.JINWATCH_DATA || window.PHONGWATCH_DATA));
     }
 
-    // B. Load Config: Ưu tiên localStorage override, sau đó tới window.SHOP_CONFIG
+    // B. Load Config: Ưu tiên localStorage override NẾU còn hiệu lực cùng version, sau đó tới window.SHOP_CONFIG
     const savedConfig = localStorage.getItem('SHOP_CONFIG_OVERRIDE');
     if (savedConfig) {
       try {
-        shopConfig = JSON.parse(savedConfig);
+        const parsed = JSON.parse(savedConfig);
+        const currentVersion = window.SHOP_CONFIG?.version;
+        if (!parsed.version || (currentVersion && parsed.version !== currentVersion)) {
+          localStorage.removeItem('SHOP_CONFIG_OVERRIDE');
+          shopConfig = window.SHOP_CONFIG ? JSON.parse(JSON.stringify(window.SHOP_CONFIG)) : {};
+        } else {
+          shopConfig = parsed;
+        }
       } catch (e) {
-        shopConfig = window.SHOP_CONFIG || {};
+        shopConfig = window.SHOP_CONFIG ? JSON.parse(JSON.stringify(window.SHOP_CONFIG)) : {};
       }
     } else if (window.SHOP_CONFIG) {
       shopConfig = JSON.parse(JSON.stringify(window.SHOP_CONFIG));
@@ -283,11 +290,23 @@
 
     const badgeStatus = document.getElementById('overviewConfigStatus');
     if (badgeStatus) {
-      const hasOverride = localStorage.getItem('SHOP_CONFIG_OVERRIDE') || localStorage.getItem('JINWATCH_DATA_OVERRIDE');
-      if (hasOverride) {
-        badgeStatus.innerHTML = '<span class="badge" style="background:#fef3c7; color:#92400e;"><i class="fa fa-pen"></i> Có tùy chỉnh đang lưu</span>';
+      const hasConfigOverride = !!localStorage.getItem('SHOP_CONFIG_OVERRIDE');
+      const hasProdOverride = !!(localStorage.getItem('JINWATCH_DATA_OVERRIDE') || localStorage.getItem('PHONGWATCH_DATA_OVERRIDE'));
+      if (hasConfigOverride || hasProdOverride) {
+        let details = [];
+        if (hasConfigOverride) details.push('Cấu hình');
+        if (hasProdOverride) details.push('Sản phẩm');
+        badgeStatus.innerHTML = `
+          <div style="display:flex; flex-direction:column; gap:6px; align-items:flex-start; margin-top:4px;">
+            <span class="badge" style="background:#fef3c7; color:#92400e;">
+              <i class="fa fa-pen"></i> Có tùy chỉnh lưu tạm (${details.join(', ')})
+            </span>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="clearAllDraftOverrides()" style="font-size:11px; padding:3px 8px; border-color:#f59e0b; color:#b45309;" title="Xóa toàn bộ dữ liệu lưu tạm trong trình duyệt để dùng dữ liệu gốc từ config.js">
+              <i class="fa fa-rotate-left"></i> Xóa lưu tạm (Dùng file gốc)
+            </button>
+          </div>`;
       } else {
-        badgeStatus.innerHTML = '<span class="badge" style="background:#d1fae5; color:#065f46;"><i class="fa fa-check"></i> Đang đồng bộ mặc định</span>';
+        badgeStatus.innerHTML = '<span class="badge" style="background:#d1fae5; color:#065f46;"><i class="fa fa-check"></i> Đang đồng bộ mặc định (File gốc)</span>';
       }
     }
   }
@@ -410,12 +429,13 @@
 
     shopConfig = {
       ...shopConfig,
+      version: window.SHOP_CONFIG?.version || '2026.10.12.0805',
       brand: {
         name: brandName,
         tagline: getVal('cfgTagline') || 'ĐỒNG HỒ CHÍNH HÃNG',
-        slogan: getVal('cfgSlogan') || "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt",
+        slogan: getVal('cfgSlogan') || "Jin Watch - Đồng Hồ Chính Hãng Giá Tốt",
         logoUrl: getVal('cfgLogoUrl') || 'assets/logo.png',
-        faviconUrl: getVal('cfgFaviconUrl') || 'assets/favicon.png',
+        faviconUrl: getVal('cfgFaviconUrl') || shopConfig.brand?.faviconUrl || 'assets/favicon.png',
         shareFbImage: shopConfig.brand?.shareFbImage || ''
       },
       theme: {
@@ -432,7 +452,7 @@
         zaloDisplay: zaloDisplay,
         zaloLink: zaloLink,
         email: getVal('cfgEmail') || 'jinwatch.hcm@gmail.com',
-        address: getVal('cfgAddress') || '357 Bình Thành, P. Bình Hưng Hòa B, Q. Bình Tân, TP. Hồ Chí Minh',
+        address: getVal('cfgAddress') || '122 Phan Đình Phùng, Phú Nhuận, TP. Hồ Chí Minh',
         addressNote: getVal('cfgAddressNote') || '(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)',
         mapEmbedUrl: getVal('cfgMapUrl') || '',
         facebookPage: facebookPage,
@@ -446,6 +466,7 @@
     };
 
     saveConfigToStorage();
+    updateStats();
     showToast('Đã lưu cấu hình thương hiệu và màu sắc thành công!', 'success');
   };
 
@@ -904,19 +925,47 @@
   };
 
   window.resetConfigToDefault = function () {
-    if (!confirm('Bạn có chắc muốn KHÔI PHỤC lại giao diện và màu sắc gốc ban đầu?')) {
+    if (!confirm('Bạn có chắc muốn KHÔI PHỤC lại giao diện và màu sắc gốc ban đầu từ file config.js?')) {
       return;
     }
     localStorage.removeItem('SHOP_CONFIG_OVERRIDE');
-    if (window.DEFAULT_SHOP_CONFIG) {
-      shopConfig = JSON.parse(JSON.stringify(window.DEFAULT_SHOP_CONFIG));
+    if (window.SHOP_CONFIG || window.DEFAULT_SHOP_CONFIG) {
+      shopConfig = JSON.parse(JSON.stringify(window.SHOP_CONFIG || window.DEFAULT_SHOP_CONFIG));
     }
     renderThemeSettings();
     updateThemePreview();
+    updateStats();
     if (typeof window.applyShopConfig === 'function') {
       window.applyShopConfig();
     }
-    showToast('Đã khôi phục cài đặt giao diện gốc ban đầu!', 'success');
+    showToast('Đã khôi phục cài đặt giao diện gốc ban đầu từ config.js!', 'success');
+  };
+
+  window.clearAllDraftOverrides = function () {
+    if (!confirm('Bạn có chắc muốn XÓA BỘ NHỚ TẠM trình duyệt và đồng bộ lại 100% từ file gốc (config.js & products.js)?\\n\\nThao tác này sẽ đảm bảo logo, favicon, màu sắc và danh mục mới nhất từ mã nguồn được áp dụng đầy đủ.')) {
+      return;
+    }
+    localStorage.removeItem('SHOP_CONFIG_OVERRIDE');
+    localStorage.removeItem('JINWATCH_DATA_OVERRIDE');
+    localStorage.removeItem('PHONGWATCH_DATA_OVERRIDE');
+
+    if (window.SHOP_CONFIG) {
+      shopConfig = JSON.parse(JSON.stringify(window.SHOP_CONFIG));
+    }
+    if (window.JINWATCH_DATA || window.PHONGWATCH_DATA) {
+      productsData = JSON.parse(JSON.stringify(window.JINWATCH_DATA || window.PHONGWATCH_DATA));
+    }
+
+    renderThemeSettings();
+    updateThemePreview();
+    renderProductsTable(1);
+    updateStats();
+
+    if (typeof window.applyShopConfig === 'function') {
+      window.applyShopConfig();
+    }
+
+    showToast('Đã xóa bộ nhớ tạm! Bảng quản trị và website đang dùng file config.js gốc.', 'success');
   };
 
   // --- 4. EXPORT FILES FOR SERVER DEPLOYMENT & CLOUDFLARE AUTO-DEPLOY ---
@@ -1019,16 +1068,19 @@
   }
 
   function generateConfigFileString() {
+    if (shopConfig && !shopConfig.version) {
+      shopConfig.version = window.SHOP_CONFIG?.version || '2026.10.12.0805';
+    }
     return `/**
  * JINWATCH - LUXURY WATCH STORE
  * Central Configuration File (config.js)
- * Generated from Admin Panel: ${new Date().toLocaleString('vi-VN')}
+ * Generated from Admin Panel: \${new Date().toLocaleString('vi-VN')}
  */
 
 (function () {
   'use strict';
 
-  const SHOP_CONFIG = ${JSON.stringify(shopConfig, null, 2)};
+  const SHOP_CONFIG = \${JSON.stringify(shopConfig, null, 2)};
 
   window.SHOP_CONFIG = SHOP_CONFIG;
   window.DEFAULT_SHOP_CONFIG = SHOP_CONFIG;
@@ -1045,7 +1097,7 @@
       root.style.setProperty('--color-gold', theme.goldColor);
       root.style.setProperty('--color-gold-light', theme.goldLight || theme.goldColor);
       root.style.setProperty('--color-gold-dark', theme.goldDark || theme.goldColor);
-      root.style.setProperty('--shadow-gold', \`0 4px 15px \${theme.goldColor}40\`);
+      root.style.setProperty('--shadow-gold', \\\`0 4px 15px \\\${theme.goldColor}40\\\`);
     }
   }
 
@@ -1055,12 +1107,21 @@
       try {
         const saved = localStorage.getItem('SHOP_CONFIG_OVERRIDE');
         if (saved) {
-          config = JSON.parse(saved);
+          const parsed = JSON.parse(saved);
+          if (!parsed.version || (SHOP_CONFIG.version && parsed.version !== SHOP_CONFIG.version)) {
+            console.warn('[JinWatch Config] Phát hiện config.js từ mã nguồn mới hơn bộ nhớ tạm trình duyệt. Tự động đồng bộ với config.js.');
+            localStorage.removeItem('SHOP_CONFIG_OVERRIDE');
+            config = SHOP_CONFIG;
+          } else {
+            config = parsed;
+          }
         }
-      } catch (e) {}
+      } catch (e) {
+        config = SHOP_CONFIG;
+      }
     }
     if (!config) {
-      config = window.SHOP_CONFIG;
+      config = window.SHOP_CONFIG || SHOP_CONFIG;
     }
     if (!config) return;
 
@@ -1077,7 +1138,7 @@
     // 3. Brand & Logos
     const brandName = (config.brand && config.brand.name) ? config.brand.name : 'Jin Watch';
     const brandTagline = (config.brand && config.brand.tagline) ? config.brand.tagline : 'ĐỒNG HỒ CHÍNH HÃNG';
-    const brandSlogan = (config.brand && config.brand.slogan) ? config.brand.slogan : "Men's Watch - Đồng Hồ Chính Hãng Giá Tốt";
+    const brandSlogan = (config.brand && config.brand.slogan) ? config.brand.slogan : "Jin Watch - Đồng Hồ Chính Hãng Giá Tốt";
 
     // All Logo Images
     if (config.brand && config.brand.logoUrl) {
@@ -1416,6 +1477,14 @@ window.JINWATCH_DATA = ${JSON.stringify(productsData, null, 2)};\nwindow.PHONGWA
         const prodSha = prodResult.commit ? prodResult.commit.sha.substring(0, 7) : 'latest';
         logToCfTerminal(`✅ Đã commit data/products.js thành công (Commit: ${prodSha})!`, 'info');
       }
+
+      // Xóa override lưu tạm sau khi deploy thành công vì dữ liệu đã chính thức lên GitHub
+      localStorage.removeItem('SHOP_CONFIG_OVERRIDE');
+      if (includeProducts) {
+        localStorage.removeItem('JINWATCH_DATA_OVERRIDE');
+        localStorage.removeItem('PHONGWATCH_DATA_OVERRIDE');
+      }
+      updateStats();
 
       logToCfTerminal(`🎉 HOÀN TẤT COMMIT LÊN GITHUB!`, 'success');
       logToCfTerminal(`🚀 Cloudflare Pages đang tự động nhận diện commit mới và Build website toàn cầu.`, 'success');

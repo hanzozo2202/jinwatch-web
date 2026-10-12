@@ -114,6 +114,9 @@
         </div>
 
         <div class="topbar-actions">
+          <button class="btn btn-secondary btn-sm" onclick="clearAllDraftOverrides()" title="Xóa bộ nhớ tạm (Đồng bộ lại từ file config.js và products.js gốc)">
+            <i class="fa fa-rotate-left"></i> Đồng Bộ File Gốc
+          </button>
           <a href="index.html" target="_blank" class="btn btn-secondary btn-sm" title="Xem website">
             <i class="fa fa-globe"></i> Xem Website
           </a>
@@ -410,8 +413,8 @@
 
           <!-- Save Actions -->
           <div style="display: flex; gap: 12px; justify-content: flex-end; margin-bottom: 40px;">
-            <button class="btn btn-secondary" onclick="resetConfigToDefault()">
-              <i class="fa fa-rotate-left"></i> Khôi Phục Mặc Định
+            <button class="btn btn-secondary" onclick="resetConfigToDefault()" title="Khôi phục lại giao diện theo file config.js gốc">
+              <i class="fa fa-rotate-left"></i> Khôi Phục config.js Gốc
             </button>
             <button class="btn btn-primary" onclick="saveThemeAndBrandConfig()" style="padding: 12px 28px; font-size: 14px;">
               <i class="fa fa-floppy-disk"></i> Lưu Cấu Hình Giao Diện
