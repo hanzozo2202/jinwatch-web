@@ -708,7 +708,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    const orderId = 'PW-' + Math.floor(100000 + Math.random() * 900000);
+    const orderId = 'JW-' + Math.floor(100000 + Math.random() * 900000);
     const totalStr = formatMoney(calculateCartTotal());
 
     // Show success dialog

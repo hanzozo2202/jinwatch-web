@@ -308,7 +308,7 @@ Khi chủ cửa hàng thêm đồng hồ mới qua trang quản trị `admin.htm
 3. **🔍 Trang Chi Tiết Sản Phẩm Riêng Biệt (`product.html`):** Xem bộ sưu tập ảnh thumbnail góc cạnh, thông số cỗ máy, mặt kính Sapphire, cam kết bảo hành 5 năm toàn diện, chính sách đổi trả 7 ngày.
 4. **💰 Bộ Lọc Đa Năng:** Lọc giá theo từng phân khúc (Dưới 3 triệu, 3-5 triệu, 5-10 triệu, 10-20 triệu, Trên 20 triệu), lọc theo thương hiệu, lọc theo giới tính.
 5. **⚡ Tìm Kiếm Thông Minh (Live Search):** Gợi ý kết quả ngay khi người dùng gõ phím kèm ảnh thumbnail và giá tiền.
-6. **🛒 Giỏ Hàng & Đặt Hàng Trực Tuyến:** Giỏ hàng lưu trữ tự động trên máy khách, form đặt hàng sinh mã đơn hàng chuẩn `PW-XXXXXX` chuyên nghiệp.
+6. **🛒 Giỏ Hàng & Đặt Hàng Trực Tuyến:** Giỏ hàng lưu trữ tự động trên máy khách, form đặt hàng sinh mã đơn hàng chuẩn `JW-XXXXXX` chuyên nghiệp.
 7. **🛠️ Bảng Điều Khiển Quản Trị `admin.html`:** Cho phép chủ cửa hàng toàn quyền thêm/sửa/xóa sản phẩm, đổi màu sắc và thông tin mà không cần phụ thuộc vào lập trình viên.
 
 ---

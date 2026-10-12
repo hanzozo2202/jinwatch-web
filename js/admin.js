@@ -715,7 +715,7 @@
     document.getElementById('productModalTitle').textContent = 'Thêm Sản Phẩm Mới';
     
     // Auto generate ID
-    const newId = 'PW' + Date.now().toString().slice(-7);
+    const newId = 'JW' + Date.now().toString().slice(-7);
     setVal('prodId', newId);
     setVal('prodName', '');
     setVal('prodVendor', 'OLYM PIANUS');
