@@ -31,8 +31,8 @@
     "zaloDisplay": "0845.0136.19",
     "zaloLink": "https://zalo.me/0845013619",
     "email": "jinwatch.hcm@gmail.com",
-    "address": "122 Phan Đình Phùng, Phú Nhuận, TP. Hồ Chí Minh",
-    "addressNote": "(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)",
+    "address": "Hệ thống phân phối & giao dịch JinWatch (TP.HCM & Toàn quốc)",
+    "addressNote": "Tất cả các mẫu vui lòng liên hệ trước qua SĐT/Zalo để đặt lịch & giữ hàng",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9809658863846!2d106.58694401427957!3d10.81276829229686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9943d3017b%3A0x9b7461a7ddd8be8c!2zMzU3IELDrG5oIFRow6BuaCwgQsOsbmggSMawbmcgSMOyYSBCLCBCw6xuaCBUw6JuLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1505413433784",
     "facebookPage": "https://www.facebook.com/JinWatchPro",
     "messenger": "https://m.me/JinWatchPro"
@@ -221,24 +221,24 @@
       });
 
       // Footer contact list items
-      document.querySelectorAll('.footer-contact-list li').forEach((li, idx) => {
-        if (idx === 0) {
-          const span = li.querySelector('span');
-          if (span && config.contact.address) {
-            span.innerHTML = `${config.contact.address}<br><em style="color:#e9ecef; font-size:12px;">${config.contact.addressNote || ''}</em>`;
-          }
-        } else if (idx === 1 || li.textContent.includes('Gọi điện') || li.textContent.includes('Zalo')) {
-          const a = li.querySelector('a');
-          if (a) {
-            a.href = telHref;
-            a.innerHTML = `<strong>${hotlineDisplay}</strong> (Gọi điện) - <span onclick="event.preventDefault(); window.open('${zaloLink}', '_blank');" style="cursor:pointer; text-decoration:underline;" title="Bấm để chat Zalo"><strong>${zaloDisplay}</strong> (Nhắn Zalo)</span>`;
-          }
-        } else if (idx === 2 || li.textContent.includes('@')) {
-          const a = li.querySelector('a');
-          if (a && config.contact.email) {
-            a.href = `mailto:${config.contact.email}`;
-            a.textContent = config.contact.email;
-          }
+      document.querySelectorAll('.footer-contact-list').forEach(list => {
+        const addressSpan = list.querySelector('li:first-child span');
+        if (addressSpan && config.contact.address) {
+          addressSpan.innerHTML = `${config.contact.address}`;
+        }
+        const phoneA = list.querySelector('a[href^="tel:"]');
+        if (phoneA) {
+          phoneA.href = telHref;
+          phoneA.innerHTML = `<strong>${hotlineDisplay}</strong> (Gọi điện) - <span onclick="event.preventDefault(); window.open('${zaloLink}', '_blank');" style="cursor:pointer; text-decoration:underline;" title="Bấm để chat Zalo"><strong>${zaloDisplay}</strong> (Nhắn Zalo)</span>`;
+        }
+        const noteEm = list.querySelector('.footer-note-item em');
+        if (noteEm && config.contact.addressNote) {
+          noteEm.textContent = `(${config.contact.addressNote})`;
+        }
+        const emailA = list.querySelector('a[href^="mailto:"]');
+        if (emailA && config.contact.email) {
+          emailA.href = `mailto:${config.contact.email}`;
+          emailA.textContent = config.contact.email;
         }
       });
 

@@ -298,7 +298,6 @@
         <div class="hero-slide-overlay">
           <div class="wrapper" style="width: 100%;">
             <div class="hero-slide-content">
-              <span class="hero-tag">Bộ Sưu Tập Tuyệt Tác</span>
               <h1 class="hero-title">OMEGA SPEEDMASTER <span>MOONPHASE</span></h1>
               <p class="hero-desc">Đỉnh cao chế tác đồng hồ thế giới với lịch tuần trăng tinh tế, bộ máy tự động cơ khí
                 Thụy Sỹ chính xác tuyệt đối.</p>
@@ -321,7 +320,6 @@
         <div class="hero-slide-overlay">
           <div class="wrapper" style="width: 100%;">
             <div class="hero-slide-content">
-              <span class="hero-tag" style="background:var(--color-gold-dark);">Thiết Kế Hoàng Gia</span>
               <h2 class="hero-title">CARNIVAL <span>AUTOMATIC SKELETON</span></h2>
               <p class="hero-desc">Đồng hồ lộ cơ toàn phần phong cách quý ông thượng lưu, kính Sapphire chống trầy xước
                 và viền thép không gỉ 316L cao cấp.</p>
@@ -341,7 +339,6 @@
         <div class="hero-slide-overlay">
           <div class="wrapper" style="width: 100%;">
             <div class="hero-slide-content">
-              <span class="hero-tag" style="background:var(--color-primary-hover);">Tuyệt Tác Thời Gian</span>
               <h2 class="hero-title">JIN WATCH <span>ULTRA LUXURY</span></h2>
               <p class="hero-desc">Hội tụ những mẫu đồng hồ tinh hoa thế giới từ Thụy Sỹ và Nhật Bản, cam kết chính hãng 100%, bảo hành 5 năm toàn diện.</p>
               <div class="hero-btn-group">
@@ -444,7 +441,7 @@
         <a href="#tissotSection" class="brand-badge" onclick="window.scrollToSection('tissotSection')">
           <span>TISSOT</span>
         </a>
-        <a href="#womenWatchSection" class="brand-badge" onclick="window.scrollToSection('womenWatchSection')">
+        <a href="#filterSection" class="brand-badge" onclick="window.app.filterCatalog('CITIZEN'); event.preventDefault();">
           <span>CITIZEN</span>
         </a>
       </div>
@@ -895,17 +892,19 @@
       <div class="footer-grid">
         <!-- Col 1: Store info -->
         <div class="footer-col">
-          <h3>JIN WATCH ĐỒNG HỒ CHÍNH HÃNG</h3>
+          <h3>HỆ THỐNG ĐỒNG HỒ CHÍNH HÃNG - JINWATCH</h3>
           <ul class="footer-contact-list">
             <li>
               <i class="fa fa-location-dot"></i>
-              <span>122 Phan Đình Phùng, Phú Nhuận, TP. Hồ Chí Minh<br><em
-                  style="color:#e9ecef; font-size:12px;">(Tất cả các mẫu vui lòng liên hệ trước để đặt hàng)</em></span>
+              <span>Hệ thống phân phối & giao dịch JinWatch (TP.HCM & Toàn quốc)</span>
             </li>
             <li>
               <i class="fa fa-phone"></i>
-              <a href="tel:0932123473"><strong>0932.1234.73</strong> (Gọi điện) - <strong>0845.0136.19</strong> (Nhắn
-                Zalo)</a>
+              <a href="tel:0932123473"><strong>0932.1234.73</strong> (Gọi điện) - <strong>0845.0136.19</strong> (Nhắn Zalo)</a>
+            </li>
+            <li class="footer-note-item">
+              <i class="fa fa-circle-info text-gold"></i>
+              <em style="color:#e9ecef; font-size:12px;">(Tất cả các mẫu vui lòng liên hệ trước qua SĐT/Zalo để đặt lịch & giữ hàng)</em>
             </li>
             <li>
               <i class="fa fa-envelope"></i>
@@ -929,22 +928,14 @@
                   class="fa fa-angle-right"></i> CHÍNH SÁCH ĐỔI TRẢ (7 NGÀY)</a></li>
             <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('thanh-toan')"><i
                   class="fa fa-angle-right"></i> HÌNH THỨC THANH TOÁN</a></li>
-            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('bao-hanh')"><i
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('huong-dan')"><i
                   class="fa fa-angle-right"></i> HƯỚNG DẪN SỬ DỤNG ĐỒNG HỒ</a></li>
-            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('van-chuyen')"><i
+            <li><a href="#policy" onclick="event.preventDefault(); window.app.openPolicy('dong-kiem')"><i
                   class="fa fa-angle-right"></i> CHÍNH SÁCH ĐỒNG KIỂM</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Google Map -->
-        <div class="footer-col">
-          <h3>VỊ TRÍ CỬA HÀNG</h3>
-          <iframe class="footer-map-frame"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.9809658863846!2d106.58694401427957!3d10.81276829229686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9943d3017b%3A0x9b7461a7ddd8be8c!2zMzU3IELDrG5oIFRow6BuaCwgQsOsbmggSMawbmcgSMOyYSBCLCBCw6xuaCBUw6JuLCBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1505413433784"
-            loading="lazy" title="Bản đồ chỉ đường JinWatch"></iframe>
-        </div>
-
-        <!-- Col 4: Fanpage & Social -->
+        <!-- Col 3: Fanpage & Social -->
         <div class="footer-col">
           <h3>KẾT NỐI VỚI CHÚNG TÔI</h3>
           <p style="margin-bottom: 12px; line-height:1.5;">Theo dõi trang Facebook chính thức để cập nhật video mở hộp,

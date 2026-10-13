@@ -1544,8 +1544,8 @@ button {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1.1fr 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1.35fr 1.05fr 1fr;
+  gap: 36px;
   margin-bottom: 40px;
 }
 
@@ -1584,6 +1584,11 @@ button {
   margin-top: 4px;
 }
 
+.footer-contact-list li.footer-note-item {
+  margin-top: -4px;
+  margin-bottom: 12px;
+}
+
 .footer-links li {
   margin-bottom: 10px;
 }
@@ -1609,13 +1614,6 @@ button {
   height: 48px;
 }
 
-.footer-map-frame {
-  width: 100%;
-  height: 180px;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .footer-social-box {
   display: flex;
   flex-direction: column;
@@ -1629,20 +1627,54 @@ button {
 }
 
 .social-btn {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  color: #ffffff !important;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
+  text-decoration: none;
+  font-size: 15px;
 }
 
-.social-btn:hover {
-  background: var(--color-primary);
-  transform: translateY(-2px);
+.social-btn i {
+  color: #ffffff !important;
+  transition: var(--transition);
+}
+
+.social-btn:hover,
+.social-btn:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.social-btn:hover i,
+.social-btn:focus i {
+  color: #ffffff !important;
+}
+
+.social-btn[title*="Facebook"]:hover,
+.social-btn[title*="facebook"]:hover {
+  background: #1877f2 !important;
+}
+
+.social-btn[title*="Zalo"]:hover,
+.social-btn[title*="zalo"]:hover {
+  background: #0068ff !important;
+}
+
+.social-btn[title*="Hotline"]:hover,
+.social-btn[title*="Gọi"]:hover,
+.social-btn[title*="phone"]:hover {
+  background: #25d366 !important;
+}
+
+.social-btn[title*="Messenger"]:hover,
+.social-btn[title*="messenger"]:hover {
+  background: #0084ff !important;
 }
 
 .footer-bottom {
