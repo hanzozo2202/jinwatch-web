@@ -517,6 +517,7 @@
     const searchVal = (document.getElementById('productSearchInput')?.value || '').toLowerCase().trim();
     const vendorVal = document.getElementById('filterVendorSelect')?.value || 'all';
     const collectionVal = document.getElementById('filterCollectionSelect')?.value || 'all';
+    const genderVal = document.getElementById('filterGenderSelect')?.value || 'all';
     const stockVal = document.getElementById('filterStockSelect')?.value || 'all';
 
     return (productsData.products || []).filter(product => {
@@ -530,6 +531,8 @@
       if (vendorVal !== 'all' && product.vendor !== vendorVal) return false;
       // Collection
       if (collectionVal !== 'all' && product.collection !== collectionVal) return false;
+      // Gender
+      if (genderVal !== 'all' && product.gender !== genderVal) return false;
       // Stock
       if (stockVal === 'in_stock' && product.in_stock === false) return false;
       if (stockVal === 'out_of_stock' && product.in_stock !== false) return false;
@@ -1603,6 +1606,10 @@ window.JINWATCH_DATA = ${JSON.stringify(productsData, null, 2)};\nwindow.PHONGWA
     const filterCollection = document.getElementById('filterCollectionSelect');
     if (filterCollection) {
       filterCollection.addEventListener('change', () => renderProductsTable(1));
+    }
+    const filterGender = document.getElementById('filterGenderSelect');
+    if (filterGender) {
+      filterGender.addEventListener('change', () => renderProductsTable(1));
     }
     const filterStock = document.getElementById('filterStockSelect');
     if (filterStock) {

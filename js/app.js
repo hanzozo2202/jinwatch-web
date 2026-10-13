@@ -1077,11 +1077,15 @@ document.addEventListener('DOMContentLoaded', () => {
       'OLYM PIANUS', 'CARNIVAL', 'ALEXANDER FERROS', 'BENTLEY', 'SEIKO', 'ORIENT', 'TISSOT', 'CITIZEN',
       'BULOVA', 'CASIO', 'OLYMPIA STAR', 'SRWATCH',
       'LONGINES', 'FREDERIQUE CONSTANT', 'MOVADO', 'MAURICE LACROIX', 'MIDO', 'OMEGA X SWATCH', 'OMEGA', 'OGIVAL',
+      'SALVATORE FERRAGAMO', 'FERRAGAMO',
       'THOMAS EARNSHAW', 'INVICTA', 'FOSSIL', 'EMPORIO ARMANI', 'JUST CAVALLI', 'GUESS'
     ];
 
     const matchedBrand = allBrands.find(b => termUpper === b || termUpper.startsWith(b) || termUpper.includes(b));
     if (matchedBrand) {
+      let brandToFilter = matchedBrand;
+      if (brandToFilter === 'FERRAGAMO') brandToFilter = 'SALVATORE FERRAGAMO';
+
       if (termUpper.includes('NỮ')) {
         filterState.gender = 'Nữ';
         document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 2));
@@ -1096,8 +1100,8 @@ document.addEventListener('DOMContentLoaded', () => {
       filterState.keyword = '';
       if (searchInput) searchInput.value = '';
       const brandBtn = Array.from(document.querySelectorAll('#brandFilterPills .filter-pill'))
-        .find(b => b.textContent.toUpperCase().includes(matchedBrand));
-      setBrandFilter(matchedBrand, brandBtn);
+        .find(b => b.textContent.toUpperCase().includes(brandToFilter));
+      setBrandFilter(brandToFilter, brandBtn);
       return;
     }
 

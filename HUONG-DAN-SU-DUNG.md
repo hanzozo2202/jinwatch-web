@@ -74,7 +74,7 @@ Chủ shop chỉ cần mở file `admin.html` trên trình duyệt (hoặc truy 
 ### 📦 Bước 3: Thêm / Sửa / Xóa Sản Phẩm (Tab "Quản Lý Sản Phẩm")
 - **Thêm sản phẩm mới & Đăng nhiều ảnh góc cạnh:**
   1. Bấm nút **"+ Thêm Sản Phẩm Mới"**.
-  2. Nhập Tên đồng hồ, chọn Thương hiệu (Carnival, Olym Pianus, Bentley, Seiko, Tissot...), chọn Danh mục hiển thị.
+  2. Nhập Tên đồng hồ, chọn Thương hiệu (Carnival, Olym Pianus, Bentley, Seiko, Tissot, **Movado**, **Salvatore Ferragamo**...), chọn Danh mục hiển thị (hỗ trợ phân loại riêng theo từng hãng và **Đồng hồ Nam**, **Đồng hồ Nữ**).
   3. Nhập Giá bán (ví dụ gõ `6800000` hệ thống tự định dạng thành `6,800,000₫`).
   4. Nhập Giá gốc / Giá niêm yết (hệ thống sẽ tự động tính ra tỷ lệ % giảm giá, ví dụ `-24%`).
   5. **Ảnh đại diện chính (Cover Image):** Chọn 1 ảnh mặt trước đại diện hiển thị ở danh sách sản phẩm.
@@ -82,12 +82,12 @@ Chủ shop chỉ cần mở file `admin.html` trên trình duyệt (hoặc truy 
      - Bấm nút **"+ Thêm nhiều ảnh từ máy"** để chọn cùng lúc nhiều góc chụp (mặt kính sapphire, mặt đáy lộ cơ, núm vặn ren, khóa bướm, lên tay thực tế...).
      - Hoặc dán link ảnh góc cạnh vào ô và bấm **"Thêm Link"**.
      - Có thể xóa bớt góc chụp bất kỳ bằng cách bấm nút `X` màu đỏ trên thumbnail.
-  7. Chọn tình trạng (Còn hàng / Tạm hết hàng), giới tính (Nam / Nữ / Cặp đôi).
+  7. Chọn tình trạng (Còn hàng / Tạm hết hàng), giới tính (**Nam / Nữ / Cặp đôi**).
   8. Bấm **"Lưu Sản Phẩm"**.
 - **Sửa sản phẩm:** Bấm biểu tượng cây bút ✏️ tại dòng sản phẩm cần sửa để thay đổi thông tin, bổ sung thêm góc chụp hoặc cập nhật giá.
 - **Xóa sản phẩm:** Bấm biểu tượng thùng rác 🗑️ để xóa mẫu đã ngừng kinh doanh.
-- **Tìm kiếm & Lọc:** Hỗ trợ tìm nhanh theo tên, mã SKU, lọc theo hãng hoặc theo kho hàng.
-- **Khôi phục gốc:** Nếu lỡ thao tác nhầm, có nút **"Khôi phục 143 mẫu gốc"** để đưa toàn bộ danh mục về trạng thái chuẩn ban đầu.
+- **Tìm kiếm & Lọc:** Hỗ trợ tìm nhanh theo tên, mã SKU, lọc theo thương hiệu (bao gồm cả Movado, Salvatore Ferragamo), lọc theo giới tính (Nam/Nữ) hoặc theo kho hàng.
+- **Khôi phục gốc:** Nếu lỡ thao tác nhầm, có nút **"Khôi phục danh mục mẫu gốc"** để đưa toàn bộ danh mục về trạng thái chuẩn ban đầu.
 
 ---
 

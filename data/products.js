@@ -50,9 +50,123 @@ window.JINWATCH_DATA = {
       "title": "ĐỒNG HỒ NỮ",
       "handle": "dong-ho-nu",
       "tag": "Đồng hồ nữ chính hãng cao cấp"
+    },
+    {
+      "title": "MOVADO",
+      "handle": "movado",
+      "tag": "Đồng hồ Thụy Sỹ Movado phong cách tối giản huyền thoại"
+    },
+    {
+      "title": "ĐỒNG HỒ MOVADO NAM",
+      "handle": "movado-nam",
+      "tag": "Bộ sưu tập Movado Nam lịch lãm đẳng cấp"
+    },
+    {
+      "title": "ĐỒNG HỒ MOVADO NỮ",
+      "handle": "movado-nu",
+      "tag": "Bộ sưu tập Movado Nữ quý phái sang trọng"
+    },
+    {
+      "title": "SALVATORE FERRAGAMO",
+      "handle": "salvatore-ferragamo",
+      "tag": "Thương hiệu thời trang xa xỉ từ nước Ý"
+    },
+    {
+      "title": "ĐỒNG HỒ SALVATORE FERRAGAMO NAM",
+      "handle": "salvatore-ferragamo-nam",
+      "tag": "Bộ sưu tập Salvatore Ferragamo Nam thượng lưu"
+    },
+    {
+      "title": "ĐỒNG HỒ SALVATORE FERRAGAMO NỮ",
+      "handle": "salvatore-ferragamo-nu",
+      "tag": "Bộ sưu tập Salvatore Ferragamo Nữ kiêu sa thanh lịch"
     }
   ],
   "products": [
+    {
+      "id": "JW2048001",
+      "name": "Đồng Hồ Nam Movado Museum Classic Black Dial 0607219",
+      "vendor": "MOVADO",
+      "collection": "ĐỒNG HỒ MOVADO NAM",
+      "price": "14,500,000₫",
+      "price_num": 14500000,
+      "original_price": "18,200,000₫",
+      "original_price_num": 18200000,
+      "sale": "-20%",
+      "image": "assets/products/movado_men_0607219.jpg",
+      "link": "/products/JW2048001",
+      "rating": 5,
+      "reviews_count": 16,
+      "is_new": true,
+      "in_stock": true,
+      "gender": "Nam",
+      "images": [
+        "assets/products/movado_men_0607219.jpg"
+      ]
+    },
+    {
+      "id": "JW2048002",
+      "name": "Đồng Hồ Nữ Movado Esperanza Diamond MOP 0607149",
+      "vendor": "MOVADO",
+      "collection": "ĐỒNG HỒ MOVADO NỮ",
+      "price": "16,800,000₫",
+      "price_num": 16800000,
+      "original_price": "21,500,000₫",
+      "original_price_num": 21500000,
+      "sale": "-22%",
+      "image": "assets/products/movado_women_0607149.jpg",
+      "link": "/products/JW2048002",
+      "rating": 5,
+      "reviews_count": 14,
+      "is_new": true,
+      "in_stock": true,
+      "gender": "Nữ",
+      "images": [
+        "assets/products/movado_women_0607149.jpg"
+      ]
+    },
+    {
+      "id": "JW2048003",
+      "name": "Đồng Hồ Nam Salvatore Ferragamo F-80 Chronograph SFHY00121",
+      "vendor": "SALVATORE FERRAGAMO",
+      "collection": "ĐỒNG HỒ SALVATORE FERRAGAMO NAM",
+      "price": "22,500,000₫",
+      "price_num": 22500000,
+      "original_price": "29,000,000₫",
+      "original_price_num": 29000000,
+      "sale": "-22%",
+      "image": "assets/products/ferragamo_men_sfhy00121.jpg",
+      "link": "/products/JW2048003",
+      "rating": 5,
+      "reviews_count": 19,
+      "is_new": true,
+      "in_stock": true,
+      "gender": "Nam",
+      "images": [
+        "assets/products/ferragamo_men_sfhy00121.jpg"
+      ]
+    },
+    {
+      "id": "JW2048004",
+      "name": "Đồng Hồ Nữ Salvatore Ferragamo Gancini Champagne Dial SFHY00922",
+      "vendor": "SALVATORE FERRAGAMO",
+      "collection": "ĐỒNG HỒ SALVATORE FERRAGAMO NỮ",
+      "price": "19,800,000₫",
+      "price_num": 19800000,
+      "original_price": "25,500,000₫",
+      "original_price_num": 25500000,
+      "sale": "-22%",
+      "image": "assets/products/ferragamo_women_sfhy00922.jpg",
+      "link": "/products/JW2048004",
+      "rating": 5,
+      "reviews_count": 21,
+      "is_new": true,
+      "in_stock": true,
+      "gender": "Nữ",
+      "images": [
+        "assets/products/ferragamo_women_sfhy00922.jpg"
+      ]
+    },
     {
       "id": "1035326344",
       "name": "A - ( GIÁ TỐT ) Olym Pianus Fusion OP990-45ADDGS-GL-T ( OP990-45 )",

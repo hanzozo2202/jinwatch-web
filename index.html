@@ -100,6 +100,8 @@
               <option value="CITIZEN">CITIZEN</option>
               <option value="ORIENT">ORIENT</option>
               <option value="TISSOT">TISSOT</option>
+              <option value="MOVADO">MOVADO</option>
+              <option value="SALVATORE FERRAGAMO">SALVATORE FERRAGAMO</option>
               <option value="ĐỒNG HỒ NỮ">ĐỒNG HỒ NỮ</option>
             </select>
             <input type="text" class="search-input" id="searchInput"
@@ -198,7 +200,9 @@
             </li>
             <li class="nav-dropdown-item"><a href="#swiss"
                 onclick="window.app.filterCatalog('FREDERIQUE CONSTANT')">FREDERIQUE CONSTANT</a></li>
-            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MOVADO')">MOVADO</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MOVADO')">MOVADO (TẤT CẢ)</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MOVADO NAM')">MOVADO - NAM</a></li>
+            <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MOVADO NỮ')">MOVADO - NỮ</a></li>
             <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MAURICE LACROIX')">MAURICE
                 LACROIX</a></li>
             <li class="nav-dropdown-item"><a href="#swiss" onclick="window.app.filterCatalog('MIDO')">MIDO</a></li>
@@ -213,6 +217,9 @@
             THƯƠNG HIỆU ANH / MỸ / Ý <i class="fa fa-angle-down"></i>
           </a>
           <ul class="nav-dropdown">
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO')">SALVATORE FERRAGAMO (Ý)</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO NAM')">SALVATORE FERRAGAMO - NAM</a></li>
+            <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO NỮ')">SALVATORE FERRAGAMO - NỮ</a></li>
             <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('THOMAS EARNSHAW')">THOMAS
                 EARNSHAW</a></li>
             <li class="nav-dropdown-item"><a href="#brands" onclick="window.app.filterCatalog('INVICTA')">INVICTA</a>
@@ -265,6 +272,7 @@
                     <li><a href="#women" onclick="window.app.filterCatalog('SEIKO NỮ')">SEIKO NỮ</a></li>
                     <li><a href="#women" onclick="window.app.filterCatalog('OGIVAL NỮ')">OGIVAL NỮ (Thụy Sỹ)</a></li>
                     <li><a href="#women" onclick="window.app.filterCatalog('MOVADO NỮ')">MOVADO NỮ</a></li>
+                    <li><a href="#women" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO NỮ')">SALVATORE FERRAGAMO NỮ (Ý)</a></li>
                     <li><a href="#women" onclick="window.app.filterCatalog('LONGINES NỮ')">LONGINES NỮ</a></li>
                   </ul>
                 </div>
@@ -504,6 +512,8 @@
             <button class="filter-pill" onclick="window.app.setBrandFilter('ORIENT', this)">Orient</button>
             <button class="filter-pill" onclick="window.app.setBrandFilter('TISSOT', this)">Tissot</button>
             <button class="filter-pill" onclick="window.app.setBrandFilter('CITIZEN', this)">Citizen</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('MOVADO', this)">Movado</button>
+            <button class="filter-pill" onclick="window.app.setBrandFilter('SALVATORE FERRAGAMO', this)">Salvatore Ferragamo</button>
           </div>
         </div>
 
@@ -1243,9 +1253,23 @@
         </a>
         <div class="mobile-submenu">
           <a href="#tissotSection" onclick="window.scrollToSection('tissotSection')">TISSOT</a>
-          <a href="#swiss" onclick="window.app.filterCatalog('LONGINES')">LONGINES</a>
-          <a href="#swiss" onclick="window.app.filterCatalog('FREDERIQUE CONSTANT')">FREDERIQUE CONSTANT</a>
-          <a href="#swiss" onclick="window.app.filterCatalog('MOVADO')">MOVADO</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('LONGINES'); window.app.toggleMobileMenu(false)">LONGINES</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('FREDERIQUE CONSTANT'); window.app.toggleMobileMenu(false)">FREDERIQUE CONSTANT</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('MOVADO'); window.app.toggleMobileMenu(false)">MOVADO (TẤT CẢ)</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('MOVADO NAM'); window.app.toggleMobileMenu(false)">MOVADO NAM</a>
+          <a href="#swiss" onclick="window.app.filterCatalog('MOVADO NỮ'); window.app.toggleMobileMenu(false)">MOVADO NỮ</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="#brands" onclick="event.preventDefault(); window.toggleMobileSubmenu(this)">
+          <span>THƯƠNG HIỆU ANH / MỸ / Ý</span> <i class="fa fa-plus"></i>
+        </a>
+        <div class="mobile-submenu">
+          <a href="#brands" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO'); window.app.toggleMobileMenu(false)">SALVATORE FERRAGAMO</a>
+          <a href="#brands" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO NAM'); window.app.toggleMobileMenu(false)">SALVATORE FERRAGAMO NAM</a>
+          <a href="#brands" onclick="window.app.filterCatalog('SALVATORE FERRAGAMO NỮ'); window.app.toggleMobileMenu(false)">SALVATORE FERRAGAMO NỮ</a>
+          <a href="#brands" onclick="window.app.filterCatalog('EMPORIO ARMANI'); window.app.toggleMobileMenu(false)">EMPORIO ARMANI</a>
+          <a href="#brands" onclick="window.app.filterCatalog('FOSSIL'); window.app.toggleMobileMenu(false)">FOSSIL</a>
         </div>
       </div>
       <div class="mobile-menu-item">
