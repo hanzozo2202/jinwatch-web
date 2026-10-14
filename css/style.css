@@ -904,28 +904,37 @@ button {
 }
 
 .feature-icon-wrapper {
-  width: 48px;
-  height: 48px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: var(--color-primary-light);
-  color: var(--color-primary);
+  background: #fab005;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
   flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(250, 176, 5, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-box:hover .feature-icon-wrapper {
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(250, 176, 5, 0.38);
 }
 
 .feature-info h4 {
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
-  color: #1a1e24;
-  margin-bottom: 2px;
+  color: #111827;
+  margin-bottom: 3px;
+  letter-spacing: 0.2px;
 }
 
 .feature-info p {
   font-size: 12px;
-  color: var(--color-text-muted);
+  color: #4b5563;
+  margin: 0;
 }
 
 /* ========================================================
