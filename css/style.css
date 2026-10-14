@@ -1420,8 +1420,8 @@ button {
    ======================================================== */
 .story-quote-section {
   position: relative;
-  padding: 80px 0;
-  background: #121418 url('https://theme.hstatic.net/1000223154/1001363986/14/hw_bg.png?v=133') no-repeat center right / cover;
+  padding: 85px 0;
+  background: #121418 url('../assets/hw_bg.png') no-repeat center right / cover;
   color: #ffffff;
   overflow: hidden;
 }
@@ -1429,13 +1429,13 @@ button {
 .story-quote-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(14, 16, 20, 0.95) 0%, rgba(14, 16, 20, 0.8) 50%, rgba(14, 16, 20, 0.4) 100%);
+  background: linear-gradient(90deg, rgba(14, 16, 20, 0.95) 0%, rgba(14, 16, 20, 0.82) 55%, rgba(14, 16, 20, 0.45) 100%);
 }
 
 .story-quote-content {
   position: relative;
   z-index: 2;
-  max-width: 620px;
+  max-width: 680px;
 }
 
 .story-quote-title {
