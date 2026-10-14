@@ -938,14 +938,135 @@ button {
 }
 
 /* ========================================================
-   FEATURED BRANDS STRIP
+   FEATURED BRANDS STRIP (33 BRANDS CAROUSEL)
    ======================================================== */
 .featured-brands-strip {
-  padding: 28px 0;
+  padding: 16px 0;
   background: #ffffff;
-  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid #edf2f7;
+  border-bottom: 1px solid #e2e8f0;
 }
 
+.brand-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.brand-carousel-track {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border: 1px solid #edf2f7;
+  border-radius: 4px;
+  background: #ffffff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.brand-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.brand-carousel-card {
+  flex: 0 0 calc(100% / 6);
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-right: 1px solid #edf2f7;
+  background: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.brand-carousel-card:last-child {
+  border-right: none;
+}
+
+.brand-carousel-card:hover {
+  background: #fafafa;
+}
+
+.brand-carousel-card img {
+  max-height: 48px;
+  max-width: 86%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+  display: block;
+}
+
+.brand-carousel-card:hover img {
+  transform: scale(1.05);
+}
+
+.brand-carousel-card span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.brand-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  color: #64748b;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.brand-carousel-btn:hover {
+  background: #ffffff;
+  color: #1e293b;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transform: translateY(-50%) scale(1.06);
+}
+
+.brand-carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.brand-carousel-btn.prev {
+  left: 8px;
+}
+
+.brand-carousel-btn.next {
+  right: 8px;
+}
+
+@media (max-width: 1199px) {
+  .brand-carousel-card {
+    flex: 0 0 calc(100% / 4);
+    height: 66px;
+  }
+}
+
+/* Fallback legacy badge support */
 .brands-container {
   display: flex;
   align-items: center;
@@ -955,11 +1076,6 @@ button {
   padding: 4px 0;
   scrollbar-width: none;
 }
-
-.brands-container::-webkit-scrollbar {
-  display: none;
-}
-
 .brand-badge {
   flex: 0 0 auto;
   display: flex;
@@ -973,26 +1089,6 @@ button {
   transition: var(--transition);
   cursor: pointer;
   text-decoration: none;
-}
-
-.brand-badge:hover,
-.brand-badge.active {
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(214, 17, 20, 0.1);
-  transform: translateY(-2px);
-}
-
-.brand-badge img {
-  max-height: 34px;
-  max-width: 110px;
-  object-fit: contain;
-}
-
-.brand-badge span {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #333;
 }
 
 /* ========================================================
@@ -3336,10 +3432,47 @@ button {
   }
 
   /* ---------------------------------------------
-     G. FEATURED BRANDS STRIP (SWIPEABLE)
+     G. FEATURED BRANDS STRIP (33 BRANDS CAROUSEL)
      --------------------------------------------- */
   .featured-brands-strip {
-    padding: 14px 0;
+    padding: 12px 0;
+  }
+
+  .brand-carousel-card {
+    flex: 0 0 calc(100% / 3);
+    height: 58px;
+    padding: 8px 10px;
+  }
+
+  .brand-carousel-card img {
+    max-height: 38px;
+    max-width: 90%;
+  }
+
+  .brand-carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+  }
+
+  .brand-carousel-btn.prev {
+    left: 4px;
+  }
+
+  .brand-carousel-btn.next {
+    right: 4px;
+  }
+
+  @media (max-width: 480px) {
+    .brand-carousel-card {
+      flex: 0 0 calc(100% / 2.3);
+      height: 52px;
+      padding: 6px 8px;
+    }
+    .brand-carousel-card img {
+      max-height: 34px;
+    }
   }
 
   .brands-container {

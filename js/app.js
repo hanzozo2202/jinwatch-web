@@ -1060,6 +1060,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // 33-Brand Carousel Sliding Helper
+  window.scrollBrandCarousel = function(direction) {
+    const track = document.getElementById('brandCarouselTrack');
+    if (!track) return;
+    const card = track.querySelector('.brand-carousel-card');
+    const cardWidth = card ? card.getBoundingClientRect().width : 200;
+    const visibleCards = Math.max(1, Math.round(track.clientWidth / cardWidth));
+    // Advance by visibleCards - 1 cards (e.g. 5 cards on desktop, 2 on mobile)
+    const step = cardWidth * Math.max(1, visibleCards - 1);
+
+    if (direction === 'next') {
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 15) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: step, behavior: 'smooth' });
+      }
+    } else {
+      if (track.scrollLeft <= 15) {
+        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: -step, behavior: 'smooth' });
+      }
+    }
+  };
+
+  // Brand selection helper: scrolls to dedicated section or filters catalog
+  window.selectBrand = function(brandName, sectionId) {
+    if (sectionId && document.getElementById(sectionId)) {
+      window.scrollToSection(sectionId);
+    } else {
+      filterCatalog(brandName);
+    }
+  };
+
   // ==========================================
   // SEARCH & CATALOG FILTER LOGIC
   // ==========================================
@@ -1124,11 +1158,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const allBrands = [
-      'OLYM PIANUS', 'CARNIVAL', 'ALEXANDER FERROS', 'BENTLEY', 'SEIKO', 'ORIENT', 'TISSOT', 'CITIZEN',
-      'BULOVA', 'CASIO', 'OLYMPIA STAR', 'SRWATCH',
-      'LONGINES', 'FREDERIQUE CONSTANT', 'MOVADO', 'MAURICE LACROIX', 'MIDO', 'OMEGA X SWATCH', 'OMEGA', 'OGIVAL',
-      'SALVATORE FERRAGAMO', 'FERRAGAMO',
-      'THOMAS EARNSHAW', 'INVICTA', 'FOSSIL', 'EMPORIO ARMANI', 'JUST CAVALLI', 'GUESS'
+      'CARNIVAL', 'REVUE THOMMEN', 'ARMAND NICOLET', 'GLYCINE', 'OGIVAL', 'CERTINA',
+      'OLYM PIANUS', 'ALEXANDER FERROS', 'BENTLEY', 'SEIKO', 'CITIZEN', 'ORIENT', 'TISSOT',
+      'MOVADO', 'SALVATORE FERRAGAMO', 'LONGINES', 'FREDERIQUE CONSTANT', 'OMEGA', 'MAURICE LACROIX',
+      'MIDO', 'BULOVA', 'HAMILTON', 'EDOX', 'ORIS', 'RAYMOND WEIL', 'BAUME & MERCIER',
+      'MONTBLANC', 'GEVRIL', 'ETERNA', 'VERSACE', 'GUCCI', 'CALVIN KLEIN', 'FOSSIL',
+      'CASIO', 'OLYMPIA STAR', 'SRWATCH', 'FERRAGAMO', 'OMEGA X SWATCH', 'THOMAS EARNSHAW', 'INVICTA', 'EMPORIO ARMANI', 'JUST CAVALLI', 'GUESS'
     ];
 
     // Case 2: Category is selected (category !== '0')
@@ -1303,7 +1338,9 @@ document.addEventListener('DOMContentLoaded', () => {
     setBrandFilter,
     setGenderFilter,
     applySort,
-    resetFilters
+    resetFilters,
+    scrollBrandCarousel: window.scrollBrandCarousel,
+    selectBrand: window.selectBrand
   };
 
   // Initialize all features

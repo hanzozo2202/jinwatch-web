@@ -374,36 +374,153 @@
   </section>
 
   <!-- ========================================================
-       6. FEATURED BRANDS STRIP
+       6. FEATURED BRANDS STRIP (33 BRANDS CAROUSEL)
        ======================================================== -->
   <section class="featured-brands-strip">
     <div class="wrapper">
-      <div class="brands-container">
-        <a href="#carnivalSection" class="brand-badge active" onclick="window.scrollToSection('carnivalSection')">
-          <img src="assets/brand-1.png" alt="CARNIVAL" onerror="this.outerHTML='<span>CARNIVAL</span>'">
-        </a>
-        <a href="#alexanderFerrosSection" class="brand-badge"
-          onclick="window.scrollToSection('alexanderFerrosSection')">
-          <img src="assets/brand-2.png" alt="ALEXANDER FERROS" onerror="this.outerHTML='<span>ALEXANDER FERROS</span>'">
-        </a>
-        <a href="#olymPianusSection" class="brand-badge" onclick="window.scrollToSection('olymPianusSection')">
-          <img src="assets/brand-3.png" alt="OLYM PIANUS" onerror="this.outerHTML='<span>OLYM PIANUS</span>'">
-        </a>
-        <a href="#bentleySection" class="brand-badge" onclick="window.scrollToSection('bentleySection')">
-          <img src="assets/brand-4.png" alt="BENTLEY" onerror="this.outerHTML='<span>BENTLEY</span>'">
-        </a>
-        <a href="#seikoSection" class="brand-badge" onclick="window.scrollToSection('seikoSection')">
-          <span>SEIKO</span>
-        </a>
-        <a href="#sunMoonSection" class="brand-badge" onclick="window.scrollToSection('sunMoonSection')">
-          <span>ORIENT</span>
-        </a>
-        <a href="#tissotSection" class="brand-badge" onclick="window.scrollToSection('tissotSection')">
-          <span>TISSOT</span>
-        </a>
-        <a href="#filterSection" class="brand-badge" onclick="window.app.filterCatalog('CITIZEN'); event.preventDefault();">
-          <span>CITIZEN</span>
-        </a>
+      <div class="brand-carousel-wrapper">
+        <button type="button" class="brand-carousel-btn prev" id="brandPrevBtn" onclick="window.scrollBrandCarousel('prev')" aria-label="Thương hiệu trước">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="brand-carousel-track" id="brandCarouselTrack">
+          <!-- 1. CARNIVAL -->
+          <a href="#carnivalSection" class="brand-carousel-card" onclick="window.selectBrand('CARNIVAL', 'carnivalSection'); return false;" title="CARNIVAL">
+            <img src="assets/33%20LOGO%20brand/Carnival6818_200x100.jpg" alt="CARNIVAL" loading="lazy" onerror="this.outerHTML='<span>CARNIVAL</span>'">
+          </a>
+          <!-- 2. REVUE THOMMEN -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('REVUE THOMMEN'); return false;" title="REVUE THOMMEN">
+            <img src="assets/33%20LOGO%20brand/Revue-thommen8140_200x100.jpg" alt="REVUE THOMMEN" loading="lazy" onerror="this.outerHTML='<span>REVUE THOMMEN</span>'">
+          </a>
+          <!-- 3. ARMAND NICOLET -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('ARMAND NICOLET'); return false;" title="ARMAND NICOLET">
+            <img src="assets/33%20LOGO%20brand/Armand-nicolet4055_200x100.jpg" alt="ARMAND NICOLET" loading="lazy" onerror="this.outerHTML='<span>ARMAND NICOLET</span>'">
+          </a>
+          <!-- 4. GLYCINE -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('GLYCINE'); return false;" title="GLYCINE">
+            <img src="assets/33%20LOGO%20brand/Glycine-400x200.jpg1609_200x100.jpg" alt="GLYCINE" loading="lazy" onerror="this.outerHTML='<span>GLYCINE</span>'">
+          </a>
+          <!-- 5. OGIVAL -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('OGIVAL'); return false;" title="OGIVAL">
+            <img src="assets/33%20LOGO%20brand/Ogival1983_200x100.jpg" alt="OGIVAL" loading="lazy" onerror="this.outerHTML='<span>OGIVAL</span>'">
+          </a>
+          <!-- 6. CERTINA -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('CERTINA'); return false;" title="CERTINA">
+            <img src="assets/33%20LOGO%20brand/Certina1709_200x100.jpg" alt="CERTINA" loading="lazy" onerror="this.outerHTML='<span>CERTINA</span>'">
+          </a>
+          <!-- 7. OLYM PIANUS -->
+          <a href="#olymPianusSection" class="brand-carousel-card" onclick="window.selectBrand('OLYM PIANUS', 'olymPianusSection'); return false;" title="OLYM PIANUS">
+            <img src="assets/33%20LOGO%20brand/olym-pianus-logo-png_seeklogo-483048.png" alt="OLYM PIANUS" loading="lazy" onerror="this.outerHTML='<span>OLYM PIANUS</span>'">
+          </a>
+          <!-- 8. ALEXANDER FERROS -->
+          <a href="#alexanderFerrosSection" class="brand-carousel-card" onclick="window.selectBrand('ALEXANDER FERROS', 'alexanderFerrosSection'); return false;" title="ALEXANDER FERROS">
+            <img src="assets/33%20LOGO%20brand/Alexander-ferros_200x100.png" alt="ALEXANDER FERROS" loading="lazy" onerror="this.outerHTML='<span>ALEXANDER FERROS</span>'">
+          </a>
+          <!-- 9. BENTLEY -->
+          <a href="#bentleySection" class="brand-carousel-card" onclick="window.selectBrand('BENTLEY', 'bentleySection'); return false;" title="BENTLEY">
+            <img src="assets/33%20LOGO%20brand/Bentley8616_200x100.jpg" alt="BENTLEY" loading="lazy" onerror="this.outerHTML='<span>BENTLEY</span>'">
+          </a>
+          <!-- 10. SEIKO -->
+          <a href="#seikoSection" class="brand-carousel-card" onclick="window.selectBrand('SEIKO', 'seikoSection'); return false;" title="SEIKO">
+            <img src="assets/33%20LOGO%20brand/Seiko8438_200x100.jpg" alt="SEIKO" loading="lazy" onerror="this.outerHTML='<span>SEIKO</span>'">
+          </a>
+          <!-- 11. CITIZEN -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('CITIZEN'); return false;" title="CITIZEN">
+            <img src="assets/33%20LOGO%20brand/citizen9476_200x100.jpg" alt="CITIZEN" loading="lazy" onerror="this.outerHTML='<span>CITIZEN</span>'">
+          </a>
+          <!-- 12. ORIENT -->
+          <a href="#sunMoonSection" class="brand-carousel-card" onclick="window.selectBrand('ORIENT', 'sunMoonSection'); return false;" title="ORIENT">
+            <img src="assets/33%20LOGO%20brand/Orient5940_200x100.jpg" alt="ORIENT" loading="lazy" onerror="this.outerHTML='<span>ORIENT</span>'">
+          </a>
+          <!-- 13. TISSOT -->
+          <a href="#tissotSection" class="brand-carousel-card" onclick="window.selectBrand('TISSOT', 'tissotSection'); return false;" title="TISSOT">
+            <img src="assets/33%20LOGO%20brand/Tssot7399_200x100.jpg" alt="TISSOT" loading="lazy" onerror="this.outerHTML='<span>TISSOT</span>'">
+          </a>
+          <!-- 14. MOVADO -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('MOVADO'); return false;" title="MOVADO">
+            <img src="assets/33%20LOGO%20brand/movado5106_200x100.jpg" alt="MOVADO" loading="lazy" onerror="this.outerHTML='<span>MOVADO</span>'">
+          </a>
+          <!-- 15. SALVATORE FERRAGAMO -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('SALVATORE FERRAGAMO'); return false;" title="SALVATORE FERRAGAMO">
+            <img src="assets/33%20LOGO%20brand/Salvatore-ferragamo1086_200x100.jpg" alt="SALVATORE FERRAGAMO" loading="lazy" onerror="this.outerHTML='<span>SALVATORE FERRAGAMO</span>'">
+          </a>
+          <!-- 16. LONGINES -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('LONGINES'); return false;" title="LONGINES">
+            <img src="assets/33%20LOGO%20brand/Longines9053_200x100.jpg" alt="LONGINES" loading="lazy" onerror="this.outerHTML='<span>LONGINES</span>'">
+          </a>
+          <!-- 17. FREDERIQUE CONSTANT -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('FREDERIQUE CONSTANT'); return false;" title="FREDERIQUE CONSTANT">
+            <img src="assets/33%20LOGO%20brand/Frederique-constant2064_200x100.jpg" alt="FREDERIQUE CONSTANT" loading="lazy" onerror="this.outerHTML='<span>FREDERIQUE CONSTANT</span>'">
+          </a>
+          <!-- 18. OMEGA -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('OMEGA'); return false;" title="OMEGA">
+            <img src="assets/33%20LOGO%20brand/Omega3960_200x100.jpg" alt="OMEGA" loading="lazy" onerror="this.outerHTML='<span>OMEGA</span>'">
+          </a>
+          <!-- 19. MAURICE LACROIX -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('MAURICE LACROIX'); return false;" title="MAURICE LACROIX">
+            <img src="assets/33%20LOGO%20brand/Maurice-lacroix0183_200x100.jpg" alt="MAURICE LACROIX" loading="lazy" onerror="this.outerHTML='<span>MAURICE LACROIX</span>'">
+          </a>
+          <!-- 20. MIDO -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('MIDO'); return false;" title="MIDO">
+            <img src="assets/33%20LOGO%20brand/Mido3638_200x100.jpg" alt="MIDO" loading="lazy" onerror="this.outerHTML='<span>MIDO</span>'">
+          </a>
+          <!-- 21. BULOVA -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('BULOVA'); return false;" title="BULOVA">
+            <img src="assets/33%20LOGO%20brand/Bulova9694_200x100.jpg" alt="BULOVA" loading="lazy" onerror="this.outerHTML='<span>BULOVA</span>'">
+          </a>
+          <!-- 22. HAMILTON -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('HAMILTON'); return false;" title="HAMILTON">
+            <img src="assets/33%20LOGO%20brand/Hamilton8889_200x100.jpg" alt="HAMILTON" loading="lazy" onerror="this.outerHTML='<span>HAMILTON</span>'">
+          </a>
+          <!-- 23. EDOX -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('EDOX'); return false;" title="EDOX">
+            <img src="assets/33%20LOGO%20brand/Edox1924_200x100.jpg" alt="EDOX" loading="lazy" onerror="this.outerHTML='<span>EDOX</span>'">
+          </a>
+          <!-- 24. ORIS -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('ORIS'); return false;" title="ORIS">
+            <img src="assets/33%20LOGO%20brand/Oris0847_200x100.jpg" alt="ORIS" loading="lazy" onerror="this.outerHTML='<span>ORIS</span>'">
+          </a>
+          <!-- 25. RAYMOND WEIL -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('RAYMOND WEIL'); return false;" title="RAYMOND WEIL">
+            <img src="assets/33%20LOGO%20brand/raymond-weil2657_200x100.jpg" alt="RAYMOND WEIL" loading="lazy" onerror="this.outerHTML='<span>RAYMOND WEIL</span>'">
+          </a>
+          <!-- 26. BAUME & MERCIER -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('BAUME & MERCIER'); return false;" title="BAUME & MERCIER">
+            <img src="assets/33%20LOGO%20brand/Baume-&-mercier-watch4538_200x100.jpg" alt="BAUME & MERCIER" loading="lazy" onerror="this.outerHTML='<span>BAUME & MERCIER</span>'">
+          </a>
+          <!-- 27. MONTBLANC -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('MONTBLANC'); return false;" title="MONTBLANC">
+            <img src="assets/33%20LOGO%20brand/Montblanc3407_200x100.jpg" alt="MONTBLANC" loading="lazy" onerror="this.outerHTML='<span>MONTBLANC</span>'">
+          </a>
+          <!-- 28. GEVRIL -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('GEVRIL'); return false;" title="GEVRIL">
+            <img src="assets/33%20LOGO%20brand/Gevril8201_200x100.jpg" alt="GEVRIL" loading="lazy" onerror="this.outerHTML='<span>GEVRIL</span>'">
+          </a>
+          <!-- 29. ETERNA -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('ETERNA'); return false;" title="ETERNA">
+            <img src="assets/33%20LOGO%20brand/Eterna-hungwatch5843_200x100.jpg" alt="ETERNA" loading="lazy" onerror="this.outerHTML='<span>ETERNA</span>'">
+          </a>
+          <!-- 30. VERSACE -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('VERSACE'); return false;" title="VERSACE">
+            <img src="assets/33%20LOGO%20brand/Versace3477_200x100.jpg" alt="VERSACE" loading="lazy" onerror="this.outerHTML='<span>VERSACE</span>'">
+          </a>
+          <!-- 31. GUCCI -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('GUCCI'); return false;" title="GUCCI">
+            <img src="assets/33%20LOGO%20brand/Gucci9415_200x100.jpg" alt="GUCCI" loading="lazy" onerror="this.outerHTML='<span>GUCCI</span>'">
+          </a>
+          <!-- 32. CALVIN KLEIN -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('CALVIN KLEIN'); return false;" title="CALVIN KLEIN">
+            <img src="assets/33%20LOGO%20brand/Calvin-klein6023_200x100.jpg" alt="CALVIN KLEIN" loading="lazy" onerror="this.outerHTML='<span>CALVIN KLEIN</span>'">
+          </a>
+          <!-- 33. FOSSIL -->
+          <a href="#filterSection" class="brand-carousel-card" onclick="window.selectBrand('FOSSIL'); return false;" title="FOSSIL">
+            <img src="assets/33%20LOGO%20brand/Fossil6889_200x100.jpg" alt="FOSSIL" loading="lazy" onerror="this.outerHTML='<span>FOSSIL</span>'">
+          </a>
+        </div>
+
+        <button type="button" class="brand-carousel-btn next" id="brandNextBtn" onclick="window.scrollBrandCarousel('next')" aria-label="Thương hiệu tiếp theo">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
       </div>
     </div>
   </section>
