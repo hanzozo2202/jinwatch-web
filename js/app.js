@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') {
         e.preventDefault();
-        filterCatalog(searchInput.value.trim());
+        handleSearchSubmit();
       }
     });
 
@@ -308,7 +308,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // If query targets a different brand than selected dropdown category, relax category filter to prevent conflict
     if (cat !== '0') {
-      const knownBrands = ['CARNIVAL', 'ALEXANDER FERROS', 'OLYM PIANUS', 'BENTLEY', 'SEIKO', 'CITIZEN', 'ORIENT', 'TISSOT'];
+      const knownBrands = [
+        'CARNIVAL', 'ALEXANDER FERROS', 'OLYM PIANUS', 'BENTLEY', 'SEIKO', 
+        'CITIZEN', 'ORIENT', 'TISSOT', 'MOVADO', 'SALVATORE FERRAGAMO', 'FERRAGAMO'
+      ];
       const queryMatchesOtherBrand = knownBrands.some(b => b.toLowerCase() !== cat.toLowerCase() && qLower.includes(b.toLowerCase()));
       if (queryMatchesOtherBrand) {
         cat = '0';
@@ -319,20 +322,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const matchName = p.name.toLowerCase().includes(qLower);
       const matchVendor = p.vendor.toLowerCase().includes(qLower);
       const matchCollection = p.collection.toLowerCase().includes(qLower);
+      const matchId = p.id ? String(p.id).toLowerCase().includes(qLower) : false;
       
       let matchCat = true;
       if (cat !== '0') {
-        matchCat = p.collection.toLowerCase().includes(cat.toLowerCase()) || 
-                   p.vendor.toLowerCase().includes(cat.toLowerCase());
+        if (cat === 'ĐỒNG HỒ NỮ') {
+          matchCat = p.gender === 'Nữ' || p.collection.toUpperCase().includes('NỮ');
+        } else {
+          matchCat = p.collection.toLowerCase().includes(cat.toLowerCase()) || 
+                     p.vendor.toLowerCase().includes(cat.toLowerCase());
+        }
       }
       
-      return (matchName || matchVendor || matchCollection) && matchCat;
+      return (matchName || matchVendor || matchCollection || matchId) && matchCat;
     });
 
     if (filtered.length === 0) {
+      const brandContext = (cat !== '0') ? ` trong danh mục <strong>${escapeHtml(cat)}</strong>` : '';
       searchDropdown.innerHTML = `
         <div style="padding: 20px; text-align: center; color: #6c757d; font-size: 13px;">
-          Không tìm thấy sản phẩm nào phù hợp với "<strong>${escapeHtml(query)}</strong>"
+          Không tìm thấy sản phẩm nào phù hợp với "<strong>${escapeHtml(query)}</strong>"${brandContext}
         </div>
       `;
       searchDropdown.classList.add('active');
@@ -354,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchDropdown.innerHTML = `
       ${itemsHTML}
-      <div class="search-footer" onclick="window.app.filterCatalog('${escapeHtml(query)}')">
+      <div class="search-footer" onclick="window.app.handleSearchSubmit()">
         Xem tất cả ${filtered.length} kết quả tìm kiếm <i class="fa fa-angle-right"></i>
       </div>
     `;
@@ -521,12 +530,21 @@ document.addEventListener('DOMContentLoaded', () => {
       filteredSection.style.display = 'block';
 
       // Update Section Header Titles based on what is being searched/filtered
-      if (hasKeyword) {
+      if (filterState.brand !== 'all' && hasKeyword) {
+        if (sectionTag) sectionTag.textContent = 'KẾT QUẢ TÌM KIẾM';
+        if (sectionTitle) sectionTitle.textContent = `${filterState.brand.toUpperCase()} - TỪ KHÓA: "${filterState.keyword.toUpperCase()}"`;
+      } else if (hasKeyword) {
         if (sectionTag) sectionTag.textContent = 'KẾT QUẢ TÌM KIẾM';
         if (sectionTitle) sectionTitle.textContent = `TỪ KHÓA: "${filterState.keyword.toUpperCase()}"`;
       } else if (filterState.brand !== 'all') {
         if (sectionTag) sectionTag.textContent = 'BỘ SƯU TẬP THƯƠNG HIỆU';
         if (sectionTitle) sectionTitle.textContent = `ĐỒNG HỒ ${filterState.brand.toUpperCase()}`;
+      } else if (filterState.gender === 'Nữ') {
+        if (sectionTag) sectionTag.textContent = 'BỘ SƯU TẬP PHÁI ĐẸP';
+        if (sectionTitle) sectionTitle.textContent = 'ĐỒNG HỒ NỮ CAO CẤP';
+      } else if (filterState.gender === 'Nam') {
+        if (sectionTag) sectionTag.textContent = 'BỘ SƯU TẬP PHÁI MẠNH';
+        if (sectionTitle) sectionTitle.textContent = 'ĐỒNG HỒ NAM CAO CẤP';
       } else if (filterState.priceMin > 0 || filterState.priceMax < Infinity) {
         if (sectionTag) sectionTag.textContent = 'LỌC THEO PHÂN KHÚC GIÁ';
         if (sectionTitle) sectionTitle.textContent = `MỨC GIÁ: ${filterState.priceLabel.toUpperCase()}`;
@@ -539,11 +557,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (results.length === 0) {
-        let emptyTitle = 'Sản phẩm đang được cập nhật';
+        let emptyTitle = 'Không tìm thấy sản phẩm phù hợp';
         let emptyDesc = 'Hiện tại danh mục sản phẩm đang được JinWatch cập nhật thêm các mẫu mới. Quý khách vui lòng liên hệ hotline để được hỗ trợ đặt hàng theo yêu cầu.';
         let emptyIcon = 'fa-clock-rotate-left';
 
-        if (filterState.priceMin >= 20000000) {
+        if (filterState.brand !== 'all' && hasKeyword) {
+          emptyTitle = 'Không tìm thấy sản phẩm phù hợp';
+          emptyDesc = `Không tìm thấy mẫu đồng hồ <strong>${escapeHtml(filterState.brand)}</strong> nào khớp với từ khóa "<strong>${escapeHtml(filterState.keyword)}</strong>". Quý khách vui lòng thử tìm từ khóa khác hoặc liên hệ hotline để được hỗ trợ kiểm tra kho.`;
+          emptyIcon = 'fa-magnifying-glass';
+        } else if (filterState.priceMin >= 20000000) {
           emptyTitle = 'Sản phẩm đang được cập nhật';
           emptyDesc = 'Phân khúc đồng hồ cao cấp <strong>Trên 20 triệu</strong> đang được cập nhật liên tục. Quý khách có nhu cầu đặt các mẫu cao cấp Thụy Sĩ/Nhật Bản vui lòng liên hệ trực tiếp JinWatch để nhận báo giá ưu đãi.';
           emptyIcon = 'fa-crown';
@@ -552,7 +574,7 @@ document.addEventListener('DOMContentLoaded', () => {
           emptyDesc = `Danh mục thương hiệu <strong>${escapeHtml(filterState.brand)}</strong> đang được bổ sung thêm sản phẩm mới. Quý khách vui lòng liên hệ hotline/Zalo để được kiểm tra kho & đặt mẫu sớm nhất.`;
           emptyIcon = 'fa-gem';
         } else if (hasKeyword) {
-          emptyTitle = 'Sản phẩm đang được cập nhật';
+          emptyTitle = 'Không tìm thấy sản phẩm phù hợp';
           emptyDesc = `Chưa có sẵn mẫu đồng hồ khớp với từ khóa "<strong>${escapeHtml(filterState.keyword)}</strong>". JinWatch nhận tìm kiếm & order mọi mẫu đồng hồ chính hãng theo yêu cầu.`;
           emptyIcon = 'fa-magnifying-glass';
         }
@@ -1038,16 +1060,129 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Filter Catalog by Brand/Keyword
-  function filterCatalog(term) {
+  // ==========================================
+  // SEARCH & CATALOG FILTER LOGIC
+  // ==========================================
+  // Handle Search Submission from Header Search Bar (Button click or Enter)
+  function handleSearchSubmit() {
     if (searchDropdown) searchDropdown.classList.remove('active');
-    if (!term || typeof term !== 'string') return;
-    const cleanTerm = term.trim();
-    if (!cleanTerm) return;
+    
+    // Check if on product.html
+    const isProductPage = window.location.pathname.includes('product.html');
+    const rawKw = searchInput ? searchInput.value.trim() : '';
+    const rawCat = searchCategory ? searchCategory.value : '0';
 
+    if (isProductPage) {
+      window.location.href = `index.html?searchCategory=${encodeURIComponent(rawCat)}&searchInput=${encodeURIComponent(rawKw)}#filterSection`;
+      return;
+    }
+
+    executeSearch(rawKw, rawCat);
+  }
+
+  // Filter Catalog (called from menu links or search)
+  function filterCatalog(term, optionalCategory) {
+    if (searchDropdown) searchDropdown.classList.remove('active');
+
+    const isProductPage = window.location.pathname.includes('product.html');
+    if (isProductPage) {
+      const q = term ? String(term).trim() : '';
+      window.location.href = `index.html?searchInput=${encodeURIComponent(q)}#filterSection`;
+      return;
+    }
+
+    const rawInput = searchInput ? searchInput.value.trim() : '';
+    const rawCat = searchCategory ? searchCategory.value : '0';
+
+    if (term && typeof term === 'string' && term.trim()) {
+      const cleanTerm = term.trim();
+      const cat = optionalCategory || (cleanTerm === rawInput ? rawCat : '0');
+      executeSearch(cleanTerm, cat);
+    } else {
+      executeSearch(rawInput, rawCat);
+    }
+  }
+
+  function executeSearch(keyword, category) {
+    keyword = (keyword || '').trim();
+    category = (category || '0').trim();
+
+    // Reset price filter and sort for a fresh search
+    filterState.priceMin = 0;
+    filterState.priceMax = Infinity;
+    filterState.priceLabel = 'Tất cả mức giá';
+    filterState.sort = 'default';
+    const sortSelect = document.getElementById('sortSelect');
+    if (sortSelect) sortSelect.value = 'default';
+    document.querySelectorAll('#priceFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
+
+    // Case 1: Both keyword and category are empty (Tất cả thương hiệu & no text)
+    if (!keyword && category === '0') {
+      showToast('Vui lòng nhập từ khóa hoặc chọn thương hiệu để tìm kiếm.');
+      scrollToSection('filterSection');
+      return;
+    }
+
+    const allBrands = [
+      'OLYM PIANUS', 'CARNIVAL', 'ALEXANDER FERROS', 'BENTLEY', 'SEIKO', 'ORIENT', 'TISSOT', 'CITIZEN',
+      'BULOVA', 'CASIO', 'OLYMPIA STAR', 'SRWATCH',
+      'LONGINES', 'FREDERIQUE CONSTANT', 'MOVADO', 'MAURICE LACROIX', 'MIDO', 'OMEGA X SWATCH', 'OMEGA', 'OGIVAL',
+      'SALVATORE FERRAGAMO', 'FERRAGAMO',
+      'THOMAS EARNSHAW', 'INVICTA', 'FOSSIL', 'EMPORIO ARMANI', 'JUST CAVALLI', 'GUESS'
+    ];
+
+    // Case 2: Category is selected (category !== '0')
+    if (category !== '0') {
+      if (category === 'ĐỒNG HỒ NỮ') {
+        filterState.brand = 'all';
+        filterState.gender = 'Nữ';
+        filterState.keyword = keyword;
+        
+        document.querySelectorAll('#brandFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
+        document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 2));
+      } else {
+        let brandName = category;
+        if (brandName === 'FERRAGAMO') brandName = 'SALVATORE FERRAGAMO';
+        filterState.brand = brandName;
+        
+        const kwUpper = keyword.toUpperCase();
+        if (kwUpper.includes('NỮ')) {
+          filterState.gender = 'Nữ';
+          document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 2));
+        } else if (kwUpper.includes('NAM') && !kwUpper.includes('VIETNAM')) {
+          filterState.gender = 'Nam';
+          document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 1));
+        } else {
+          filterState.gender = 'all';
+          document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
+        }
+
+        let refinedKw = keyword;
+        if (refinedKw.toUpperCase() === brandName.toUpperCase() || 
+            refinedKw.toUpperCase() === 'NAM' || 
+            refinedKw.toUpperCase() === 'NỮ' ||
+            refinedKw.toUpperCase() === `${brandName.toUpperCase()} NAM` ||
+            refinedKw.toUpperCase() === `${brandName.toUpperCase()} NỮ`) {
+          refinedKw = '';
+        }
+        filterState.keyword = refinedKw;
+
+        document.querySelectorAll('#brandFilterPills .filter-pill').forEach(b => {
+          const match = b.textContent.toUpperCase().includes(brandName.toUpperCase());
+          b.classList.toggle('active', match);
+        });
+      }
+
+      if (searchCategory) searchCategory.value = category;
+      applyFilters();
+      return;
+    }
+
+    // Case 3: Category is '0', but keyword is provided
+    const cleanTerm = keyword;
     const termUpper = cleanTerm.toUpperCase();
 
-    // 1. Check price queries
+    // 3a. Check price queries (e.g. '3 - 5 triệu')
     if (cleanTerm.toLowerCase().includes('triệu') || cleanTerm.toLowerCase().includes('trieu')) {
       if (cleanTerm.includes('trên 20') || cleanTerm.includes('tren 20') || cleanTerm.includes('> 20') || cleanTerm.includes('>20')) {
         const pills = document.querySelectorAll('#priceFilterPills .filter-pill');
@@ -1072,16 +1207,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // 2. Check if term matches known watch brands
-    const allBrands = [
-      'OLYM PIANUS', 'CARNIVAL', 'ALEXANDER FERROS', 'BENTLEY', 'SEIKO', 'ORIENT', 'TISSOT', 'CITIZEN',
-      'BULOVA', 'CASIO', 'OLYMPIA STAR', 'SRWATCH',
-      'LONGINES', 'FREDERIQUE CONSTANT', 'MOVADO', 'MAURICE LACROIX', 'MIDO', 'OMEGA X SWATCH', 'OMEGA', 'OGIVAL',
-      'SALVATORE FERRAGAMO', 'FERRAGAMO',
-      'THOMAS EARNSHAW', 'INVICTA', 'FOSSIL', 'EMPORIO ARMANI', 'JUST CAVALLI', 'GUESS'
-    ];
-
-    const matchedBrand = allBrands.find(b => termUpper === b || termUpper.startsWith(b) || termUpper.includes(b));
+    // 3b. Check if term matches known watch brands
+    const matchedBrand = allBrands.find(b => termUpper === b || termUpper.startsWith(b + ' ') || termUpper.includes(b));
     if (matchedBrand) {
       let brandToFilter = matchedBrand;
       if (brandToFilter === 'FERRAGAMO') brandToFilter = 'SALVATORE FERRAGAMO';
@@ -1089,7 +1216,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (termUpper.includes('NỮ')) {
         filterState.gender = 'Nữ';
         document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 2));
-      } else if (termUpper.includes('NAM')) {
+      } else if (termUpper.includes('NAM') && !termUpper.includes('VIETNAM')) {
         filterState.gender = 'Nam';
         document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 1));
       } else {
@@ -1097,18 +1224,32 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
       }
 
-      filterState.keyword = '';
-      if (searchInput) searchInput.value = '';
-      const brandBtn = Array.from(document.querySelectorAll('#brandFilterPills .filter-pill'))
-        .find(b => b.textContent.toUpperCase().includes(brandToFilter));
-      setBrandFilter(brandToFilter, brandBtn);
+      filterState.brand = brandToFilter;
+
+      let rem = cleanTerm.replace(new RegExp(brandToFilter, 'gi'), '')
+                         .replace(/\b(nam|nữ|đặc biệt|chính hãng)\b/gi, '')
+                         .trim();
+      filterState.keyword = rem;
+
+      document.querySelectorAll('#brandFilterPills .filter-pill').forEach(b => {
+        const match = b.textContent.toUpperCase().includes(brandToFilter.toUpperCase());
+        b.classList.toggle('active', match);
+      });
+
+      if (searchCategory) {
+        const opt = Array.from(searchCategory.options).find(o => o.value.toUpperCase() === brandToFilter.toUpperCase());
+        if (opt) searchCategory.value = opt.value;
+      }
+
+      applyFilters();
       return;
     }
 
-    // 3. Gender queries
+    // 3c. Gender queries
     if (termUpper === 'ĐỒNG HỒ NỮ' || termUpper === 'NỮ') {
       const pills = document.querySelectorAll('#genderFilterPills .filter-pill');
       setGenderFilter('Nữ', pills[2] || null);
+      if (searchCategory) searchCategory.value = 'ĐỒNG HỒ NỮ';
       return;
     } else if (termUpper === 'ĐỒNG HỒ NAM' || termUpper === 'NAM') {
       const pills = document.querySelectorAll('#genderFilterPills .filter-pill');
@@ -1116,15 +1257,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 4. General Keyword Search (e.g. Tissot PRX, Sapphire, Lộ cơ, 8231G...)
+    // 3d. General Keyword Search (e.g. Tissot PRX, Sapphire, Lộ cơ, 8231G...)
+    filterState.brand = 'all';
+    filterState.gender = 'all';
     filterState.keyword = cleanTerm;
-    // Check if dropdown had conflicting brand category, reset if conflicting
-    if (searchCategory && searchCategory.value !== '0') {
-      const catVal = searchCategory.value.toUpperCase();
-      if (!termUpper.includes(catVal)) {
-        searchCategory.value = '0';
-      }
-    }
+    document.querySelectorAll('#brandFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
+    document.querySelectorAll('#genderFilterPills .filter-pill').forEach((b, i) => b.classList.toggle('active', i === 0));
     applyFilters();
   }
 
@@ -1159,6 +1297,8 @@ document.addEventListener('DOMContentLoaded', () => {
     prevSlide,
     toggleMobileMenu,
     filterCatalog,
+    handleSearchSubmit,
+    executeSearch,
     setPriceFilter,
     setBrandFilter,
     setGenderFilter,
@@ -1172,4 +1312,20 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroSlider();
   initSmartSearch();
   updateCartUI();
+
+  // Handle URL Search Parameters (e.g., from product.html or shared links)
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramCat = urlParams.get('searchCategory') || urlParams.get('brand');
+    const paramKw = urlParams.get('searchInput') || urlParams.get('q');
+    if (paramCat || paramKw) {
+      if (searchCategory && paramCat) searchCategory.value = paramCat;
+      if (searchInput && paramKw) searchInput.value = paramKw;
+      setTimeout(() => {
+        executeSearch(paramKw || '', paramCat || '0');
+      }, 100);
+    }
+  } catch (err) {
+    console.warn('URLSearchParams init error:', err);
+  }
 });
